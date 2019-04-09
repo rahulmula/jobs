@@ -1,0 +1,324 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_Build_Install_Compiler
+[CompilerCQE_Build_Install_Compiler] $ /bin/sh -xe /tmp/jenkins4598832602503670738.sh
++ git clone -b amd-common https://github.com/RadeonOpenCompute/llvm.git
+Cloning into 'llvm'...
+Checking out files:  14% (5386/36396)   Checking out files:  15% (5460/36396)   Checking out files:  16% (5824/36396)   Checking out files:  17% (6188/36396)   Checking out files:  18% (6552/36396)   Checking out files:  19% (6916/36396)   Checking out files:  20% (7280/36396)   Checking out files:  21% (7644/36396)   Checking out files:  22% (8008/36396)   Checking out files:  23% (8372/36396)   Checking out files:  24% (8736/36396)   Checking out files:  25% (9099/36396)   Checking out files:  26% (9463/36396)   Checking out files:  27% (9827/36396)   Checking out files:  28% (10191/36396)   Checking out files:  29% (10555/36396)   Checking out files:  30% (10919/36396)   Checking out files:  31% (11283/36396)   Checking out files:  32% (11647/36396)   Checking out files:  33% (12011/36396)   Checking out files:  34% (12375/36396)   Checking out files:  35% (12739/36396)   Checking out files:  36% (13103/36396)   Checking out files:  37% (13467/36396)   Checking out files:  38% (13831/36396)   Checking out files:  39% (14195/36396)   Checking out files:  40% (14559/36396)   Checking out files:  41% (14923/36396)   Checking out files:  42% (15287/36396)   Checking out files:  43% (15651/36396)   Checking out files:  44% (16015/36396)   Checking out files:  45% (16379/36396)   Checking out files:  46% (16743/36396)   Checking out files:  47% (17107/36396)   Checking out files:  48% (17471/36396)   Checking out files:  49% (17835/36396)   Checking out files:  50% (18198/36396)   Checking out files:  51% (18562/36396)   Checking out files:  52% (18926/36396)   Checking out files:  53% (19290/36396)   Checking out files:  54% (19654/36396)   Checking out files:  54% (19929/36396)   Checking out files:  55% (20018/36396)   Checking out files:  56% (20382/36396)   Checking out files:  57% (20746/36396)   Checking out files:  58% (21110/36396)   Checking out files:  59% (21474/36396)   Checking out files:  60% (21838/36396)   Checking out files:  61% (22202/36396)   Checking out files:  62% (22566/36396)   Checking out files:  63% (22930/36396)   Checking out files:  64% (23294/36396)   Checking out files:  65% (23658/36396)   Checking out files:  66% (24022/36396)   Checking out files:  67% (24386/36396)   Checking out files:  68% (24750/36396)   Checking out files:  69% (25114/36396)   Checking out files:  70% (25478/36396)   Checking out files:  71% (25842/36396)   Checking out files:  72% (26206/36396)   Checking out files:  73% (26570/36396)   Checking out files:  74% (26934/36396)   Checking out files:  75% (27297/36396)   Checking out files:  76% (27661/36396)   Checking out files:  77% (28025/36396)   Checking out files:  78% (28389/36396)   Checking out files:  79% (28753/36396)   Checking out files:  80% (29117/36396)   Checking out files:  81% (29481/36396)   Checking out files:  82% (29845/36396)   Checking out files:  83% (30209/36396)   Checking out files:  84% (30573/36396)   Checking out files:  85% (30937/36396)   Checking out files:  86% (31301/36396)   Checking out files:  87% (31665/36396)   Checking out files:  88% (32029/36396)   Checking out files:  89% (32393/36396)   Checking out files:  90% (32757/36396)   Checking out files:  91% (33121/36396)   Checking out files:  92% (33485/36396)   Checking out files:  93% (33849/36396)   Checking out files:  94% (34213/36396)   Checking out files:  94% (34422/36396)   Checking out files:  95% (34577/36396)   Checking out files:  96% (34941/36396)   Checking out files:  97% (35305/36396)   Checking out files:  98% (35669/36396)   Checking out files:  99% (36033/36396)   Checking out files: 100% (36396/36396)   Checking out files: 100% (36396/36396), done.
++ cd llvm/tools
++ git clone -b amd-common https://github.com/radeonopencompute/clang
+Cloning into 'clang'...
++ git clone -b amd-common https://github.com/RadeonOpenCompute/lld.git
+Cloning into 'lld'...
++ cd ../
++ mkdir build
++ cd build/
++ cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/opt/rocm/llvm -DLLVM_TARGETS_TO_BUILD=AMDGPU;X86 -DLLVM_USE_SANITIZER=MemoryWithOrigins -DLLVM_BUILD_TOOLS=ON -DLLVM_INCLUDE_TESTS=ON ..
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find Z3: Found unsuitable version "0.0.0", but required is at least "4.7.1" (found Z3_LIBRARIES-NOTFOUND)
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - found
+-- Looking for errno.h
+-- Looking for errno.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for link.h
+-- Looking for link.h - found
+-- Looking for malloc/malloc.h
+-- Looking for malloc/malloc.h - not found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for signal.h
+-- Looking for signal.h - found
+-- Looking for sys/ioctl.h
+-- Looking for sys/ioctl.h - found
+-- Looking for sys/mman.h
+-- Looking for sys/mman.h - found
+-- Looking for sys/param.h
+-- Looking for sys/param.h - found
+-- Looking for sys/resource.h
+-- Looking for sys/resource.h - found
+-- Looking for sys/stat.h
+-- Looking for sys/stat.h - found
+-- Looking for sys/time.h
+-- Looking for sys/time.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for termios.h
+-- Looking for termios.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for valgrind/valgrind.h
+-- Looking for valgrind/valgrind.h - not found
+-- Looking for zlib.h
+-- Looking for zlib.h - found
+-- Looking for fenv.h
+-- Looking for fenv.h - found
+-- Looking for FE_ALL_EXCEPT
+-- Looking for FE_ALL_EXCEPT - found
+-- Looking for FE_INEXACT
+-- Looking for FE_INEXACT - found
+-- Looking for mach/mach.h
+-- Looking for mach/mach.h - not found
+-- Looking for histedit.h
+-- Looking for histedit.h - not found
+-- Looking for CrashReporterClient.h
+-- Looking for CrashReporterClient.h - not found
+-- Looking for linux/magic.h
+-- Looking for linux/magic.h - found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Looking for pthread_getspecific in pthread
+-- Looking for pthread_getspecific in pthread - found
+-- Looking for pthread_rwlock_init in pthread
+-- Looking for pthread_rwlock_init in pthread - found
+-- Looking for pthread_mutex_lock in pthread
+-- Looking for pthread_mutex_lock in pthread - found
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - found
+-- Looking for pfm_initialize in pfm
+-- Looking for pfm_initialize in pfm - not found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Looking for xar_open in xar
+-- Looking for xar_open in xar - not found
+-- Looking for arc4random
+-- Looking for arc4random - not found
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- backtrace facility detected in default set of libraries
+-- Found Backtrace: /usr/include  
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Failed
+-- Looking for _Unwind_Backtrace
+-- Looking for _Unwind_Backtrace - found
+-- Looking for getpagesize
+-- Looking for getpagesize - found
+-- Looking for sysconf
+-- Looking for sysconf - found
+-- Looking for getrusage
+-- Looking for getrusage - found
+-- Looking for setrlimit
+-- Looking for setrlimit - found
+-- Looking for isatty
+-- Looking for isatty - found
+-- Looking for futimens
+-- Looking for futimens - found
+-- Looking for futimes
+-- Looking for futimes - found
+-- Looking for posix_fallocate
+-- Looking for posix_fallocate - found
+-- Looking for sigaltstack
+-- Looking for sigaltstack - found
+-- Looking for lseek64
+-- Looking for lseek64 - found
+-- Looking for mallctl
+-- Looking for mallctl - not found
+-- Looking for mallinfo
+-- Looking for mallinfo - found
+-- Looking for malloc_zone_statistics
+-- Looking for malloc_zone_statistics - not found
+-- Looking for getrlimit
+-- Looking for getrlimit - found
+-- Looking for posix_spawn
+-- Looking for posix_spawn - found
+-- Looking for pread
+-- Looking for pread - found
+-- Looking for sbrk
+-- Looking for sbrk - found
+-- Looking for strerror
+-- Looking for strerror - found
+-- Looking for strerror_r
+-- Looking for strerror_r - found
+-- Looking for strerror_s
+-- Looking for strerror_s - not found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Looking for dlopen
+-- Looking for dlopen - found
+-- Looking for dladdr
+-- Looking for dladdr - not found
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC - Success
+-- Looking for __GLIBC__
+-- Looking for __GLIBC__ - found
+-- Looking for sched_getaffinity
+-- Looking for sched_getaffinity - found
+-- Looking for CPU_COUNT
+-- Looking for CPU_COUNT - found
+-- Looking for pthread_getname_np
+-- Looking for pthread_getname_np - found
+-- Looking for pthread_setname_np
+-- Looking for pthread_setname_np - found
+-- Performing Test HAVE_STD_IS_TRIVIALLY_COPYABLE
+-- Performing Test HAVE_STD_IS_TRIVIALLY_COPYABLE - Failed
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB - Success
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB - Success
+-- Performing Test LLVM_HAS_ATOMICS
+-- Performing Test LLVM_HAS_ATOMICS - Success
+-- Performing Test SUPPORTS_VARIADIC_MACROS_FLAG
+-- Performing Test SUPPORTS_VARIADIC_MACROS_FLAG - Success
+-- Performing Test SUPPORTS_GNU_ZERO_VARIADIC_MACRO_ARGUMENTS_FLAG
+-- Performing Test SUPPORTS_GNU_ZERO_VARIADIC_MACRO_ARGUMENTS_FLAG - Failed
+-- Performing Test HAS_MAYBE_UNINITIALIZED
+-- Performing Test HAS_MAYBE_UNINITIALIZED - Success
+-- Native target architecture is X86
+-- Threads enabled.
+-- Doxygen disabled.
+-- Go bindings disabled.
+-- Could NOT find OCaml (missing:  OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- Could NOT find OCaml (missing:  OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- OCaml bindings disabled.
+-- Could NOT find Python module pygments
+-- Could NOT find Python module pygments.lexers.c_cpp
+-- Could NOT find Python module yaml
+-- LLVM host triple: x86_64-unknown-linux-gnu
+-- LLVM default target triple: x86_64-unknown-linux-gnu
+-- Performing Test C_SUPPORTS_FPIC
+-- Performing Test C_SUPPORTS_FPIC - Success
+-- Performing Test CXX_SUPPORTS_FPIC
+-- Performing Test CXX_SUPPORTS_FPIC - Success
+-- Building with -fPIC
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Performing Test C_SUPPORTS_WERROR_DATE_TIME
+-- Performing Test C_SUPPORTS_WERROR_DATE_TIME - Success
+-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME
+-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME - Success
+-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Failed
+-- Performing Test CXX_SUPPORTS_CXX11
+-- Performing Test CXX_SUPPORTS_CXX11 - Success
+-- Performing Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG
+-- Performing Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG - Success
+-- Performing Test C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG
+-- Performing Test C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG
+-- Performing Test CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG - Failed
+-- Performing Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_CLASS_MEMACCESS_FLAG
+-- Performing Test CXX_SUPPORTS_CLASS_MEMACCESS_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG
+-- Performing Test CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG - Failed
+-- Performing Test C_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG
+-- Performing Test C_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG
+-- Performing Test CXX_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG - Success
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP - Failed
+-- Performing Test C_SUPPORTS_STRING_CONVERSION_FLAG
+-- Performing Test C_SUPPORTS_STRING_CONVERSION_FLAG - Failed
+-- Performing Test CXX_SUPPORTS_STRING_CONVERSION_FLAG
+-- Performing Test CXX_SUPPORTS_STRING_CONVERSION_FLAG - Failed
+-- Performing Test C_SUPPORTS_FNO_OMIT_FRAME_POINTER
+-- Performing Test C_SUPPORTS_FNO_OMIT_FRAME_POINTER - Success
+-- Performing Test CXX_SUPPORTS_FNO_OMIT_FRAME_POINTER
+-- Performing Test CXX_SUPPORTS_FNO_OMIT_FRAME_POINTER - Success
+-- Performing Test C_SUPPORTS_O1
+-- Performing Test C_SUPPORTS_O1 - Success
+-- Performing Test CXX_SUPPORTS_O1
+-- Performing Test CXX_SUPPORTS_O1 - Success
+-- Looking for os_signpost_interval_begin
+-- Looking for os_signpost_interval_begin - not found
+-- Found PythonInterp: /usr/bin/python2.7 (found version "2.7.12") 
+-- Constructing LLVMBuild project information
+-- Found Git: /usr/bin/git (found version "2.7.4") 
+-- Linker detection: GNU ld
+-- Targeting AMDGPU
+-- Targeting X86
+-- Looking for sys/resource.h
+-- Looking for sys/resource.h - not found
+-- Clang version: 9.0.0
+-- Performing Test CXX_SUPPORTS_NO_NESTED_ANON_TYPES_FLAG
+-- Performing Test CXX_SUPPORTS_NO_NESTED_ANON_TYPES_FLAG - Failed
+-- LLD version: 9.0.0
+-- Failed to find LLVM FileCheck
+-- git Version: v0.0.0
+-- Version: 0.0.0
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11 - Failed
+-- Performing Test HAVE_CXX_FLAG_STD_CXX0X
+-- Performing Test HAVE_CXX_FLAG_STD_CXX0X - Failed
+-- Performing Test HAVE_CXX_FLAG_WALL
+-- Performing Test HAVE_CXX_FLAG_WALL - Failed
+-- Performing Test HAVE_CXX_FLAG_WEXTRA
+-- Performing Test HAVE_CXX_FLAG_WEXTRA - Failed
+-- Performing Test HAVE_CXX_FLAG_WSHADOW
+-- Performing Test HAVE_CXX_FLAG_WSHADOW - Failed
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC - Failed
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS - Failed
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Failed
+-- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL
+-- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL - Failed
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Failed
+-- Performing Test HAVE_CXX_FLAG_FNO_EXCEPTIONS
+-- Performing Test HAVE_CXX_FLAG_FNO_EXCEPTIONS - Failed
+-- Performing Test HAVE_CXX_FLAG_WD654
+-- Performing Test HAVE_CXX_FLAG_WD654 - Failed
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Failed
+-- Performing Test HAVE_CXX_FLAG_COVERAGE
+-- Performing Test HAVE_CXX_FLAG_COVERAGE - Failed
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX -- failed to compile
+CMake Warning at utils/benchmark/CMakeLists.txt:241 (message):
+  Using std::regex with exceptions disabled is not fully supported
+
+
+-- Performing Test HAVE_STEADY_CLOCK
+-- Performing Test HAVE_STEADY_CLOCK
+-- Performing Test HAVE_STEADY_CLOCK -- failed to compile
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_Build_Install_Compiler/llvm/build
++ make
+Scanning dependencies of target LLVMDemangle
+[  0%] Building CXX object lib/Demangle/CMakeFiles/LLVMDemangle.dir/Demangle.cpp.o
+c++: error: unrecognized argument to -fsanitize= option: ‘memory’
+c++: error: unrecognized command line option ‘-fsanitize-memory-track-origins’
+lib/Demangle/CMakeFiles/LLVMDemangle.dir/build.make:62: recipe for target 'lib/Demangle/CMakeFiles/LLVMDemangle.dir/Demangle.cpp.o' failed
+make[2]: *** [lib/Demangle/CMakeFiles/LLVMDemangle.dir/Demangle.cpp.o] Error 1
+CMakeFiles/Makefile2:819: recipe for target 'lib/Demangle/CMakeFiles/LLVMDemangle.dir/all' failed
+make[1]: *** [lib/Demangle/CMakeFiles/LLVMDemangle.dir/all] Error 2
+Makefile:149: recipe for target 'all' failed
+make: *** [all] Error 2
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

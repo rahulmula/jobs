@@ -1,0 +1,48 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocFFT_Full
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/ROCmSoftwarePlatform/rocFFT.git
+ > /usr/bin/git init /home/taccuser/workspace/CompilerCQE_rocFFT_Full # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocFFT.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocFFT.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocFFT.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocFFT.git # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocFFT.git
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocFFT.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision 50c845276cf90ad6ce80bfeadac1c94326ee7686 (refs/remotes/origin/develop)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 50c845276cf90ad6ce80bfeadac1c94326ee7686
+Commit message: "Merge pull request #156 from feizheng10/develop"
+ > /usr/bin/git rev-list --no-walk 50c845276cf90ad6ce80bfeadac1c94326ee7686 # timeout=10
+[CompilerCQE_rocFFT_Full] $ /bin/sh -xe /tmp/jenkins5805221209543764249.sh
++ ls -al
+total 104
+drwxrwxr-x 11 taccuser taccuser  4096 Mar 27 13:07 .
+drwxrwxr-x 21 taccuser taccuser  4096 Mar 27 13:07 ..
+drwxrwxr-x  7 taccuser taccuser  4096 Mar 27 13:07 clients
+drwxrwxr-x  2 taccuser taccuser  4096 Mar 27 13:07 cmake
+-rw-rw-r--  1 taccuser taccuser  7857 Mar 27 13:07 CMakeLists.txt
+drwxrwxr-x  2 taccuser taccuser  4096 Mar 27 13:07 deps
+drwxrwxr-x  2 taccuser taccuser  4096 Mar 27 13:07 docker
+drwxrwxr-x  4 taccuser taccuser  4096 Mar 27 13:07 docs
+drwxrwxr-x  8 taccuser taccuser  4096 Mar 27 13:07 .git
+drwxrwxr-x  2 taccuser taccuser  4096 Mar 27 13:07 .github
+-rw-rw-r--  1 taccuser taccuser   332 Mar 27 13:07 .gitignore
+-rwxrwxr-x  1 taccuser taccuser 12541 Mar 27 13:07 install.sh
+-rw-rw-r--  1 taccuser taccuser 23210 Mar 27 13:07 Jenkinsfile
+drwxrwxr-x  4 taccuser taccuser  4096 Mar 27 13:07 library
+-rw-rw-r--  1 taccuser taccuser  1074 Mar 27 13:07 LICENSE.md
+-rw-rw-r--  1 taccuser taccuser  3567 Mar 27 13:07 README.md
+drwxrwxr-x  3 taccuser taccuser  4096 Mar 27 13:07 utils
++ chmod 777 rocFFT
+chmod: cannot access 'rocFFT': No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

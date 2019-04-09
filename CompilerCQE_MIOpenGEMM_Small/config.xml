@@ -1,0 +1,43 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>OpenCL general matrix multiplication (GEMM) API and kernel generator.</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+cd ~/Documents;cd compilerNightly
+# 1. Rocm cmake modules installation
+rm -rf rocm-cmake
+git clone https://github.com/RadeonOpenCompute/rocm-cmake;cd rocm-cmake
+mkdir build; cd build
+cmake ..
+sudo cmake --build . --target install
+# 2. MIOpenGEMM installation
+cd ../../
+rm -rf MIOpenGEMM
+git clone https://github.com/ROCmSoftwarePlatform/MIOpenGEMM; cd MIOpenGEMM
+mkdir build; cd build;
+cmake ..
+make miopengemm
+sudo make install
+make check
+make examples</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

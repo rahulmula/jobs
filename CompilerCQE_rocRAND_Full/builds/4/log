@@ -1,0 +1,30 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocRAND_Full
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/ROCmSoftwarePlatform/rocRAND.git
+ > /usr/bin/git init /home/taccuser/workspace/CompilerCQE_rocRAND_Full # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocRAND.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocRAND.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocRAND.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocRAND.git # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocRAND.git
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocRAND.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 687d659a294f416c69dd6e860a8ded939e55c22a (refs/remotes/origin/master)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 687d659a294f416c69dd6e860a8ded939e55c22a
+Commit message: "Merge pull request #54 from ROCmSoftwarePlatform/develop"
+ > /usr/bin/git rev-list --no-walk 687d659a294f416c69dd6e860a8ded939e55c22a # timeout=10
+[CompilerCQE_rocRAND_Full] $ /bin/sh -xe /tmp/jenkins1054658061116602095.sh
++ mkdir bu ild
++ cd build
+/tmp/jenkins1054658061116602095.sh: 3: cd: can't cd to build
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

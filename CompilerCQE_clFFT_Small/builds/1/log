@@ -1,0 +1,121 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_clFFT
+[CompilerCQE_clFFT] $ /bin/sh -xe /tmp/jenkins2574227625414422071.sh
++ git clone https://github.com/clMathLibraries/clFFT
+Cloning into 'clFFT'...
++ cd clFFT/src
++ mkdir build
++ cd build
++ cmake -DOpenCL_INCLUDE_DIR=/opt/rocm/opencl/include -DOpenCL_LIBRARY=/opt/rocm/opencl/lib/x86_64/libOpenCL.so ..
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- UNICODE feature disabled on linux
+-- 64bit build - FIND_LIBRARY_USE_LIB64_PATHS TRUE
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106400
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:142 (find_package)
+
+
+-- Boost version: 1.64.0
+-- Found the following Boost libraries:
+--   program_options
+-- Boost_PROGRAM_OPTIONS_LIBRARY: /usr/local/lib/libboost_program_options.a
+-- Looking for CL_VERSION_2_0
+-- Looking for CL_VERSION_2_0 - found
+-- Found OpenCL: /opt/rocm/opencl/lib/x86_64/libOpenCL.so (found version "2.0") 
+-- Found FFTW: /usr/lib/x86_64-linux-gnu/libfftw3f.so;/usr/lib/x86_64-linux-gnu/libfftw3.so  
+-- Detected GNU fortran compiler.
+-- CMAKE_CXX_COMPILER flags: -m64 -pthread 
+-- CMAKE_CXX_COMPILER debug flags: -g
+-- CMAKE_CXX_COMPILER release flags: -O3 -DNDEBUG
+-- CMAKE_CXX_COMPILER relwithdebinfo flags: -O2 -g -DNDEBUG
+-- CMAKE_EXE_LINKER link flags: 
+FFT clients will NOT be built
+GoogleTest unit tests will NOT be built
+FFT callback client will NOT be built
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/build
++ make
+Scanning dependencies of target clFFT
+[  3%] Building CXX object library/CMakeFiles/clFFT.dir/transform.cpp.o
+[  7%] Building CXX object library/CMakeFiles/clFFT.dir/accessors.cpp.o
+[ 11%] Building CXX object library/CMakeFiles/clFFT.dir/plan.cpp.o
+[ 15%] Building CXX object library/CMakeFiles/clFFT.dir/repo.cpp.o
+[ 19%] Building CXX object library/CMakeFiles/clFFT.dir/generator.stockham.cpp.o
+[ 23%] Building CXX object library/CMakeFiles/clFFT.dir/generator.transpose.gcn.cpp.o
+[ 26%] Building CXX object library/CMakeFiles/clFFT.dir/generator.transpose.cpp.o
+[ 30%] Building CXX object library/CMakeFiles/clFFT.dir/action.transpose.cpp.o
+[ 34%] Building CXX object library/CMakeFiles/clFFT.dir/generator.copy.cpp.o
+[ 38%] Building CXX object library/CMakeFiles/clFFT.dir/lifetime.cpp.o
+[ 42%] Building CXX object library/CMakeFiles/clFFT.dir/fft_binary_lookup.cpp.o
+[ 46%] Building C object library/CMakeFiles/clFFT.dir/md5sum.c.o
+[ 50%] Building CXX object library/CMakeFiles/clFFT.dir/enqueue.cpp.o
+[ 53%] Building CXX object library/CMakeFiles/clFFT.dir/stdafx.cpp.o
+[ 57%] Linking CXX shared library libclFFT.so
+[ 57%] Built target clFFT
+Scanning dependencies of target StatTimer
+[ 61%] Building CXX object statTimer/CMakeFiles/StatTimer.dir/statisticalTimer.CPU.cpp.o
+[ 65%] Building CXX object statTimer/CMakeFiles/StatTimer.dir/statisticalTimer.GPU.cpp.o
+[ 69%] Building CXX object statTimer/CMakeFiles/StatTimer.dir/statisticalTimer.extern.cpp.o
+[ 73%] Building CXX object statTimer/CMakeFiles/StatTimer.dir/stdafx.cpp.o
+[ 76%] Linking CXX shared library libStatTimer.so
+[ 76%] Built target StatTimer
+Scanning dependencies of target example_examples_fft3d
+[ 80%] Building C object examples/CMakeFiles/example_examples_fft3d.dir/fft3d.c.o
+/home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft3d.c: In function ‘main’:
+/home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft3d.c:63:5: warning: ‘clCreateCommandQueue’ is deprecated [-Wdeprecated-declarations]
+     queue = clCreateCommandQueue( ctx, device, 0, &err );
+     ^
+In file included from /home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft3d.c:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 84%] Linking C executable examples/fft3d
+[ 84%] Built target example_examples_fft3d
+Scanning dependencies of target example_examples_fft1d
+[ 88%] Building C object examples/CMakeFiles/example_examples_fft1d.dir/fft1d.c.o
+/home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft1d.c: In function ‘main’:
+/home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft1d.c:62:5: warning: ‘clCreateCommandQueue’ is deprecated [-Wdeprecated-declarations]
+     queue = clCreateCommandQueue( ctx, device, 0, &err );
+     ^
+In file included from /home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft1d.c:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 92%] Linking C executable examples/fft1d
+[ 92%] Built target example_examples_fft1d
+Scanning dependencies of target example_examples_fft2d
+[ 96%] Building C object examples/CMakeFiles/example_examples_fft2d.dir/fft2d.c.o
+/home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft2d.c: In function ‘main’:
+/home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft2d.c:63:5: warning: ‘clCreateCommandQueue’ is deprecated [-Wdeprecated-declarations]
+     queue = clCreateCommandQueue( ctx, device, 0, &err );
+     ^
+In file included from /home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/workspace/CompilerCQE_clFFT/clFFT/src/examples/fft2d.c:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[100%] Linking C executable examples/fft2d
+[100%] Built target example_examples_fft2d
++ ./Test -r 5 -v --gtest_filter=*random*
+/tmp/jenkins2574227625414422071.sh: 6: /tmp/jenkins2574227625414422071.sh: ./Test: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

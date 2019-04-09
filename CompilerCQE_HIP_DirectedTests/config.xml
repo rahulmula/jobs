@@ -1,0 +1,39 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>HIP Directed Tests&#xd;
+HIP Samples&#xd;
+HIP Example Applications&#xd;
+mixbench&#xd;
+babelStream</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+#Since we have already downloaded everything into ~/Documents and built as first step,
+# we just rebuilding again to run directed tests
+cd ~/Documents/compilerNightly/HIP/
+sudo rm -rf build
+mkdir build; cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=$PWD/install
+make -j16
+make install
+make check -j16 
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

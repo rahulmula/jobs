@@ -1,0 +1,816 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocRAND_Full
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/ROCmSoftwarePlatform/rocRAND.git
+ > /usr/bin/git init /home/taccuser/workspace/CompilerCQE_rocRAND_Full # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocRAND.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocRAND.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocRAND.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocRAND.git # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocRAND.git
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocRAND.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 687d659a294f416c69dd6e860a8ded939e55c22a (refs/remotes/origin/master)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 687d659a294f416c69dd6e860a8ded939e55c22a
+Commit message: "Merge pull request #54 from ROCmSoftwarePlatform/develop"
+First time build. Skipping changelog.
+[CompilerCQE_rocRAND_Full] $ /bin/sh -xe /tmp/jenkins948838404463928630.sh
++ mkdir build
++ cd build
++ CXX=/opt/rocm/hcc/bin/hcc cmake -DBUILD_TEST=ON -DBUILD_BENCHMARK=ON -DBUILD_CRUSH_TEST=ON -DDEPENDENCIES_FORCE_DOWNLOAD=ON ../.
++ tee rocrand_build.log
+-- The CXX compiler identification is Clang 9.0.0
+-- Check for working CXX compiler: /opt/rocm/hcc/bin/hcc
+-- Check for working CXX compiler: /opt/rocm/hcc/bin/hcc -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Setting build type to 'Release' as none was specified.
+-- Found HIP: /usr/local (found version "1.5.19122") 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Git: /usr/bin/git (found version "2.7.4") 
+-- GTest not found. Downloading and building GTest.
+-- Downloading/updating googletest
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/googletest-download
+Scanning dependencies of target googletest-download
+[ 11%] Creating directories for 'googletest-download'
+[ 22%] Performing download step (git clone) for 'googletest-download'
+-- googletest-download download command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-download-*.log
+[ 33%] No patch step for 'googletest-download'
+[ 44%] Skipping update step for 'googletest-download'
+[ 55%] Performing configure step for 'googletest-download'
+-- googletest-download configure command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-configure-*.log
+[ 66%] Performing build step for 'googletest-download'
+-- googletest-download build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-build-*.log
+[ 77%] Performing install step for 'googletest-download'
+-- googletest-download install command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-install-*.log
+[ 88%] No test step for 'googletest-download'
+[100%] Completed 'googletest-download'
+[100%] Built target googletest-download
+-- Found GTest: /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/gtest/lib/libgtest.so  
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- TestU01 not found. Downloading and building TestU01.
+-- Downloading/updating TestU01
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/TestU01-download
+Scanning dependencies of target TestU01-download
+[ 11%] Creating directories for 'TestU01-download'
+[ 22%] Performing download step (download, verify and extract) for 'TestU01-download'
+-- TestU01-download download command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/TestU01-download/TestU01-download-prefix/src/TestU01-download-stamp/TestU01-download-download-*.log
+[ 33%] No patch step for 'TestU01-download'
+[ 44%] No update step for 'TestU01-download'
+[ 55%] Performing configure step for 'TestU01-download'
+-- TestU01-download configure command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/TestU01-download/TestU01-download-prefix/src/TestU01-download-stamp/TestU01-download-configure-*.log
+[ 66%] Performing build step for 'TestU01-download'
+-- TestU01-download build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/TestU01-download/TestU01-download-prefix/src/TestU01-download-stamp/TestU01-download-build-*.log
+[ 77%] Performing install step for 'TestU01-download'
+-- TestU01-download install command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/TestU01-download/TestU01-download-prefix/src/TestU01-download-stamp/TestU01-download-install-*.log
+[ 88%] No test step for 'TestU01-download'
+[100%] Completed 'TestU01-download'
+[100%] Built target TestU01-download
+-- Found TestU01: /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/testu01/lib/libtestu01.so;/home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/testu01/lib/libprobdist.so;/home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/testu01/lib/libmylib.so
+-- 
+-- ******** Summary ********
+-- General:
+--   System                : Linux
+--   HIP ROOT              : /usr/local
+--   C++ compiler          : /opt/rocm/hcc/bin/hcc
+--   C++ compiler version  : 9.0.0
+--   CXX flags             : -Wno-unused-command-line-argument -Wall -Wextra
+--   Build type            : Release
+--   Install prefix        : /opt/rocm
+-- 
+--   BUILD_SHARED_LIBS     : ON
+--   BUILD_FORTRAN_WRAPPER : OFF
+--   BUILD_TEST            : ON
+--   BUILD_CRUSH_TEST      : ON
+--   BUILD_BENCHMARK       : ON
+-- Configuring done
+CMake Warning at library/CMakeLists.txt:52 (add_library):
+  Cannot generate a safe runtime search path for target rocrand because files
+  in some directories may conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at library/CMakeLists.txt:157 (add_library):
+  Cannot generate a safe runtime search path for target hiprand because files
+  in some directories may conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_kernel_sobol32 because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_kernel_mtgp32 because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_normal_distribution because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target test_rocrand_generate
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_mtgp32_prng because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:92 (add_executable):
+  Cannot generate a safe runtime search path for target test_hiprand_api
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_kernel_philox4x32_10 because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:92 (add_executable):
+  Cannot generate a safe runtime search path for target test_hiprand_kernel
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target test_rocrand_basic
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_generate_log_normal because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_philox_prng because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_generate_normal because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_kernel_xorwow because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_generate_poisson because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_sobol32_qrng because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_cpp_wrapper because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_poisson_distribution because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_generator_type because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_mrg32k3a_prng because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_kernel_mrg32k3a because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:92 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hiprand_cpp_wrapper because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_rocrand_xorwow_prng because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_log_normal_distribution because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_uniform_distribution because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/crush/CMakeLists.txt:35 (add_executable):
+  Cannot generate a safe runtime search path for target crush_test_rocrand
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/crush/CMakeLists.txt:35 (add_executable):
+  Cannot generate a safe runtime search path for target
+  stat_test_rocrand_generate because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/crush/CMakeLists.txt:35 (add_executable):
+  Cannot generate a safe runtime search path for target
+  stat_test_rocrand_kernel because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at test/linkage/CMakeLists.txt:28 (add_executable):
+  Cannot generate a safe runtime search path for target test_rocrand_linkage
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/linkage/CMakeLists.txt:62 (add_rocrand_link_test)
+
+
+CMake Warning at test/linkage/CMakeLists.txt:77 (add_executable):
+  Cannot generate a safe runtime search path for target test_hiprand_linkage
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/linkage/CMakeLists.txt:117 (add_hiprand_link_test)
+
+
+CMake Warning at benchmark/CMakeLists.txt:35 (add_executable):
+  Cannot generate a safe runtime search path for target
+  benchmark_rocrand_kernel because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at benchmark/CMakeLists.txt:35 (add_executable):
+  Cannot generate a safe runtime search path for target
+  benchmark_rocrand_generate because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build
++ + make -j8
+tee -a rocrand_build.log
+Scanning dependencies of target mrg32k3a_precomputed_generator
+Scanning dependencies of target sobol_direction_vector_generator
+Scanning dependencies of target xorwow_precomputed_generator
+[  1%] Building CXX object tools/CMakeFiles/mrg32k3a_precomputed_generator.dir/mrg32k3a_precomputed_generator.cpp.o
+[  2%] Building CXX object tools/CMakeFiles/xorwow_precomputed_generator.dir/xorwow_precomputed_generator.cpp.o
+[  4%] Building CXX object tools/CMakeFiles/sobol_direction_vector_generator.dir/sobol_direction_vector_generator.cpp.o
+Scanning dependencies of target rocrand
+[  5%] Building CXX object library/CMakeFiles/rocrand.dir/src/rocrand.cpp.o
+[  6%] Linking CXX executable mrg32k3a_precomputed_generator
+[  8%] Linking CXX executable xorwow_precomputed_generator
+[  8%] Built target mrg32k3a_precomputed_generator
+[  9%] Linking CXX executable sobol_direction_vector_generator
+[  9%] Built target xorwow_precomputed_generator
+[  9%] Built target sobol_direction_vector_generator
+[ 10%] Linking CXX shared library librocrand.so
+[ 10%] Built target rocrand
+Scanning dependencies of target hiprand
+Scanning dependencies of target test_rocrand_mtgp32_prng
+Scanning dependencies of target test_rocrand_kernel_philox4x32_10
+Scanning dependencies of target test_normal_distribution
+Scanning dependencies of target test_rocrand_generate
+Scanning dependencies of target test_rocrand_basic
+[ 12%] Building CXX object library/CMakeFiles/hiprand.dir/src/hiprand/hiprand_hcc.cpp.o
+Scanning dependencies of target test_rocrand_kernel_mtgp32
+Scanning dependencies of target test_rocrand_kernel_sobol32
+[ 13%] Building CXX object test/CMakeFiles/test_rocrand_mtgp32_prng.dir/test_rocrand_mtgp32_prng.cpp.o
+[ 14%] Building CXX object test/CMakeFiles/test_normal_distribution.dir/test_normal_distribution.cpp.o
+[ 16%] Building CXX object test/CMakeFiles/test_rocrand_kernel_philox4x32_10.dir/test_rocrand_kernel_philox4x32_10.cpp.o
+[ 17%] Building CXX object test/CMakeFiles/test_rocrand_generate.dir/test_rocrand_generate.cpp.o
+[ 18%] Building CXX object test/CMakeFiles/test_rocrand_basic.dir/test_rocrand_basic.cpp.o
+[ 20%] Building CXX object test/CMakeFiles/test_rocrand_kernel_mtgp32.dir/test_rocrand_kernel_mtgp32.cpp.o
+[ 21%] Building CXX object test/CMakeFiles/test_rocrand_kernel_sobol32.dir/test_rocrand_kernel_sobol32.cpp.o
+[ 22%] Linking CXX shared library libhiprand.so
+[ 22%] Built target hiprand
+Scanning dependencies of target test_rocrand_generate_log_normal
+[ 24%] Building CXX object test/CMakeFiles/test_rocrand_generate_log_normal.dir/test_rocrand_generate_log_normal.cpp.o
+[ 25%] Linking CXX executable test_rocrand_generate
+[ 27%] Linking CXX executable test_normal_distribution
+[ 27%] Built target test_rocrand_generate
+Scanning dependencies of target test_rocrand_philox_prng
+[ 28%] Linking CXX executable test_rocrand_basic
+[ 29%] Building CXX object test/CMakeFiles/test_rocrand_philox_prng.dir/test_rocrand_philox_prng.cpp.o
+[ 29%] Built target test_normal_distribution
+Scanning dependencies of target test_rocrand_generate_normal
+[ 31%] Building CXX object test/CMakeFiles/test_rocrand_generate_normal.dir/test_rocrand_generate_normal.cpp.o
+[ 31%] Built target test_rocrand_basic
+Scanning dependencies of target test_rocrand_kernel_xorwow
+[ 32%] Building CXX object test/CMakeFiles/test_rocrand_kernel_xorwow.dir/test_rocrand_kernel_xorwow.cpp.o
+[ 33%] Linking CXX executable test_rocrand_generate_log_normal
+[ 33%] Built target test_rocrand_generate_log_normal
+Scanning dependencies of target test_rocrand_generate_poisson
+[ 35%] Building CXX object test/CMakeFiles/test_rocrand_generate_poisson.dir/test_rocrand_generate_poisson.cpp.o
+[ 36%] Linking CXX executable test_rocrand_generate_normal
+[ 37%] Linking CXX executable test_rocrand_kernel_mtgp32
+[ 37%] Built target test_rocrand_generate_normal
+Scanning dependencies of target test_rocrand_sobol32_qrng
+[ 39%] Building CXX object test/CMakeFiles/test_rocrand_sobol32_qrng.dir/test_rocrand_sobol32_qrng.cpp.o
+[ 39%] Built target test_rocrand_kernel_mtgp32
+[ 40%] Linking CXX executable test_rocrand_kernel_philox4x32_10
+Scanning dependencies of target test_rocrand_cpp_wrapper
+[ 41%] Building CXX object test/CMakeFiles/test_rocrand_cpp_wrapper.dir/test_rocrand_cpp_wrapper.cpp.o
+[ 43%] Linking CXX executable test_rocrand_kernel_sobol32
+[ 43%] Built target test_rocrand_kernel_philox4x32_10
+[ 43%] Built target test_rocrand_kernel_sobol32
+Scanning dependencies of target test_poisson_distribution
+Scanning dependencies of target test_rocrand_generator_type
+[ 44%] Building CXX object test/CMakeFiles/test_poisson_distribution.dir/test_poisson_distribution.cpp.o
+[ 45%] Building CXX object test/CMakeFiles/test_rocrand_generator_type.dir/test_rocrand_generator_type.cpp.o
+[ 47%] Linking CXX executable test_rocrand_mtgp32_prng
+[ 47%] Built target test_rocrand_mtgp32_prng
+Scanning dependencies of target test_rocrand_mrg32k3a_prng
+[ 48%] Building CXX object test/CMakeFiles/test_rocrand_mrg32k3a_prng.dir/test_rocrand_mrg32k3a_prng.cpp.o
+[ 50%] Linking CXX executable test_rocrand_generate_poisson
+[ 50%] Built target test_rocrand_generate_poisson
+Scanning dependencies of target test_rocrand_kernel_mrg32k3a
+[ 51%] Building CXX object test/CMakeFiles/test_rocrand_kernel_mrg32k3a.dir/test_rocrand_kernel_mrg32k3a.cpp.o
+[ 52%] Linking CXX executable test_rocrand_kernel_xorwow
+[ 54%] Linking CXX executable test_rocrand_generator_type
+[ 54%] Built target test_rocrand_kernel_xorwow
+Scanning dependencies of target test_hiprand_cpp_wrapper
+[ 54%] Built target test_rocrand_generator_type
+[ 55%] Building CXX object test/CMakeFiles/test_hiprand_cpp_wrapper.dir/test_hiprand_cpp_wrapper.cpp.o
+Scanning dependencies of target test_rocrand_xorwow_prng
+[ 56%] Building CXX object test/CMakeFiles/test_rocrand_xorwow_prng.dir/test_rocrand_xorwow_prng.cpp.o
+[ 58%] Linking CXX executable test_rocrand_philox_prng
+[ 58%] Built target test_rocrand_philox_prng
+Scanning dependencies of target test_log_normal_distribution
+[ 59%] Building CXX object test/CMakeFiles/test_log_normal_distribution.dir/test_log_normal_distribution.cpp.o
+[ 60%] Linking CXX executable test_poisson_distribution
+[ 60%] Built target test_poisson_distribution
+Scanning dependencies of target test_uniform_distribution
+[ 62%] Building CXX object test/CMakeFiles/test_uniform_distribution.dir/test_uniform_distribution.cpp.o
+[ 63%] Linking CXX executable test_rocrand_cpp_wrapper
+[ 63%] Built target test_rocrand_cpp_wrapper
+Scanning dependencies of target crush_test_rocrand
+[ 64%] Building CXX object test/crush/CMakeFiles/crush_test_rocrand.dir/crush_test_rocrand.cpp.o
+[ 66%] Linking CXX executable test_rocrand_sobol32_qrng
+[ 67%] Linking CXX executable test_log_normal_distribution
+[ 67%] Built target test_rocrand_sobol32_qrng
+Scanning dependencies of target stat_test_rocrand_generate
+[ 68%] Building CXX object test/crush/CMakeFiles/stat_test_rocrand_generate.dir/stat_test_rocrand_generate.cpp.o
+[ 68%] Built target test_log_normal_distribution
+Scanning dependencies of target stat_test_rocrand_kernel
+[ 70%] Building CXX object test/crush/CMakeFiles/stat_test_rocrand_kernel.dir/stat_test_rocrand_kernel.cpp.o
+[ 71%] Linking CXX executable test_rocrand_kernel_mrg32k3a
+[ 72%] Linking CXX executable test_uniform_distribution
+[ 72%] Built target test_uniform_distribution
+Scanning dependencies of target test_rocrand_linkage
+[ 74%] Building CXX object test/linkage/CMakeFiles/test_rocrand_linkage.dir/test_rocrand_linkage.cpp.o
+[ 74%] Built target test_rocrand_kernel_mrg32k3a
+[ 75%] Building CXX object test/linkage/CMakeFiles/test_rocrand_linkage.dir/get_rocrand_version.cpp.o
+[ 77%] Linking CXX executable ../crush_test_rocrand
+[ 77%] Built target crush_test_rocrand
+Scanning dependencies of target test_hiprand_linkage
+[ 78%] Building CXX object test/linkage/CMakeFiles/test_hiprand_linkage.dir/test_hiprand_linkage.cpp.o
+[ 79%] Linking CXX executable test_hiprand_cpp_wrapper
+[ 81%] Linking CXX executable test_rocrand_mrg32k3a_prng
+[ 81%] Built target test_hiprand_cpp_wrapper
+[ 82%] Building CXX object test/linkage/CMakeFiles/test_hiprand_linkage.dir/get_hiprand_version.cpp.o
+[ 82%] Built target test_rocrand_mrg32k3a_prng
+Scanning dependencies of target benchmark_rocrand_kernel
+[ 83%] Building CXX object benchmark/CMakeFiles/benchmark_rocrand_kernel.dir/benchmark_rocrand_kernel.cpp.o
+[ 85%] Linking CXX executable test_rocrand_xorwow_prng
+Scanning dependencies of target benchmark_rocrand_generate
+[ 86%] Building CXX object benchmark/CMakeFiles/benchmark_rocrand_generate.dir/benchmark_rocrand_generate.cpp.o
+[ 87%] Linking CXX executable ../test_rocrand_linkage
+[ 87%] Built target test_rocrand_linkage
+Scanning dependencies of target test_hiprand_api
+[ 89%] Building CXX object test/CMakeFiles/test_hiprand_api.dir/test_hiprand_api.cpp.o
+[ 89%] Built target test_rocrand_xorwow_prng
+[ 90%] Linking CXX executable ../stat_test_rocrand_generate
+Scanning dependencies of target test_hiprand_kernel
+[ 91%] Building CXX object test/CMakeFiles/test_hiprand_kernel.dir/test_hiprand_kernel.cpp.o
+[ 91%] Built target stat_test_rocrand_generate
+[ 93%] Linking CXX executable ../test_hiprand_linkage
+[ 93%] Built target test_hiprand_linkage
+[ 94%] Linking CXX executable benchmark_rocrand_generate
+[ 94%] Built target benchmark_rocrand_generate
+[ 95%] Linking CXX executable test_hiprand_api
+[ 95%] Built target test_hiprand_api
+[ 97%] Linking CXX executable test_hiprand_kernel
+[ 97%] Built target test_hiprand_kernel
+[ 98%] Linking CXX executable ../stat_test_rocrand_kernel
+[ 98%] Built target stat_test_rocrand_kernel
+[100%] Linking CXX executable benchmark_rocrand_kernel
+[100%] Built target benchmark_rocrand_kernel
++ echo AH64_uh1
++ sudo -S make package
++ tee -a rocrand_build.log1
+[  2%] Built target mrg32k3a_precomputed_generator
+[  5%] Built target xorwow_precomputed_generator
+[  8%] Built target sobol_direction_vector_generator
+[ 10%] Built target rocrand
+[ 13%] Built target hiprand
+[ 16%] Built target test_rocrand_kernel_sobol32
+[ 18%] Built target test_rocrand_kernel_mtgp32
+[ 21%] Built target test_normal_distribution
+[ 24%] Built target test_rocrand_generate
+[ 27%] Built target test_rocrand_mtgp32_prng
+[ 29%] Built target test_hiprand_api
+[ 32%] Built target test_rocrand_kernel_philox4x32_10
+[ 35%] Built target test_hiprand_kernel
+[ 37%] Built target test_rocrand_basic
+[ 40%] Built target test_rocrand_generate_log_normal
+[ 43%] Built target test_rocrand_philox_prng
+[ 45%] Built target test_rocrand_generate_normal
+[ 48%] Built target test_rocrand_kernel_xorwow
+[ 51%] Built target test_rocrand_generate_poisson
+[ 54%] Built target test_rocrand_sobol32_qrng
+[ 56%] Built target test_rocrand_cpp_wrapper
+[ 59%] Built target test_poisson_distribution
+[ 62%] Built target test_rocrand_generator_type
+[ 64%] Built target test_rocrand_mrg32k3a_prng
+[ 67%] Built target test_rocrand_kernel_mrg32k3a
+[ 70%] Built target test_hiprand_cpp_wrapper
+[ 72%] Built target test_rocrand_xorwow_prng
+[ 75%] Built target test_log_normal_distribution
+[ 78%] Built target test_uniform_distribution
+[ 81%] Built target crush_test_rocrand
+[ 83%] Built target stat_test_rocrand_generate
+[ 86%] Built target stat_test_rocrand_kernel
+[ 90%] Built target test_rocrand_linkage
+[ 94%] Built target test_hiprand_linkage
+[ 97%] Built target benchmark_rocrand_kernel
+[100%] Built target benchmark_rocrand_generate
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: rocRAND
+CPack: - Install project: rocRAND
+CPack: Create package
+CPack: - package: /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/rocrand-1.8.2-Linux.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: rocRAND
+CPack: - Install project: rocRAND
+CPack: Create package
+CPack: - package: /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/rocrand-1.8.2-Linux.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: rocRAND
+CPack: - Install project: rocRAND
+CPack: Create package
+CPack: - package: /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build/rocrand-1.8.2-Linux.deb generated.
++ echo AH64_uh1
++ + sudo -S dpkg -i rocrand-1.8.2-Linux.deb
+tee -a rocrand_build.log2
+Selecting previously unselected package rocrand.
+(Reading database ... 285596 files and directories currently installed.)
+Preparing to unpack rocrand-1.8.2-Linux.deb ...
+Unpacking rocrand (1.8.2) ...
+Setting up rocrand (1.8.2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
++ ctest --output-on-failure
++ tee rocRAND_unittest.log
+Test project /home/taccuser/workspace/CompilerCQE_rocRAND_Full/build
+      Start  1: test_rocrand_basic
+ 1/26 Test  #1: test_rocrand_basic ..................   Passed    0.88 sec
+      Start  2: test_rocrand_generate_normal
+ 2/26 Test  #2: test_rocrand_generate_normal ........   Passed    0.77 sec
+      Start  3: test_rocrand_generate_log_normal
+ 3/26 Test  #3: test_rocrand_generate_log_normal ....   Passed    0.88 sec
+      Start  4: test_rocrand_generate
+ 4/26 Test  #4: test_rocrand_generate ...............   Passed    0.88 sec
+      Start  5: test_rocrand_kernel_mtgp32
+ 5/26 Test  #5: test_rocrand_kernel_mtgp32 ..........   Passed    0.77 sec
+      Start  6: test_rocrand_kernel_philox4x32_10
+ 6/26 Test  #6: test_rocrand_kernel_philox4x32_10 ...   Passed    0.64 sec
+      Start  7: test_normal_distribution
+ 7/26 Test  #7: test_normal_distribution ............   Passed    0.59 sec
+      Start  8: test_rocrand_kernel_sobol32
+ 8/26 Test  #8: test_rocrand_kernel_sobol32 .........   Passed    0.88 sec
+      Start  9: test_rocrand_generate_poisson
+ 9/26 Test  #9: test_rocrand_generate_poisson .......   Passed    0.62 sec
+      Start 10: test_rocrand_cpp_wrapper
+10/26 Test #10: test_rocrand_cpp_wrapper ............   Passed    0.84 sec
+      Start 11: test_poisson_distribution
+11/26 Test #11: test_poisson_distribution ...........   Passed    5.30 sec
+      Start 12: test_rocrand_generator_type
+12/26 Test #12: test_rocrand_generator_type .........   Passed    0.62 sec
+      Start 13: test_rocrand_kernel_mrg32k3a
+13/26 Test #13: test_rocrand_kernel_mrg32k3a ........   Passed    0.84 sec
+      Start 14: test_rocrand_xorwow_prng
+14/26 Test #14: test_rocrand_xorwow_prng ............   Passed    0.94 sec
+      Start 15: test_log_normal_distribution
+15/26 Test #15: test_log_normal_distribution ........   Passed    0.60 sec
+      Start 16: test_rocrand_mrg32k3a_prng
+16/26 Test #16: test_rocrand_mrg32k3a_prng ..........   Passed    1.24 sec
+      Start 17: test_rocrand_philox_prng
+17/26 Test #17: test_rocrand_philox_prng ............   Passed    0.91 sec
+      Start 18: test_rocrand_kernel_xorwow
+18/26 Test #18: test_rocrand_kernel_xorwow ..........   Passed    0.77 sec
+      Start 19: test_uniform_distribution
+19/26 Test #19: test_uniform_distribution ...........   Passed    0.84 sec
+      Start 20: test_rocrand_sobol32_qrng
+20/26 Test #20: test_rocrand_sobol32_qrng ...........   Passed    0.89 sec
+      Start 21: test_rocrand_mtgp32_prng
+21/26 Test #21: test_rocrand_mtgp32_prng ............   Passed    0.77 sec
+      Start 22: test_hiprand_api
+22/26 Test #22: test_hiprand_api ....................   Passed    0.89 sec
+      Start 23: test_hiprand_cpp_wrapper
+23/26 Test #23: test_hiprand_cpp_wrapper ............   Passed    0.85 sec
+      Start 24: test_hiprand_kernel
+24/26 Test #24: test_hiprand_kernel .................   Passed    0.77 sec
+      Start 25: test_rocrand_linkage
+25/26 Test #25: test_rocrand_linkage ................   Passed    0.59 sec
+      Start 26: test_hiprand_linkage
+26/26 Test #26: test_hiprand_linkage ................   Passed    0.59 sec
+
+100% tests passed, 0 tests failed out of 26
+
+Total Test time (real) =  25.16 sec
+Finished: SUCCESS

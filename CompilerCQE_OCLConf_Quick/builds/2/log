@@ -1,0 +1,14 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_OCLConf_Quick
+[CompilerCQE_OCLConf_Quick] $ /bin/sh -xe /tmp/jenkins8631924789476948592.sh
++ ls -al
+total 280900
+drwxrwxr-x  2 taccuser taccuser      4096 Mar 27 15:39 .
+drwxrwxr-x 24 taccuser taccuser      4096 Mar 27 15:37 ..
+-rw-rw-r--  1 taccuser taccuser  72023249 Jan 15 13:20 conformance-1730747-lnx64a.tar.gz
+-rw-rw-r--  1 taccuser taccuser  71861567 Jan 15 13:20 conformance-1730747-lnx.tar.gz
+-rw-rw-r--  1 taccuser taccuser 143742204 Jan 25 02:32 ocl-conformance.zip
++ cd conformance/2.0
+/tmp/jenkins8631924789476948592.sh: 5: cd: can't cd to conformance/2.0
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

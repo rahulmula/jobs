@@ -1,0 +1,124 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocFFT
+[CompilerCQE_rocFFT] $ /bin/sh -xe /tmp/jenkins8520291876686829900.sh
++ rm -rf rocFFT
++ git clone -b develop https://github.com/ROCmSoftwarePlatform/rocFFT.git
+Cloning into 'rocFFT'...
++ cd rocFFT
++ ./install.sh –icd
++ tee install_rocFFT.log
+[32mCreating project build directory in: [33m./build[0m
+~/workspace/CompilerCQE_rocFFT/rocFFT ~/workspace/CompilerCQE_rocFFT/rocFFT
+-- The CXX compiler identification is Clang 9.0.0
+-- Check for working CXX compiler: /opt/rocm/bin/hcc
+-- Check for working CXX compiler: /opt/rocm/bin/hcc -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- HCC compiler set; ROCm backend selected [ CXX=/opt/rocm/bin/hcc cmake ... ]
+-- Building with ROCm tools
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release
+Scanning dependencies of target rocfft-kernel-generator
+[  2%] Building CXX object library/src/device/generator/CMakeFiles/rocfft-kernel-generator.dir/generator.main.cpp.o
+[  5%] Building CXX object library/src/device/generator/CMakeFiles/rocfft-kernel-generator.dir/generator.file.cpp.o
+[  7%] Linking CXX executable rocfft-kernel-generator
+[  7%] Built target rocfft-kernel-generator
+[ 10%] Generator producing device kernels for rocfft-device
+Scanning dependencies of target rocfft-device
+[ 13%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/complex2real.cpp.o
+[ 15%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_4.cpp.o
+[ 18%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/bluestein.cpp.o
+[ 21%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/function_pool.cpp.o
+[ 23%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/transpose.cpp.o
+[ 26%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_large.cpp.o
+[ 28%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_2.cpp.o
+[ 31%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_0.cpp.o
+[ 34%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_large.cpp.o
+[ 39%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_3.cpp.o
+[ 47%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_2.cpp.o
+[ 47%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_1.cpp.o
+[ 39%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/real2complex.cpp.o
+[ 47%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_1.cpp.o
+[ 50%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_0.cpp.o
+[ 52%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_3.cpp.o
+[ 55%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_4.cpp.o
+[ 57%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_5.cpp.o
+[ 60%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_5.cpp.o
+[ 63%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_6.cpp.o
+[ 65%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_6.cpp.o
+[ 68%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_7.cpp.o
+[ 71%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_7.cpp.o
+[ 73%] Linking CXX shared library librocfft-device.so
+[ 73%] Built target rocfft-device
+Scanning dependencies of target rocfft
+[ 76%] Building CXX object library/src/CMakeFiles/rocfft.dir/plan.cpp.o
+[ 78%] Building CXX object library/src/CMakeFiles/rocfft.dir/kargs.cpp.o
+[ 81%] Building CXX object library/src/CMakeFiles/rocfft.dir/transform.cpp.o
+[ 84%] Building CXX object library/src/CMakeFiles/rocfft.dir/auxiliary.cpp.o
+[ 86%] Building CXX object library/src/CMakeFiles/rocfft.dir/powX.cpp.o
+[ 92%] Building CXX object library/src/CMakeFiles/rocfft.dir/get_radix.cpp.o
+[ 92%] Building CXX object library/src/CMakeFiles/rocfft.dir/hipfft.cpp.o
+[ 94%] Building CXX object library/src/CMakeFiles/rocfft.dir/repo.cpp.o
+[ 97%] Building CXX object library/src/CMakeFiles/rocfft.dir/twiddles.cpp.o
+[100%] Linking CXX shared library librocfft.so
+[100%] Built target rocfft
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/include
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/include/rocfft.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/include/hipfft.h
+-- Up-to-date: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/include
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/include/rocfft-export.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/include/rocfft-version.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/librocfft.so.0.9.1.12
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/librocfft.so.0
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/librocfft.so
+-- Set runtime path of "/home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/librocfft.so.0.9.1.12" to ""
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/cmake/rocfft/rocfft-targets.cmake
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/cmake/rocfft/rocfft-targets-release.cmake
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/cmake/rocfft/rocfft-config.cmake
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/cmake/rocfft/rocfft-config-version.cmake
+-- symlink: ../rocfft/lib/librocfft.so -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft.so
+-- symlink: ../../../rocfft/lib/cmake/rocfft/rocfft-config.cmake -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/cmake/rocfft/rocfft-config.cmake
+-- symlink: ../../../rocfft/lib/cmake/rocfft/rocfft-targets.cmake -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/cmake/rocfft/rocfft-targets.cmake
+-- symlink: ../../../rocfft/lib/cmake/rocfft/rocfft-config-version.cmake -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/cmake/rocfft/rocfft-config-version.cmake
+-- symlink: ../../../rocfft/lib/cmake/rocfft/rocfft-targets-release.cmake -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/cmake/rocfft/rocfft-targets-release.cmake
+-- symlink: ../rocfft/lib/librocfft.so.0 -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft.so.0
+-- symlink: ../rocfft/lib/librocfft.so.0.9.1.12 -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft.so.0.9.1.12
+-- symlink: ../rocfft/include/rocfft.h -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/include/rocfft.h
+-- symlink: ../rocfft/include/hipfft.h -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/include/hipfft.h
+-- symlink: ../rocfft/include/rocfft-export.h -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/include/rocfft-export.h
+-- symlink: ../rocfft/include/rocfft-version.h -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/include/rocfft-version.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/librocfft-device.so.0.9.1.12
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/librocfft-device.so.0
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/librocfft-device.so
+-- Set runtime path of "/home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/rocfft/lib/librocfft-device.so.0.9.1.12" to ""
+-- symlink: ../rocfft/lib/librocfft-device.so.0.9.1.12 -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft-device.so.0.9.1.12
+-- symlink: ../rocfft/lib/librocfft.so -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft.so
+-- symlink: ../../../rocfft/lib/cmake/rocfft/rocfft-config.cmake -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/cmake/rocfft/rocfft-config.cmake
+-- symlink: ../../../rocfft/lib/cmake/rocfft/rocfft-targets.cmake -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/cmake/rocfft/rocfft-targets.cmake
+-- symlink: ../../../rocfft/lib/cmake/rocfft/rocfft-config-version.cmake -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/cmake/rocfft/rocfft-config-version.cmake
+-- symlink: ../../../rocfft/lib/cmake/rocfft/rocfft-targets-release.cmake -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/cmake/rocfft/rocfft-targets-release.cmake
+-- symlink: ../rocfft/lib/librocfft.so.0 -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft.so.0
+-- symlink: ../rocfft/lib/librocfft-device.so -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft-device.so
+-- symlink: ../rocfft/lib/librocfft.so.0.9.1.12 -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft.so.0.9.1.12
+-- symlink: ../rocfft/lib/librocfft-device.so.0 -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/lib/librocfft-device.so.0
+-- symlink: ../rocfft/include/rocfft.h -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/include/rocfft.h
+-- symlink: ../rocfft/include/hipfft.h -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/include/hipfft.h
+-- symlink: ../rocfft/include/rocfft-export.h -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/include/rocfft-export.h
+-- symlink: ../rocfft/include/rocfft-version.h -> /home/taccuser/workspace/CompilerCQE_rocFFT/rocFFT/build/release/rocfft-install/include/rocfft-version.h
+~/workspace/CompilerCQE_rocFFT/rocFFT
++ cd build/release/clients/staging/
+/tmp/jenkins8520291876686829900.sh: 6: cd: can't cd to build/release/clients/staging/
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

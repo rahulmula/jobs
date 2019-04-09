@@ -1,0 +1,48 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+cd ~/Documents;cd compilerNightly
+git clone https://github.com/ROCmSoftwarePlatform/MIOpen;cd MIOpen
+cmake -P install_deps.cmake
+mkdir build; cd build;
+cmake -DMIOPEN_BACKEND=OpenCL -DCMAKE_INSTALL_PREFIX=/opt/rocm/bin..
+make
+make MIOpenDriver
+sudo make install
+#make check
+
+cd /opt/rocm
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/rocm/miopen/lib
+./bin/MIOpenDriver conv -W 32 -H 32 -c 3 -k 32 -x 5 -y 5 -p 2 -q 2
+./bin/MIOpenDriver conv -W 32 -H 32 -c 3 -k 32 -x 5 -y 5 -p 2 -q 2 -s 0 -F 1
+./bin/MIOpenDriver lrn -t 1
+./bin/MIOpenDriver pool
+./bin/MIOpenDriver bnorm -F 1 -n 32 -c 512 -H 16 -W 16 -m 1 -s 1
+./bin/MIOpenDriver rnn -n 4,4,4,3,3,3,2,2,2,1 -k 10 -H 512 -W 1024 -l 3 -F 0 -b 0 -r 1 -m lstm
+./bin/MIOpenDriver conv -W 341 -H 79 -c 32 -n 4 -k 32 -y 5 -x 10 -p 0 -q 0 -u 2 -v 2 -t 1 -V 0 -i 1
+./bin/MIOpenDriver conv -n 1 -c 512 -H 256 -W 256 -k 6 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+./bin/MIOpenDriver conv -n 1 -c 64 -H 130 -W 130 -k 3 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

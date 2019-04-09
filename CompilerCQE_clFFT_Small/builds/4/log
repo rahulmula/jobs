@@ -1,0 +1,1783 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_clFFT_Small
+[CompilerCQE_clFFT_Small] $ /bin/sh -xe /tmp/jenkins6277782880239204267.sh
++ sudo apt-get install libgtest-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.15.0-45 linux-headers-4.15.0-45-generic
+  linux-image-4.15.0-45-generic linux-modules-4.15.0-45-generic
+  linux-modules-extra-4.15.0-45-generic
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  libgtest-dev
+0 upgraded, 1 newly installed, 0 to remove and 102 not upgraded.
+Need to get 198 kB of archives.
+After this operation, 1,361 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 libgtest-dev amd64 1.7.0-4ubuntu1 [198 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 198 kB in 1s (124 kB/s)
+Selecting previously unselected package libgtest-dev:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 283519 files and directories currently installed.)
+Preparing to unpack .../libgtest-dev_1.7.0-4ubuntu1_amd64.deb ...
+Unpacking libgtest-dev:amd64 (1.7.0-4ubuntu1) ...
+Setting up libgtest-dev:amd64 (1.7.0-4ubuntu1) ...
++ sudo apt-get install fftw3 fftw3-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libfftw3-dev is already the newest version (3.3.4-2ubuntu1).
+libfftw3-3 is already the newest version (3.3.4-2ubuntu1).
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.15.0-45 linux-headers-4.15.0-45-generic
+  linux-image-4.15.0-45-generic linux-modules-4.15.0-45-generic
+  linux-modules-extra-4.15.0-45-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 102 not upgraded.
++ cd /home/taccuser/Documents
++ cd compilerNightly
++ rm -rf clFFT
++ git clone https://github.com/clMathLibraries/clFFT
+Cloning into 'clFFT'...
++ cd clFFT/src
++ mkdir build
++ cd build
++ cmake -DOpenCL_INCLUDE_DIR=/opt/rocm/opencl/include -DOpenCL_LIBRARY=/opt/rocm/opencl/lib/x86_64/libOpenCL.so -DUNIT_TEST=ON -DBUILD_TEST=ON -DBUILD_CLIENT=ON ..
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- UNICODE feature disabled on linux
+-- 64bit build - FIND_LIBRARY_USE_LIB64_PATHS TRUE
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106400
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:142 (find_package)
+
+
+-- Boost version: 1.64.0
+-- Found the following Boost libraries:
+--   program_options
+-- Boost_PROGRAM_OPTIONS_LIBRARY: /usr/local/lib/libboost_program_options.a
+-- Looking for CL_VERSION_2_0
+-- Looking for CL_VERSION_2_0 - found
+-- Found OpenCL: /opt/rocm/opencl/lib/x86_64/libOpenCL.so (found version "2.0") 
+-- Found FFTW: /usr/lib/x86_64-linux-gnu/libfftw3f.so;/usr/lib/x86_64-linux-gnu/libfftw3.so  
+-- Detected GNU fortran compiler.
+-- CMAKE_CXX_COMPILER flags: -m64 -pthread 
+-- CMAKE_CXX_COMPILER debug flags: -g
+-- CMAKE_CXX_COMPILER release flags: -O3 -DNDEBUG
+-- CMAKE_CXX_COMPILER relwithdebinfo flags: -O2 -g -DNDEBUG
+-- CMAKE_EXE_LINKER link flags: 
+FFT callback client will NOT be built
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/Documents/compilerNightly/clFFT/src/build
++ make
+Scanning dependencies of target gtest-external
+[  1%] Creating directories for 'gtest-external'
+[  3%] Performing download step (download, verify and extract) for 'gtest-external'
+-- downloading...
+     src='https://github.com/google/googletest/archive/release-1.7.0.zip'
+     dst='/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/release-1.7.0.zip'
+     timeout='none'
+-- downloading... done
+-- verifying file...
+     file='/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/release-1.7.0.zip'
+-- verifying file... done
+-- extracting...
+     src='/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/release-1.7.0.zip'
+     dst='/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[  5%] No patch step for 'gtest-external'
+[  6%] No update step for 'gtest-external'
+[  8%] Performing configure step for 'gtest-external'
+loading initial cache file /home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/tmp/gtest-external-cache-Release.cmake
+-- The CXX compiler identification is GNU 5.4.0
+-- The C compiler identification is GNU 5.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external-build
+[ 10%] Performing build step for 'gtest-external'
+Scanning dependencies of target gtest
+[ 25%] Building CXX object CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 50%] Linking CXX static library libgtest.a
+[ 50%] Built target gtest
+Scanning dependencies of target gtest_main
+[ 75%] Building CXX object CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[100%] Linking CXX static library libgtest_main.a
+[100%] Built target gtest_main
+[ 11%] No install step for 'gtest-external'
+[ 13%] Completed 'gtest-external'
+[ 13%] Built target gtest-external
+Scanning dependencies of target clFFT
+[ 15%] Building CXX object library/CMakeFiles/clFFT.dir/transform.cpp.o
+[ 16%] Building CXX object library/CMakeFiles/clFFT.dir/accessors.cpp.o
+[ 18%] Building CXX object library/CMakeFiles/clFFT.dir/plan.cpp.o
+[ 20%] Building CXX object library/CMakeFiles/clFFT.dir/repo.cpp.o
+[ 21%] Building CXX object library/CMakeFiles/clFFT.dir/generator.stockham.cpp.o
+[ 23%] Building CXX object library/CMakeFiles/clFFT.dir/generator.transpose.gcn.cpp.o
+[ 25%] Building CXX object library/CMakeFiles/clFFT.dir/generator.transpose.cpp.o
+[ 26%] Building CXX object library/CMakeFiles/clFFT.dir/action.transpose.cpp.o
+[ 28%] Building CXX object library/CMakeFiles/clFFT.dir/generator.copy.cpp.o
+[ 30%] Building CXX object library/CMakeFiles/clFFT.dir/lifetime.cpp.o
+[ 31%] Building CXX object library/CMakeFiles/clFFT.dir/fft_binary_lookup.cpp.o
+[ 33%] Building C object library/CMakeFiles/clFFT.dir/md5sum.c.o
+[ 35%] Building CXX object library/CMakeFiles/clFFT.dir/enqueue.cpp.o
+[ 36%] Building CXX object library/CMakeFiles/clFFT.dir/stdafx.cpp.o
+[ 38%] Linking CXX shared library libclFFT.so
+[ 38%] Built target clFFT
+Scanning dependencies of target clFFT-client
+[ 40%] Building CXX object client/CMakeFiles/clFFT-client.dir/client.cpp.o
+[ 41%] Building CXX object client/CMakeFiles/clFFT-client.dir/openCL.misc.cpp.o
+/home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp: In function ‘void createOpenCLCommandQueue(_cl_context*&, cl_uint, _cl_command_queue*&, std::vector<_cl_device_id*>, size_t, cl_uint, _cl_mem**, size_t, cl_uint, _cl_mem**)’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:533:22: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+     commandQueue = ::clCreateCommandQueue( context, devices[0], commandQueueFlags, &status );
+                      ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/client/../include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:533:22: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+     commandQueue = ::clCreateCommandQueue( context, devices[0], commandQueueFlags, &status );
+                      ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/client/../include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:533:92: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+     commandQueue = ::clCreateCommandQueue( context, devices[0], commandQueueFlags, &status );
+                                                                                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/client/../include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 43%] Building CXX object client/CMakeFiles/clFFT-client.dir/stdafx.cpp.o
+[ 45%] Linking CXX executable ../staging/clFFT-client
+[ 45%] Built target clFFT-client
+Scanning dependencies of target StatTimer
+[ 46%] Building CXX object statTimer/CMakeFiles/StatTimer.dir/statisticalTimer.CPU.cpp.o
+[ 48%] Building CXX object statTimer/CMakeFiles/StatTimer.dir/statisticalTimer.GPU.cpp.o
+[ 50%] Building CXX object statTimer/CMakeFiles/StatTimer.dir/statisticalTimer.extern.cpp.o
+[ 51%] Building CXX object statTimer/CMakeFiles/StatTimer.dir/stdafx.cpp.o
+[ 53%] Linking CXX shared library libStatTimer.so
+[ 53%] Built target StatTimer
+Scanning dependencies of target Test
+[ 55%] Building CXX object tests/CMakeFiles/Test.dir/test_constants.cpp.o
+[ 56%] Building CXX object tests/CMakeFiles/Test.dir/buffer_memory.cpp.o
+[ 58%] Building CXX object tests/CMakeFiles/Test.dir/buffer.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1929:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:18:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp: In member function ‘virtual void test_harness_tests_buffer_equivalence_operator_returns_correct_result_with_pointwise_compare_Test::TestBody()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:259:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 == thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:264:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 == thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:269:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 == thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:286:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_3 == thing_4 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp: In member function ‘virtual void test_harness_tests_buffer_inequivalence_operator_returns_correct_result_with_pointwise_compare_Test::TestBody()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:320:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 != thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:327:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 != thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp: In member function ‘virtual void test_harness_tests_buffer_equivalence_operator_returns_correct_result_with_rms_Test::TestBody()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:360:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 == thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:365:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 == thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:370:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 == thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:387:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_3 == thing_4 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp: In member function ‘virtual void test_harness_tests_buffer_inequivalence_operator_returns_correct_result_with_rms_Test::TestBody()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:421:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 != thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:428:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 != thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp: In member function ‘virtual void test_harness_tests_buffer_equivalence_should_fail_given_non_matching_complexities_Test::TestBody()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:451:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_1 == thing_2 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:455:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_3 == thing_4 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:459:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_5 == thing_6 );
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/internal/gtest-internal.h:133:55: warning: converting ‘false’ to pointer type for argument 1 of ‘char testing::internal::IsNullLiteralHelper(testing::internal::Secret*)’ [-Wconversion-null]
+     (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)
+                                                       ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/build/gtest-external-prefix/src/gtest-external/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/buffer.cpp:463:3: note: in expansion of macro ‘EXPECT_EQ’
+   EXPECT_EQ( false, thing_7 == thing_8 );
+   ^
+[ 60%] Building CXX object tests/CMakeFiles/Test.dir/unit_test.cpp.o
+[ 61%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_common.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 63%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_pow2.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:75:37:   required from ‘void power2::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:80:102:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:75:37:   required from ‘void power2::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:86:103:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 65%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_pow3.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:75:37:   required from ‘void power3::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:80:102:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:75:37:   required from ‘void power3::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:86:103:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 66%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_pow5.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:75:37:   required from ‘void power5::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:80:102:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:75:37:   required from ‘void power5::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:86:103:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 68%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_pow7.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:75:44:   required from ‘void power7::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:80:109:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:75:44:   required from ‘void power7::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:86:110:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 70%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_mixed_radices.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:61:38:   required from ‘void mixed_radix_complex_to_complex(size_t) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:71:77:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:63:27:   required from ‘void complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:61:38:   required from ‘void mixed_radix_complex_to_complex(size_t) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:77:78:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_radices.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 71%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_random.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:30:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:30:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:30:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:579:27:   required from ‘void real_to_complex(data_pattern, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:631:100:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:30:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:30:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:30:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:579:27:   required from ‘void real_to_complex(data_pattern, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:677:100:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:30:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:30:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_random.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 73%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_directed.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:29:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:26:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:29:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:26:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:29:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:579:27:   required from ‘void real_to_complex(data_pattern, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:520:26:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:26:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:29:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:26:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:29:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:26:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:29:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:579:27:   required from ‘void real_to_complex(data_pattern, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, placeness::placeness_t, T) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:566:26:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:26:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:29:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:26:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:29:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_directed.cpp:26:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 75%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_mixed_callback.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:158:50:   required from ‘void callback_mixed::mixed_radix_complex_to_complex_precallback(size_t) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:168:89:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:158:50:   required from ‘void callback_mixed::mixed_radix_complex_to_complex_precallback(size_t) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:174:90:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_mixed_callback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 76%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_pow2_precallback.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:75:49:   required from ‘void precallback_pow2::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:80:102:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:75:49:   required from ‘void precallback_pow2::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:86:103:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow2_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 78%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_pow3_precallback.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:75:49:   required from ‘void precallback_power3::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:80:102:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:75:49:   required from ‘void precallback_power3::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:86:103:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow3_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 80%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_pow5_precallback.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:75:49:   required from ‘void precallback_power5::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:80:102:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:75:49:   required from ‘void precallback_power5::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:86:103:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow5_precallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 81%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_pow7_precallback.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:74:52:   required from ‘void precallback_power7::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:79:105:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:137:27:   required from ‘void precallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:74:52:   required from ‘void precallback_power7::normal_1D_forward_in_place_complex_planar_to_complex_planar() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:85:106:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:22:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_pow7_precallback.cpp:20:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 83%] Building CXX object tests/CMakeFiles/Test.dir/accuracy_test_postcallback.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In member function ‘void clfft<T, cl_T>::initialize_openCL()’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:8: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+        ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = float; cl_T = float]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = float; cl_T = float; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:224:27:   required from ‘void postcallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = float; cl_T = float; fftw_T = float [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:74:50:   required from ‘void postcallback::pow2_normal_1D_forward_in_place_complex_interleaved_to_complex_interleaved() [with T = float; cl_T = float; fftw_T = float [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:79:117:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h: In instantiation of ‘void clfft<T, cl_T>::initialize_openCL() [with T = double; cl_T = double]’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:222:20:   required from ‘clfft<T, cl_T>::clfft(clfftDim, const size_t*, const size_t*, const size_t*, size_t, size_t, size_t, clfftLayout, clfftLayout, clfftResultLocation) [with T = double; cl_T = double; clfftDim = clfftDim_; size_t = long unsigned int; clfftLayout = clfftLayout_; clfftResultLocation = clfftResultLocation_]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_common.h:224:27:   required from ‘void postcallback_complex_to_complex(data_pattern, direction::direction_t, std::vector<long unsigned int>, size_t, std::vector<long unsigned int>, std::vector<long unsigned int>, size_t, size_t, layout::buffer_layout_t, layout::buffer_layout_t, placeness::placeness_t, T, bool) [with T = double; cl_T = double; fftw_T = double [2]; size_t = long unsigned int]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:74:50:   required from ‘void postcallback::pow2_normal_1D_forward_in_place_complex_interleaved_to_complex_interleaved() [with T = double; cl_T = double; fftw_T = double [2]]’
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:85:118:   required from here
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:23:0:
+/home/taccuser/Documents/compilerNightly/clFFT/src/tests/cl_transform.h:285:28: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+      ::clCreateCommandQueue( context.get( ), device_id[ 0 ], commandQueueFlags, &status ) );
+                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/test_constants.h:22,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/tests/accuracy_test_postcallback.cpp:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 85%] Building CXX object tests/CMakeFiles/Test.dir/gtest_main.cpp.o
+[ 86%] Building CXX object tests/CMakeFiles/Test.dir/__/client/openCL.misc.cpp.o
+/home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp: In function ‘void createOpenCLCommandQueue(_cl_context*&, cl_uint, _cl_command_queue*&, std::vector<_cl_device_id*>, size_t, cl_uint, _cl_mem**, size_t, cl_uint, _cl_mem**)’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:533:22: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+     commandQueue = ::clCreateCommandQueue( context, devices[0], commandQueueFlags, &status );
+                      ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:533:22: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+     commandQueue = ::clCreateCommandQueue( context, devices[0], commandQueueFlags, &status );
+                      ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+/home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:533:92: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+     commandQueue = ::clCreateCommandQueue( context, devices[0], commandQueueFlags, &status );
+                                                                                            ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/client/openCL.misc.cpp:27:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 88%] Building C object tests/CMakeFiles/Test.dir/c-compliance.c.o
+[ 90%] Linking CXX executable ../staging/Test
+[ 90%] Built target Test
+Scanning dependencies of target example_examples_fft3d
+[ 91%] Building C object examples/CMakeFiles/example_examples_fft3d.dir/fft3d.c.o
+/home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft3d.c: In function ‘main’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft3d.c:63:5: warning: ‘clCreateCommandQueue’ is deprecated [-Wdeprecated-declarations]
+     queue = clCreateCommandQueue( ctx, device, 0, &err );
+     ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft3d.c:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 93%] Linking C executable examples/fft3d
+[ 93%] Built target example_examples_fft3d
+Scanning dependencies of target example_examples_fft1d
+[ 95%] Building C object examples/CMakeFiles/example_examples_fft1d.dir/fft1d.c.o
+/home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft1d.c: In function ‘main’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft1d.c:62:5: warning: ‘clCreateCommandQueue’ is deprecated [-Wdeprecated-declarations]
+     queue = clCreateCommandQueue( ctx, device, 0, &err );
+     ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft1d.c:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[ 96%] Linking C executable examples/fft1d
+[ 96%] Built target example_examples_fft1d
+Scanning dependencies of target example_examples_fft2d
+[ 98%] Building C object examples/CMakeFiles/example_examples_fft2d.dir/fft2d.c.o
+/home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft2d.c: In function ‘main’:
+/home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft2d.c:63:5: warning: ‘clCreateCommandQueue’ is deprecated [-Wdeprecated-declarations]
+     queue = clCreateCommandQueue( ctx, device, 0, &err );
+     ^
+In file included from /home/taccuser/Documents/compilerNightly/clFFT/src/include/clFFT.h:33:0,
+                 from /home/taccuser/Documents/compilerNightly/clFFT/src/examples/fft2d.c:21:
+/opt/rocm/opencl/include/CL/cl.h:1364:1: note: declared here
+ clCreateCommandQueue(cl_context                     /* context */,
+ ^
+[100%] Linking C executable examples/fft2d
+[100%] Built target example_examples_fft2d
++ ./Test -r 5 -v --gtest_filter=*random*
+/tmp/jenkins6277782880239204267.sh: 10: /tmp/jenkins6277782880239204267.sh: ./Test: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

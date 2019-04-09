@@ -1,0 +1,35 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>hipSPARSE Test suite</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+cd ~/Documents;cd compilerNightly
+rm -rf hipSPARSE/
+git clone -b master https://github.com/ROCmSoftwarePlatform/hipSPARSE.git
+chmod 777 hipSPARSE
+cd hipSPARSE/
+./install.sh -icd 2&gt;&amp;1 | tee hipsparse-build.log
+cd build/release/clients/tests
+#./hipsparse-test 2&gt;&amp;1 | tee $current/hipsparse-test.log &amp;&amp; exit 1 || exit 0
+./hipsparse-test 2&gt;&amp;1 | tee hipsparse-test.log</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

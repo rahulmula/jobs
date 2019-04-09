@@ -1,0 +1,13 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocFFT
+[CompilerCQE_rocFFT] $ /bin/sh -xe /tmp/jenkins5268507405814610113.sh
++ git clone -b develop https://github.com/ROCmSoftwarePlatform/rocFFT.git
+Cloning into 'rocFFT'...
++ cd rocFFT
++ ./install –icd
+/tmp/jenkins5268507405814610113.sh: 4: /tmp/jenkins5268507405814610113.sh: ./install: not found
++ tee install_rocFFT.log
++ cd /build/release/client/staging/
+/tmp/jenkins5268507405814610113.sh: 5: cd: can't cd to /build/release/client/staging/
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

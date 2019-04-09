@@ -1,0 +1,317 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_MIOpenGEMM_Small
+[CompilerCQE_MIOpenGEMM_Small] $ /bin/sh -xe /tmp/jenkins2321157048326026640.sh
++ rm -rf rocm-cmake
++ whoami
+taccuser
++ git clone https://github.com/RadeonOpenCompute/rocm-cmake
+Cloning into 'rocm-cmake'...
++ cd rocm-cmake
++ mkdir build
++ cd build
++ cmake ..
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_MIOpenGEMM_Small/rocm-cmake/build
++ sudo cmake --build . --target install
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /opt/rocm/./share
+-- Up-to-date: /opt/rocm/./share/rocm
+-- Up-to-date: /opt/rocm/./share/rocm/cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMSetupVersion.cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMInstallSymlinks.cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMConfig.cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMAnalyzers.cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMPackageConfigHelpers.cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMCppCheck.cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMInstallTargets.cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMCreatePackage.cmake
+-- Installing: /opt/rocm/./share/rocm/cmake/ROCMClangTidy.cmake
++ cd ../../
++ git clone https://github.com/ROCmSoftwarePlatform/MIOpenGEMM
+Cloning into 'MIOpenGEMM'...
++ cd MIOpenGEMM
++ mkdir build
++ cd build
++ cmake ..
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OPENCL: /opt/rocm/opencl/lib/x86_64/libOpenCL.so  
+-- Found LATEX: /usr/bin/latex   
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_MIOpenGEMM_Small/MIOpenGEMM/build
++ make miopengemm
+Scanning dependencies of target miopengemm
+[  2%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/bundle.cpp.o
+[  4%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/solution.cpp.o
+[  6%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/stringutilbase.cpp.o
+[  8%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/tinyone.cpp.o
+[ 11%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/enums.cpp.o
+[ 13%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/findparams.cpp.o
+[ 15%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/timer.cpp.o
+[ 17%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/kernelcache.cpp.o
+[ 20%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/miogemm.cpp.o
+[ 22%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/tinytwo.cpp.o
+[ 24%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/cpugemm.cpp.o
+[ 26%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/nearest.cpp.o
+[ 28%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/hyperparams.cpp.o
+[ 31%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/basegenerator.cpp.o
+[ 33%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/standalone.cpp.o
+[ 35%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/tiling.cpp.o
+[ 37%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/bylinegenerator.cpp.o
+[ 40%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/architests.cpp.o
+[ 42%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/hint.cpp.o
+[ 44%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/betacgenerator.cpp.o
+[ 46%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/redirection.cpp.o
+[ 48%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/copygenerator.cpp.o
+[ 51%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/geometry.cpp.o
+[ 53%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/macgrid.cpp.o
+[ 55%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/gemm.cpp.o
+[ 57%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/programs.cpp.o
+[ 60%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/tinyzero.cpp.o
+[ 62%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/alphagenerator.cpp.o
+[ 64%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/programcacher.cpp.o
+[ 66%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/normalformgenerator.cpp.o
+[ 68%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/floattostring.cpp.o
+[ 71%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/graph.cpp.o
+[ 73%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/oclutil.cpp.o
+[ 75%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/randomutil.cpp.o
+[ 77%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/error.cpp.o
+[ 80%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/derivedparams.cpp.o
+[ 82%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/setabcw.cpp.o
+[ 84%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/prepgenerator.cpp.o
+[ 86%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/accuracytests.cpp.o
+[ 88%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/kernelstring.cpp.o
+[ 91%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/outputwriter.cpp.o
+[ 93%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/geometries.cpp.o
+[ 95%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/apitest.cpp.o
+[ 97%] Building CXX object miopengemm/CMakeFiles/miopengemm.dir/src/kernelcachemerge.cpp.o
+[100%] Linking CXX shared library libmiopengemm.so
+[100%] Built target miopengemm
++ sudo make install
+[100%] Built target miopengemm
+Install the project...
+-- Install configuration: ""
+-- Installing: /opt/rocm/miopengemm/include
+-- Installing: /opt/rocm/miopengemm/include/miopengemm
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/derivedparams.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/graph.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/outputwriter.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/kernelcachemerge.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/tinyzero.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/error.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/apitest.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/kernelstring.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/prepgenerator.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/solution.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/geometry.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/tinyone.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/hint.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/hyperparams.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/standalone.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/randomutil.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/programs.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/normalformgenerator.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/copygenerator.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/gemm.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/programcacher.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/bylinegenerator.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/platform.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/betacgenerator.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/tiling.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/miogemm.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/floattostring.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/basegenerator.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/timer.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/findparams.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/enums.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/geometries.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/setabcw.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/alphagenerator.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/oclutil.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/nearest.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/stringutilbase.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/macgrid.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/cpugemm.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/bundle.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/accuracytests.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/architests.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/kernelcache.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/redirection.hpp
+-- Installing: /opt/rocm/miopengemm/include/miopengemm/tinytwo.hpp
+-- Installing: /opt/rocm/miopengemm/lib/libmiopengemm.so
+-- Set runtime path of "/opt/rocm/miopengemm/lib/libmiopengemm.so" to ""
+-- Installing: /opt/rocm/miopengemm/lib/cmake/miopengemm/miopengemm-targets.cmake
+-- Installing: /opt/rocm/miopengemm/lib/cmake/miopengemm/miopengemm-targets-noconfig.cmake
+-- Installing: /opt/rocm/miopengemm/lib/cmake/miopengemm/miopengemm-config.cmake
+-- Installing: /opt/rocm/miopengemm/lib/cmake/miopengemm/miopengemm-config-version.cmake
+-- symlink: ../../../miopengemm/lib/cmake/miopengemm/miopengemm-targets.cmake -> /opt/rocm/lib/cmake/miopengemm/miopengemm-targets.cmake
+-- symlink: ../../../miopengemm/lib/cmake/miopengemm/miopengemm-targets-noconfig.cmake -> /opt/rocm/lib/cmake/miopengemm/miopengemm-targets-noconfig.cmake
+-- symlink: ../../../miopengemm/lib/cmake/miopengemm/miopengemm-config.cmake -> /opt/rocm/lib/cmake/miopengemm/miopengemm-config.cmake
+-- symlink: ../../../miopengemm/lib/cmake/miopengemm/miopengemm-config-version.cmake -> /opt/rocm/lib/cmake/miopengemm/miopengemm-config-version.cmake
+-- symlink: ../miopengemm/lib/libmiopengemm.so -> /opt/rocm/lib/libmiopengemm.so
+-- symlink: ../../miopengemm/include/miopengemm/derivedparams.hpp -> /opt/rocm/include/miopengemm/derivedparams.hpp
+-- symlink: ../../miopengemm/include/miopengemm/graph.hpp -> /opt/rocm/include/miopengemm/graph.hpp
+-- symlink: ../../miopengemm/include/miopengemm/outputwriter.hpp -> /opt/rocm/include/miopengemm/outputwriter.hpp
+-- symlink: ../../miopengemm/include/miopengemm/kernelcachemerge.hpp -> /opt/rocm/include/miopengemm/kernelcachemerge.hpp
+-- symlink: ../../miopengemm/include/miopengemm/tinyzero.hpp -> /opt/rocm/include/miopengemm/tinyzero.hpp
+-- symlink: ../../miopengemm/include/miopengemm/error.hpp -> /opt/rocm/include/miopengemm/error.hpp
+-- symlink: ../../miopengemm/include/miopengemm/apitest.hpp -> /opt/rocm/include/miopengemm/apitest.hpp
+-- symlink: ../../miopengemm/include/miopengemm/kernelstring.hpp -> /opt/rocm/include/miopengemm/kernelstring.hpp
+-- symlink: ../../miopengemm/include/miopengemm/prepgenerator.hpp -> /opt/rocm/include/miopengemm/prepgenerator.hpp
+-- symlink: ../../miopengemm/include/miopengemm/solution.hpp -> /opt/rocm/include/miopengemm/solution.hpp
+-- symlink: ../../miopengemm/include/miopengemm/geometry.hpp -> /opt/rocm/include/miopengemm/geometry.hpp
+-- symlink: ../../miopengemm/include/miopengemm/tinyone.hpp -> /opt/rocm/include/miopengemm/tinyone.hpp
+-- symlink: ../../miopengemm/include/miopengemm/hint.hpp -> /opt/rocm/include/miopengemm/hint.hpp
+-- symlink: ../../miopengemm/include/miopengemm/hyperparams.hpp -> /opt/rocm/include/miopengemm/hyperparams.hpp
+-- symlink: ../../miopengemm/include/miopengemm/standalone.hpp -> /opt/rocm/include/miopengemm/standalone.hpp
+-- symlink: ../../miopengemm/include/miopengemm/randomutil.hpp -> /opt/rocm/include/miopengemm/randomutil.hpp
+-- symlink: ../../miopengemm/include/miopengemm/programs.hpp -> /opt/rocm/include/miopengemm/programs.hpp
+-- symlink: ../../miopengemm/include/miopengemm/normalformgenerator.hpp -> /opt/rocm/include/miopengemm/normalformgenerator.hpp
+-- symlink: ../../miopengemm/include/miopengemm/copygenerator.hpp -> /opt/rocm/include/miopengemm/copygenerator.hpp
+-- symlink: ../../miopengemm/include/miopengemm/gemm.hpp -> /opt/rocm/include/miopengemm/gemm.hpp
+-- symlink: ../../miopengemm/include/miopengemm/programcacher.hpp -> /opt/rocm/include/miopengemm/programcacher.hpp
+-- symlink: ../../miopengemm/include/miopengemm/bylinegenerator.hpp -> /opt/rocm/include/miopengemm/bylinegenerator.hpp
+-- symlink: ../../miopengemm/include/miopengemm/platform.hpp -> /opt/rocm/include/miopengemm/platform.hpp
+-- symlink: ../../miopengemm/include/miopengemm/betacgenerator.hpp -> /opt/rocm/include/miopengemm/betacgenerator.hpp
+-- symlink: ../../miopengemm/include/miopengemm/tiling.hpp -> /opt/rocm/include/miopengemm/tiling.hpp
+-- symlink: ../../miopengemm/include/miopengemm/miogemm.hpp -> /opt/rocm/include/miopengemm/miogemm.hpp
+-- symlink: ../../miopengemm/include/miopengemm/floattostring.hpp -> /opt/rocm/include/miopengemm/floattostring.hpp
+-- symlink: ../../miopengemm/include/miopengemm/basegenerator.hpp -> /opt/rocm/include/miopengemm/basegenerator.hpp
+-- symlink: ../../miopengemm/include/miopengemm/timer.hpp -> /opt/rocm/include/miopengemm/timer.hpp
+-- symlink: ../../miopengemm/include/miopengemm/findparams.hpp -> /opt/rocm/include/miopengemm/findparams.hpp
+-- symlink: ../../miopengemm/include/miopengemm/enums.hpp -> /opt/rocm/include/miopengemm/enums.hpp
+-- symlink: ../../miopengemm/include/miopengemm/geometries.hpp -> /opt/rocm/include/miopengemm/geometries.hpp
+-- symlink: ../../miopengemm/include/miopengemm/setabcw.hpp -> /opt/rocm/include/miopengemm/setabcw.hpp
+-- symlink: ../../miopengemm/include/miopengemm/alphagenerator.hpp -> /opt/rocm/include/miopengemm/alphagenerator.hpp
+-- symlink: ../../miopengemm/include/miopengemm/oclutil.hpp -> /opt/rocm/include/miopengemm/oclutil.hpp
+-- symlink: ../../miopengemm/include/miopengemm/nearest.hpp -> /opt/rocm/include/miopengemm/nearest.hpp
+-- symlink: ../../miopengemm/include/miopengemm/stringutilbase.hpp -> /opt/rocm/include/miopengemm/stringutilbase.hpp
+-- symlink: ../../miopengemm/include/miopengemm/macgrid.hpp -> /opt/rocm/include/miopengemm/macgrid.hpp
+-- symlink: ../../miopengemm/include/miopengemm/cpugemm.hpp -> /opt/rocm/include/miopengemm/cpugemm.hpp
+-- symlink: ../../miopengemm/include/miopengemm/bundle.hpp -> /opt/rocm/include/miopengemm/bundle.hpp
+-- symlink: ../../miopengemm/include/miopengemm/accuracytests.hpp -> /opt/rocm/include/miopengemm/accuracytests.hpp
+-- symlink: ../../miopengemm/include/miopengemm/architests.hpp -> /opt/rocm/include/miopengemm/architests.hpp
+-- symlink: ../../miopengemm/include/miopengemm/kernelcache.hpp -> /opt/rocm/include/miopengemm/kernelcache.hpp
+-- symlink: ../../miopengemm/include/miopengemm/redirection.hpp -> /opt/rocm/include/miopengemm/redirection.hpp
+-- symlink: ../../miopengemm/include/miopengemm/tinytwo.hpp -> /opt/rocm/include/miopengemm/tinytwo.hpp
++ make check
+[ 91%] Built target miopengemm
+Scanning dependencies of target smallgeometrytests
+[ 93%] Building CXX object tests/CMakeFiles/smallgeometrytests.dir/smallgeometrytests.cpp.o
+[ 95%] Linking CXX executable smallgeometrytests
+[ 95%] Built target smallgeometrytests
+Scanning dependencies of target test_gemm0
+[ 97%] Building CXX object tests/CMakeFiles/test_gemm0.dir/test_gemm0.cpp.o
+[100%] Linking CXX executable test_gemm0
+[100%] Built target test_gemm0
+Scanning dependencies of target tests
+[100%] Built target tests
+Scanning dependencies of target check
+Test project /home/taccuser/workspace/CompilerCQE_MIOpenGEMM_Small/MIOpenGEMM/build/tests
+    Start 1: smallgeometrytests
+1/2 Test #1: smallgeometrytests ...............   Passed   20.77 sec
+    Start 2: test_gemm0
+2/2 Test #2: test_gemm0 .......................   Passed    5.07 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =  25.85 sec
+[100%] Built target check
++ make examples
+[ 58%] Built target miopengemm
+Scanning dependencies of target initialisationdemo
+[ 59%] Building CXX object examples/CMakeFiles/initialisationdemo.dir/initialisationdemo.cpp.o
+[ 61%] Linking CXX executable initialisationdemo
+[ 61%] Built target initialisationdemo
+Scanning dependencies of target multifind
+[ 62%] Building CXX object examples/CMakeFiles/multifind.dir/multifind.cpp.o
+[ 63%] Linking CXX executable multifind
+[ 63%] Built target multifind
+Scanning dependencies of target multifindbase
+[ 64%] Building CXX object examples/CMakeFiles/multifindbase.dir/multifindbase.cpp.o
+[ 66%] Linking CXX executable multifindbase
+[ 66%] Built target multifindbase
+Scanning dependencies of target redirection
+[ 67%] Building CXX object examples/CMakeFiles/redirection.dir/redirection.cpp.o
+[ 68%] Linking CXX executable redirection
+[ 68%] Built target redirection
+Scanning dependencies of target gencache
+[ 70%] Building CXX object examples/CMakeFiles/gencache.dir/gencache.cpp.o
+[ 71%] Linking CXX executable gencache
+[ 71%] Built target gencache
+Scanning dependencies of target gemmbench
+[ 72%] Building CXX object examples/CMakeFiles/gemmbench.dir/gemmbench.cpp.o
+[ 74%] Linking CXX executable gemmbench
+[ 74%] Built target gemmbench
+Scanning dependencies of target accu
+[ 75%] Building CXX object examples/CMakeFiles/accu.dir/accu.cpp.o
+[ 76%] Linking CXX executable accu
+[ 76%] Built target accu
+Scanning dependencies of target mergecaches
+[ 77%] Building CXX object examples/CMakeFiles/mergecaches.dir/mergecaches.cpp.o
+[ 79%] Linking CXX executable mergecaches
+[ 79%] Built target mergecaches
+Scanning dependencies of target runcache
+[ 80%] Building CXX object examples/CMakeFiles/runcache.dir/runcache.cpp.o
+[ 81%] Linking CXX executable runcache
+[ 81%] Built target runcache
+Scanning dependencies of target genrocmtest
+[ 83%] Building CXX object examples/CMakeFiles/genrocmtest.dir/genrocmtest.cpp.o
+[ 84%] Linking CXX executable genrocmtest
+[ 84%] Built target genrocmtest
+Scanning dependencies of target apidriver
+[ 85%] Building CXX object examples/CMakeFiles/apidriver.dir/apidriver.cpp.o
+[ 87%] Linking CXX executable apidriver
+[ 87%] Built target apidriver
+Scanning dependencies of target bench
+[ 88%] Building CXX object examples/CMakeFiles/bench.dir/bench.cpp.o
+[ 89%] Linking CXX executable bench
+[ 89%] Built target bench
+Scanning dependencies of target apiexample1
+[ 90%] Building CXX object examples/CMakeFiles/apiexample1.dir/apiexample1.cpp.o
+[ 92%] Linking CXX executable apiexample1
+[ 92%] Built target apiexample1
+Scanning dependencies of target deepbench
+[ 93%] Building CXX object examples/CMakeFiles/deepbench.dir/deepbench.cpp.o
+[ 94%] Linking CXX executable deepbench
+[ 94%] Built target deepbench
+Scanning dependencies of target find
+[ 96%] Building CXX object examples/CMakeFiles/find.dir/find.cpp.o
+[ 97%] Linking CXX executable find
+[ 97%] Built target find
+Scanning dependencies of target print
+[ 98%] Building CXX object examples/CMakeFiles/print.dir/print.cpp.o
+[100%] Linking CXX executable print
+[100%] Built target print
+Scanning dependencies of target examples
+[100%] Built target examples
+Finished: SUCCESS

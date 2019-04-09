@@ -1,0 +1,52 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+#Build HCC
+cd ~/Documents; cd compilerNightly
+sudo rm -rf hcc
+git clone --recursive -b clang_tot_upgrade https://github.com/RadeonOpenCompute/hcc.git
+cd hcc; mkdir -p build; cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/rocm/ ..
+make
+sudo make install
+
+#Build HIP
+cd ~/Documents; cd compilerNightly
+sudo rm -rf HIP
+git clone -b master https://github.com/ROCm-Developer-Tools/HIP
+cd HIP; mkdir -p build; cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/rocm/ ..
+make
+sudo make install
+make clean
+sudo rm -rf *
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PWD/install/ ..
+make
+sudo make install
+#make check; created another job specifically for hip directed tests.
+
+# Printing System config details
+sh ~/Documents/config_details.sh</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

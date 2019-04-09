@@ -1,0 +1,203 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_hipSPARSE
+[CompilerCQE_hipSPARSE] $ /bin/sh -xe /tmp/jenkins6276862141934942424.sh
++ cd /home/taccuser/Documents
++ cd compilerNightly
++ git clone -b master https://github.com/ROCmSoftwarePlatform/hipSPARSE.git
+Cloning into 'hipSPARSE'...
++ chmod 777 hipSPARSE
++ cd hipSPARSE/
++ ./install.sh -icd
++ tee hipsparse-build.log
+[32mCreating project build directory in: [33m./build[0m
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease
+Hit:2 http://in.archive.ubuntu.com/ubuntu xenial InRelease
+Get:3 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Ign:4 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial InRelease
+Get:5 http://in.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Hit:6 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release
+Ign:7 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release.gpg
+Get:8 http://in.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:9 http://security.ubuntu.com/ubuntu xenial-security/main amd64 DEP-11 Metadata [67.9 kB]
+Get:10 http://security.ubuntu.com/ubuntu xenial-security/main DEP-11 64x64 Icons [67.1 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 DEP-11 Metadata [318 kB]
+Get:12 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 DEP-11 Metadata [116 kB]
+Get:13 http://security.ubuntu.com/ubuntu xenial-security/universe DEP-11 64x64 Icons [163 kB]
+Get:14 http://in.archive.ubuntu.com/ubuntu xenial-updates/main DEP-11 64x64 Icons [227 kB]
+Get:15 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+Get:16 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 DEP-11 Metadata [252 kB]
+Get:17 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe DEP-11 64x64 Icons [350 kB]
+Get:18 http://in.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 DEP-11 Metadata [5,964 B]
+Get:19 http://in.archive.ubuntu.com/ubuntu xenial-backports/main amd64 DEP-11 Metadata [3,328 B]
+Get:20 http://in.archive.ubuntu.com/ubuntu xenial-backports/universe amd64 DEP-11 Metadata [5,104 B]
+AppStream cache update completed, but some metadata was ignored due to errors.
+Fetched 1,904 kB in 3s (585 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+105 packages can be upgraded. Run 'apt list --upgradable' to see them.
+~/Documents/compilerNightly/hipSPARSE ~/Documents/compilerNightly/hipSPARSE
+[32mBuilding [33mgoogletest[32m from source; installing into [33m/usr/local[0m
+-- Configuring gtest external dependency
+-- ExternalGmock using ( 17 ) cores to build with
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/Documents/compilerNightly/hipSPARSE/build/deps
+Scanning dependencies of target googletest
+[ 12%] Creating directories for 'googletest'
+[ 25%] Performing download step (git clone) for 'googletest'
+Cloning into 'googletest'...
+Note: checking out 'release-1.8.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at ec44c6c... Merge pull request #821 from mazong1123/master
+[ 37%] Performing update step for 'googletest'
+[ 50%] No patch step for 'googletest'
+[ 62%] Performing configure step for 'googletest'
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/Documents/compilerNightly/hipSPARSE/build/deps/gtest/src/googletest-build
+[ 75%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/Documents/compilerNightly/hipSPARSE/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 87%] No install step for 'googletest'
+[100%] Completed 'googletest'
+[100%] Built target googletest
+[ 12%] Performing update step for 'googletest'
+[ 25%] Performing configure step for 'googletest'
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/Documents/compilerNightly/hipSPARSE/build/deps/gtest/src/googletest-build
+[ 37%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/Documents/compilerNightly/hipSPARSE/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 50%] No install step for 'googletest'
+[ 62%] Completed 'googletest'
+[100%] Built target googletest
+Scanning dependencies of target install
+[ 27%] Built target gmock
+[ 63%] Built target gmock_main
+[ 81%] Built target gtest
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/local/lib/libgmock.a
+-- Installing: /usr/local/lib/libgmock_main.a
+-- Up-to-date: /usr/local/include/gmock
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-cardinalities.h
+-- Installing: /usr/local/include/gmock/gmock-spec-builders.h
+-- Up-to-date: /usr/local/include/gmock/internal
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h
+-- Up-to-date: /usr/local/include/gmock/internal/custom
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-port.h
+-- Installing: /usr/local/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h.pump
+-- Installing: /usr/local/include/gmock/internal/gmock-port.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h
+-- Installing: /usr/local/include/gmock/gmock-actions.h
+-- Installing: /usr/local/include/gmock/gmock-more-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/gmock.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-more-actions.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h.pump
+-- Installing: /usr/local/lib/libgtest.a
+-- Installing: /usr/local/lib/libgtest_main.a
+-- Up-to-date: /usr/local/include/gtest
+-- Installing: /usr/local/include/gtest/gtest-death-test.h
+-- Installing: /usr/local/include/gtest/gtest_prod.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h
+-- Up-to-date: /usr/local/include/gtest/internal
+-- Installing: /usr/local/include/gtest/internal/gtest-linked_ptr.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/gtest-filepath.h
+-- Installing: /usr/local/include/gtest/internal/gtest-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h
+-- Up-to-date: /usr/local/include/gtest/internal/custom
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-string.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port-arch.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h
+-- Installing: /usr/local/include/gtest/gtest-test-part.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h.pump
+-- Installing: /usr/local/include/gtest/gtest-spi.h
+-- Installing: /usr/local/include/gtest/gtest-typed-test.h
+-- Installing: /usr/local/include/gtest/gtest.h
+-- Installing: /usr/local/include/gtest/gtest-message.h
+-- Installing: /usr/local/include/gtest/gtest_pred_impl.h
+-- Installing: /usr/local/include/gtest/gtest-printers.h
+[100%] Built target install
+~/Documents/compilerNightly/hipSPARSE
+~/Documents/compilerNightly/hipSPARSE ~/Documents/compilerNightly/hipSPARSE
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: /usr/bin/git (found version "2.7.4") 
+CMake Error at /usr/local/lib/cmake/hip/hip-config.cmake:11 (message):
+  File or directory /usr/local/bin/hipcc referenced by variable
+  hip_HIPCC_EXECUTABLE does not exist !
+Call Stack (most recent call first):
+  /usr/local/lib/cmake/hip/hip-config.cmake:72 (set_and_check)
+  cmake/Dependencies.cmake:33 (find_package)
+  CMakeLists.txt:58 (include)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/taccuser/Documents/compilerNightly/hipSPARSE/build/release/CMakeFiles/CMakeOutput.log".
++ cd build/release/clients/tests
+/tmp/jenkins6276862141934942424.sh: 7: cd: can't cd to build/release/clients/tests
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

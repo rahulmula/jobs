@@ -1,0 +1,58 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>jenkins job to test clFFT_Small</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+sudo apt-get install -y libgtest-dev 
+sudo apt-get install -y fftw3 fftw3-dev 
+sudo apt-get install -y libboost-all-dev 
+cd ~/Documents;cd compilerNightly
+rm -rf clFFT
+git clone https://github.com/clMathLibraries/clFFT
+cd clFFT/src; mkdir build; cd  build
+cmake -DOpenCL_INCLUDE_DIR=/opt/rocm/opencl/include -DOpenCL_LIBRARY=/opt/rocm/opencl/lib/x86_64/libOpenCL.so -DUNIT_TEST=ON -DBUILD_TEST=ON -DBUILD_CLIENT=ON ..
+make
+cd library
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD
+cd ../staging
+./Test -r 5 -v --gtest_filter=*random*
+./Test --gtest_filter=*clfft_UnitTest*
+./Test --gtest_filter=*test_harness_tests_buffer*
+./Test --gtest_filter=*accuracy_test_mixed_single*
+./Test --gtest_filter=*accuracy_test_mixed_double*
+./Test --gtest_filter=*accuracy_test_callback_single
+./Test --gtest_filter=test_harness_tests_buffer*
+./Test --gtest_filter=clfft_UnitTest*
+./Test --gtest_filter=accuracy_test_pow2_single.*small*
+./Test --gtest_filter=accuracy_test_pow2_double.*normal*
+./Test --gtest_filter=accuracy_test_pow5_single.small*
+./Test --gtest_filter=accuracy_test_mixed_single*
+./Test --gtest_filter=accuracy_test_callback_single*
+./Test --gtest_filter=accuracy_test_postcallback_single.*small*
+./Test --gtest_filter=clfft_pow7_AllInpSizeTest/accuracy_test_pow7_all_ip_size.power7_all_input_size/15*
+./Test --gtest_filter=mixed_radices/mixed_radix.*_complex_to_complex_auto_generated/488*
+./Test --gtest_filter=clfft_RandomTest/accuracy_test_random.random_transform/137*
+./Test --gtest_filter=*accuracy_test_directed_real.inplace_interleaved/48
+./Test --gtest_filter=mixed_radices_precallback/mixed_radix_precallback.*complex_to_complex_auto_generated/240*
+./Test --gtest_filter=mixed_radices_postcallback/mixed_radix_postcallback.*complex_to_complex_auto_generated/241*</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

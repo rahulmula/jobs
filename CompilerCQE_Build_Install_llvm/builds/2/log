@@ -1,0 +1,7 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building on master in workspace /var/lib/jenkins/workspace/CompilerCQE_Build_Install_Compiler
+[CompilerCQE_Build_Install_Compiler] $ /bin/sh -xe /tmp/jenkins6102847781056597362.sh
++ cd /var/lib/jenkins/Documents
+/tmp/jenkins6102847781056597362.sh: 2: cd: can't cd to /var/lib/jenkins/Documents
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

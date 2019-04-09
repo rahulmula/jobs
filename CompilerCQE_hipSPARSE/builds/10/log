@@ -1,0 +1,23 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_hipSPARSE
+[CompilerCQE_hipSPARSE] $ /bin/sh -xe /tmp/jenkins3184387386681547219.sh
++ cd /home/taccuser/Documents
++ cd compilerNightly
++ rm -rf hipSPARSE/
++ git clone -b master https://github.com/ROCmSoftwarePlatform/hipSPARSE.git
+Cloning into 'hipSPARSE'...
++ chmod 777 hipSPARSE
++ cd hipSPARSE/
++ ./install.sh -icd
++ tee hipsparse-build.log
+[32mCreating project build directory in: [33m./build[0m
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+E: Could not get lock /var/lib/apt/lists/lock - open (11: Resource temporarily unavailable)
+E: Unable to lock directory /var/lib/apt/lists/
++ cd build/release/clients/tests
+/tmp/jenkins3184387386681547219.sh: 8: cd: can't cd to build/release/clients/tests
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

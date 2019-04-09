@@ -1,0 +1,2623 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocPRIM_Full
+ > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocPRIM.git # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocPRIM.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocPRIM.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 41ff492c0be6bd084dad09be7e358dc682e51447 (refs/remotes/origin/master)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 41ff492c0be6bd084dad09be7e358dc682e51447
+Commit message: "Merge pull request #44 from ROCmSoftwarePlatform/develop"
+First time build. Skipping changelog.
+[CompilerCQE_rocPRIM_Full] $ /bin/sh -xe /tmp/jenkins4768766912254772147.sh
++ rm -rf build/
++ mkdir build
++ cd build
++ CXX=/opt/rocm/hcc/bin/hcc cmake -DBUILD_BENCHMARK=OFF ../.
++ tee rocPRIM_build.log
+-- The CXX compiler identification is Clang 9.0.0
+-- Check for working CXX compiler: /opt/rocm/hcc/bin/hcc
+-- Check for working CXX compiler: /opt/rocm/hcc/bin/hcc -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Setting build type to 'Release' as none was specified.
+-- Found HIP: /usr/local (found suitable version "1.5.19122", minimum required is "1.5.18263") 
+-- HIP Compiler: hcc
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Git: /usr/bin/git (found version "2.7.4") 
+-- Downloading and building GTest.
+-- Downloading/updating googletest
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download
+Scanning dependencies of target googletest-download
+[ 11%] Creating directories for 'googletest-download'
+[ 22%] Performing download step (git clone) for 'googletest-download'
+-- googletest-download download command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-download-*.log
+[ 33%] No patch step for 'googletest-download'
+[ 44%] Skipping update step for 'googletest-download'
+[ 55%] Performing configure step for 'googletest-download'
+-- googletest-download configure command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-configure-*.log
+[ 66%] Performing build step for 'googletest-download'
+-- googletest-download build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-build-*.log
+[ 77%] Performing install step for 'googletest-download'
+-- googletest-download install command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-install-*.log
+[ 88%] No test step for 'googletest-download'
+[100%] Completed 'googletest-download'
+[100%] Built target googletest-download
+-- Found GTest: /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/gtest/lib/libgtest.so  
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- ******** Summary ********
+-- General:
+--   System                : Linux
+--   HIP ROOT              : /usr/local
+--   C++ compiler          : /opt/rocm/hcc/bin/hcc
+--   C++ compiler version  : 9.0.0
+--   CXX flags             : -Wno-unused-command-line-argument -Wall -Wextra
+--   Build type            : Release
+--   Install prefix        : /opt/rocm
+--   Device targets        : gfx803;gfx900;gfx906
+-- 
+--   BUILD_TEST            : ON
+--   BUILD_BENCHMARK       : OFF
+--   BUILD_EXAMPLE         : OFF
+-- Configuring done
+CMake Warning at test/CMakeLists.txt:59 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_api because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:98 (add_hc_test)
+
+
+CMake Warning at test/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_api because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:96 (add_hip_test)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_zip_iterator
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:143 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_warp_sort
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:142 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_transform because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:135 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_segmented_reduce because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:132 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_segmented_radix_sort because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:131 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_run_length_encode because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:129 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_reduce because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:128 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_reduce_by_key because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:127 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_radix_sort because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:126 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_partition because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:125 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_merge_sort because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:124 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_histogram because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:122 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_device_scan
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:88 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_device_merge
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:123 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_partition because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:83 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_transform_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:138 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_block_sort
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:119 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_segmented_radix_sort because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:89 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_warp_reduce
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:140 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_arg_index_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:69 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_segmented_scan because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:91 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_block_histogram because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:72 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_reduce_by_key because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:85 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_radix_sort because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:84 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_device_merge
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:81 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_histogram because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:80 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_counting_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:79 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_block_exchange because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:113 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_constant_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:78 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_block_scan
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:118 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_block_load_store because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:73 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_block_exchange because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:71 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_block_discontinuity because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:70 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_intrinsics
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:139 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_merge_sort because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:82 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_constant_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:120 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_texture_cache_iterator because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:137 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_block_reduce
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:75 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_segmented_reduce because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:90 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_device_select
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:92 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_warp_scan
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:141 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_block_sort
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:77 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_block_radix_sort because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:116 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_discard_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:136 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_transform because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:93 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_zip_iterator
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:101 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_device_scan
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:130 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_block_radix_sort because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:74 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_discard_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:94 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_intrinsics
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:95 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_segmented_scan because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:133 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_transform_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:96 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_warp_sort
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:100 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_block_load_store because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:115 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_device_reduce
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:86 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_block_scan
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:76 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_tuple because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:97 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_basic because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:67 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_warp_scan
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:99 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_counting_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:121 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_basic
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:109 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_arg_index_iterator because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:111 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hc_warp_reduce
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:98 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_block_discontinuity because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:112 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hc_device_run_length_encode because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:50 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:87 (add_rocprim_test_hc)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_block_histogram because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:114 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hip_device_select because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:134 (add_rocprim_test_hip)
+
+
+CMake Warning at test/rocprim/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_hip_block_reduce
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/rocprim/CMakeLists.txt:54 (meta_add_rocprim_test)
+  test/rocprim/CMakeLists.txt:117 (add_rocprim_test_hip)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_radix_sort because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:96 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_block_exchange because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:89 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_block_scan because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:94 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_block_reduce because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:93 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_block_load_store because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:91 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target test_hipcub_basic
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:86 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_block_discontinuity because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:88 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_run_length_encode because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:98 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_block_histogram because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:90 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_warp_reduce because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:105 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_reduce because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:97 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_reduce_by_key because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:99 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_block_radix_sort because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:92 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_scan because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:100 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_segmented_radix_sort because files in some directories
+  may conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:101 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_segmented_reduce because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:102 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target test_hipcub_util_ptx
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:104 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_select because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:103 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target test_hipcub_warp_scan
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:106 (add_hipcub_test)
+
+
+CMake Warning at test/hipcub/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_hipcub_device_histogram because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/hipcub/CMakeLists.txt:95 (add_hipcub_test)
+
+
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build
++ make -j16+ 
+tee -a rocPRIM_build.log
+Scanning dependencies of target test_hc_api
+[  0%] Building CXX object test/CMakeFiles/test_hc_api.dir/test_hc_api.cpp.o
+Scanning dependencies of target test_hip_api
+[  1%] Building CXX object test/CMakeFiles/test_hip_api.dir/test_hip_api.cpp.o
+Scanning dependencies of target test_hip_device_partition
+Scanning dependencies of target test_hip_device_run_length_encode
+Scanning dependencies of target test_hip_device_transform
+Scanning dependencies of target test_hip_device_merge_sort
+Scanning dependencies of target test_hip_device_merge
+Scanning dependencies of target test_hip_device_segmented_reduce
+Scanning dependencies of target test_hip_device_reduce_by_key
+Scanning dependencies of target test_hip_device_radix_sort
+Scanning dependencies of target test_hip_device_segmented_radix_sort
+Scanning dependencies of target test_hip_device_reduce
+Scanning dependencies of target test_hip_device_histogram
+Scanning dependencies of target test_hip_warp_sort
+Scanning dependencies of target test_hip_zip_iterator
+Scanning dependencies of target test_hc_device_scan
+[  2%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_partition.dir/test_hip_device_partition.cpp.o
+[  2%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_run_length_encode.dir/test_hip_device_run_length_encode.cpp.o
+[  3%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_transform.dir/test_hip_device_transform.cpp.o
+[  4%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_merge.dir/test_hip_device_merge.cpp.o
+[  5%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_merge_sort.dir/test_hip_device_merge_sort.cpp.o
+[  5%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_reduce_by_key.dir/test_hip_device_reduce_by_key.cpp.o
+[  7%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_radix_sort.dir/test_hip_device_radix_sort.cpp.o
+[  7%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_segmented_reduce.dir/test_hip_device_segmented_reduce.cpp.o
+[  8%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_segmented_radix_sort.dir/test_hip_device_segmented_radix_sort.cpp.o
+[  8%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_histogram.dir/test_hip_device_histogram.cpp.o
+[  8%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_reduce.dir/test_hip_device_reduce.cpp.o
+[  9%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_scan.dir/test_hc_device_scan.cpp.o
+[ 10%] Building CXX object test/rocprim/CMakeFiles/test_hip_zip_iterator.dir/test_hip_zip_iterator.cpp.o
+[ 10%] Building CXX object test/rocprim/CMakeFiles/test_hip_warp_sort.dir/test_hip_warp_sort.cpp.o
+[ 11%] Linking CXX executable test_hc_api
+[ 11%] Built target test_hc_api
+Scanning dependencies of target test_hc_device_partition
+[ 11%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_partition.dir/test_hc_device_partition.cpp.o
+[ 11%] Linking CXX executable test_hip_api
+[ 11%] Built target test_hip_api
+Scanning dependencies of target test_hip_transform_iterator
+[ 11%] Building CXX object test/rocprim/CMakeFiles/test_hip_transform_iterator.dir/test_hip_transform_iterator.cpp.o
+[ 11%] Linking CXX executable test_hip_device_transform
+[ 11%] Linking CXX executable test_hip_device_merge
+[ 11%] Linking CXX executable test_hip_zip_iterator
+[ 12%] Linking CXX executable test_hip_warp_sort
+[ 12%] Built target test_hip_device_transform
+[ 12%] Linking CXX executable test_hip_device_segmented_reduce
+Scanning dependencies of target test_hip_block_sort
+[ 12%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_sort.dir/test_hip_block_sort.cpp.o
+[ 12%] Built target test_hip_device_merge
+Scanning dependencies of target test_hc_device_segmented_radix_sort
+[ 13%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_segmented_radix_sort.dir/test_hc_device_segmented_radix_sort.cpp.o
+[ 14%] Linking CXX executable test_hc_device_partition
+[ 14%] Built target test_hip_warp_sort
+Scanning dependencies of target test_hip_warp_reduce
+[ 14%] Building CXX object test/rocprim/CMakeFiles/test_hip_warp_reduce.dir/test_hip_warp_reduce.cpp.o
+[ 14%] Built target test_hip_zip_iterator
+Scanning dependencies of target test_hc_arg_index_iterator
+[ 14%] Building CXX object test/rocprim/CMakeFiles/test_hc_arg_index_iterator.dir/test_hc_arg_index_iterator.cpp.o
+[ 14%] Built target test_hip_device_segmented_reduce
+Scanning dependencies of target test_hc_device_segmented_scan
+[ 15%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_segmented_scan.dir/test_hc_device_segmented_scan.cpp.o
+[ 15%] Linking CXX executable test_hip_device_partition
+[ 15%] Built target test_hc_device_partition
+Scanning dependencies of target test_hc_block_histogram
+[ 15%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_histogram.dir/test_hc_block_histogram.cpp.o
+[ 15%] Built target test_hip_device_partition
+Scanning dependencies of target test_hc_device_reduce_by_key
+[ 15%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_reduce_by_key.dir/test_hc_device_reduce_by_key.cpp.o
+[ 16%] Linking CXX executable test_hip_transform_iterator
+[ 17%] Linking CXX executable test_hip_device_reduce
+[ 17%] Built target test_hip_transform_iterator
+Scanning dependencies of target test_hc_device_radix_sort
+[ 17%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_radix_sort.dir/test_hc_device_radix_sort.cpp.o
+[ 18%] Linking CXX executable test_hc_arg_index_iterator
+[ 18%] Built target test_hip_device_reduce
+Scanning dependencies of target test_hc_device_merge
+[ 19%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_merge.dir/test_hc_device_merge.cpp.o
+[ 19%] Built target test_hc_arg_index_iterator
+Scanning dependencies of target test_hc_device_histogram
+[ 20%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_histogram.dir/test_hc_device_histogram.cpp.o
+[ 21%] Linking CXX executable test_hc_block_histogram
+[ 22%] Linking CXX executable test_hip_device_reduce_by_key
+[ 22%] Built target test_hc_block_histogram
+Scanning dependencies of target test_hc_counting_iterator
+[ 23%] Building CXX object test/rocprim/CMakeFiles/test_hc_counting_iterator.dir/test_hc_counting_iterator.cpp.o
+[ 23%] Linking CXX executable test_hc_device_merge
+[ 23%] Linking CXX executable test_hip_device_merge_sort
+[ 23%] Linking CXX executable test_hip_device_histogram
+[ 23%] Built target test_hc_device_merge
+Scanning dependencies of target test_hip_block_exchange
+[ 24%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_exchange.dir/test_hip_block_exchange.cpp.o
+[ 24%] Linking CXX executable test_hc_counting_iterator
+[ 24%] Built target test_hip_device_reduce_by_key
+Scanning dependencies of target test_hc_constant_iterator
+[ 25%] Building CXX object test/rocprim/CMakeFiles/test_hc_constant_iterator.dir/test_hc_constant_iterator.cpp.o
+[ 26%] Linking CXX executable test_hip_block_sort
+[ 26%] Built target test_hc_counting_iterator
+Scanning dependencies of target test_hip_block_scan
+[ 26%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_scan.dir/test_hip_block_scan.cpp.o
+[ 26%] Built target test_hip_device_merge_sort
+Scanning dependencies of target test_hc_block_load_store
+[ 26%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_load_store.dir/test_hc_block_load_store.cpp.o
+[ 27%] Linking CXX executable test_hip_device_run_length_encode
+[ 28%] Linking CXX executable test_hc_device_reduce_by_key
+[ 28%] Built target test_hip_device_histogram
+Scanning dependencies of target test_hc_block_exchange
+[ 29%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_exchange.dir/test_hc_block_exchange.cpp.o
+[ 29%] Linking CXX executable test_hc_constant_iterator
+[ 29%] Built target test_hc_constant_iterator
+Scanning dependencies of target test_hc_block_discontinuity
+[ 30%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_discontinuity.dir/test_hc_block_discontinuity.cpp.o
+[ 30%] Built target test_hip_block_sort
+Scanning dependencies of target test_hip_intrinsics
+[ 31%] Building CXX object test/rocprim/CMakeFiles/test_hip_intrinsics.dir/test_hip_intrinsics.cpp.o
+[ 31%] Linking CXX executable test_hc_device_segmented_scan
+[ 31%] Built target test_hc_device_reduce_by_key
+Scanning dependencies of target test_hc_device_merge_sort
+[ 32%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_merge_sort.dir/test_hc_device_merge_sort.cpp.o
+[ 32%] Built target test_hip_device_run_length_encode
+Scanning dependencies of target test_hip_constant_iterator
+[ 32%] Building CXX object test/rocprim/CMakeFiles/test_hip_constant_iterator.dir/test_hip_constant_iterator.cpp.o
+[ 32%] Linking CXX executable test_hc_device_histogram
+[ 33%] Linking CXX executable test_hip_warp_reduce
+[ 33%] Linking CXX executable test_hc_device_scan
+[ 33%] Built target test_hc_device_histogram
+Scanning dependencies of target test_hip_texture_cache_iterator
+[ 33%] Building CXX object test/rocprim/CMakeFiles/test_hip_texture_cache_iterator.dir/test_hip_texture_cache_iterator.cpp.o
+[ 33%] Built target test_hip_warp_reduce
+Scanning dependencies of target test_hc_block_reduce
+[ 33%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_reduce.dir/test_hc_block_reduce.cpp.o
+[ 34%] Linking CXX executable test_hip_constant_iterator
+[ 35%] Linking CXX executable test_hip_intrinsics
+[ 35%] Built target test_hip_constant_iterator
+Scanning dependencies of target test_hc_device_segmented_reduce
+[ 36%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_segmented_reduce.dir/test_hc_device_segmented_reduce.cpp.o
+[ 36%] Linking CXX executable test_hc_block_discontinuity
+[ 36%] Built target test_hc_device_segmented_scan
+Scanning dependencies of target test_hc_device_select
+[ 37%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_select.dir/test_hc_device_select.cpp.o
+[ 38%] Linking CXX executable test_hc_block_exchange
+[ 38%] Built target test_hip_intrinsics
+Scanning dependencies of target test_hip_warp_scan
+[ 38%] Building CXX object test/rocprim/CMakeFiles/test_hip_warp_scan.dir/test_hip_warp_scan.cpp.o
+[ 39%] Linking CXX executable test_hc_device_merge_sort
+[ 39%] Built target test_hc_block_discontinuity
+Scanning dependencies of target test_hc_block_sort
+[ 40%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_sort.dir/test_hc_block_sort.cpp.o
+[ 40%] Built target test_hc_block_exchange
+[ 40%] Linking CXX executable test_hip_block_exchange
+Scanning dependencies of target test_hip_block_radix_sort
+[ 41%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_radix_sort.dir/test_hip_block_radix_sort.cpp.o
+[ 42%] Linking CXX executable test_hip_texture_cache_iterator
+[ 43%] Linking CXX executable test_hc_block_load_store
+[ 43%] Built target test_hip_texture_cache_iterator
+Scanning dependencies of target test_hip_discard_iterator
+[ 44%] Building CXX object test/rocprim/CMakeFiles/test_hip_discard_iterator.dir/test_hip_discard_iterator.cpp.o
+[ 44%] Built target test_hc_device_merge_sort
+[ 44%] Built target test_hip_block_exchange
+Scanning dependencies of target test_hc_zip_iterator
+Scanning dependencies of target test_hc_device_transform
+[ 45%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_transform.dir/test_hc_device_transform.cpp.o
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hc_zip_iterator.dir/test_hc_zip_iterator.cpp.o
+[ 46%] Linking CXX executable test_hc_device_segmented_reduce
+[ 46%] Built target test_hc_block_load_store
+Scanning dependencies of target test_hip_device_scan
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_scan.dir/test_hip_device_scan.cpp.o
+[ 46%] Linking CXX executable test_hc_device_select
+[ 46%] Built target test_hc_device_segmented_reduce
+Scanning dependencies of target test_hc_block_radix_sort
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_radix_sort.dir/test_hc_block_radix_sort.cpp.o
+[ 46%] Built target test_hc_device_scan
+Scanning dependencies of target test_hc_discard_iterator
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hc_discard_iterator.dir/test_hc_discard_iterator.cpp.o
+[ 46%] Built target test_hc_device_select
+Scanning dependencies of target test_hc_intrinsics
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hc_intrinsics.dir/test_hc_intrinsics.cpp.o
+[ 47%] Linking CXX executable test_hc_device_transform
+[ 47%] Linking CXX executable test_hc_zip_iterator
+[ 47%] Built target test_hc_device_transform
+Scanning dependencies of target test_hip_device_segmented_scan
+[ 48%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_segmented_scan.dir/test_hip_device_segmented_scan.cpp.o
+[ 48%] Built target test_hc_zip_iterator
+Scanning dependencies of target test_hc_transform_iterator
+[ 48%] Building CXX object test/rocprim/CMakeFiles/test_hc_transform_iterator.dir/test_hc_transform_iterator.cpp.o
+[ 48%] Linking CXX executable test_hip_discard_iterator
+[ 49%] Linking CXX executable test_hc_discard_iterator
+[ 50%] Linking CXX executable test_hc_intrinsics
+[ 50%] Built target test_hip_discard_iterator
+Scanning dependencies of target test_hc_warp_sort
+[ 51%] Building CXX object test/rocprim/CMakeFiles/test_hc_warp_sort.dir/test_hc_warp_sort.cpp.o
+[ 51%] Built target test_hc_discard_iterator
+Scanning dependencies of target test_hip_block_load_store
+[ 52%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_load_store.dir/test_hip_block_load_store.cpp.o
+[ 52%] Built target test_hc_intrinsics
+Scanning dependencies of target test_hc_device_reduce
+[ 52%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_reduce.dir/test_hc_device_reduce.cpp.o
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+        [=](hc::tiled_index<1> i) [[hc]]
+        ^
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:172:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+        [=](hc::tiled_index<1> i) [[hc]]
+        ^
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:240:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:417:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+        [=](hc::tiled_index<1> i) [[hc]]
+        ^
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:417:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:417:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hc_block_reduce.cpp:417:9: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+34 warnings generated.
+[ 53%] Linking CXX executable test_hc_block_reduce
+[ 53%] Linking CXX executable test_hc_block_sort
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warningwarning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation orderingwarning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+
+warningwarning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warningwarning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+[ 54%] Linking CXX executable test_hip_device_segmented_radix_sort
+[ 54%] Built target test_hc_block_reduce
+Scanning dependencies of target test_hc_block_scan
+[ 54%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_scan.dir/test_hc_block_scan.cpp.o
+[ 55%] Linking CXX executable test_hc_transform_iterator
+[ 55%] Linking CXX executable test_hc_warp_sort
+[ 55%] Built target test_hc_warp_sort
+Scanning dependencies of target test_hc_tuple
+[ 55%] Building CXX object test/rocprim/CMakeFiles/test_hc_tuple.dir/test_hc_tuple.cpp.o
+[ 55%] Built target test_hc_transform_iterator
+Scanning dependencies of target test_hc_basic
+[ 55%] Building CXX object test/rocprim/CMakeFiles/test_hc_basic.dir/test_hc_basic.cpp.o
+[ 56%] Building CXX object test/rocprim/CMakeFiles/test_hc_basic.dir/detail/get_rocprim_version_hc.cpp.o
+[ 56%] Built target test_hc_block_sort
+Scanning dependencies of target test_hc_warp_scan
+[ 57%] Building CXX object test/rocprim/CMakeFiles/test_hc_warp_scan.dir/test_hc_warp_scan.cpp.o
+[ 58%] Linking CXX executable test_hc_block_radix_sort
+[ 59%] Linking CXX executable test_hc_device_reduce
+[ 60%] Linking CXX executable test_hip_block_radix_sort
+[ 61%] Linking CXX executable test_hc_tuple
+[ 62%] Linking CXX executable test_hip_device_radix_sort
+[ 62%] Linking CXX executable test_hc_basic
+[ 62%] Built target test_hc_tuple
+[ 62%] Linking CXX executable test_hc_device_segmented_radix_sort
+Scanning dependencies of target test_hip_counting_iterator
+[ 63%] Building CXX object test/rocprim/CMakeFiles/test_hip_counting_iterator.dir/test_hip_counting_iterator.cpp.o
+[ 63%] Built target test_hc_block_radix_sort
+Scanning dependencies of target test_hip_basic
+[ 64%] Building CXX object test/rocprim/CMakeFiles/test_hip_basic.dir/test_hip_basic.cpp.o
+[ 64%] Built target test_hc_basic
+[ 65%] Building CXX object test/rocprim/CMakeFiles/test_hip_basic.dir/detail/get_rocprim_version_hip.cpp.o
+[ 65%] Built target test_hip_block_radix_sort
+Scanning dependencies of target test_hip_arg_index_iterator
+[ 66%] Building CXX object test/rocprim/CMakeFiles/test_hip_arg_index_iterator.dir/test_hip_arg_index_iterator.cpp.o
+[ 66%] Built target test_hc_device_reduce
+Scanning dependencies of target test_hc_warp_reduce
+[ 66%] Building CXX object test/rocprim/CMakeFiles/test_hc_warp_reduce.dir/test_hc_warp_reduce.cpp.o
+[ 67%] Linking CXX executable test_hip_warp_scan
+Scanning dependencies of target test_hip_block_discontinuity
+[ 68%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_discontinuity.dir/test_hip_block_discontinuity.cpp.o
+[ 68%] Built target test_hip_warp_scan
+Scanning dependencies of target test_hc_device_run_length_encode
+[ 68%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_run_length_encode.dir/test_hc_device_run_length_encode.cpp.o
+[ 68%] Linking CXX executable test_hip_counting_iterator
+[ 68%] Linking CXX executable test_hip_basic
+[ 68%] Built target test_hip_counting_iterator
+Scanning dependencies of target test_hip_block_histogram
+[ 69%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_histogram.dir/test_hip_block_histogram.cpp.o
+[ 69%] Built target test_hip_basic
+Scanning dependencies of target test_hip_device_select
+[ 70%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_select.dir/test_hip_device_select.cpp.o
+[ 70%] Linking CXX executable test_hip_arg_index_iterator
+[ 71%] Linking CXX executable test_hip_block_scan
+[ 71%] Built target test_hip_arg_index_iterator
+Scanning dependencies of target test_hip_block_reduce
+[ 71%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_reduce.dir/test_hip_block_reduce.cpp.o
+[ 71%] Linking CXX executable test_hip_block_load_store
+[ 71%] Linking CXX executable test_hip_device_segmented_scan
+[ 71%] Built target test_hip_block_load_store
+Scanning dependencies of target test_hipcub_device_radix_sort
+[ 72%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_radix_sort.dir/test_hipcub_device_radix_sort.cpp.o
+[ 72%] Built target test_hip_block_scan
+Scanning dependencies of target test_hipcub_block_exchange
+[ 72%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_exchange.dir/test_hipcub_block_exchange.cpp.o
+[ 72%] Linking CXX executable test_hip_block_histogram
+[ 72%] Linking CXX executable test_hc_warp_scan
+[ 72%] Linking CXX executable test_hip_block_discontinuity
+[ 72%] Built target test_hip_block_histogram
+Scanning dependencies of target test_hipcub_block_scan
+[ 73%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_scan.dir/test_hipcub_block_scan.cpp.o
+[ 73%] Built target test_hc_warp_scan
+Scanning dependencies of target test_hipcub_block_reduce
+[ 74%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_reduce.dir/test_hipcub_block_reduce.cpp.o
+[ 74%] Linking CXX executable test_hip_device_select
+[ 74%] Built target test_hip_block_discontinuity
+Scanning dependencies of target test_hipcub_block_load_store
+[ 75%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_load_store.dir/test_hipcub_block_load_store.cpp.o
+[ 76%] Linking CXX executable test_hc_warp_reduce
+[ 76%] Built target test_hip_device_segmented_scan
+Scanning dependencies of target test_hipcub_basic
+[ 77%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_basic.dir/test_hipcub_basic.cpp.o
+[ 77%] Built target test_hip_device_select
+[ 77%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_basic.dir/detail/get_hipcub_version.cpp.o
+[ 78%] Linking CXX executable test_hc_device_run_length_encode
+[ 78%] Built target test_hc_warp_reduce
+Scanning dependencies of target test_hipcub_block_discontinuity
+[ 78%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_discontinuity.dir/test_hipcub_block_discontinuity.cpp.o
+[ 79%] Linking CXX executable test_hc_block_scan
+Scanning dependencies of target test_hipcub_device_run_length_encode
+[ 79%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_run_length_encode.dir/test_hipcub_device_run_length_encode.cpp.o
+[ 80%] Linking CXX executable test_hipcub_basic
+[ 80%] Built target test_hipcub_basic
+Scanning dependencies of target test_hipcub_block_histogram
+[ 80%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_histogram.dir/test_hipcub_block_histogram.cpp.o
+[ 80%] Built target test_hc_block_scan
+Scanning dependencies of target test_hipcub_warp_reduce
+[ 81%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_warp_reduce.dir/test_hipcub_warp_reduce.cpp.o
+[ 82%] Linking CXX executable test_hipcub_block_exchange
+[ 82%] Built target test_hc_device_run_length_encode
+Scanning dependencies of target test_hipcub_device_reduce
+[ 82%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_reduce.dir/test_hipcub_device_reduce.cpp.o
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+void reduce_kernel(T* device_output, T* device_output_reductions)
+     ^
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:139:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+void reduce_multiplies_kernel(T* device_output, T* device_output_reductions)
+     ^
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:227:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:471:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+void reduce_array_kernel(T* device_output, T* device_output_reductions)
+     ^
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:471:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_block_reduce.cpp:471:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+27 warnings generated.
+[ 83%] Linking CXX executable test_hip_block_reduce
+[ 83%] Built target test_hip_device_segmented_radix_sort
+Scanning dependencies of target test_hipcub_device_reduce_by_key
+[ 83%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_reduce_by_key.dir/test_hipcub_device_reduce_by_key.cpp.o
+[ 83%] Built target test_hipcub_block_exchange
+Scanning dependencies of target test_hipcub_block_radix_sort
+[ 84%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_radix_sort.dir/test_hipcub_block_radix_sort.cpp.o
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+void reduce_kernel(T* device_output, T* device_output_reductions)
+     ^
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:111:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:335:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+void reduce_array_kernel(T* device_output, T* device_output_reductions)
+     ^
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_block_reduce.cpp:335:6: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+11 warnings generated.
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+[ 84%] Linking CXX executable test_hipcub_block_reduce
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warningwarning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+[ 84%] Built target test_hip_block_reduce
+Scanning dependencies of target test_hipcub_device_scan
+[ 84%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_scan.dir/test_hipcub_device_scan.cpp.o
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+<unknown>:0:0: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+[ 85%] Linking CXX executable test_hipcub_block_discontinuity
+[ 85%] Built target test_hipcub_block_reduce
+Scanning dependencies of target test_hipcub_device_segmented_radix_sort
+[ 85%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_segmented_radix_sort.dir/test_hipcub_device_segmented_radix_sort.cpp.o
+[ 86%] Linking CXX executable test_hip_device_scan
+[ 86%] Built target test_hipcub_block_discontinuity
+Scanning dependencies of target test_hipcub_device_segmented_reduce
+[ 87%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_segmented_reduce.dir/test_hipcub_device_segmented_reduce.cpp.o
+[ 88%] Linking CXX executable test_hipcub_block_histogram
+[ 88%] Linking CXX executable test_hipcub_block_load_store
+[ 88%] Built target test_hipcub_block_histogram
+Scanning dependencies of target test_hipcub_util_ptx
+[ 89%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_util_ptx.dir/test_hipcub_util_ptx.cpp.o
+[ 89%] Built target test_hipcub_block_load_store
+Scanning dependencies of target test_hipcub_device_select
+[ 90%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_select.dir/test_hipcub_device_select.cpp.o
+[ 91%] Linking CXX executable test_hipcub_device_scan
+[ 91%] Linking CXX executable test_hipcub_warp_reduce
+[ 92%] Linking CXX executable test_hipcub_device_reduce
+[ 92%] Built target test_hipcub_device_scan
+Scanning dependencies of target test_hipcub_warp_scan
+[ 93%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_warp_scan.dir/test_hipcub_warp_scan.cpp.o
+[ 93%] Built target test_hipcub_warp_reduce
+Scanning dependencies of target test_hipcub_device_histogram
+[ 94%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_histogram.dir/test_hipcub_device_histogram.cpp.o
+[ 95%] Linking CXX executable test_hipcub_device_run_length_encode
+[ 96%] Linking CXX executable test_hipcub_device_reduce_by_key
+[ 96%] Linking CXX executable test_hipcub_device_segmented_reduce
+[ 96%] Linking CXX executable test_hipcub_device_select
+[ 96%] Built target test_hipcub_device_segmented_reduce
+[ 96%] Built target test_hc_device_segmented_radix_sort
+[ 96%] Built target test_hipcub_device_select
+[ 96%] Linking CXX executable test_hipcub_util_ptx
+[ 96%] Built target test_hipcub_device_reduce
+[ 96%] Built target test_hipcub_device_reduce_by_key
+[ 96%] Built target test_hipcub_util_ptx
+[ 96%] Built target test_hip_device_radix_sort
+[ 96%] Linking CXX executable test_hipcub_block_radix_sort
+[ 96%] Built target test_hip_device_scan
+[ 96%] Built target test_hipcub_device_run_length_encode
+[ 96%] Built target test_hipcub_block_radix_sort
+[ 96%] Linking CXX executable test_hipcub_block_scan
+[ 96%] Built target test_hipcub_block_scan
+[ 96%] Linking CXX executable test_hipcub_device_histogram
+[ 97%] Linking CXX executable test_hipcub_warp_scan
+[ 97%] Built target test_hipcub_warp_scan
+[ 97%] Built target test_hipcub_device_histogram
+[ 98%] Linking CXX executable test_hipcub_device_radix_sort
+[ 99%] Linking CXX executable test_hc_device_radix_sort
+[100%] Linking CXX executable test_hipcub_device_segmented_radix_sort
+[100%] Built target test_hipcub_device_radix_sort
+[100%] Built target test_hipcub_device_segmented_radix_sort
+[100%] Built target test_hc_device_radix_sort
++ ctest --output-on-failure
++ tee rocPRIM_unittest.log
+Test project /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build
+      Start  1: hip.device_api
+ 1/90 Test  #1: hip.device_api ............................   Passed    1.02 sec
+      Start  2: hc.device_api
+ 2/90 Test  #2: hc.device_api .............................   Passed    0.60 sec
+      Start  3: rocprim.hc.basic_test
+ 3/90 Test  #3: rocprim.hc.basic_test .....................   Passed    0.59 sec
+      Start  4: rocprim.hc.arg_index_iterator
+ 4/90 Test  #4: rocprim.hc.arg_index_iterator .............   Passed    0.85 sec
+      Start  5: rocprim.hc.block_discontinuity
+ 5/90 Test  #5: rocprim.hc.block_discontinuity ............   Passed    4.96 sec
+      Start  6: rocprim.hc.block_exchange
+ 6/90 Test  #6: rocprim.hc.block_exchange .................   Passed    0.95 sec
+      Start  7: rocprim.hc.block_histogram
+ 7/90 Test  #7: rocprim.hc.block_histogram ................   Passed    0.65 sec
+      Start  8: rocprim.hc.block_load_store
+ 8/90 Test  #8: rocprim.hc.block_load_store ...............   Passed    1.61 sec
+      Start  9: rocprim.hc.block_radix_sort
+ 9/90 Test  #9: rocprim.hc.block_radix_sort ...............   Passed    3.42 sec
+      Start 10: rocprim.hc.block_reduce
+10/90 Test #10: rocprim.hc.block_reduce ...................   Passed    0.82 sec
+      Start 11: rocprim.hc.block_scan
+11/90 Test #11: rocprim.hc.block_scan .....................   Passed    1.16 sec
+      Start 12: rocprim.hc.block_sort
+12/90 Test #12: rocprim.hc.block_sort .....................   Passed    1.92 sec
+      Start 13: rocprim.hc.constant_iterator
+13/90 Test #13: rocprim.hc.constant_iterator ..............   Passed    0.63 sec
+      Start 14: rocprim.hc.counting_iterator
+14/90 Test #14: rocprim.hc.counting_iterator ..............   Passed    0.60 sec
+      Start 15: rocprim.hc.device_histogram
+15/90 Test #15: rocprim.hc.device_histogram ...............   Passed    8.92 sec
+      Start 16: rocprim.hc.device_merge
+16/90 Test #16: rocprim.hc.device_merge ...................   Passed    3.15 sec
+      Start 17: rocprim.hc.device_merge_sort
+17/90 Test #17: rocprim.hc.device_merge_sort ..............   Passed    1.67 sec
+      Start 18: rocprim.hc.device_partition
+18/90 Test #18: rocprim.hc.device_partition ...............   Passed    1.07 sec
+      Start 19: rocprim.hc.device_radix_sort
+19/90 Test #19: rocprim.hc.device_radix_sort ..............   Passed   13.11 sec
+      Start 20: rocprim.hc.device_reduce_by_key
+20/90 Test #20: rocprim.hc.device_reduce_by_key ...........   Passed    9.23 sec
+      Start 21: rocprim.hc.device_reduce
+21/90 Test #21: rocprim.hc.device_reduce ..................   Passed    1.27 sec
+      Start 22: rocprim.hc.device_run_length_encode
+22/90 Test #22: rocprim.hc.device_run_length_encode .......   Passed    3.94 sec
+      Start 23: rocprim.hc.device_scan
+23/90 Test #23: rocprim.hc.device_scan ....................   Passed    8.44 sec
+      Start 24: rocprim.hc.device_segmented_radix_sort
+24/90 Test #24: rocprim.hc.device_segmented_radix_sort ....   Passed   10.98 sec
+      Start 25: rocprim.hc.device_segmented_reduce
+25/90 Test #25: rocprim.hc.device_segmented_reduce ........   Passed    2.13 sec
+      Start 26: rocprim.hc.device_segmented_scan
+26/90 Test #26: rocprim.hc.device_segmented_scan ..........   Passed    4.80 sec
+      Start 27: rocprim.hc.device_select
+27/90 Test #27: rocprim.hc.device_select ..................   Passed    1.51 sec
+      Start 28: rocprim.hc.device_transform
+28/90 Test #28: rocprim.hc.device_transform ...............   Passed    1.02 sec
+      Start 29: rocprim.hc.discard_iterator
+29/90 Test #29: rocprim.hc.discard_iterator ...............   Passed    0.59 sec
+      Start 30: rocprim.hc.intrinsics
+30/90 Test #30: rocprim.hc.intrinsics .....................   Passed    0.59 sec
+      Start 31: rocprim.hc.transform_iterator
+31/90 Test #31: rocprim.hc.transform_iterator .............   Passed    0.62 sec
+      Start 32: rocprim.hc.tuple
+32/90 Test #32: rocprim.hc.tuple ..........................   Passed    0.59 sec
+      Start 33: rocprim.hc.warp_reduce
+33/90 Test #33: rocprim.hc.warp_reduce ....................   Passed    0.70 sec
+      Start 34: rocprim.hc.warp_scan
+34/90 Test #34: rocprim.hc.warp_scan ......................   Passed    0.69 sec
+      Start 35: rocprim.hc.warp_sort
+35/90 Test #35: rocprim.hc.warp_sort ......................   Passed    0.60 sec
+      Start 36: rocprim.hc.zip_iterator
+36/90 Test #36: rocprim.hc.zip_iterator ...................   Passed    0.61 sec
+      Start 37: rocprim.hip.basic_test
+37/90 Test #37: rocprim.hip.basic_test ....................   Passed    0.61 sec
+      Start 38: rocprim.hip.arg_index_iterator
+38/90 Test #38: rocprim.hip.arg_index_iterator ............   Passed    0.87 sec
+      Start 39: rocprim.hip.block_discontinuity
+39/90 Test #39: rocprim.hip.block_discontinuity ...........   Passed    4.54 sec
+      Start 40: rocprim.hip.block_exchange
+40/90 Test #40: rocprim.hip.block_exchange ................   Passed    0.84 sec
+      Start 41: rocprim.hip.block_histogram
+41/90 Test #41: rocprim.hip.block_histogram ...............   Passed    0.66 sec
+      Start 42: rocprim.hip.block_load_store
+42/90 Test #42: rocprim.hip.block_load_store ..............   Passed    1.34 sec
+      Start 43: rocprim.hip.block_radix_sort
+43/90 Test #43: rocprim.hip.block_radix_sort ..............   Passed    3.48 sec
+      Start 44: rocprim.hip.block_reduce
+44/90 Test #44: rocprim.hip.block_reduce ..................   Passed    0.77 sec
+      Start 45: rocprim.hip.block_scan
+45/90 Test #45: rocprim.hip.block_scan ....................   Passed    1.24 sec
+      Start 46: rocprim.hip.block_sort
+46/90 Test #46: rocprim.hip.block_sort ....................   Passed    1.93 sec
+      Start 47: rocprim.hip.constant_iterator
+47/90 Test #47: rocprim.hip.constant_iterator .............   Passed    0.64 sec
+      Start 48: rocprim.hip.counting_iterator
+48/90 Test #48: rocprim.hip.counting_iterator .............   Passed    0.61 sec
+      Start 49: rocprim.hip.device_histogram
+49/90 Test #49: rocprim.hip.device_histogram ..............   Passed    8.17 sec
+      Start 50: rocprim.hip.device_merge
+50/90 Test #50: rocprim.hip.device_merge ..................   Passed    3.11 sec
+      Start 51: rocprim.hip.device_merge_sort
+51/90 Test #51: rocprim.hip.device_merge_sort .............   Passed    4.91 sec
+      Start 52: rocprim.hip.device_partition
+52/90 Test #52: rocprim.hip.device_partition ..............   Passed   10.70 sec
+      Start 53: rocprim.hip.device_radix_sort
+53/90 Test #53: rocprim.hip.device_radix_sort .............   Passed   12.15 sec
+      Start 54: rocprim.hip.device_reduce_by_key
+54/90 Test #54: rocprim.hip.device_reduce_by_key ..........   Passed    7.95 sec
+      Start 55: rocprim.hip.device_reduce
+55/90 Test #55: rocprim.hip.device_reduce .................   Passed    1.13 sec
+      Start 56: rocprim.hip.device_run_length_encode
+56/90 Test #56: rocprim.hip.device_run_length_encode ......   Passed    3.41 sec
+      Start 57: rocprim.hip.device_scan
+57/90 Test #57: rocprim.hip.device_scan ...................***Exception: Other 10.21 sec
+Running main() from /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 100 tests from 20 test cases.
+[----------] Global test environment set-up.
+[----------] 5 tests from RocprimDeviceScanTests/0, where TypeParam = DeviceScanParams<char, char, rocprim::plus<char>, false>
+[ RUN      ] RocprimDeviceScanTests/0.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/0.InclusiveScanEmptyInput (99 ms)
+[ RUN      ] RocprimDeviceScanTests/0.InclusiveScan
+[       OK ] RocprimDeviceScanTests/0.InclusiveScan (31 ms)
+[ RUN      ] RocprimDeviceScanTests/0.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/0.ExclusiveScan (32 ms)
+[ RUN      ] RocprimDeviceScanTests/0.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/0.InclusiveScanByKey (84 ms)
+[ RUN      ] RocprimDeviceScanTests/0.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/0.ExclusiveScanByKey (86 ms)
+[----------] 5 tests from RocprimDeviceScanTests/0 (333 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/1, where TypeParam = DeviceScanParams<unsigned short, unsigned short, rocprim::plus<unsigned short>, false>
+[ RUN      ] RocprimDeviceScanTests/1.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/1.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/1.InclusiveScan
+[       OK ] RocprimDeviceScanTests/1.InclusiveScan (33 ms)
+[ RUN      ] RocprimDeviceScanTests/1.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/1.ExclusiveScan (33 ms)
+[ RUN      ] RocprimDeviceScanTests/1.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/1.InclusiveScanByKey (81 ms)
+[ RUN      ] RocprimDeviceScanTests/1.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/1.ExclusiveScanByKey (85 ms)
+[----------] 5 tests from RocprimDeviceScanTests/1 (232 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/2, where TypeParam = DeviceScanParams<short, int, rocprim::plus<int>, false>
+[ RUN      ] RocprimDeviceScanTests/2.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/2.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/2.InclusiveScan
+[       OK ] RocprimDeviceScanTests/2.InclusiveScan (35 ms)
+[ RUN      ] RocprimDeviceScanTests/2.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/2.ExclusiveScan (34 ms)
+[ RUN      ] RocprimDeviceScanTests/2.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/2.InclusiveScanByKey (88 ms)
+[ RUN      ] RocprimDeviceScanTests/2.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/2.ExclusiveScanByKey (92 ms)
+[----------] 5 tests from RocprimDeviceScanTests/2 (249 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/3, where TypeParam = DeviceScanParams<int, int, rocprim::plus<int>, false>
+[ RUN      ] RocprimDeviceScanTests/3.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/3.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/3.InclusiveScan
+[       OK ] RocprimDeviceScanTests/3.InclusiveScan (36 ms)
+[ RUN      ] RocprimDeviceScanTests/3.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/3.ExclusiveScan (35 ms)
+[ RUN      ] RocprimDeviceScanTests/3.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/3.InclusiveScanByKey (85 ms)
+[ RUN      ] RocprimDeviceScanTests/3.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/3.ExclusiveScanByKey (93 ms)
+[----------] 5 tests from RocprimDeviceScanTests/3 (249 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/4, where TypeParam = DeviceScanParams<float, float, rocprim::maximum<float>, false>
+[ RUN      ] RocprimDeviceScanTests/4.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/4.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/4.InclusiveScan
+[       OK ] RocprimDeviceScanTests/4.InclusiveScan (125 ms)
+[ RUN      ] RocprimDeviceScanTests/4.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/4.ExclusiveScan (121 ms)
+[ RUN      ] RocprimDeviceScanTests/4.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/4.InclusiveScanByKey (170 ms)
+[ RUN      ] RocprimDeviceScanTests/4.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/4.ExclusiveScanByKey (165 ms)
+[----------] 5 tests from RocprimDeviceScanTests/4 (581 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/5, where TypeParam = DeviceScanParams<__half, __half, test_utils::half_maximum, false>
+[ RUN      ] RocprimDeviceScanTests/5.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/5.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/5.InclusiveScan
+[       OK ] RocprimDeviceScanTests/5.InclusiveScan (142 ms)
+[ RUN      ] RocprimDeviceScanTests/5.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/5.ExclusiveScan (141 ms)
+[ RUN      ] RocprimDeviceScanTests/5.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/5.InclusiveScanByKey (198 ms)
+[ RUN      ] RocprimDeviceScanTests/5.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/5.ExclusiveScanByKey (216 ms)
+[----------] 5 tests from RocprimDeviceScanTests/5 (697 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/6, where TypeParam = DeviceScanParams<__half, float, rocprim::plus<float>, false>
+[ RUN      ] RocprimDeviceScanTests/6.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/6.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/6.InclusiveScan
+[       OK ] RocprimDeviceScanTests/6.InclusiveScan (128 ms)
+[ RUN      ] RocprimDeviceScanTests/6.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/6.ExclusiveScan (120 ms)
+[ RUN      ] RocprimDeviceScanTests/6.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/6.InclusiveScanByKey (177 ms)
+[ RUN      ] RocprimDeviceScanTests/6.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/6.ExclusiveScanByKey (191 ms)
+[----------] 5 tests from RocprimDeviceScanTests/6 (616 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/7, where TypeParam = DeviceScanParams<int, double, rocprim::plus<int>, false>
+[ RUN      ] RocprimDeviceScanTests/7.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/7.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/7.InclusiveScan
+[       OK ] RocprimDeviceScanTests/7.InclusiveScan (47 ms)
+[ RUN      ] RocprimDeviceScanTests/7.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/7.ExclusiveScan (46 ms)
+[ RUN      ] RocprimDeviceScanTests/7.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/7.InclusiveScanByKey (99 ms)
+[ RUN      ] RocprimDeviceScanTests/7.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/7.ExclusiveScanByKey (106 ms)
+[----------] 5 tests from RocprimDeviceScanTests/7 (299 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/8, where TypeParam = DeviceScanParams<int, double, rocprim::plus<double>, false>
+[ RUN      ] RocprimDeviceScanTests/8.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/8.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/8.InclusiveScan
+[       OK ] RocprimDeviceScanTests/8.InclusiveScan (43 ms)
+[ RUN      ] RocprimDeviceScanTests/8.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/8.ExclusiveScan (47 ms)
+[ RUN      ] RocprimDeviceScanTests/8.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/8.InclusiveScanByKey (95 ms)
+[ RUN      ] RocprimDeviceScanTests/8.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/8.ExclusiveScanByKey (93 ms)
+[----------] 5 tests from RocprimDeviceScanTests/8 (278 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/9, where TypeParam = DeviceScanParams<int, long long, rocprim::plus<long long>, false>
+[ RUN      ] RocprimDeviceScanTests/9.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/9.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/9.InclusiveScan
+[       OK ] RocprimDeviceScanTests/9.InclusiveScan (45 ms)
+[ RUN      ] RocprimDeviceScanTests/9.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/9.ExclusiveScan (42 ms)
+[ RUN      ] RocprimDeviceScanTests/9.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/9.InclusiveScanByKey (89 ms)
+[ RUN      ] RocprimDeviceScanTests/9.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/9.ExclusiveScanByKey (94 ms)
+[----------] 5 tests from RocprimDeviceScanTests/9 (270 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/10, where TypeParam = DeviceScanParams<unsigned int, unsigned long long, rocprim::plus<unsigned long long>, false>
+[ RUN      ] RocprimDeviceScanTests/10.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/10.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/10.InclusiveScan
+[       OK ] RocprimDeviceScanTests/10.InclusiveScan (38 ms)
+[ RUN      ] RocprimDeviceScanTests/10.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/10.ExclusiveScan (39 ms)
+[ RUN      ] RocprimDeviceScanTests/10.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/10.InclusiveScanByKey (92 ms)
+[ RUN      ] RocprimDeviceScanTests/10.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/10.ExclusiveScanByKey (93 ms)
+[----------] 5 tests from RocprimDeviceScanTests/10 (263 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/11, where TypeParam = DeviceScanParams<long long, long long, rocprim::maximum<long long>, false>
+[ RUN      ] RocprimDeviceScanTests/11.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/11.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/11.InclusiveScan
+[       OK ] RocprimDeviceScanTests/11.InclusiveScan (46 ms)
+[ RUN      ] RocprimDeviceScanTests/11.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/11.ExclusiveScan (47 ms)
+[ RUN      ] RocprimDeviceScanTests/11.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/11.InclusiveScanByKey (107 ms)
+[ RUN      ] RocprimDeviceScanTests/11.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/11.ExclusiveScanByKey (98 ms)
+[----------] 5 tests from RocprimDeviceScanTests/11 (298 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/12, where TypeParam = DeviceScanParams<double, double, rocprim::plus<double>, true>
+[ RUN      ] RocprimDeviceScanTests/12.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/12.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/12.InclusiveScan
+[       OK ] RocprimDeviceScanTests/12.InclusiveScan (136 ms)
+[ RUN      ] RocprimDeviceScanTests/12.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/12.ExclusiveScan (131 ms)
+[ RUN      ] RocprimDeviceScanTests/12.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/12.InclusiveScanByKey (177 ms)
+[ RUN      ] RocprimDeviceScanTests/12.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/12.ExclusiveScanByKey (185 ms)
+[----------] 5 tests from RocprimDeviceScanTests/12 (629 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/13, where TypeParam = DeviceScanParams<signed char, long, rocprim::plus<long>, false>
+[ RUN      ] RocprimDeviceScanTests/13.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/13.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/13.InclusiveScan
+[       OK ] RocprimDeviceScanTests/13.InclusiveScan (39 ms)
+[ RUN      ] RocprimDeviceScanTests/13.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/13.ExclusiveScan (37 ms)
+[ RUN      ] RocprimDeviceScanTests/13.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/13.InclusiveScanByKey (95 ms)
+[ RUN      ] RocprimDeviceScanTests/13.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/13.ExclusiveScanByKey (100 ms)
+[----------] 5 tests from RocprimDeviceScanTests/13 (271 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/14, where TypeParam = DeviceScanParams<float, double, rocprim::minimum<double>, false>
+[ RUN      ] RocprimDeviceScanTests/14.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/14.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/14.InclusiveScan
+[       OK ] RocprimDeviceScanTests/14.InclusiveScan (119 ms)
+[ RUN      ] RocprimDeviceScanTests/14.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/14.ExclusiveScan (123 ms)
+[ RUN      ] RocprimDeviceScanTests/14.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/14.InclusiveScanByKey (179 ms)
+[ RUN      ] RocprimDeviceScanTests/14.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/14.ExclusiveScanByKey (175 ms)
+[----------] 5 tests from RocprimDeviceScanTests/14 (596 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/15, where TypeParam = DeviceScanParams<test_utils::custom_test_type<int>, test_utils::custom_test_type<int>, rocprim::plus<test_utils::custom_test_type<int> >, false>
+[ RUN      ] RocprimDeviceScanTests/15.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/15.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/15.InclusiveScan
+[       OK ] RocprimDeviceScanTests/15.InclusiveScan (65 ms)
+[ RUN      ] RocprimDeviceScanTests/15.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/15.ExclusiveScan (59 ms)
+[ RUN      ] RocprimDeviceScanTests/15.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/15.InclusiveScanByKey (110 ms)
+[ RUN      ] RocprimDeviceScanTests/15.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/15.ExclusiveScanByKey (111 ms)
+[----------] 5 tests from RocprimDeviceScanTests/15 (345 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/16, where TypeParam = DeviceScanParams<test_utils::custom_test_type<double>, test_utils::custom_test_type<double>, rocprim::plus<test_utils::custom_test_type<double> >, true>
+[ RUN      ] RocprimDeviceScanTests/16.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/16.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/16.InclusiveScan
+[       OK ] RocprimDeviceScanTests/16.InclusiveScan (277 ms)
+[ RUN      ] RocprimDeviceScanTests/16.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/16.ExclusiveScan (283 ms)
+[ RUN      ] RocprimDeviceScanTests/16.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/16.InclusiveScanByKey (308 ms)
+[ RUN      ] RocprimDeviceScanTests/16.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/16.ExclusiveScanByKey (340 ms)
+[----------] 5 tests from RocprimDeviceScanTests/16 (1208 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/17, where TypeParam = DeviceScanParams<test_utils::custom_test_type<int>, test_utils::custom_test_type<int>, rocprim::plus<test_utils::custom_test_type<int> >, false>
+[ RUN      ] RocprimDeviceScanTests/17.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/17.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/17.InclusiveScan
+[       OK ] RocprimDeviceScanTests/17.InclusiveScan (61 ms)
+[ RUN      ] RocprimDeviceScanTests/17.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/17.ExclusiveScan (62 ms)
+[ RUN      ] RocprimDeviceScanTests/17.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/17.InclusiveScanByKey (109 ms)
+[ RUN      ] RocprimDeviceScanTests/17.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/17.ExclusiveScanByKey (122 ms)
+[----------] 5 tests from RocprimDeviceScanTests/17 (354 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/18, where TypeParam = DeviceScanParams<test_utils::custom_test_array_type<long long, 5ul>, test_utils::custom_test_array_type<long long, 5ul>, rocprim::plus<test_utils::custom_test_array_type<long long, 5ul> >, false>
+[ RUN      ] RocprimDeviceScanTests/18.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/18.InclusiveScanEmptyInput (0 ms)
+[ RUN      ] RocprimDeviceScanTests/18.InclusiveScan
+[       OK ] RocprimDeviceScanTests/18.InclusiveScan (187 ms)
+[ RUN      ] RocprimDeviceScanTests/18.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/18.ExclusiveScan (177 ms)
+[ RUN      ] RocprimDeviceScanTests/18.InclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/18.InclusiveScanByKey (237 ms)
+[ RUN      ] RocprimDeviceScanTests/18.ExclusiveScanByKey
+[       OK ] RocprimDeviceScanTests/18.ExclusiveScanByKey (240 ms)
+[----------] 5 tests from RocprimDeviceScanTests/18 (843 ms total)
+
+[----------] 5 tests from RocprimDeviceScanTests/19, where TypeParam = DeviceScanParams<test_utils::custom_test_array_type<int, 10ul>, test_utils::custom_test_array_type<int, 10ul>, rocprim::plus<test_utils::custom_test_array_type<int, 10ul> >, false>
+[ RUN      ] RocprimDeviceScanTests/19.InclusiveScanEmptyInput
+[       OK ] RocprimDeviceScanTests/19.InclusiveScanEmptyInput (1 ms)
+[ RUN      ] RocprimDeviceScanTests/19.InclusiveScan
+[       OK ] RocprimDeviceScanTests/19.InclusiveScan (273 ms)
+[ RUN      ] RocprimDeviceScanTests/19.ExclusiveScan
+[       OK ] RocprimDeviceScanTests/19.ExclusiveScan (294 ms)
+[ RUN      ] RocprimDeviceScanTests/19.InclusiveScanByKey
+Memory access fault by GPU node-1 (Agent handle: 0x2c0e1f0) on address 0x602dc0000. Reason: Page not present or supervisor privilege.
+
+      Start 58: rocprim.hip.device_segmented_radix_sort
+58/90 Test #58: rocprim.hip.device_segmented_radix_sort ...   Passed    9.83 sec
+      Start 59: rocprim.hip.device_segmented_reduce
+59/90 Test #59: rocprim.hip.device_segmented_reduce .......   Passed    2.60 sec
+      Start 60: rocprim.hip.device_segmented_scan
+60/90 Test #60: rocprim.hip.device_segmented_scan .........   Passed    4.01 sec
+      Start 61: rocprim.hip.device_select
+61/90 Test #61: rocprim.hip.device_select .................   Passed    1.54 sec
+      Start 62: rocprim.hip.device_transform
+62/90 Test #62: rocprim.hip.device_transform ..............   Passed    0.91 sec
+      Start 63: rocprim.hip.discard_iterator
+63/90 Test #63: rocprim.hip.discard_iterator ..............   Passed    0.61 sec
+      Start 64: rocprim.hip.texture_cache_iterator
+64/90 Test #64: rocprim.hip.texture_cache_iterator ........   Passed    0.62 sec
+      Start 65: rocprim.hip.transform_iterator
+65/90 Test #65: rocprim.hip.transform_iterator ............   Passed    0.62 sec
+      Start 66: rocprim.hip.intrinsics
+66/90 Test #66: rocprim.hip.intrinsics ....................   Passed    0.65 sec
+      Start 67: rocprim.hip.warp_reduce
+67/90 Test #67: rocprim.hip.warp_reduce ...................   Passed    0.64 sec
+      Start 68: rocprim.hip.warp_scan
+68/90 Test #68: rocprim.hip.warp_scan .....................   Passed    0.64 sec
+      Start 69: rocprim.hip.warp_sort
+69/90 Test #69: rocprim.hip.warp_sort .....................   Passed    0.62 sec
+      Start 70: rocprim.hip.zip_iterator
+70/90 Test #70: rocprim.hip.zip_iterator ..................   Passed    0.62 sec
+      Start 71: hipcub.BasicTest
+71/90 Test #71: hipcub.BasicTest ..........................   Passed    0.61 sec
+      Start 72: hipcub.BlockDiscontinuity
+72/90 Test #72: hipcub.BlockDiscontinuity .................   Passed    3.38 sec
+      Start 73: hipcub.BlockExchange
+73/90 Test #73: hipcub.BlockExchange ......................   Passed    0.94 sec
+      Start 74: hipcub.BlockHistogram
+74/90 Test #74: hipcub.BlockHistogram .....................   Passed    0.64 sec
+      Start 75: hipcub.BlockLoadStore
+75/90 Test #75: hipcub.BlockLoadStore .....................   Passed    1.37 sec
+      Start 76: hipcub.BlockRadixSort
+76/90 Test #76: hipcub.BlockRadixSort .....................   Passed    2.54 sec
+      Start 77: hipcub.BlockReduce
+77/90 Test #77: hipcub.BlockReduce ........................   Passed    0.72 sec
+      Start 78: hipcub.BlockScan
+78/90 Test #78: hipcub.BlockScan ..........................   Passed    1.01 sec
+      Start 79: hipcub.DeviceHistogram
+79/90 Test #79: hipcub.DeviceHistogram ....................   Passed    8.21 sec
+      Start 80: hipcub.DeviceRadixSort
+80/90 Test #80: hipcub.DeviceRadixSort ....................   Passed   11.30 sec
+      Start 81: hipcub.DeviceReduce
+81/90 Test #81: hipcub.DeviceReduce .......................   Passed    0.86 sec
+      Start 82: hipcub.DeviceRunLengthEncode
+82/90 Test #82: hipcub.DeviceRunLengthEncode ..............   Passed    2.32 sec
+      Start 83: hipcub.DeviceReduceByKey
+83/90 Test #83: hipcub.DeviceReduceByKey ..................   Passed    4.72 sec
+      Start 84: hipcub.DeviceScan
+84/90 Test #84: hipcub.DeviceScan .........................   Passed    0.77 sec
+      Start 85: hipcub.DeviceSegmentedRadixSort
+85/90 Test #85: hipcub.DeviceSegmentedRadixSort ...........   Passed    9.68 sec
+      Start 86: hipcub.DeviceSegmentedReduce
+86/90 Test #86: hipcub.DeviceSegmentedReduce ..............   Passed    3.17 sec
+      Start 87: hipcub.DeviceSelect
+87/90 Test #87: hipcub.DeviceSelect .......................   Passed    0.94 sec
+      Start 88: hipcub.UtilPtx
+88/90 Test #88: hipcub.UtilPtx ............................   Passed    0.63 sec
+      Start 89: hipcub.WarpReduce
+89/90 Test #89: hipcub.WarpReduce .........................   Passed    0.63 sec
+      Start 90: hipcub.WarpScan
+90/90 Test #90: hipcub.WarpScan ...........................   Passed    0.64 sec
+
+99% tests passed, 1 tests failed out of 90
+
+Total Test time (real) = 254.30 sec
+
+The following tests FAILED:
+	 57 - rocprim.hip.device_scan (OTHER_FAULT)
+Errors while running CTest
+Finished: SUCCESS

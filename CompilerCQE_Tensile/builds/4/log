@@ -1,0 +1,38 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_Tensile
+[CompilerCQE_Tensile] $ /bin/sh -xe /tmp/jenkins5593273889953649497.sh
++ sudo apt-get install python-yaml
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-yaml is already the newest version (3.11-3build1).
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.15.0-45 linux-headers-4.15.0-45-generic
+  linux-image-4.15.0-45-generic linux-modules-4.15.0-45-generic
+  linux-modules-extra-4.15.0-45-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 103 not upgraded.
++ rm -rf Tensile
++ mkdir Tensile
++ cd Tensile
++ git clone https://github.com/ROCmSoftwarePlatform/Tensile repo
+Cloning into 'repo'...
++ cd repo
++ git checkout master
+Switched to a new branch 'master'
+Branch master set up to track remote branch master from origin.
++ mkdir build
++ cd build
++ python2 ../Tensile/Tensile.py ../Tensile/Configs/test_sgemm.yaml ./
+
+################################################################################
+#
+#  Tensile v4.9.2
+# Restoring default globalParameters
+#  Config: /home/taccuser/workspace/CompilerCQE_Tensile/Tensile/repo/Tensile/Configs/test_sgemm.yaml
+#
+################################################################################
+
+Tensile::FATAL: Cannot open file: /home/taccuser/workspace/CompilerCQE_Tensile/Tensile/repo/Tensile/Configs/test_sgemm.yaml
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

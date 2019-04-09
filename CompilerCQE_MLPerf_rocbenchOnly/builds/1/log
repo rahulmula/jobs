@@ -1,0 +1,285 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_MLPerf_rocbenchOnly
+[CompilerCQE_MLPerf_rocbenchOnly] $ /bin/sh -xe /tmp/jenkins920130813664827021.sh
++ cd /home/taccuser/workspace/CompilerCQE_rocBLAS_Full/rocBLAS/build/release/clients/staging/
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB N -m 1024 -n 3996 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,N,1024,3996,1024,1,1024,1024,0,1024,3573.35,2345.2
++ ./rocblas-bench -f gemm_strided_batched -r s --transposeA T --transposeB N -m 54 -n 54 -k 64 --alpha 1 --lda 64 --stride_a 3456 --ldb 64 --stride_b 3456 --beta 0 --ldc 54 --stride_c 2916 --batch 1184
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,stride_a,ldb,stride_b,beta,ldc,stride_c,Batch_Count,rocblas-Gflops,us
+T,N,54,54,64,1,64,3456,64,3456,0,54,2916,1184,909.125,486.1
++ ./rocblas-bench -f gemm_strided_batched -r s --transposeA N --transposeB N -m 64 -n 54 -k 54 --alpha 1 --lda 64 --stride_a 3456 --ldb 54 --stride_b 2916 --beta 0 --ldc 64 --stride_c 3456 --batch 1184
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,stride_a,ldb,stride_b,beta,ldc,stride_c,Batch_Count,rocblas-Gflops,us
+N,N,64,54,54,1,64,3456,54,2916,0,64,3456,1184,1183.84,373.3
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB N -m 4096 -n 3327 -k 1024 --alpha 1 --lda 4096 --ldb 1024 --beta 0 --ldc 4096
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,N,4096,3327,1024,1,4096,1024,0,4096,1322.86,21097.4
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB N -m 1024 -n 3327 -k 4096 --alpha 1 --lda 1024 --ldb 4096 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,N,1024,3327,4096,1,1024,4096,0,1024,3079.67,9062.3
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB N -m 4096 -n 3996 -k 1024 --alpha 1 --lda 4096 --ldb 1024 --beta 0 --ldc 4096
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,N,4096,3996,1024,1,4096,1024,0,4096,2675.59,12528.4
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB N -m 1024 -n 3996 -k 4096 --alpha 1 --lda 1024 --ldb 4096 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,N,1024,3996,4096,1,1024,4096,0,1024,1128.96,29691.9
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 33708 -n 3996 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 33708
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,33708,3996,1024,1,1024,1024,0,33708,2640.63,104468
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB N -m 1024 -n 3996 -k 33708 --alpha 1 --lda 1024 --ldb 33708 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,N,1024,3996,33708,1,1024,33708,0,1024,3162.72,87222.4
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB T -m 1024 -n 33708 -k 3996 --alpha 1 --lda 1024 --ldb 33708 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,T,1024,33708,3996,1,1024,33708,0,1024,3872.58,71234.1
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 4096 -n 3996 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 4096
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,4096,3996,1024,1,1024,1024,0,4096,1576.44,21263.7
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB T -m 1024 -n 4096 -k 3996 --alpha 1 --lda 1024 --ldb 4096 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,T,1024,4096,3996,1,1024,4096,0,1024,1749.13,19164.3
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 1024 -n 3996 -k 4096 --alpha 1 --lda 4096 --ldb 4096 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,1024,3996,4096,1,4096,4096,0,1024,821.973,40781
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB T -m 4096 -n 1024 -k 3996 --alpha 1 --lda 4096 --ldb 1024 --beta 0 --ldc 4096
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,T,4096,1024,3996,1,4096,1024,0,4096,1724.13,19442.2
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 1024 -n 3996 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,1024,3996,1024,1,1024,1024,0,1024,908.996,9219.2
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB T -m 1024 -n 1024 -k 3996 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,T,1024,1024,3996,1,1024,1024,0,1024,2442.22,3431.4
++ ./rocblas-bench -f gemm_strided_batched -r s --transposeA N --transposeB T -m 64 -n 54 -k 54 --alpha 1 --lda 64 --stride_a 3456 --ldb 54 --stride_b 2916 --beta 0 --ldc 64 --stride_c 3456 --batch 1184
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,stride_a,ldb,stride_b,beta,ldc,stride_c,Batch_Count,rocblas-Gflops,us
+N,T,64,54,54,1,64,3456,54,2916,0,64,3456,1184,282.742,1563
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 4096 -n 3327 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 4096
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,4096,3327,1024,1,1024,1024,0,4096,2242.33,12446.4
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB T -m 1024 -n 4096 -k 3327 --alpha 1 --lda 1024 --ldb 4096 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,T,1024,4096,3327,1,1024,4096,0,1024,2648.53,10537.5
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 1024 -n 3327 -k 4096 --alpha 1 --lda 4096 --ldb 4096 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,1024,3327,4096,1,4096,4096,0,1024,767.829,36347.8
++ ./rocblas-bench -f gemm -r s --transposeA N --transposeB T -m 4096 -n 1024 -k 3327 --alpha 1 --lda 4096 --ldb 1024 --beta 0 --ldc 4096
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+N,T,4096,1024,3327,1,4096,1024,0,4096,3541.78,7879.9
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 4096 -n 128 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 4096
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,4096,128,1024,1,1024,1024,0,4096,2357.28,455.5
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 4096 -n 128 -k 2048 --alpha 1 --lda 2048 --ldb 2048 --beta 0 --ldc 4096
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,4096,128,2048,1,2048,2048,0,4096,2736.35,784.8
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 1024 -n 6272 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,1024,6272,1024,1,1024,1024,0,1024,2475.78,5312.8
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 1024 -n 6400 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 1024
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,1024,6400,1024,1,1024,1024,0,1024,1531.34,8764.7
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 313600 -n 1 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 313600
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,ldb,beta,ldc,rocblas-Gflops,us
+T,N,313600,1,1024,1,1024,1024,0,313600,52.9152,12137.4
++ ./rocblas-bench -f gemm_strided_batched -r s --transposeA N --transposeB N -m 1024 -n 49 -k 50 --alpha 1 --lda 131072 --stride_a 1024 --ldb 50 --stride_b 2450 --beta 0 --ldc 1024 --stride_c 50176 --batch 128
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+transA,transB,M,N,K,alpha,lda,stride_a,ldb,stride_b,beta,ldc,stride_c,Batch_Count,rocblas-Gflops,us
+N,N,1024,49,50,1,131072,1024,50,2450,0,1024,50176,128,329.242,1950.7
++ ./rocblas-bench -f gemm -r s --transposeA T --transposeB N -m 32317 -n 6272 -k 1024 --alpha 1 --lda 1024 --ldb 1024 --beta 0 --ldc 32317
+Query device success: there are 1 devices 
+-------------------------------------------------------------------------------
+Device ID 0 : Device 67df
+with 8.6 GB memory, clock rate 1342MHz @ computing capability 3.0 
+maxGridDimX 2147483647, sharedMemPerBlock 65.5 KB, maxThreadsPerBlock 1024, warpSize 64
+-------------------------------------------------------------------------------
+
+Build was aborted
+Aborted by [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Finished: ABORTED

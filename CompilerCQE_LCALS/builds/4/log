@@ -1,0 +1,853 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_LCALS
+[CompilerCQE_LCALS] $ /bin/sh -xe /tmp/jenkins7478426956209935858.sh
++ cd /home/taccuser/Documents
++ cd compilerNightly
++ rm -rf hcc_lcals_eigen_boost
++ git clone https://bitbucket.org/whchung/hcc_lcals_eigen_boost
+Cloning into 'hcc_lcals_eigen_boost'...
+Checking out files:  23% (11720/49436)   Checking out files:  24% (11865/49436)   Checking out files:  25% (12359/49436)   Checking out files:  26% (12854/49436)   Checking out files:  27% (13348/49436)   Checking out files:  28% (13843/49436)   Checking out files:  29% (14337/49436)   Checking out files:  30% (14831/49436)   Checking out files:  31% (15326/49436)   Checking out files:  32% (15820/49436)   Checking out files:  33% (16314/49436)   Checking out files:  34% (16809/49436)   Checking out files:  35% (17303/49436)   Checking out files:  36% (17797/49436)   Checking out files:  37% (18292/49436)   Checking out files:  37% (18633/49436)   Checking out files:  38% (18786/49436)   Checking out files:  39% (19281/49436)   Checking out files:  40% (19775/49436)   Checking out files:  41% (20269/49436)   Checking out files:  42% (20764/49436)   Checking out files:  43% (21258/49436)   Checking out files:  44% (21752/49436)   Checking out files:  45% (22247/49436)   Checking out files:  46% (22741/49436)   Checking out files:  47% (23235/49436)   Checking out files:  48% (23730/49436)   Checking out files:  49% (24224/49436)   Checking out files:  50% (24718/49436)   Checking out files:  51% (25213/49436)   Checking out files:  52% (25707/49436)   Checking out files:  53% (26202/49436)   Checking out files:  54% (26696/49436)   Checking out files:  55% (27190/49436)   Checking out files:  56% (27685/49436)   Checking out files:  57% (28179/49436)   Checking out files:  58% (28673/49436)   Checking out files:  59% (29168/49436)   Checking out files:  59% (29606/49436)   Checking out files:  60% (29662/49436)   Checking out files:  61% (30156/49436)   Checking out files:  62% (30651/49436)   Checking out files:  63% (31145/49436)   Checking out files:  64% (31640/49436)   Checking out files:  65% (32134/49436)   Checking out files:  66% (32628/49436)   Checking out files:  67% (33123/49436)   Checking out files:  68% (33617/49436)   Checking out files:  69% (34111/49436)   Checking out files:  70% (34606/49436)   Checking out files:  71% (35100/49436)   Checking out files:  72% (35594/49436)   Checking out files:  72% (35922/49436)   Checking out files:  73% (36089/49436)   Checking out files:  74% (36583/49436)   Checking out files:  75% (37077/49436)   Checking out files:  76% (37572/49436)   Checking out files:  77% (38066/49436)   Checking out files:  78% (38561/49436)   Checking out files:  79% (39055/49436)   Checking out files:  80% (39549/49436)   Checking out files:  81% (40044/49436)   Checking out files:  82% (40538/49436)   Checking out files:  83% (41032/49436)   Checking out files:  84% (41527/49436)   Checking out files:  85% (42021/49436)   Checking out files:  86% (42515/49436)   Checking out files:  87% (43010/49436)   Checking out files:  88% (43504/49436)   Checking out files:  89% (43999/49436)   Checking out files:  90% (44493/49436)   Checking out files:  91% (44987/49436)   Checking out files:  92% (45482/49436)   Checking out files:  92% (45728/49436)   Checking out files:  93% (45976/49436)   Checking out files:  94% (46470/49436)   Checking out files:  95% (46965/49436)   Checking out files:  96% (47459/49436)   Checking out files:  97% (47953/49436)   Checking out files:  98% (48448/49436)   Checking out files:  99% (48942/49436)   Checking out files: 100% (49436/49436)   Checking out files: 100% (49436/49436), done.
++ cd hcc_lcals_eigen_boost
++ cd lcals_v1_0_2
++ sed -i s/compiler//g Makefile
++ make
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runBRawLoops.o runBRawLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runOMPRawLoops.o runOMPRawLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o LCALSStats.o LCALSStats.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o main.o main.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runOMPForallLambdaLoops.o runOMPForallLambdaLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runCRawLoops.o runCRawLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o LCALSSuite.o LCALSSuite.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runReferenceLoops.o runReferenceLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runBForallLambdaLoops.o runBForallLambdaLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o LCALSTraversalMethods.o LCALSTraversalMethods.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runCForallLambdaLoops.o runCForallLambdaLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runAForallLambdaLoops.o runAForallLambdaLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp -c -o runARawLoops.o runARawLoops.cxx -I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR  -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK   
+Creating ./lcalsversioninfo.txt file
+/opt/rocm/hcc//bin/hcc -Ofast  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp ./runBRawLoops.o ./runOMPRawLoops.o ./LCALSStats.o ./main.o ./runOMPForallLambdaLoops.o ./runCRawLoops.o ./LCALSSuite.o ./runReferenceLoops.o ./runBForallLambdaLoops.o ./LCALSTraversalMethods.o ./runCForallLambdaLoops.o ./runAForallLambdaLoops.o ./runARawLoops.o   -L/opt/rocm/hcc/lib -Wl,--rpath=/opt/rocm/hcc/lib -o  lcals.exe
++ ./lcals.exe
+
+ Running loop suite on taccuser-SYS-7048GR-TR
+
+ WARNING: unknown system cache size. Timing results may be suspect!!
+
+ allocateLoopSuiteRunInfo...
+
+ defineLoopSuiteRunInfo...
+
+ allocateLoopData...
+
+ computeReferenceLoopTimes...
+
+ run suite: pass = 0
+	 run loop variant ---> Raw
+	 run loop variant ---> Forall_Lambda
+	 run loop variant ---> Raw_OMP
+	 run loop variant ---> Forall_Lambda_OMP
+
+ generate reports....
+
+
+
+===========================================================================================================
+===========================================================================================================
+LCALS compilation summary: 
+
+/********************************************************************
+* LCALS compilation information created by 'lcals_vesion'
+* script during make process....
+********************************************************************/
+
+#define VER_MACHINE "taccuser-SYS-7048GR-TR
+"
+#define VER_DATE "04/04/19"
+#define VER_TIME "14:29:31"
+#define VER_OS " Linux 5.0.0-rc1-kfd-compute-roc-master-10159 #1 SMP Thu Mar 28 20:44:04 CDT 2019"
+#define VER_COMPILER "/opt/rocm/hcc//bin/hcc"
+#define VER_PERSON "taccuser"
+
+#define LCALS_VER_INFO_MAX 3
+
+static char *lcals_ver_info_names[LCALS_VER_INFO_MAX] = {
+   "CXX_COMPILE",
+   "CXX_FLAGS_BUILD",
+   "LDFLAGS"
+};
+
+#define LCALS_VER_INFO_NUM 3
+
+static char *lcals_ver_info_values[LCALS_VER_INFO_NUM] = {
+   "/opt/rocm/hcc//bin/hcc -Ofast -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp ",
+   "-I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK  ",
+   " "
+};
+
+
+
+
+
+===========================================================================================================
+===========================================================================================================
+LCALS run summary: 
+sizeof(Real_type) = 8
+     num suite passes = 1
+     loop sample fraction = 1
+     loop variants run : Raw , Forall_Lambda , Raw_OMP , Forall_Lambda_OMP
+     reference variant : Raw
+===========================================================================================================
+===========================================================================================================
+Loop name(Loop ID) -->   <length id>:(length, samples/pass), etc.
+Variant(length id)         Mean Time         Min Time        Max Time        Std. Dev.     Mean time rel to ref variant
+------------------------------------------------------------------------------------------------------------
+PRESSURE_CALC (1) -->    L:(44217, 15000)   M:(5001, 200000)   S:(171, 10000000)
+Raw(L)                    1.523588000       1.523588000       1.523588000       0.000000000
+Raw(M)                    2.082273000       2.082273000       2.082273000       0.000000000
+Raw(S)                    3.316097000       3.316097000       3.316097000       0.000000000
+............................................
+Forall_Lambda(L)          1.527306000       1.527306000       1.527306000       0.000000000           1.00244
+Forall_Lambda(M)          2.082848000       2.082848000       2.082848000       0.000000000           1.00028
+Forall_Lambda(S)          3.307832000       3.307832000       3.307832000       0.000000000          0.997508
+
+-------------------------------------------------------
+ENERGY_CALC (3) -->    L:(44217, 3000)   M:(5001, 30000)   S:(171, 1000000)
+Raw(L)                   0.8768460000      0.8768460000      0.8768460000       0.000000000
+Raw(M)                   0.8923260000      0.8923260000      0.8923260000       0.000000000
+Raw(S)                   0.9147400000      0.9147400000      0.9147400000       0.000000000
+............................................
+Forall_Lambda(L)          1.088339000       1.088339000       1.088339000       0.000000000           1.24120
+Forall_Lambda(M)          1.145251000       1.145251000       1.145251000       0.000000000           1.28344
+Forall_Lambda(S)          1.195655000       1.195655000       1.195655000       0.000000000           1.30710
+
+-------------------------------------------------------
+VOL3D_CALC (5) -->    L:(27805, 6500)   M:(6097, 30000)   S:(229, 800000)
+Raw(L)                    2.168694000       2.168694000       2.168694000       0.000000000
+Raw(M)                    2.199585000       2.199585000       2.199585000       0.000000000
+Raw(S)                    2.205310000       2.205310000       2.205310000       0.000000000
+............................................
+Forall_Lambda(L)          2.174170000       2.174170000       2.174170000       0.000000000           1.00253
+Forall_Lambda(M)          2.202017000       2.202017000       2.202017000       0.000000000           1.00111
+Forall_Lambda(S)          2.206269000       2.206269000       2.206269000       0.000000000           1.00043
+
+-------------------------------------------------------
+DEL_DOT_VEC_2D (6) -->    L:(24025, 4000)   M:(3969, 25000)   S:(49, 2000000)
+Raw(L)                   0.8887280000      0.8887280000      0.8887280000       0.000000000
+Raw(M)                   0.9170640000      0.9170640000      0.9170640000       0.000000000
+Raw(S)                   0.9055890000      0.9055890000      0.9055890000       0.000000000
+............................................
+Forall_Lambda(L)         0.8882440000      0.8882440000      0.8882440000       0.000000000          0.999455
+Forall_Lambda(M)         0.9184180000      0.9184180000      0.9184180000       0.000000000           1.00148
+Forall_Lambda(S)         0.9055340000      0.9055340000      0.9055340000       0.000000000          0.999939
+
+-------------------------------------------------------
+COUPLE (7) -->    L:(27805, 2000)   M:(6097, 10000)   S:(229, 600000)
+Raw(L)                    2.497324000       2.497324000       2.497324000       0.000000000
+Raw(M)                    2.043279000       2.043279000       2.043279000       0.000000000
+Raw(S)                   0.7570590000      0.7570590000      0.7570590000       0.000000000
+............................................
+Forall_Lambda(L)          2.446057000       2.446057000       2.446057000       0.000000000          0.979471
+Forall_Lambda(M)          2.028697000       2.028697000       2.028697000       0.000000000          0.992863
+Forall_Lambda(S)         0.7545950000      0.7545950000      0.7545950000       0.000000000          0.996745
+
+-------------------------------------------------------
+FIR (8) -->    L:(44217, 10000)   M:(5001, 80000)   S:(171, 3000000)
+Raw(L)                    1.079497000       1.079497000       1.079497000       0.000000000
+Raw(M)                   0.9071620000      0.9071620000      0.9071620000       0.000000000
+Raw(S)                    1.003150000       1.003150000       1.003150000       0.000000000
+............................................
+Forall_Lambda(L)         0.9830060000      0.9830060000      0.9830060000       0.000000000          0.910615
+Forall_Lambda(M)         0.8860810000      0.8860810000      0.8860810000       0.000000000          0.976762
+Forall_Lambda(S)         0.9549630000      0.9549630000      0.9549630000       0.000000000          0.951964
+
+-------------------------------------------------------
+INIT3 (9) -->    L:(44217, 10000)   M:(5001, 110000)   S:(171, 12000000)
+Raw(L)                   0.9109920000      0.9109920000      0.9109920000       0.000000000
+Raw(M)                   0.9629700000      0.9629700000      0.9629700000       0.000000000
+Raw(S)                    1.689890000       1.689890000       1.689890000       0.000000000
+............................................
+Forall_Lambda(L)         0.9092290000      0.9092290000      0.9092290000       0.000000000          0.998065
+Forall_Lambda(M)         0.9669430000      0.9669430000      0.9669430000       0.000000000           1.00413
+Forall_Lambda(S)          1.686178000       1.686178000       1.686178000       0.000000000          0.997803
+
+-------------------------------------------------------
+MULADDSUB (10) -->    L:(44217, 12000)   M:(5001, 140000)   S:(171, 15000000)
+Raw(L)                    1.149114000       1.149114000       1.149114000       0.000000000
+Raw(M)                    1.353412000       1.353412000       1.353412000       0.000000000
+Raw(S)                    3.206738000       3.206738000       3.206738000       0.000000000
+............................................
+Forall_Lambda(L)          1.146302000       1.146302000       1.146302000       0.000000000          0.997553
+Forall_Lambda(M)          1.354983000       1.354983000       1.354983000       0.000000000           1.00116
+Forall_Lambda(S)          3.213432000       3.213432000       3.213432000       0.000000000           1.00209
+
+-------------------------------------------------------
+IF_QUAD (11) -->    L:(44217, 3000)   M:(5001, 30000)   S:(171, 1000000)
+Raw(L)                   0.4806270000      0.4806270000      0.4806270000       0.000000000
+Raw(M)                   0.5366610000      0.5366610000      0.5366610000       0.000000000
+Raw(S)                   0.6123080000      0.6123080000      0.6123080000       0.000000000
+............................................
+Forall_Lambda(L)         0.4754670000      0.4754670000      0.4754670000       0.000000000          0.989264
+Forall_Lambda(M)         0.5423760000      0.5423760000      0.5423760000       0.000000000           1.01065
+Forall_Lambda(S)         0.6164490000      0.6164490000      0.6164490000       0.000000000           1.00676
+
+-------------------------------------------------------
+TRAP_INT (12) -->    L:(44217, 4000)   M:(5001, 32000)   S:(171, 1000000)
+Raw(L)                   0.5912410000      0.5912410000      0.5912410000       0.000000000
+Raw(M)                   0.5342440000      0.5342440000      0.5342440000       0.000000000
+Raw(S)                   0.5717470000      0.5717470000      0.5717470000       0.000000000
+............................................
+Forall_Lambda(L)         0.5909710000      0.5909710000      0.5909710000       0.000000000          0.999543
+Forall_Lambda(M)         0.5345040000      0.5345040000      0.5345040000       0.000000000           1.00049
+Forall_Lambda(S)         0.5690420000      0.5690420000      0.5690420000       0.000000000          0.995269
+
+-------------------------------------------------------
+HYDRO_1D (13) -->    L:(44217, 30000)   M:(5001, 320000)   S:(171, 15000000)
+Raw(L)                   0.8905300000      0.8905300000      0.8905300000       0.000000000
+Raw(M)                   0.7256060000      0.7256060000      0.7256060000       0.000000000
+Raw(S)                    1.022906000       1.022906000       1.022906000       0.000000000
+............................................
+Forall_Lambda(L)         0.8833860000      0.8833860000      0.8833860000       0.000000000          0.991978
+Forall_Lambda(M)         0.7374840000      0.7374840000      0.7374840000       0.000000000           1.01637
+Forall_Lambda(S)          1.032607000       1.032607000       1.032607000       0.000000000           1.00948
+
+-------------------------------------------------------
+ICCG (14) -->    L:(44217, 20000)   M:(5001, 200000)   S:(171, 6000000)
+Raw(L)                    1.003239000       1.003239000       1.003239000       0.000000000
+Raw(M)                   0.9967730000      0.9967730000      0.9967730000       0.000000000
+Raw(S)                    1.088302000       1.088302000       1.088302000       0.000000000
+............................................
+Forall_Lambda(L)         0.9981130000      0.9981130000      0.9981130000       0.000000000          0.994891
+Forall_Lambda(M)          1.001284000       1.001284000       1.001284000       0.000000000           1.00453
+Forall_Lambda(S)          1.076987000       1.076987000       1.076987000       0.000000000          0.989603
+
+-------------------------------------------------------
+INNER_PROD (15) -->    L:(44217, 50000)   M:(5001, 600000)   S:(171, 30000000)
+Raw(L)                   0.7680060000      0.7680060000      0.7680060000       0.000000000
+Raw(M)                   0.9073270000      0.9073270000      0.9073270000       0.000000000
+Raw(S)                    1.014106000       1.014106000       1.014106000       0.000000000
+............................................
+Forall_Lambda(L)         0.7546690000      0.7546690000      0.7546690000       0.000000000          0.982634
+Forall_Lambda(M)         0.9074590000      0.9074590000      0.9074590000       0.000000000           1.00015
+Forall_Lambda(S)          1.116186000       1.116186000       1.116186000       0.000000000           1.10066
+
+-------------------------------------------------------
+BAND_LIN_EQ (16) -->    L:(44217, 40000)   M:(5001, 600000)   S:(171, 20000000)
+Raw(L)                    1.104630000       1.104630000       1.104630000       0.000000000
+Raw(M)                   0.8590300000      0.8590300000      0.8590300000       0.000000000
+Raw(S)                   0.6943000000      0.6943000000      0.6943000000       0.000000000
+............................................
+Forall_Lambda(L)          1.100572000       1.100572000       1.100572000       0.000000000          0.996326
+Forall_Lambda(M)         0.8654080000      0.8654080000      0.8654080000       0.000000000           1.00742
+Forall_Lambda(S)         0.6945170000      0.6945170000      0.6945170000       0.000000000           1.00031
+
+-------------------------------------------------------
+TRIDIAG_ELIM (17) -->    L:(44217, 10000)   M:(5001, 100000)   S:(171, 3000000)
+Raw(L)                   0.7209670000      0.7209670000      0.7209670000       0.000000000
+Raw(M)                   0.8131070000      0.8131070000      0.8131070000       0.000000000
+Raw(S)                   0.7679940000      0.7679940000      0.7679940000       0.000000000
+............................................
+Forall_Lambda(L)         0.7212760000      0.7212760000      0.7212760000       0.000000000           1.00043
+Forall_Lambda(M)         0.8123640000      0.8123640000      0.8123640000       0.000000000          0.999086
+Forall_Lambda(S)         0.7691670000      0.7691670000      0.7691670000       0.000000000           1.00153
+
+-------------------------------------------------------
+EOS (18) -->    L:(44217, 18000)   M:(5001, 140000)   S:(171, 5000000)
+Raw(L)                    1.030688000       1.030688000       1.030688000       0.000000000
+Raw(M)                   0.8911900000      0.8911900000      0.8911900000       0.000000000
+Raw(S)                    1.028364000       1.028364000       1.028364000       0.000000000
+............................................
+Forall_Lambda(L)          1.027393000       1.027393000       1.027393000       0.000000000          0.996803
+Forall_Lambda(M)         0.9823940000      0.9823940000      0.9823940000       0.000000000           1.10234
+Forall_Lambda(S)          1.150293000       1.150293000       1.150293000       0.000000000           1.11857
+
+-------------------------------------------------------
+ADI (19) -->    L:(44217, 1000)   M:(5001, 9000)   S:(171, 300000)
+Raw(L)                   0.8119740000      0.8119740000      0.8119740000       0.000000000
+Raw(M)                   0.8173450000      0.8173450000      0.8173450000       0.000000000
+Raw(S)                   0.7770860000      0.7770860000      0.7770860000       0.000000000
+............................................
+Forall_Lambda(L)         0.8106980000      0.8106980000      0.8106980000       0.000000000          0.998429
+Forall_Lambda(M)         0.8203930000      0.8203930000      0.8203930000       0.000000000           1.00373
+Forall_Lambda(S)         0.7884230000      0.7884230000      0.7884230000       0.000000000           1.01459
+
+-------------------------------------------------------
+INT_PREDICT (20) -->    L:(44217, 3000)   M:(5001, 30000)   S:(171, 2000000)
+Raw(L)                   0.7836090000      0.7836090000      0.7836090000       0.000000000
+Raw(M)                   0.8923270000      0.8923270000      0.8923270000       0.000000000
+Raw(S)                    1.035856000       1.035856000       1.035856000       0.000000000
+............................................
+Forall_Lambda(L)         0.7837990000      0.7837990000      0.7837990000       0.000000000           1.00024
+Forall_Lambda(M)         0.8952890000      0.8952890000      0.8952890000       0.000000000           1.00332
+Forall_Lambda(S)          1.045891000       1.045891000       1.045891000       0.000000000           1.00969
+
+-------------------------------------------------------
+DIFF_PREDICT (21) -->    L:(44217, 2000)   M:(5001, 22000)   S:(171, 1800000)
+Raw(L)                   0.8040420000      0.8040420000      0.8040420000       0.000000000
+Raw(M)                   0.9941490000      0.9941490000      0.9941490000       0.000000000
+Raw(S)                    1.371612000       1.371612000       1.371612000       0.000000000
+............................................
+Forall_Lambda(L)         0.8043850000      0.8043850000      0.8043850000       0.000000000           1.00043
+Forall_Lambda(M)         0.9960730000      0.9960730000      0.9960730000       0.000000000           1.00194
+Forall_Lambda(S)          1.374767000       1.374767000       1.374767000       0.000000000           1.00230
+
+-------------------------------------------------------
+FIRST_SUM (22) -->    L:(44217, 30000)   M:(5001, 250000)   S:(171, 8000000)
+Raw(L)                    1.080441000       1.080441000       1.080441000       0.000000000
+Raw(M)                    1.015961000       1.015961000       1.015961000       0.000000000
+Raw(S)                    1.001880000       1.001880000       1.001880000       0.000000000
+............................................
+Forall_Lambda(L)          1.082805000       1.082805000       1.082805000       0.000000000           1.00219
+Forall_Lambda(M)          1.016966000       1.016966000       1.016966000       0.000000000           1.00099
+Forall_Lambda(S)          1.015836000       1.015836000       1.015836000       0.000000000           1.01393
+
+-------------------------------------------------------
+FIRST_DIFF (23) -->    L:(44217, 30000)   M:(5001, 500000)   S:(171, 30000000)
+Raw(L)                   0.6681860000      0.6681860000      0.6681860000       0.000000000
+Raw(M)                   0.7722420000      0.7722420000      0.7722420000       0.000000000
+Raw(S)                    1.076788000       1.076788000       1.076788000       0.000000000
+............................................
+Forall_Lambda(L)         0.6687030000      0.6687030000      0.6687030000       0.000000000           1.00077
+Forall_Lambda(M)         0.7727160000      0.7727160000      0.7727160000       0.000000000           1.00061
+Forall_Lambda(S)          1.090842000       1.090842000       1.090842000       0.000000000           1.01305
+
+-------------------------------------------------------
+PIC_2D (24) -->    L:(44217, 2000)   M:(5001, 18000)   S:(171, 700000)
+Raw(L)                   0.8090320000      0.8090320000      0.8090320000       0.000000000
+Raw(M)                   0.8369410000      0.8369410000      0.8369410000       0.000000000
+Raw(S)                   0.9354880000      0.9354880000      0.9354880000       0.000000000
+............................................
+Forall_Lambda(L)         0.8100230000      0.8100230000      0.8100230000       0.000000000           1.00122
+Forall_Lambda(M)         0.8409000000      0.8409000000      0.8409000000       0.000000000           1.00473
+Forall_Lambda(S)         0.9372690000      0.9372690000      0.9372690000       0.000000000           1.00190
+
+-------------------------------------------------------
+PIC_1D (25) -->    L:(44217, 3000)   M:(5001, 24000)   S:(171, 1000000)
+Raw(L)                    1.280425000       1.280425000       1.280425000       0.000000000
+Raw(M)                    1.132089000       1.132089000       1.132089000       0.000000000
+Raw(S)                    1.299817000       1.299817000       1.299817000       0.000000000
+............................................
+Forall_Lambda(L)          1.280917000       1.280917000       1.280917000       0.000000000           1.00038
+Forall_Lambda(M)          1.133595000       1.133595000       1.133595000       0.000000000           1.00133
+Forall_Lambda(S)          1.305061000       1.305061000       1.305061000       0.000000000           1.00403
+
+-------------------------------------------------------
+HYDRO_2D (26) -->    L:(44217, 300)   M:(5001, 2000)   S:(171, 50000)
+Raw(L)                   0.9089380000      0.9089380000      0.9089380000       0.000000000
+Raw(M)                   0.6943280000      0.6943280000      0.6943280000       0.000000000
+Raw(S)                   0.5629600000      0.5629600000      0.5629600000       0.000000000
+............................................
+Forall_Lambda(L)         0.8574840000      0.8574840000      0.8574840000       0.000000000          0.943391
+Forall_Lambda(M)         0.6591840000      0.6591840000      0.6591840000       0.000000000          0.949384
+Forall_Lambda(S)         0.5288620000      0.5288620000      0.5288620000       0.000000000          0.939431
+
+-------------------------------------------------------
+GEN_LIN_RECUR (27) -->    L:(44217, 4000)   M:(5001, 36000)   S:(171, 1000000)
+Raw(L)                   0.8662870000      0.8662870000      0.8662870000       0.000000000
+Raw(M)                   0.8797690000      0.8797690000      0.8797690000       0.000000000
+Raw(S)                   0.8364440000      0.8364440000      0.8364440000       0.000000000
+............................................
+Forall_Lambda(L)         0.8758280000      0.8758280000      0.8758280000       0.000000000           1.01101
+Forall_Lambda(M)         0.8930910000      0.8930910000      0.8930910000       0.000000000           1.01514
+Forall_Lambda(S)         0.8524930000      0.8524930000      0.8524930000       0.000000000           1.01919
+
+-------------------------------------------------------
+DISC_ORD (28) -->    L:(44217, 1000)   M:(5001, 8000)   S:(171, 200000)
+Raw(L)                   0.8663400000      0.8663400000      0.8663400000       0.000000000
+Raw(M)                   0.7826520000      0.7826520000      0.7826520000       0.000000000
+Raw(S)                   0.6544710000      0.6544710000      0.6544710000       0.000000000
+............................................
+Forall_Lambda(L)         0.8656240000      0.8656240000      0.8656240000       0.000000000          0.999174
+Forall_Lambda(M)         0.7825720000      0.7825720000      0.7825720000       0.000000000          0.999898
+Forall_Lambda(S)         0.6555200000      0.6555200000      0.6555200000       0.000000000           1.00160
+
+-------------------------------------------------------
+MAT_X_MAT (29) -->    L:(44217, 8)   M:(5001, 70)   S:(171, 8000)
+Raw(L)                    1.111846000       1.111846000       1.111846000       0.000000000
+Raw(M)                    1.087857000       1.087857000       1.087857000       0.000000000
+Raw(S)                   0.8581510000      0.8581510000      0.8581510000       0.000000000
+............................................
+Forall_Lambda(L)          1.110949000       1.110949000       1.110949000       0.000000000          0.999193
+Forall_Lambda(M)          1.087911000       1.087911000       1.087911000       0.000000000           1.00005
+Forall_Lambda(S)         0.8589590000      0.8589590000      0.8589590000       0.000000000           1.00094
+
+-------------------------------------------------------
+PLANCKIAN (30) -->    L:(44217, 4000)   M:(5001, 30000)   S:(171, 1000000)
+Raw(L)                    12.16196600       12.16196600       12.16196600       0.000000000
+Raw(M)                    1.862605000       1.862605000       1.862605000       0.000000000
+Raw(S)                    2.127575000       2.127575000       2.127575000       0.000000000
+............................................
+Forall_Lambda(L)          2.191737000       2.191737000       2.191737000       0.000000000          0.180212
+Forall_Lambda(M)          1.862148000       1.862148000       1.862148000       0.000000000          0.999755
+Forall_Lambda(S)          2.124228000       2.124228000       2.124228000       0.000000000          0.998427
+
+-------------------------------------------------------
+IMP_HYDRO_2D (31) -->    L:(44217, 800)   M:(5001, 6000)   S:(171, 150000)
+Raw(L)                    1.108992000       1.108992000       1.108992000       0.000000000
+Raw(M)                   0.9373020000      0.9373020000      0.9373020000       0.000000000
+Raw(S)                   0.7845580000      0.7845580000      0.7845580000       0.000000000
+............................................
+Forall_Lambda(L)         0.7230980000      0.7230980000      0.7230980000       0.000000000          0.652032
+Forall_Lambda(M)         0.6139520000      0.6139520000      0.6139520000       0.000000000          0.655020
+Forall_Lambda(S)         0.5099000000      0.5099000000      0.5099000000       0.000000000          0.649920
+
+-------------------------------------------------------
+FIND_FIRST_MIN (32) -->    L:(44217, 50000)   M:(5001, 330000)   S:(171, 8000000)
+Raw(L)                   0.9783080000      0.9783080000      0.9783080000       0.000000000
+Raw(M)                   0.7351980000      0.7351980000      0.7351980000       0.000000000
+Raw(S)                   0.7473120000      0.7473120000      0.7473120000       0.000000000
+............................................
+Forall_Lambda(L)          1.352929000       1.352929000       1.352929000       0.000000000           1.38293
+Forall_Lambda(M)          1.016273000       1.016273000       1.016273000       0.000000000           1.38231
+Forall_Lambda(S)          1.022756000       1.022756000       1.022756000       0.000000000           1.36858
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+===========================================================================================================
+===========================================================================================================
+LCALS compilation summary: 
+
+/********************************************************************
+* LCALS compilation information created by 'lcals_vesion'
+* script during make process....
+********************************************************************/
+
+#define VER_MACHINE "taccuser-SYS-7048GR-TR
+"
+#define VER_DATE "04/04/19"
+#define VER_TIME "14:29:31"
+#define VER_OS " Linux 5.0.0-rc1-kfd-compute-roc-master-10159 #1 SMP Thu Mar 28 20:44:04 CDT 2019"
+#define VER_COMPILER "/opt/rocm/hcc//bin/hcc"
+#define VER_PERSON "taccuser"
+
+#define LCALS_VER_INFO_MAX 3
+
+static char *lcals_ver_info_names[LCALS_VER_INFO_MAX] = {
+   "CXX_COMPILE",
+   "CXX_FLAGS_BUILD",
+   "LDFLAGS"
+};
+
+#define LCALS_VER_INFO_NUM 3
+
+static char *lcals_ver_info_values[LCALS_VER_INFO_NUM] = {
+   "/opt/rocm/hcc//bin/hcc -Ofast -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp ",
+   "-I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK  ",
+   " "
+};
+
+
+
+
+
+===========================================================================================================
+===========================================================================================================
+Loop name -->
+Variant(length #)                            Check Sum            Delta from reference            
+------------------------------------------------------------------------------------------------------------
+PRESSURE_CALC (1) --> 
+Raw(L)                   97197939.191977054695598781108856
+Raw(M)                   97922407.261323742844979278743267
+Raw(S)                   97931775.181423720598104409873486
+............................................
+Forall_Lambda(L)         97197939.191977054695598781108856       0.0000000000000000000000000000000
+Forall_Lambda(M)         97922407.261323742844979278743267       0.0000000000000000000000000000000
+Forall_Lambda(S)         97931775.181423720598104409873486       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+ENERGY_CALC (3) --> 
+Raw(L)                   372002787.49715676056803204119205
+Raw(M)                   294795950.51371418600319884717464
+Raw(S)                   293796533.70897553206305019557476
+............................................
+Forall_Lambda(L)         372002787.49715676056803204119205       0.0000000000000000000000000000000
+Forall_Lambda(M)         294795950.51371418600319884717464       0.0000000000000000000000000000000
+Forall_Lambda(S)         293796533.70897553206305019557476       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+VOL3D_CALC (5) --> 
+Raw(L)                   113027046.04928070683672558516264
+Raw(M)                   191681058.23907040615449659526348
+Raw(S)                   195855695.11886116390815004706383
+............................................
+Forall_Lambda(L)         113027046.04928070683672558516264       0.0000000000000000000000000000000
+Forall_Lambda(M)         191681058.23907040615449659526348       0.0000000000000000000000000000000
+Forall_Lambda(S)         195855695.11886116390815004706383       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+DEL_DOT_VEC_2D (6) --> 
+Raw(L)                   371261864.66028437824570573866367
+Raw(M)                   105951159.62924891436705365777016
+Raw(S)                   97934476.037522903556236997246742
+............................................
+Forall_Lambda(L)         371261864.66028437824570573866367       0.0000000000000000000000000000000
+Forall_Lambda(M)         105951159.62924891436705365777016       0.0000000000000000000000000000000
+Forall_Lambda(S)         97934476.037522903556236997246742       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+COUPLE (7) --> 
+Raw(L)                   1047592808.5032677549170330166817
+Raw(M)                   1060497628.7846157086314633488655
+Raw(S)                   1077245354.7471191629301756620407
+............................................
+Forall_Lambda(L)         1047592808.5032677603885531425476   5.4715201258659362792968750000000e-09
+Forall_Lambda(M)         1060497628.7846157102612778544426   1.6298145055770874023437500000000e-09
+Forall_Lambda(S)         1077245354.7471191626973450183868   2.3283064365386962890625000000000e-10
+
+-------------------------------------------------------
+FIR (8) --> 
+Raw(L)                   243259.29826839115715131356409984
+Raw(M)                   96689036.937513323238817974925041
+Raw(S)                   97930577.116513883520383387804031
+............................................
+Forall_Lambda(L)         243259.29826839113604819431202486   2.1103119252074975520372390747070e-11
+Forall_Lambda(M)         96689036.937513323398889042437077   1.6007106751203536987304687500000e-10
+Forall_Lambda(S)         97930577.116513883520383387804031       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+INIT3 (9) --> 
+Raw(L)                  -879143257.69492160406662151217461
+Raw(M)                   375467544.41352021656348370015621
+Raw(S)                   391708030.68366111544310115277767
+............................................
+Forall_Lambda(L)        -879143257.69492160406662151217461       0.0000000000000000000000000000000
+Forall_Lambda(M)         375467544.41352021656348370015621       0.0000000000000000000000000000000
+Forall_Lambda(S)         391708030.68366111544310115277767       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+MULADDSUB (10) --> 
+Raw(L)                   411278974.87741791378357447683811
+Raw(M)                   391977288.62174957900424487888813
+Raw(S)                   391727437.25186200960888527333736
+............................................
+Forall_Lambda(L)         411278974.87741791378357447683811       0.0000000000000000000000000000000
+Forall_Lambda(M)         391977288.62174957900424487888813       0.0000000000000000000000000000000
+Forall_Lambda(S)         391727437.25186200960888527333736       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+IF_QUAD (11) --> 
+Raw(L)                  -1954669733.3743642342742532491684
+Raw(M)                   265028140.34296849161910358816385
+Raw(S)                   293761534.86684716117451898753643
+............................................
+Forall_Lambda(L)        -1954669733.3743642342742532491684       0.0000000000000000000000000000000
+Forall_Lambda(M)         265028140.34296849161910358816385       0.0000000000000000000000000000000
+Forall_Lambda(S)         293761534.86684716117451898753643       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+TRAP_INT (12) --> 
+Raw(L)                  0.99999995427519006163663561892463
+Raw(M)                  0.99999999317889121108748895494500
+Raw(S)                  0.99999999968835484587259543332038
+............................................
+Forall_Lambda(L)        0.99999995427519006163663561892463       0.0000000000000000000000000000000
+Forall_Lambda(M)        0.99999999317889121108748895494500       0.0000000000000000000000000000000
+Forall_Lambda(S)        0.99999999968835484587259543332038       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+HYDRO_1D (13) --> 
+Raw(L)                   99765434.003212166120647452771664
+Raw(M)                   97955255.412347759833210147917271
+Raw(S)                   97931813.775572069935151375830173
+............................................
+Forall_Lambda(L)         99765434.003212166120647452771664       0.0000000000000000000000000000000
+Forall_Lambda(M)         97955255.412347759833210147917271       0.0000000000000000000000000000000
+Forall_Lambda(S)         97931813.775572069935151375830173       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+ICCG (14) --> 
+Raw(L)                   1389490600.2742329919710755348206
+Raw(M)                   1564616666.6310996634420007467270
+Raw(S)                   1566880711.5563338813371956348419
+............................................
+Forall_Lambda(L)         1389490600.2742329919710755348206       0.0000000000000000000000000000000
+Forall_Lambda(M)         1564616666.6310996634420007467270       0.0000000000000000000000000000000
+Forall_Lambda(S)         1566880711.5563338813371956348419       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+INNER_PROD (15) --> 
+Raw(L)                   1.0000000000556366064330404697102
+Raw(M)                   1.0000000000409954292734937553178
+Raw(S)                   1.0000000000240130137996175108128
+............................................
+Forall_Lambda(L)         1.0000000000556366064330404697102       0.0000000000000000000000000000000
+Forall_Lambda(M)         1.0000000000409954292734937553178       0.0000000000000000000000000000000
+Forall_Lambda(S)         1.0000000000240130137996175108128       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+BAND_LIN_EQ (16) --> 
+Raw(L)                   97869466.435385706296074204146862
+Raw(M)                   97924613.377852001882274635136127
+Raw(S)                   97931399.224420176338753663003445
+............................................
+Forall_Lambda(L)         97869466.435385706296074204146862       0.0000000000000000000000000000000
+Forall_Lambda(M)         97924613.377852001882274635136127       0.0000000000000000000000000000000
+Forall_Lambda(S)         97931399.224420176338753663003445       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+TRIDIAG_ELIM (17) --> 
+Raw(L)                   17946918.340548690885043470188975
+Raw(M)                   96908452.554334381376975215971470
+Raw(S)                   97930582.932531688478775322437286
+............................................
+Forall_Lambda(L)         17946918.340548690885043470188975       0.0000000000000000000000000000000
+Forall_Lambda(M)         96908452.554334381376975215971470       0.0000000000000000000000000000000
+Forall_Lambda(S)         97930582.932531688478775322437286       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+EOS (18) --> 
+Raw(L)                   230918156.97002684559265617281199
+Raw(M)                   99633222.149757154344115406274796
+Raw(S)                   97933785.810354932982590980827808
+............................................
+Forall_Lambda(L)         230918156.97002684559265617281199       0.0000000000000000000000000000000
+Forall_Lambda(M)         99633222.149757154344115406274796       0.0000000000000000000000000000000
+Forall_Lambda(S)         97933785.810354932982590980827808       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+ADI (19) --> 
+Raw(L)                   25039822872.198205310851335525513
+Raw(M)                   25069677967.865817423909902572632
+Raw(S)                   25070064299.818820510059595108032
+............................................
+Forall_Lambda(L)         25039822872.198205310851335525513       0.0000000000000000000000000000000
+Forall_Lambda(M)         25069677967.865817423909902572632       0.0000000000000000000000000000000
+Forall_Lambda(S)         25070064299.818820510059595108032       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+INT_PREDICT (20) --> 
+Raw(L)                   63390296285.086288735270500183105
+Raw(M)                   61234036175.529474873095750808716
+Raw(S)                   61206133216.767081193625926971436
+............................................
+Forall_Lambda(L)         63390296285.086288735270500183105       0.0000000000000000000000000000000
+Forall_Lambda(M)         61234036175.529474873095750808716       0.0000000000000000000000000000000
+Forall_Lambda(S)         61206133216.767081193625926971436       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+DIFF_PREDICT (21) --> 
+Raw(L)                   41654736990.505872927606105804443
+Raw(M)                   60956008310.813985101878643035889
+Raw(S)                   61205808575.203498136252164840698
+............................................
+Forall_Lambda(L)         41654736990.505872927606105804443       0.0000000000000000000000000000000
+Forall_Lambda(M)         60956008310.813985101878643035889       0.0000000000000000000000000000000
+Forall_Lambda(S)         61205808575.203498136252164840698       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+FIRST_SUM (22) --> 
+Raw(L)                   5763517943050.3090262413024902344
+Raw(M)                   8437023310.0520892767235636711121
+Raw(S)                   98266245.038329323870129883289337
+............................................
+Forall_Lambda(L)         5763517943050.3090262413024902344       0.0000000000000000000000000000000
+Forall_Lambda(M)         8437023310.0520892767235636711121       0.0000000000000000000000000000000
+Forall_Lambda(S)         98266245.038329323870129883289337       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+FIRST_DIFF (23) --> 
+Raw(L)                   172524.25585586704296758853161009
+Raw(M)                   96681047.484746506888768635690212
+Raw(S)                   97930315.643586606573080644011497
+............................................
+Forall_Lambda(L)         172524.25585586704296758853161009       0.0000000000000000000000000000000
+Forall_Lambda(M)         96681047.484746506888768635690212       0.0000000000000000000000000000000
+Forall_Lambda(S)         97930315.643586606573080644011497       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+PIC_2D (24) --> 
+Raw(L)                   14708141455873757.395507812500000
+Raw(M)                   15195030160895217.508789062500000
+Raw(S)                   26446599146459016.976562500000000
+............................................
+Forall_Lambda(L)         14708141455873757.395507812500000       0.0000000000000000000000000000000
+Forall_Lambda(M)         15195030160895217.508789062500000       0.0000000000000000000000000000000
+Forall_Lambda(S)         26446599146459016.976562500000000       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+PIC_1D (25) --> 
+Raw(L)                   1415332826.2480504550039768218994
+Raw(M)                   631414729.32156549958745017647743
+Raw(S)                   677413732.74518284032819792628288
+............................................
+Forall_Lambda(L)         1415332826.2480504550039768218994       0.0000000000000000000000000000000
+Forall_Lambda(M)         631414729.32156549958745017647743       0.0000000000000000000000000000000
+Forall_Lambda(S)         677413732.74518284032819792628288       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+HYDRO_2D (26) --> 
+Raw(L)                   14433713525.873357120901346206665
+Raw(M)                   14399460506.963620061054825782776
+Raw(S)                   14395832127.192996755242347717285
+............................................
+Forall_Lambda(L)         14433713525.873357120901346206665       0.0000000000000000000000000000000
+Forall_Lambda(M)         14399460506.963620061054825782776       0.0000000000000000000000000000000
+Forall_Lambda(S)         14395832127.192996755242347717285       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+GEN_LIN_RECUR (27) --> 
+Raw(L)                   205981484.54102529933152254670858
+Raw(M)                   99314179.571268169529503211379051
+Raw(S)                   97933410.737929784809239208698273
+............................................
+Forall_Lambda(L)         205981484.54102529933152254670858       0.0000000000000000000000000000000
+Forall_Lambda(M)         99314179.571268169529503211379051       0.0000000000000000000000000000000
+Forall_Lambda(S)         97933410.737929784809239208698273       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+DISC_ORD (28) --> 
+Raw(L)                   2715955693584.1506989002227783203
+Raw(M)                   4126987358.6745561866555362939835
+Raw(S)                   196023303.25447867214097641408443
+............................................
+Forall_Lambda(L)         2715955693584.1506989002227783203       0.0000000000000000000000000000000
+Forall_Lambda(M)         4126987358.6745561866555362939835       0.0000000000000000000000000000000
+Forall_Lambda(S)         196023303.25447867214097641408443       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+MAT_X_MAT (29) --> 
+Raw(L)                   2504678494145.9932248592376708984
+Raw(M)                   334703747071.83428397774696350098
+Raw(S)                   97758652332.324997179210186004639
+............................................
+Forall_Lambda(L)         2504678494145.9932248592376708984       0.0000000000000000000000000000000
+Forall_Lambda(M)         334703747071.83428397774696350098       0.0000000000000000000000000000000
+Forall_Lambda(S)         97758652332.324997179210186004639       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+PLANCKIAN (30) --> 
+Raw(L)                   150861031.47946559517004061490297
+Raw(M)                   98608282.354306093649938702583313
+Raw(S)                   97932555.571882577190990559756756
+............................................
+Forall_Lambda(L)         150861031.47946559517004061490297       0.0000000000000000000000000000000
+Forall_Lambda(M)         98608282.354306093649938702583313       0.0000000000000000000000000000000
+Forall_Lambda(S)         97932555.571882577190990559756756       0.0000000000000000000000000000000
+
+-------------------------------------------------------
+IMP_HYDRO_2D (31) --> 
+Raw(L)                   17128640997.592403696849942207336
+Raw(M)                   6020185880.7030686540529131889343
+Raw(S)                   4839252917.2536934632807970046997
+............................................
+Forall_Lambda(L)         17128640997.592402648180723190308   1.0486692190170288085937500000000e-06
+Forall_Lambda(M)         6020185880.7030685581266880035400   9.5926225185394287109375000000000e-08
+Forall_Lambda(S)         4839252917.2536934604868292808533   2.7939677238464355468750000000000e-09
+
+-------------------------------------------------------
+FIND_FIRST_MIN (32) --> 
+Raw(L)                   135961480.71599999070167541503906
+Raw(M)                   101474692.50000000000000000000000
+Raw(S)                   83639989.545000001788139343261719
+............................................
+Forall_Lambda(L)         135961480.71599999070167541503906       0.0000000000000000000000000000000
+Forall_Lambda(M)         101474692.50000000000000000000000       0.0000000000000000000000000000000
+Forall_Lambda(S)         83639989.545000001788139343261719       0.0000000000000000000000000000000
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+===========================================================================================================
+===========================================================================================================
+LCALS compilation summary: 
+
+/********************************************************************
+* LCALS compilation information created by 'lcals_vesion'
+* script during make process....
+********************************************************************/
+
+#define VER_MACHINE "taccuser-SYS-7048GR-TR
+"
+#define VER_DATE "04/04/19"
+#define VER_TIME "14:29:31"
+#define VER_OS " Linux 5.0.0-rc1-kfd-compute-roc-master-10159 #1 SMP Thu Mar 28 20:44:04 CDT 2019"
+#define VER_COMPILER "/opt/rocm/hcc//bin/hcc"
+#define VER_PERSON "taccuser"
+
+#define LCALS_VER_INFO_MAX 3
+
+static char *lcals_ver_info_names[LCALS_VER_INFO_MAX] = {
+   "CXX_COMPILE",
+   "CXX_FLAGS_BUILD",
+   "LDFLAGS"
+};
+
+#define LCALS_VER_INFO_NUM 3
+
+static char *lcals_ver_info_values[LCALS_VER_INFO_NUM] = {
+   "/opt/rocm/hcc//bin/hcc -Ofast -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include -std=c++amp -openmp ",
+   "-I. -DLCALS_COMPILER_CLANG -I/opt/rocm/hcc/include -DLCALS_USE_DOUBLE -DLCALS_USE_RESTRICT_PTR -DLCALS_VERIFY_CHECKSUM -DLCALS_USE_CLOCK  ",
+   " "
+};
+
+
+
+
+
+===========================================================================================================
+===========================================================================================================
+LCALS FOM results: 
+===========================================================================================================
+Loop variant -- Raw
+	LONG :   # loops run = 30 ,   total exec time = 41.925096999999999999170219311395
+		FOM_relative = 0.34478723528752690502107575154511
+............................................
+	MEDIUM :   # loops run = 30 ,   total exec time = 31.062774000000000001672773031203
+		FOM_relative = 0.43834420519121797789265267131231
+............................................
+	SHORT :   # loops run = 30 ,   total exec time = 34.868598000000000002029931778225
+		FOM_relative = 0.56044080689024998437721206134832
+
+-------------------------------------------------------
+Loop variant -- Forall_Lambda
+	LONG :   # loops run = 30 ,   total exec time = 31.933478999999999999731548072646
+		FOM_relative = 0.45369241704895858002051685364808
+............................................
+	MEDIUM :   # loops run = 30 ,   total exec time = 31.359573999999999997789768002576
+		FOM_relative = 0.43431579251206606795692073685888
+............................................
+	SHORT :   # loops run = 30 ,   total exec time = 35.360513000000000000122568621919
+		FOM_relative = 0.55255965930056104263527055886485
+
+-------------------------------------------------------
+Loop variant -- Raw_OMP
+	LONG :   # loops run = 0 ,   total exec time = 0.0000000000000000000000000000000
+		FOM_relative = 0.0000000000000000000000000000000
+............................................
+	MEDIUM :   # loops run = 0 ,   total exec time = 0.0000000000000000000000000000000
+		FOM_relative = 0.0000000000000000000000000000000
+............................................
+	SHORT :   # loops run = 0 ,   total exec time = 0.0000000000000000000000000000000
+		FOM_relative = 0.0000000000000000000000000000000
+
+-------------------------------------------------------
+Loop variant -- Forall_Lambda_OMP
+	LONG :   # loops run = 0 ,   total exec time = 0.0000000000000000000000000000000
+		FOM_relative = 0.0000000000000000000000000000000
+............................................
+	MEDIUM :   # loops run = 0 ,   total exec time = 0.0000000000000000000000000000000
+		FOM_relative = 0.0000000000000000000000000000000
+............................................
+	SHORT :   # loops run = 0 ,   total exec time = 0.0000000000000000000000000000000
+		FOM_relative = 0.0000000000000000000000000000000
+===========================================================================================================
+
+
+
+
+ freeLoopSuiteRunInfo...
+
+ DONE!!! 
++ cd ../boost_1_60_0/hcc_test
++ make
+/opt/rocm/hcc/bin/hcc  -g    -I..  -hc -std=c++amp -I/opt/rocm/hcc/include -I/opt/rocm/include  -hc -std=c++amp -L/opt/rocm/hcc/lib -Wl,--rpath=/opt/rocm/hcc/lib -ldl -lm -lpthread -lhc_am -Wl,--whole-archive -lmcwamp -Wl,--no-whole-archive -O3 -o boost_test test.cpp
++ ./boost_test
+Running 2 test cases...
+
+*** No errors detected
+Finished: SUCCESS

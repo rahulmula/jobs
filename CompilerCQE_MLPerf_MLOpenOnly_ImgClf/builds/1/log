@@ -1,0 +1,7 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building on master in workspace /var/lib/jenkins/workspace/CompilerCQE_MLPerf_MLOpenOnly_ImgClf
+[CompilerCQE_MLPerf_MLOpenOnly_ImgClf] $ /bin/sh -xe /tmp/jenkins1528136525411789666.sh
++ cd /opt/rocm
+/tmp/jenkins1528136525411789666.sh: 2: cd: can't cd to /opt/rocm
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

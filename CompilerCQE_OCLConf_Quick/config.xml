@@ -1,0 +1,37 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>OCL Conformance WimpyQuick</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+cd ~/Documents;cd compilerNightly
+rm -rf ocl-conformance.zip conformance*
+wget http://compute-artifactory.amd.com/artifactory/rocm-generic-local/amd/lightning-support-files/ocl-conformance.zip
+unzip ocl-conformance.zip
+# Adding the below line for checking [Lenine]
+tar xvzf conformance-1730747-lnx64*
+cd conformance/2.0
+#./run_conformance.py opencl_conformance_tests_reallyquick.csv &gt; ~/Desktop/logs/conf2.0_RQ.log 2&gt;&amp;1
+./run_conformance.py opencl_conformance_tests_reallyquick.csv &gt; conformance_2.0_RQ.log
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

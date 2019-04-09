@@ -1,0 +1,89 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#This is the python script I wrote to test OpenMM tests based on OpenCL. 
+#Op1:Convert this to a groovy script
+#Op2:Host this script to http://compute-artifactory.amd.com/artifactory/rocm-generic-local/amd/lightning-support-files/
+
+import glob
+import os
+import time 
+from prettytable import PrettyTable
+
+def runCMD(cmd):
+    cmdres = os.system(cmd)
+    return cmdres
+
+def clone_Build_Repo():
+    cloneCMD = &quot;git clone -b 7.2_branch https://github.com/pandegroup/openmm&quot;
+    cmd = runCMD(cloneCMD)
+    cwd = os.getcwd()
+    path = cwd + &quot;/openmm&quot;
+    print(path)
+    cmd = runCMD(&quot;cd $path; mkdir build; cd build&quot;)
+    #os.chdir(path)
+    if not cmd:
+        cdCMD = &quot;mkdir build; cd build&quot;
+        runCMD(cdCMD)
+        cmakeCMD = &quot;cmake -DOPENCL_LIBRARY=/opt/rocm/opencl/lib/x86_64/libOpenCL.so -DOPENCL_INCLUDE_DIR=/opt/rocm/opencl/include/ ..&quot;
+        runCMD(cmakeCMD)
+        if(cmd):
+            makeCMD = &quot;make&quot;
+            runCMD(makeCMD)
+
+
+def run_OpenCL_Tests():
+    x = PrettyTable()
+    x.field_names = [&quot;TestName&quot;,&quot;Result&quot;,&quot;Time(mins)&quot;]
+    x.align[&quot;TestName&quot;] = &quot;l&quot;
+    x.align[&quot;Result&quot;] = &quot;l&quot;
+    x.align[&quot;Time(mins)&quot;] = &quot;l&quot;
+    x.hrules = 1
+    oclTestList = glob.glob(&apos;TestOpenCL*&apos;)
+    suite_start_time = time.time()
+    for test in oclTestList:
+        test_start_time = time.time()
+        run = &apos;./&apos; + test
+        #print(run)
+        cmd = os.system(run)
+        test_end_time = time.time()
+        test_run_time = test_end_time - test_start_time
+        test_time = time.strftime(&quot;%H:%M:%S&quot;,time.gmtime(test_run_time))
+        #print(test_time)
+        if cmd &gt; 0:
+            result = &apos;FAIL&apos;
+        elif cmd == 0:
+            result = &apos;PASS&apos;
+        #print(result)
+        x.add_row([test,result,test_time])
+        print(x)
+    suite_end_time = time.time()
+    suite_run_time = suite_end_time - suite_start_time
+    print(x)
+    print(&quot;Total Suite Run Time:&quot;)
+    print(time.strftime(&quot;%H:%M:%S&quot;, time.gmtime(suite_run_time)))
+
+#clone_Build_Repo()
+run_OpenCL_Tests()
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

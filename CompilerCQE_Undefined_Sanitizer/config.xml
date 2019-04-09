@@ -1,0 +1,31 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Undefined Sanitizer</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>git clone -b amd-common https://github.com/RadeonOpenCompute/llvm.git
+cd llvm/tools
+git clone -b amd-common https://github.com/radeonopencompute/clang
+git clone -b amd-common https://github.com/RadeonOpenCompute/lld.git
+cd ../
+mkdir build
+
+cd build/
+ cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/opt/rocm/llvm -DLLVM_TARGETS_TO_BUILD=&quot;AMDGPU;X86&quot; &quot;-DLLVM_USE_SANITIZER=Undefined&quot; &quot;-DLLVM_BUILD_TOOLS=ON&quot; &quot;-DLLVM_INCLUDE_TESTS=ON&quot; ..
+make</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

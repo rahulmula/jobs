@@ -1,0 +1,41 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>jenkins job to test clFFT_Full&#xd;
+Takes a ~4hours to run</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+sudo apt-get install -y libgtest-dev 
+sudo apt-get install -y fftw3 fftw3-dev 
+sudo apt-get install -y libboost-all-dev 
+cd ~/Documents;cd compilerNightly
+rm -rf clFFT
+git clone https://github.com/clMathLibraries/clFFT
+cd clFFT/src; mkdir build; cd  build
+cmake -DOpenCL_INCLUDE_DIR=/opt/rocm/opencl/include -DOpenCL_LIBRARY=/opt/rocm/opencl/lib/x86_64/libOpenCL.so -DUNIT_TEST=ON -DBUILD_TEST=ON -DBUILD_CLIENT=ON ..
+make
+cd library
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD
+cd ../staging
+./Test
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

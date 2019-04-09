@@ -1,0 +1,726 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_MLPerf_MIOpenOnly_OD_LW
+[CompilerCQE_MLPerf_MIOpenOnly_OD_LW] $ /bin/sh -xe /tmp/jenkins3897540193330032754.sh
++ cd /opt/rocm/
++ export LD_LIBRARY_PATH=:/opt/rocm/miopen/lib
++ ./bin/MIOpenDriver conv -n 32 -c 3 -H 300 -W 300 -k 64 -y 7 -x 7 -p 3 -q 3 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 3 -H 300 -W 300 -k 64 -y 7 -x 7 -p 3 -q 3 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 7.757878 ms (average)
+Forward Convolution Verifies on CPU and GPU (3.48879e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 8.350518 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 8.475977 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.23218e-07)
+Backward Convolution Weights Verifies on CPU and GPU (8.87975e-08)
++ ./bin/MIOpenDriver bnorm -n 32 -c 64 -H 150 -W 150 -m 1 -s 1 -r 1
+MIOpenDriver: bnorm -n 32 -c 64 -H 150 -W 150 -m 1 -s 1 -r 1
+/tmp/AMD_14255_18/t_14255_20.cl:462:1: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+MIOpenBatchNormFwdTrainSpatial(const __global _FLOAT* __restrict in,
+^
+/tmp/AMD_14255_18/t_14255_20.cl:462:1: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2 warnings generated.
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+Forward train batch norm verification passed on running mean.
+Forward train batch norm verification passed on running variance
+Forward train batch norm verification passed on saved mean
+Forward train batch norm verification passed on saved inverse variance.
+Forward batch norm verification passed on output
+Forward Batch Norm Verifies on CPU and GPU.
++ ./bin/MIOpenDriver conv -n 32 -c 64 -H 75 -W 75 -k 64 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 64 -H 75 -W 75 -k 64 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 1.538311 ms (average)
+Forward Convolution Verifies on CPU and GPU (4.51436e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 4.311678 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 11.435676 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (4.34668e-08)
+Backward Convolution Weights Verifies on CPU and GPU (8.58834e-08)
++ ./bin/MIOpenDriver bnorm -n 32 -c 64 -H 75 -W 75 -m 1 -s 1 -r 1
+MIOpenDriver: bnorm -n 32 -c 64 -H 75 -W 75 -m 1 -s 1 -r 1
+/tmp/AMD_14361_18/t_14361_20.cl:462:1: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+MIOpenBatchNormFwdTrainSpatial(const __global _FLOAT* __restrict in,
+^
+/tmp/AMD_14361_18/t_14361_20.cl:462:1: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2 warnings generated.
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+Forward train batch norm verification passed on running mean.
+Forward train batch norm verification passed on running variance
+Forward train batch norm verification passed on saved mean
+Forward train batch norm verification passed on saved inverse variance.
+Forward batch norm verification passed on output
+Forward Batch Norm Verifies on CPU and GPU.
++ ./bin/MIOpenDriver conv -n 32 -c 64 -H 75 -W 75 -k 128 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 64 -H 75 -W 75 -k 128 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 7.020142 ms (average)
+Forward Convolution Verifies on CPU and GPU (7.96919e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 8.051341 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 6.780267 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (5.55396e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.24303e-07)
++ ./bin/MIOpenDriver bnorm -n 32 -c 128 -H 38 -W 38 -m 1 -s 1 -r 1
+MIOpenDriver: bnorm -n 32 -c 128 -H 38 -W 38 -m 1 -s 1 -r 1
+/tmp/AMD_14468_18/t_14468_20.cl:462:1: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+MIOpenBatchNormFwdTrainSpatial(const __global _FLOAT* __restrict in,
+^
+/tmp/AMD_14468_18/t_14468_20.cl:462:1: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2 warnings generated.
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+Forward train batch norm verification passed on running mean.
+Forward train batch norm verification passed on running variance
+Forward train batch norm verification passed on saved mean
+Forward train batch norm verification passed on saved inverse variance.
+Forward batch norm verification passed on output
+Forward Batch Norm Verifies on CPU and GPU.
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 38 -W 38 -k 128 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 38 -W 38 -k 128 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 1.983930 ms (average)
+Forward Convolution Verifies on CPU and GPU (6.14508e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 4.250348 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 8.995699 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.25495e-08)
+Backward Convolution Weights Verifies on CPU and GPU (5.4394e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 64 -H 75 -W 75 -k 128 -y 1 -x 1 -p 0 -q 0 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 64 -H 75 -W 75 -k 128 -y 1 -x 1 -p 0 -q 0 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 1
+GPU Kernel Time Forward Conv. Elapsed: 0.356143 ms (average)
+Forward Convolution Verifies on CPU and GPU (3.13001e-08)
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 1.102386 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 4.300889 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.62534e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.31956e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 38 -W 38 -k 256 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 38 -W 38 -k 256 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 2.713016 ms (average)
+Forward Convolution Verifies on CPU and GPU (5.09618e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 7.333034 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 13.338881 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.55063e-08)
+Backward Convolution Weights Verifies on CPU and GPU (2.2641e-07)
++ ./bin/MIOpenDriver bnorm -n 32 -c 256 -H 38 -W 38 -m 1 -s 1 -r 1
+MIOpenDriver: bnorm -n 32 -c 256 -H 38 -W 38 -m 1 -s 1 -r 1
+/tmp/AMD_14784_18/t_14784_20.cl:462:1: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+MIOpenBatchNormFwdTrainSpatial(const __global _FLOAT* __restrict in,
+^
+/tmp/AMD_14784_18/t_14784_20.cl:462:1: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2 warnings generated.
+warning: <unknown>:0:0: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+Forward train batch norm verification passed on running mean.
+Forward train batch norm verification passed on running variance
+Forward train batch norm verification passed on saved mean
+Forward train batch norm verification passed on saved inverse variance.
+Forward batch norm verification passed on output
+Forward Batch Norm Verifies on CPU and GPU.
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 256 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 256 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 5.268360 ms (average)
+Forward Convolution Verifies on CPU and GPU (8.07431e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 14.767015 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 28.415876 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.09555e-08)
+Backward Convolution Weights Verifies on CPU and GPU (5.43395e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 38 -W 38 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 38 -W 38 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 0
+GPU Kernel Time Forward Conv. Elapsed: 1.589383 ms (average)
+Forward Convolution Verifies on CPU and GPU (4.33767e-08)
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 3.042921 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 2.577757 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.06098e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.71348e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 0
+GPU Kernel Time Forward Conv. Elapsed: 4.628548 ms (average)
+Forward Convolution Verifies on CPU and GPU (6.05636e-08)
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 2.393508 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 17.138102 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.39212e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.33423e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 512 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 512 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 0
+GPU Kernel Time Forward Conv. Elapsed: 17.100048 ms (average)
+Forward Convolution Verifies on CPU and GPU (7.50594e-08)
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 11.934873 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 23.173063 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.5209e-08)
+Backward Convolution Weights Verifies on CPU and GPU (9.29449e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 19 -W 19 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 19 -W 19 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 6.983625 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.04561e-07)
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 2.655605 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 3.736529 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (5.90959e-08)
+Backward Convolution Weights Verifies on CPU and GPU (9.91103e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 19 -W 19 -k 512 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 19 -W 19 -k 512 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 9.487942 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.47699e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 7.239275 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 4.116224 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.31856e-08)
+Backward Convolution Weights Verifies on CPU and GPU (7.30916e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 10 -W 10 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 10 -W 10 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.802526 ms (average)
+Forward Convolution Verifies on CPU and GPU (9.32667e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 0.431805 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 1.101454 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.3534e-08)
+Backward Convolution Weights Verifies on CPU and GPU (8.75117e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 10 -W 10 -k 256 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 10 -W 10 -k 256 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.398472 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.19791e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.383983 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.550828 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.28183e-08)
+Backward Convolution Weights Verifies on CPU and GPU (7.02114e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 5 -W 5 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 5 -W 5 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.091822 ms (average)
+Forward Convolution Verifies on CPU and GPU (9.59489e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 0.071093 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.086259 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.57208e-08)
+Backward Convolution Weights Verifies on CPU and GPU (3.77303e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 5 -W 5 -k 256 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 5 -W 5 -k 256 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.065121 ms (average)
+Forward Convolution Verifies on CPU and GPU (6.36267e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.079947 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.148693 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.51478e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.91084e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 3 -W 3 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 3 -W 3 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 0
+GPU Kernel Time Forward Conv. Elapsed: 0.049887 ms (average)
+Forward Convolution Verifies on CPU and GPU (7.98525e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 0.064570 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.072054 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.77539e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.87634e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 3 -W 3 -k 256 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 3 -W 3 -k 256 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.092179 ms (average)
+Forward Convolution Verifies on CPU and GPU (5.50661e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.077903 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.072889 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.23137e-07)
+Backward Convolution Weights Verifies on CPU and GPU (4.80961e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.843167 ms (average)
+Forward Convolution Verifies on CPU and GPU (8.93607e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 1.913001 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 2.574585 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.83747e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.26503e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 8.235723 ms (average)
+Forward Convolution Verifies on CPU and GPU (7.58714e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 18.008051 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 41.170658 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.80668e-08)
+Backward Convolution Weights Verifies on CPU and GPU (5.4317e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 19 -W 19 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 19 -W 19 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.892535 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.34039e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.962064 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 4.962305 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (3.27572e-08)
+Backward Convolution Weights Verifies on CPU and GPU (2.29987e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 19 -W 19 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 19 -W 19 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 5.862273 ms (average)
+Forward Convolution Verifies on CPU and GPU (9.81479e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 15.626968 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 34.160686 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (9.70998e-08)
+Backward Convolution Weights Verifies on CPU and GPU (9.03521e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 10 -W 10 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 10 -W 10 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.269458 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.42443e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.312178 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.299093 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (3.19196e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.30077e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 10 -W 10 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 10 -W 10 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 3.823688 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.06703e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 3.570425 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 3.470389 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.14722e-07)
+Backward Convolution Weights Verifies on CPU and GPU (1.27968e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 5 -W 5 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 5 -W 5 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.087148 ms (average)
+Forward Convolution Verifies on CPU and GPU (9.28945e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.029636 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.037441 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (3.56016e-08)
+Backward Convolution Weights Verifies on CPU and GPU (3.99311e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 5 -W 5 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 5 -W 5 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.376160 ms (average)
+Forward Convolution Verifies on CPU and GPU (8.29466e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.298916 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.716499 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.07511e-07)
+Backward Convolution Weights Verifies on CPU and GPU (6.0771e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 3 -W 3 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 3 -W 3 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.081814 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.13751e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.018490 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.023983 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.92368e-08)
+Backward Convolution Weights Verifies on CPU and GPU (2.44242e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 3 -W 3 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 3 -W 3 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.260463 ms (average)
+Forward Convolution Verifies on CPU and GPU (8.9008e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.103237 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.156019 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (9.26306e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.08361e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 1 -W 1 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 1 -W 1 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.081317 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.33903e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.018970 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.018525 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (4.07137e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.06066e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 1 -W 1 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 1 -W 1 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.081637 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.18128e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.100641 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.071450 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.28028e-07)
+Backward Convolution Weights Verifies on CPU and GPU (1.80379e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 1 -W 1 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 1 -W 1 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.130917 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.18128e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.103308 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.147662 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.28028e-07)
+Backward Convolution Weights Verifies on CPU and GPU (1.80379e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 1 -W 1 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 1 -W 1 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.081263 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.33903e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.019272 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.018312 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (4.07137e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.06066e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 3 -W 3 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 3 -W 3 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.255769 ms (average)
+Forward Convolution Verifies on CPU and GPU (8.9008e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.102899 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.141334 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (9.26306e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.08361e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 3 -W 3 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 3 -W 3 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.082152 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.13751e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.018757 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.027503 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.92368e-08)
+Backward Convolution Weights Verifies on CPU and GPU (2.44242e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 5 -W 5 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 5 -W 5 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.379769 ms (average)
+Forward Convolution Verifies on CPU and GPU (8.29466e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.299733 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.761779 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.07511e-07)
+Backward Convolution Weights Verifies on CPU and GPU (6.0771e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 5 -W 5 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 5 -W 5 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.087965 ms (average)
+Forward Convolution Verifies on CPU and GPU (9.28945e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.029813 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.037352 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (3.56016e-08)
+Backward Convolution Weights Verifies on CPU and GPU (3.99311e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 10 -W 10 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 10 -W 10 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 3.854978 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.06703e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 3.539101 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 3.486887 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.14722e-07)
+Backward Convolution Weights Verifies on CPU and GPU (1.27968e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 10 -W 10 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 10 -W 10 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.268036 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.42443e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.313031 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.585974 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (3.19196e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.30485e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 19 -W 19 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 19 -W 19 -k 486 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 5.872741 ms (average)
+Forward Convolution Verifies on CPU and GPU (9.81479e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 15.622199 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 31.715759 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (9.70998e-08)
+Backward Convolution Weights Verifies on CPU and GPU (9.03521e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 19 -W 19 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 19 -W 19 -k 24 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.891077 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.34039e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.979770 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 2.246884 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (3.27572e-08)
+Backward Convolution Weights Verifies on CPU and GPU (9.12214e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 324 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 13.135654 ms (average)
+Forward Convolution Verifies on CPU and GPU (7.58714e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 18.012959 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 34.535015 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.80668e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.42983e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 16 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.817939 ms (average)
+Forward Convolution Verifies on CPU and GPU (8.93607e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 1.921105 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 3.184504 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.83747e-08)
+Backward Convolution Weights Verifies on CPU and GPU (8.36083e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 3 -W 3 -k 256 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 3 -W 3 -k 256 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.091877 ms (average)
+Forward Convolution Verifies on CPU and GPU (5.50661e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.077974 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.049619 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.23137e-07)
+Backward Convolution Weights Verifies on CPU and GPU (4.80961e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 3 -W 3 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 3 -W 3 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 0
+GPU Kernel Time Forward Conv. Elapsed: 0.050081 ms (average)
+Forward Convolution Verifies on CPU and GPU (7.98525e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 0.064677 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.068090 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.77539e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.87634e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 5 -W 5 -k 256 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 5 -W 5 -k 256 -y 3 -x 3 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.048748 ms (average)
+Forward Convolution Verifies on CPU and GPU (6.36267e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.079788 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.140871 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.51478e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.91084e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 5 -W 5 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 5 -W 5 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.091005 ms (average)
+Forward Convolution Verifies on CPU and GPU (9.59489e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 0.047219 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.060819 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.57208e-08)
+Backward Convolution Weights Verifies on CPU and GPU (3.77303e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 10 -W 10 -k 256 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 10 -W 10 -k 256 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.403449 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.19791e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.379396 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.560285 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.28183e-08)
+Backward Convolution Weights Verifies on CPU and GPU (7.02114e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 10 -W 10 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 10 -W 10 -k 128 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 1
+GPU Kernel Time Forward Conv. Elapsed: 0.220036 ms (average)
+Forward Convolution Verifies on CPU and GPU (3.61505e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 0.428373 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.580374 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.3534e-08)
+Backward Convolution Weights Verifies on CPU and GPU (4.20481e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 19 -W 19 -k 512 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 19 -W 19 -k 512 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 2.999436 ms (average)
+Forward Convolution Verifies on CPU and GPU (1.47699e-07)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 7.356030 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 4.099730 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.31856e-08)
+Backward Convolution Weights Verifies on CPU and GPU (7.30916e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 512 -H 19 -W 19 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 512 -H 19 -W 19 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 1
+GPU Kernel Time Forward Conv. Elapsed: 1.572074 ms (average)
+Forward Convolution Verifies on CPU and GPU (4.05181e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 2.627346 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 2.389391 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (3.1635e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.07541e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 512 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 512 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 0
+GPU Kernel Time Forward Conv. Elapsed: 15.892302 ms (average)
+Forward Convolution Verifies on CPU and GPU (7.5066e-08)
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 13.275156 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 9.445161 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.5209e-08)
+Backward Convolution Weights Verifies on CPU and GPU (9.29449e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 1
+GPU Kernel Time Forward Conv. Elapsed: 2.505604 ms (average)
+Forward Convolution Verifies on CPU and GPU (4.34538e-08)
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 2.395143 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 5.267209 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.39212e-08)
+Backward Convolution Weights Verifies on CPU and GPU (6.76994e-08)
++ ./bin/MIOpenDriver bnorm
+MIOpenDriver: bnorm
+Forward batch norm verification passed on output
+Forward Batch Norm Verifies on CPU and GPU.
++ ./bin/MIOpenDriver conv -n 32 -c 256 -H 38 -W 38 -k 256 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 256 -H 38 -W 38 -k 256 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 5.269379 ms (average)
+Forward Convolution Verifies on CPU and GPU (8.07431e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 14.767422 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 29.821194 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.09555e-08)
+Backward Convolution Weights Verifies on CPU and GPU (5.43395e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 38 -W 38 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 38 -W 38 -k 256 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 1
+GPU Kernel Time Forward Conv. Elapsed: 0.944534 ms (average)
+Forward Convolution Verifies on CPU and GPU (4.33767e-08)
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 1.908157 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 0
+GPU Kernel Time Backward Weights Conv. Elapsed: 1.881774 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.06098e-08)
+Backward Convolution Weights Verifies on CPU and GPU (1.71254e-07)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 38 -W 38 -k 256 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 38 -W 38 -k 256 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 2.710973 ms (average)
+Forward Convolution Verifies on CPU and GPU (5.09618e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 7.331228 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 13.866065 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (8.55063e-08)
+Backward Convolution Weights Verifies on CPU and GPU (5.42949e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 128 -H 38 -W 38 -k 128 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 128 -H 38 -W 38 -k 128 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 2.081870 ms (average)
+Forward Convolution Verifies on CPU and GPU (6.14508e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 4.250815 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 5.811332 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (6.25495e-08)
+Backward Convolution Weights Verifies on CPU and GPU (5.4394e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 64 -H 75 -W 75 -k 128 -y 1 -x 1 -p 0 -q 0 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 64 -H 75 -W 75 -k 128 -y 1 -x 1 -p 0 -q 0 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 0
+GPU Kernel Time Forward Conv. Elapsed: 4.078761 ms (average)
+Forward Convolution Verifies on CPU and GPU (3.13001e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 0.945459 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 0.889994 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (2.62534e-08)
+Backward Convolution Weights Verifies on CPU and GPU (6.81817e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 64 -H 75 -W 75 -k 128 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 64 -H 75 -W 75 -k 128 -y 3 -x 3 -p 1 -q 1 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 2.594173 ms (average)
+Forward Convolution Verifies on CPU and GPU (7.96919e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 8.826715 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 13.496075 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (5.55396e-08)
+Backward Convolution Weights Verifies on CPU and GPU (8.40502e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 64 -H 75 -W 75 -k 64 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 64 -H 75 -W 75 -k 64 -y 3 -x 3 -p 1 -q 1 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 1.543344 ms (average)
+Forward Convolution Verifies on CPU and GPU (4.51436e-08)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 4.253535 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 7.958305 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (4.34668e-08)
+Backward Convolution Weights Verifies on CPU and GPU (8.58834e-08)
++ ./bin/MIOpenDriver conv -n 32 -c 3 -H 300 -W 300 -k 64 -y 7 -x 7 -p 3 -q 3 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 32 -c 3 -H 300 -W 300 -k 64 -y 7 -x 7 -p 3 -q 3 -u 2 -v 2 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 4.188700 ms (average)
+Forward Convolution Verifies on CPU and GPU (3.48879e-08)
+MIOpen Backward Data Conv. Algorithm: 1
+GPU Kernel Time Backward Data Conv. Elapsed: 10.193348 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 6.812437 ms (average)
+Backward Convolution Data Verifies on CPU and GPU (1.23218e-07)
+Backward Convolution Weights Verifies on CPU and GPU (8.87975e-08)
+Finished: SUCCESS

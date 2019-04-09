@@ -1,0 +1,34 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>ocltst compiler module</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+cd ~/Documents; cd compilerNightly
+rm -rf ocltst
+mkdir ocltst;cd ocltst
+wget http://compute-artifactory.amd.com/artifactory/rocm-generic-local/amd/lightning-support-files/ocltst.zip
+unzip ocltst.zip
+cd ocltst/x86_64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD
+./ocltst -m oclcompiler.so -A oclcompiler.exclude -o ocltst.log
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

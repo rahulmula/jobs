@@ -1,0 +1,433 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocSPARSE
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/ROCmSoftwarePlatform/rocSPARSE.git
+ > /usr/bin/git init /home/taccuser/workspace/CompilerCQE_rocSPARSE # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocSPARSE.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocSPARSE.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocSPARSE.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocSPARSE.git # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocSPARSE.git
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocSPARSE.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision 64404a4c728e8e93a36ba0c7f8cb9fed5b7af436 (refs/remotes/origin/develop)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 64404a4c728e8e93a36ba0c7f8cb9fed5b7af436
+Commit message: "Merge pull request #90 from ntrost57/develop"
+First time build. Skipping changelog.
+[CompilerCQE_rocSPARSE] $ /bin/sh -xe /tmp/jenkins7208451137548272305.sh
++ echo AH64_uh1
++ sudo -S ./install.sh -icd
++ tee rocsparse-install.log
+[32mCreating project build directory in: [33m./build[0m
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://in.archive.ubuntu.com/ubuntu xenial InRelease
+Ign:2 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial InRelease
+Get:3 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Hit:5 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release
+Ign:6 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release.gpg
+Get:7 http://in.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:8 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [626 kB]
+Get:9 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages [524 kB]
+Get:10 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [430 kB]
+Hit:11 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease
+Get:12 http://security.ubuntu.com/ubuntu xenial-security/universe i386 Packages [374 kB]
+Fetched 2,278 kB in 7s (313 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+102 packages can be upgraded. Run 'apt list --upgradable' to see them.
+~/workspace/CompilerCQE_rocSPARSE ~/workspace/CompilerCQE_rocSPARSE
+[32mBuilding [33mgoogletest[32m from source; installing into [33m/usr/local[0m
+-- Configuring gtest external dependency
+-- ExternalGmock using ( 17 ) cores to build with
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/deps
+Scanning dependencies of target googletest
+[ 12%] Creating directories for 'googletest'
+[ 25%] Performing download step (git clone) for 'googletest'
+Cloning into 'googletest'...
+Note: checking out 'release-1.8.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 2fe3bd9... Merge pull request #1433 from dsacre/fix-clang-warnings
+[ 37%] Performing update step for 'googletest'
+[ 50%] No patch step for 'googletest'
+[ 62%] Performing configure step for 'googletest'
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/deps/gtest/src/googletest-build
+[ 75%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 87%] No install step for 'googletest'
+[100%] Completed 'googletest'
+[100%] Built target googletest
+[ 12%] Performing update step for 'googletest'
+[ 25%] Performing configure step for 'googletest'
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/deps/gtest/src/googletest-build
+[ 37%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 50%] No install step for 'googletest'
+[ 62%] Completed 'googletest'
+[100%] Built target googletest
+Scanning dependencies of target install
+[ 25%] Built target gtest
+[ 50%] Built target gmock
+[ 75%] Built target gmock_main
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /usr/local/include
+-- Up-to-date: /usr/local/include/gmock
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-cardinalities.h
+-- Installing: /usr/local/include/gmock/gmock-spec-builders.h
+-- Up-to-date: /usr/local/include/gmock/internal
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h
+-- Up-to-date: /usr/local/include/gmock/internal/custom
+-- Installing: /usr/local/include/gmock/internal/custom/README.md
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-port.h
+-- Installing: /usr/local/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h.pump
+-- Installing: /usr/local/include/gmock/internal/gmock-port.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h
+-- Installing: /usr/local/include/gmock/gmock-actions.h
+-- Installing: /usr/local/include/gmock/gmock-more-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/gmock.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-more-actions.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h.pump
+-- Installing: /usr/local/lib/libgmock.a
+-- Installing: /usr/local/lib/libgmock_main.a
+-- Installing: /usr/local/lib/pkgconfig/gmock.pc
+-- Installing: /usr/local/lib/pkgconfig/gmock_main.pc
+-- Installing: /usr/local/lib/cmake/GTest/GTestTargets.cmake
+-- Installing: /usr/local/lib/cmake/GTest/GTestTargets-noconfig.cmake
+-- Installing: /usr/local/lib/cmake/GTest/GTestConfigVersion.cmake
+-- Installing: /usr/local/lib/cmake/GTest/GTestConfig.cmake
+-- Up-to-date: /usr/local/include
+-- Up-to-date: /usr/local/include/gtest
+-- Installing: /usr/local/include/gtest/gtest-death-test.h
+-- Installing: /usr/local/include/gtest/gtest_prod.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h
+-- Up-to-date: /usr/local/include/gtest/internal
+-- Installing: /usr/local/include/gtest/internal/gtest-linked_ptr.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/gtest-filepath.h
+-- Installing: /usr/local/include/gtest/internal/gtest-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h
+-- Up-to-date: /usr/local/include/gtest/internal/custom
+-- Installing: /usr/local/include/gtest/internal/custom/README.md
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-string.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port-arch.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h
+-- Installing: /usr/local/include/gtest/gtest-test-part.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h.pump
+-- Installing: /usr/local/include/gtest/gtest-spi.h
+-- Installing: /usr/local/include/gtest/gtest-typed-test.h
+-- Installing: /usr/local/include/gtest/gtest.h
+-- Installing: /usr/local/include/gtest/gtest-message.h
+-- Installing: /usr/local/include/gtest/gtest_pred_impl.h
+-- Installing: /usr/local/include/gtest/gtest-printers.h
+-- Installing: /usr/local/lib/libgtest.a
+-- Installing: /usr/local/lib/libgtest_main.a
+-- Installing: /usr/local/lib/pkgconfig/gtest.pc
+-- Installing: /usr/local/lib/pkgconfig/gtest_main.pc
+[100%] Built target install
+~/workspace/CompilerCQE_rocSPARSE
+~/workspace/CompilerCQE_rocSPARSE ~/workspace/CompilerCQE_rocSPARSE
+-- Found HIP: /usr/local (found suitable version "1.5.19122", minimum required is "1.5.19055") 
+-- The CXX compiler identification is Clang 9.0.0
+-- Check for working CXX compiler: /opt/rocm/bin/hcc
+-- Check for working CXX compiler: /opt/rocm/bin/hcc -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: /usr/bin/git (found version "2.7.4") 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Downloading rocPRIM.
+-- Downloading/updating rocPRIM
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocPRIM-download
+Scanning dependencies of target rocPRIM-download
+[ 11%] Creating directories for 'rocPRIM-download'
+[ 22%] Performing download step (git clone) for 'rocPRIM-download'
+-- rocPRIM-download download command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocPRIM-download/rocPRIM-download-prefix/src/rocPRIM-download-stamp/rocPRIM-download-download-*.log
+[ 33%] No patch step for 'rocPRIM-download'
+[ 44%] Performing update step for 'rocPRIM-download'
+Current branch master is up to date.
+[ 55%] Performing configure step for 'rocPRIM-download'
+-- rocPRIM-download configure command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocPRIM-download/rocPRIM-download-prefix/src/rocPRIM-download-stamp/rocPRIM-download-configure-*.log
+[ 66%] Performing build step for 'rocPRIM-download'
+[ 77%] Performing install step for 'rocPRIM-download'
+-- rocPRIM-download install command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocPRIM-download/rocPRIM-download-prefix/src/rocPRIM-download-stamp/rocPRIM-download-install-*.log
+[ 88%] No test step for 'rocPRIM-download'
+[100%] Completed 'rocPRIM-download'
+[100%] Built target rocPRIM-download
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106400
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  clients/benchmarks/CMakeLists.txt:29 (find_package)
+
+
+-- Boost version: 1.64.0
+-- Found the following Boost libraries:
+--   program_options
+  Downloading and extracting test matrix Bova/rma10.tar.gz
+  Downloading and extracting test matrix JGD_BIBD/bibd_22_8.tar.gz
+  Downloading and extracting test matrix Williams/mac_econ_fwd500.tar.gz
+  Downloading and extracting test matrix Williams/mc2depi.tar.gz
+  Downloading and extracting test matrix Hamm/scircuit.tar.gz
+  Downloading and extracting test matrix Sandia/ASIC_320k.tar.gz
+  Downloading and extracting test matrix GHS_psdef/bmwcra_1.tar.gz
+  Downloading and extracting test matrix HB/nos1.tar.gz
+  Downloading and extracting test matrix HB/nos2.tar.gz
+  Downloading and extracting test matrix HB/nos3.tar.gz
+  Downloading and extracting test matrix HB/nos4.tar.gz
+  Downloading and extracting test matrix HB/nos5.tar.gz
+  Downloading and extracting test matrix HB/nos6.tar.gz
+  Downloading and extracting test matrix HB/nos7.tar.gz
+-- Found GTest: /usr/local/lib/libgtest.a  
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release
+Scanning dependencies of target rocsparse
+[  1%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level1/rocsparse_gthr.cpp.o
+[  2%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level2/rocsparse_csrsv.cpp.o
+[  3%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level1/rocsparse_doti.cpp.o
+[  5%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level2/rocsparse_ellmv.cpp.o
+[  6%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level1/rocsparse_roti.cpp.o
+[  7%] Building CXX object library/CMakeFiles/rocsparse.dir/src/handle.cpp.o
+[  9%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level1/rocsparse_dotci.cpp.o
+[ 11%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level2/rocsparse_hybmv.cpp.o
+[ 11%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level1/rocsparse_axpyi.cpp.o
+[ 12%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level2/rocsparse_csrmv.cpp.o
+[ 15%] Building CXX object library/CMakeFiles/rocsparse.dir/src/status.cpp.o
+[ 15%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level1/rocsparse_sctr.cpp.o
+[ 16%] Building CXX object library/CMakeFiles/rocsparse.dir/src/rocsparse_auxiliary.cpp.o
+[ 18%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level2/rocsparse_coomv.cpp.o
+[ 19%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level1/rocsparse_gthrz.cpp.o
+[ 20%] Building CXX object library/CMakeFiles/rocsparse.dir/src/level3/rocsparse_csrmm.cpp.o
+[ 22%] Building CXX object library/CMakeFiles/rocsparse.dir/src/precond/rocsparse_csrilu0.cpp.o
+[ 23%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_csr2coo.cpp.o
+[ 24%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_csr2csc.cpp.o
+[ 25%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_csr2ell.cpp.o
+[ 27%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_csr2hyb.cpp.o
+[ 28%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_coo2csr.cpp.o
+[ 29%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_ell2csr.cpp.o
+[ 31%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_identity.cpp.o
+[ 32%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_csrsort.cpp.o
+[ 33%] Building CXX object library/CMakeFiles/rocsparse.dir/src/conversion/rocsparse_coosort.cpp.o
+[ 35%] Linking CXX shared library librocsparse.so
+[ 35%] Built target rocsparse
+Scanning dependencies of target example_hybmv
+Scanning dependencies of target example_ellmv
+Scanning dependencies of target example_coomv
+Scanning dependencies of target example_csrmv
+[ 37%] Building CXX object clients/samples/CMakeFiles/example_coomv.dir/example_coomv.cpp.o
+[ 37%] Building CXX object clients/samples/CMakeFiles/example_csrmv.dir/example_csrmv.cpp.o
+[ 38%] Building CXX object clients/samples/CMakeFiles/example_ellmv.dir/__/common/utility.cpp.o
+[ 40%] Building CXX object clients/samples/CMakeFiles/example_csrmv.dir/__/common/utility.cpp.o
+[ 41%] Building CXX object clients/samples/CMakeFiles/example_hybmv.dir/__/common/utility.cpp.o
+[ 42%] Building CXX object clients/samples/CMakeFiles/example_hybmv.dir/example_hybmv.cpp.o
+[ 44%] Building CXX object clients/samples/CMakeFiles/example_coomv.dir/__/common/utility.cpp.o
+[ 45%] Building CXX object clients/samples/CMakeFiles/example_ellmv.dir/example_ellmv.cpp.o
+Scanning dependencies of target example_handle
+[ 46%] Building CXX object clients/samples/CMakeFiles/example_handle.dir/example_handle.cpp.o
+[ 48%] Building CXX object clients/samples/CMakeFiles/example_handle.dir/__/common/utility.cpp.o
+Scanning dependencies of target rocsparse-bench
+Scanning dependencies of target rocsparse-test
+[ 49%] Building CXX object clients/benchmarks/CMakeFiles/rocsparse-bench.dir/client.cpp.o
+[ 51%] Building CXX object clients/benchmarks/CMakeFiles/rocsparse-bench.dir/__/common/unit.cpp.o
+[ 51%] Building CXX object clients/benchmarks/CMakeFiles/rocsparse-bench.dir/__/common/arg_check.cpp.o
+[ 53%] Building CXX object clients/benchmarks/CMakeFiles/rocsparse-bench.dir/__/common/utility.cpp.o
+[ 54%] Building CXX object clients/benchmarks/CMakeFiles/rocsparse-bench.dir/__/common/rocsparse_template_specialization.cpp.o
+[ 55%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/rocsparse_gtest_main.cpp.o
+[ 57%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_axpyi.cpp.o
+[ 58%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_doti.cpp.o
+[ 59%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_gthr.cpp.o
+[ 61%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_gthrz.cpp.o
+[ 62%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_roti.cpp.o
+[ 63%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_sctr.cpp.o
+[ 64%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_coomv.cpp.o
+[ 66%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csrmv.cpp.o
+[ 67%] Linking CXX executable ../../example/example_handle
+[ 68%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csrsv.cpp.o
+[ 70%] Linking CXX executable ../../example/example_ellmv
+[ 71%] Linking CXX executable ../../example/example_hybmv
+[ 72%] Linking CXX executable ../../example/example_csrmv
+[ 74%] Linking CXX executable ../../example/example_coomv
+[ 74%] Built target example_handle
+[ 75%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_ellmv.cpp.o
+[ 75%] Built target example_ellmv
+[ 76%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_hybmv.cpp.o
+[ 77%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csrmm.cpp.o
+[ 77%] Built target example_hybmv
+[ 79%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csrilu0.cpp.o
+[ 79%] Built target example_csrmv
+[ 80%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csr2coo.cpp.o
+[ 80%] Built target example_coomv
+[ 81%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csr2csc.cpp.o
+[ 83%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csr2ell.cpp.o
+[ 84%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csr2hyb.cpp.o
+[ 85%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_coo2csr.cpp.o
+[ 87%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_ell2csr.cpp.o
+[ 88%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_identity.cpp.o
+[ 89%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csrsort.cpp.o
+[ 90%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_coosort.cpp.o
+[ 92%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/test_csrilusv.cpp.o
+[ 93%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/__/common/arg_check.cpp.o
+[ 94%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/__/common/unit.cpp.o
+[ 96%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/__/common/utility.cpp.o
+[ 97%] Building CXX object clients/tests/CMakeFiles/rocsparse-test.dir/__/common/rocsparse_template_specialization.cpp.o
+[ 98%] Linking CXX executable rocsparse-test
+[ 98%] Built target rocsparse-test
+[100%] Linking CXX executable rocsparse-bench
+[100%] Built target rocsparse-bench
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/include
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/include/rocsparse-functions.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/include/rocsparse.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/include/rocsparse-types.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/include/rocsparse-auxiliary.h
+-- Up-to-date: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/include
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/include/rocsparse-export.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/include/rocsparse-version.h
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/lib/librocsparse.so.1.1.1.0
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/lib/librocsparse.so.0
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/lib/librocsparse.so
+-- Set runtime path of "/home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/lib/librocsparse.so.1.1.1.0" to "/opt/rocm/lib"
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/lib/cmake/rocsparse/rocsparse-targets.cmake
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/lib/cmake/rocsparse/rocsparse-targets-release.cmake
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/lib/cmake/rocsparse/rocsparse-config.cmake
+-- Installing: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/rocsparse/lib/cmake/rocsparse/rocsparse-config-version.cmake
+-- symlink: ../rocsparse/lib/librocsparse.so.1.1.1.0 -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/lib/librocsparse.so.1.1.1.0
+-- symlink: ../../../rocsparse/lib/cmake/rocsparse/rocsparse-targets-release.cmake -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/lib/cmake/rocsparse/rocsparse-targets-release.cmake
+-- symlink: ../../../rocsparse/lib/cmake/rocsparse/rocsparse-targets.cmake -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/lib/cmake/rocsparse/rocsparse-targets.cmake
+-- symlink: ../../../rocsparse/lib/cmake/rocsparse/rocsparse-config.cmake -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/lib/cmake/rocsparse/rocsparse-config.cmake
+-- symlink: ../../../rocsparse/lib/cmake/rocsparse/rocsparse-config-version.cmake -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/lib/cmake/rocsparse/rocsparse-config-version.cmake
+-- symlink: ../rocsparse/lib/librocsparse.so -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/lib/librocsparse.so
+-- symlink: ../rocsparse/lib/librocsparse.so.0 -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/lib/librocsparse.so.0
+-- symlink: ../rocsparse/include/rocsparse-functions.h -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/include/rocsparse-functions.h
+-- symlink: ../rocsparse/include/rocsparse.h -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/include/rocsparse.h
+-- symlink: ../rocsparse/include/rocsparse-types.h -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/include/rocsparse-types.h
+-- symlink: ../rocsparse/include/rocsparse-export.h -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/include/rocsparse-export.h
+-- symlink: ../rocsparse/include/rocsparse-version.h -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/include/rocsparse-version.h
+-- symlink: ../rocsparse/include/rocsparse-auxiliary.h -> /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-install/include/rocsparse-auxiliary.h
+[ 35%] Built target rocsparse
+[ 38%] Built target example_csrmv
+[ 42%] Built target example_handle
+[ 46%] Built target example_coomv
+[ 50%] Built target example_hybmv
+[ 54%] Built target example_ellmv
+[ 62%] Built target rocsparse-bench
+[100%] Built target rocsparse-test
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: rocsparse
+CPack: - Install project: rocsparse
+CPack: Create package
+CPack: - package: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-1.1.1.0-Linux.tar.gz generated.
+CPack: Create package using ZIP
+CPack: Install projects
+CPack: - Run preinstall target for: rocsparse
+CPack: - Install project: rocsparse
+CPack: Create package
+CPack: - package: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-1.1.1.0-Linux.zip generated.
+CPack: Create package using DEB
+CPack: Install projects
+CPack: - Run preinstall target for: rocsparse
+CPack: - Install project: rocsparse
+CPack: Create package
+CPack: - package: /home/taccuser/workspace/CompilerCQE_rocSPARSE/build/release/rocsparse-1.1.1.0-Linux.deb generated.
+(Reading database ... 283517 files and directories currently installed.)
+Preparing to unpack rocsparse-1.1.1.0-Linux.deb ...
+Unpacking rocsparse (1.1.1.0) over (1.1.1.0) ...
+Setting up rocsparse (1.1.1.0) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+~/workspace/CompilerCQE_rocSPARSE
++ cd build/release/clients/staging
+/tmp/jenkins7208451137548272305.sh: 6: cd: can't cd to build/release/clients/staging
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

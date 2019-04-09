@@ -1,0 +1,21 @@
+Started by user [8mha:////4NM1HdwXeC+tdLMNMBm5EtDk8uwd8LrA7gu5JtzsjVTcAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9otzSnEQA1tuh3MAAAAA=[0mRahul Mula
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_LCALS
+[CompilerCQE_LCALS] $ /bin/sh -xe /tmp/jenkins5949595622431926321.sh
++ sh /home/taccuser/Documents/config_details.sh
+********************** [Tue Apr  9 14:52:32 IST 2019] CONFIG DETAILS ***********************
+GFXID      :  gfx803
+ROCm build :  roc-master-10159
+llvm HEAD  :  2272fb8 Merge branch amd-common into amd-common
+clang HEAD :  0295f1f SWDEV-179954 - OpenCL/LC - Merge branch amd-master into amd-common
+lld HEAD   :  8d67bd5 SWDEV-179954 - OpenCL/LC - Merge branch amd-master into amd-common
+HCC HEAD   :  3164bec Merge pull request #1105 from rocm-hcc/auto_merge_201904080523_EST
+HIP HEAD   :  035a3e5 Merge pull request #1010 from ROCm-Developer-Tools/mangupta-patch-1
+********************************************************************************************
++ cd /home/taccuser/Documents
++ cd compilerNightly
++ rm -rf hcc_lcals_eigen_boost
++ git clone https://bitbucket.org/whchung/hcc_lcals_eigen_boost
+Cloning into 'hcc_lcals_eigen_boost'...
+Checking out files:  22% (11302/49436)   Checking out files:  23% (11371/49436)   Checking out files:  24% (11865/49436)   Checking out files:  25% (12359/49436)   Checking out files:  26% (12854/49436)   Checking out files:  27% (13348/49436)   Checking out files:  28% (13843/49436)   Checking out files:  29% (14337/49436)   Checking out files:  30% (14831/49436)   Checking out files:  31% (15326/49436)   Checking out files:  32% (15820/49436)   Checking out files:  33% (16314/49436)   Checking out files:  34% (16809/49436)   Checking out files:  35% (17303/49436)   Checking out files:  36% (17797/49436)   Checking out files:  36% (18077/49436)   Checking out files:  37% (18292/49436)   Checking out files:  38% (18786/49436)   Checking out files:  39% (19281/49436)   Checking out files:  40% (19775/49436)   Checking out files:  41% (20269/49436)   Checking out files:  42% (20764/49436)   Checking out files:  43% (21258/49436)   Checking out files:  44% (21752/49436)   Checking out files:  45% (22247/49436)   Checking out files:  46% (22741/49436)   Checking out files:  47% (23235/49436)   Checking out files:  48% (23730/49436)   Checking out files:  49% (24224/49436)   Checking out files:  50% (24718/49436)   Checking out files:  51% (25213/49436)   Checking out files:  52% (25707/49436)   Checking out files:  53% (26202/49436)   Checking out files:  54% (26696/49436)   Checking out files:  55% (27190/49436)   Checking out files:  56% (27685/49436)   Checking out files:  57% (28179/49436)   Checking out files:  57% (28518/49436)   Checking out files:  58% (28673/49436)   Checking out files:  59% (29168/49436)   Checking out files:  60% (29662/49436)   Build was aborted
+Aborted by [8mha:////4NM1HdwXeC+tdLMNMBm5EtDk8uwd8LrA7gu5JtzsjVTcAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9otzSnEQA1tuh3MAAAAA=[0mRahul Mula
+Checking out files:  61% (30156/49436)   Checking out files:  62% (30651/49436)   Finished: ABORTED

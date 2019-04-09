@@ -1,0 +1,2347 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_MIOpen_HIP_Small
+[CompilerCQE_MIOpen_HIP_Small] $ /bin/sh -xe /tmp/jenkins6017998018246084906.sh
++ cd /home/taccuser/Documents
++ cd compilerNightly
++ cd MIOpen/build
++ sudo make clean
++ cd ..
++ rm -rf build
++ mkdir build
++ cd build
++ CXX=/opt/rocm/hcc/bin/hcc cmake -DMIOPEN_BACKEND=HIP -DCMAKE_PREFIX_PATH=/opt/rocm/hcc;/opt/rocm/hip -DCMAKE_INSTALL_PREFIX=/opt/rocm/bin ..
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is Clang 9.0.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /opt/rocm/hcc/bin/hcc
+-- Check for working CXX compiler: /opt/rocm/hcc/bin/hcc -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- hip compiler: /opt/rocm/bin/clang-ocl
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Performing Test -Werror,
+-- Performing Test -Werror, - Failed
+-- Build with rocblas
+-- HIP backend selected.
+-- AMDGCN assembler: /opt/rocm/opencl/bin/x86_64/clang
+-- Build with miopengemm
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106400
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:164 (find_package)
+
+
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106400
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:164 (find_package)
+
+
+-- Boost version: 1.64.0
+-- Found the following Boost libraries:
+--   filesystem
+--   system
+-- Clang tidy found: 9.0.0svn
+-- Clang tidy checks: *,-cert-env33-c,-android-cloexec-fopen,-cert-msc30-c,-cert-msc50-cpp,-clang-analyzer-alpha.core.CastToStruct,-clang-analyzer-optin.performance.Padding,-clang-diagnostic-deprecated-declarations,-clang-diagnostic-extern-c-compat,-clang-diagnostic-unused-command-line-argument,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-cppcoreguidelines-pro-bounds-constant-array-index,-cppcoreguidelines-pro-bounds-pointer-arithmetic,-cppcoreguidelines-pro-type-member-init,-cppcoreguidelines-pro-type-reinterpret-cast,-cppcoreguidelines-pro-type-union-access,-cppcoreguidelines-pro-type-vararg,-cppcoreguidelines-special-member-functions,-fuchsia-*,-google-explicit-constructor,-google-readability-braces-around-statements,-google-readability-todo,-google-runtime-int,-google-runtime-references,-hicpp-braces-around-statements,-hicpp-explicit-conversions,-hicpp-no-array-decay,-hicpp-signed-bitwise,-hicpp-special-member-functions,-hicpp-use-equals-default,-hicpp-use-override,-llvm-header-guard,-llvm-include-order,-misc-misplaced-const,-modernize-pass-by-value,-modernize-use-default-member-init,-modernize-use-equals-default,-modernize-use-transparent-functors,-performance-unnecessary-value-param,-readability-braces-around-statements,-readability-else-after-return,-readability-named-parameter,-hicpp-use-auto,-modernize-use-auto,-modernize-use-override,-readability-non-const-parameter
+-- Found LATEX: /usr/bin/latex   
+-- MIOpen_VERSION= 1.7.1-6c13092
+-- CMAKE_BUILD_TYPE= Release
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Librt: /usr/lib/x86_64-linux-gnu/librt.so
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Performing Test MIOPEN_HAS_address
+-- Performing Test MIOPEN_HAS_address - Failed
+-- Performing Test MIOPEN_HAS_thread
+-- Performing Test MIOPEN_HAS_thread - Failed
+-- Configuring done
+CMake Warning at src/CMakeLists.txt:325 (add_library):
+  Cannot generate a safe runtime search path for target MIOpen because files
+  in some directories may conflict with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at driver/CMakeLists.txt:30 (add_executable):
+  Cannot generate a safe runtime search path for target MIOpenDriver because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+
+
+WARNING: Target "MIOpenDriver" has EXCLUDE_FROM_ALL set and will not be built by default but an install rule has been provided for it.  CMake does not define behavior for this case.
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_na_inference
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_cba_inference
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_pooling_test
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_bn_aux because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_w_supertensor
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_bn_3d_spatial_test because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_mdgraph because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_tensor_transform
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_tensor_test
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_soft_max because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_tensor_scale
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_na_train because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_main because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_test_errors
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_bn_spatial_test
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_type_name
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_lstm because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_bn_peract_test
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_handle_test
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_lrn_test because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_cache because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_bn_3d_peract_test because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_include_inliner
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_conv because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_solver because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_custom_allocator
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_conv_bias
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_tensor_cast
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_tensor_set
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_tensor_copy
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_activation
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_perfdb because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_rnn_vanilla
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_fusion_aux
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_gru because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_tensor_trans
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_cbna_inference
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_check_numerics_test because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+CMake Warning at test/CMakeLists.txt:94 (add_executable):
+  Cannot generate a safe runtime search path for target test_tensor_ops
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libmcwamp.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+    runtime library [libhc_am.so] in /opt/rocm/hcc/lib may be hidden by files in:
+      /opt/rocm/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:135 (add_test_executable)
+
+
+-- Generating done
+-- Build files have been written to: /home/taccuser/Documents/compilerNightly/MIOpen/build
++ make
+Scanning dependencies of target addkernels
+[  0%] Building CXX object addkernels/CMakeFiles/addkernels.dir/include_inliner.cpp.o
+[  0%] Building CXX object addkernels/CMakeFiles/addkernels.dir/addkernels.cpp.o
+[  3%] Linking CXX executable ../bin/addkernels
+[  3%] Built target addkernels
+[  3%] Inlining MIOpen kernels
+Scanning dependencies of target MIOpen
+[  3%] Building CXX object src/CMakeFiles/MIOpen.dir/check_numerics.cpp.o
+[  3%] Building CXX object src/CMakeFiles/MIOpen.dir/convolution.cpp.o
+[  6%] Building CXX object src/CMakeFiles/MIOpen.dir/convolution_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:36:34: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc);
+                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:50:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc, c_mode, pad_h, pad_w, u, v, dilation_h, dilation_w);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:61:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc, groupCount);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:85:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc, c_mode, pad_h, pad_w, u, v, dilation_h, dilation_w);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:107:75: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc, inputTensorDesc, filterDesc, n, c, h, w);
+                                                                          ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:116:34: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc);
+                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:129:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(wDesc, yDesc, convDesc, workSpaceSize);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:170:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        exhaustiveSearch);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:208:93: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        alpha, xDesc, x, wDesc, w, convDesc, algo, beta, yDesc, y, workSpace, workSpaceSize);
+                                                                                            ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:272:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, bDesc, b, beta, yDesc, y);
+                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:318:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        exhaustiveSearch);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:357:97: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        alpha, dyDesc, dy, wDesc, w, convDesc, algo, beta, dxDesc, dx, workSpace, workSpaceSize);
+                                                                                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:421:72: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(dyDesc, wDesc, convDesc, dxDesc, workSpaceSize);
+                                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:440:72: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(dyDesc, xDesc, convDesc, dwDesc, workSpaceSize);
+                                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:480:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        exhaustiveSearch);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:553:97: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        alpha, dyDesc, dy, xDesc, x, convDesc, algo, beta, dwDesc, dw, workSpace, workSpaceSize);
+                                                                                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:582:61: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, dyDesc, dy, beta, dbDesc, db);
+                                                            ^
+17 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:36:34: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc);
+                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:50:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc, c_mode, pad_h, pad_w, u, v, dilation_h, dilation_w);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:61:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc, groupCount);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:85:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc, c_mode, pad_h, pad_w, u, v, dilation_h, dilation_w);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:107:75: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc, inputTensorDesc, filterDesc, n, c, h, w);
+                                                                          ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:116:34: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(convDesc);
+                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:129:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(wDesc, yDesc, convDesc, workSpaceSize);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:170:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        exhaustiveSearch);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:208:93: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        alpha, xDesc, x, wDesc, w, convDesc, algo, beta, yDesc, y, workSpace, workSpaceSize);
+                                                                                            ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:272:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, bDesc, b, beta, yDesc, y);
+                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:318:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        exhaustiveSearch);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:357:97: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        alpha, dyDesc, dy, wDesc, w, convDesc, algo, beta, dxDesc, dx, workSpace, workSpaceSize);
+                                                                                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:421:72: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(dyDesc, wDesc, convDesc, dxDesc, workSpaceSize);
+                                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:440:72: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(dyDesc, xDesc, convDesc, dwDesc, workSpaceSize);
+                                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:480:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        exhaustiveSearch);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:553:97: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        alpha, dyDesc, dy, xDesc, x, convDesc, algo, beta, dwDesc, dw, workSpace, workSpaceSize);
+                                                                                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/convolution_api.cpp:582:61: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, dyDesc, dy, beta, dbDesc, db);
+                                                            ^
+17 warnings generated.
+[  6%] Building CXX object src/CMakeFiles/MIOpen.dir/convolution_fft.cpp.o
+[  6%] Building CXX object src/CMakeFiles/MIOpen.dir/db.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/MIOpen.dir/db_record.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/MIOpen.dir/expanduser.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/MIOpen.dir/find_controls.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/MIOpen.dir/fusion.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/MIOpen.dir/op_args.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/MIOpen.dir/operator.cpp.o
+[ 17%] Building CXX object src/CMakeFiles/MIOpen.dir/fused_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:46:64: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, fuseDirection, inputDesc);
+                                                               ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:64:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, op_idx);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:78:50: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(/*handle,*/ fusePlanDesc);
+                                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:88:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, workSpaceSize);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:104:90: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, requestAlgoCount, returnedAlgoCount, returnedAlgos);
+                                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:118:44: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, algo);
+                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:130:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, convOp, convDesc, wDesc);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:145:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, activOp, mode);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:160:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, activOp, mode);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:175:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, biasOp, bDesc);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:192:77: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, bnOp, bn_mode, bnScaleBiasMeanVarDesc);
+                                                                            ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:208:74: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, bnOp, bn_mode, runningMeanVariance);
+                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:223:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, bnOp, bn_mode);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:236:30: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args);
+                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:242:30: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args);
+                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:251:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args, alpha, beta, convOp, w);
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:266:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args, biasOp, alpha, beta, bias);
+                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:282:90: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args, activFwdOp, alpha, beta, activAlpha, activBeta, activGamma);
+                                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:299:93: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args, activBwdOp, alpha, beta, y, activAlpha, activBeta, activGamma);
+                                                                                            ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:325:93: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        args, bnOp, alpha, beta, bnScale, bnBias, estimatedMean, estimatedVariance, epsilon);
+                                                                                            ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:364:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        epsilon);
+                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:404:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        savedInvVariance);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:431:82: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, inputDesc, input, outputDesc, output, args);
+                                                                                 ^
+23 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:46:64: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, fuseDirection, inputDesc);
+                                                               ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:64:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, op_idx);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:78:50: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(/*handle,*/ fusePlanDesc);
+                                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:88:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, workSpaceSize);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:104:90: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, requestAlgoCount, returnedAlgoCount, returnedAlgos);
+                                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:118:44: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, algo);
+                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:130:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, convOp, convDesc, wDesc);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:145:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, activOp, mode);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:160:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, activOp, mode);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:175:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, biasOp, bDesc);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:192:77: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, bnOp, bn_mode, bnScaleBiasMeanVarDesc);
+                                                                            ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:208:74: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, bnOp, bn_mode, runningMeanVariance);
+                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:223:53: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, bnOp, bn_mode);
+                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:236:30: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args);
+                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:242:30: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args);
+                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:251:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args, alpha, beta, convOp, w);
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:266:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args, biasOp, alpha, beta, bias);
+                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:282:90: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args, activFwdOp, alpha, beta, activAlpha, activBeta, activGamma);
+                                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:299:93: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(args, activBwdOp, alpha, beta, y, activAlpha, activBeta, activGamma);
+                                                                                            ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:325:93: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        args, bnOp, alpha, beta, bnScale, bnBias, estimatedMean, estimatedVariance, epsilon);
+                                                                                            ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:364:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        epsilon);
+                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:404:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        savedInvVariance);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/fused_api.cpp:431:82: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(fusePlanDesc, inputDesc, input, outputDesc, output, args);
+                                                                                 ^
+23 warnings generated.
+[ 17%] Building CXX object src/CMakeFiles/MIOpen.dir/load_file.cpp.o
+[ 17%] Building CXX object src/CMakeFiles/MIOpen.dir/pooling_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:36:34: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc);
+                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:50:87: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc, mode, windowHeight, windowWidth, pad_h, pad_w, u, v);
+                                                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:70:87: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc, mode, windowHeight, windowWidth, pad_h, pad_w, u, v);
+                                                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:151:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc, tensorDesc, n, c, h, w);
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:162:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(yDesc, workSpaceSize);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:184:90: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        poolDesc, alpha, xDesc, x, beta, yDesc, y, do_backward, workSpace, workSpaceSize);
+                                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:243:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        poolDesc, alpha, yDesc, y, dyDesc, dy, xDesc, x, beta, dxDesc, dx, workSpace);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:290:34: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc);
+                                 ^
+8 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:36:34: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc);
+                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:50:87: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc, mode, windowHeight, windowWidth, pad_h, pad_w, u, v);
+                                                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:70:87: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc, mode, windowHeight, windowWidth, pad_h, pad_w, u, v);
+                                                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:151:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc, tensorDesc, n, c, h, w);
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:162:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(yDesc, workSpaceSize);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:184:90: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        poolDesc, alpha, xDesc, x, beta, yDesc, y, do_backward, workSpace, workSpaceSize);
+                                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:243:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        poolDesc, alpha, yDesc, y, dyDesc, dy, xDesc, x, beta, dxDesc, dx, workSpace);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/pooling_api.cpp:290:34: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(poolDesc);
+                                 ^
+8 warnings generated.
+[ 20%] Building CXX object src/CMakeFiles/MIOpen.dir/kernel_warnings.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/MIOpen.dir/logger.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/MIOpen.dir/lock_file.cpp.o
+[ 24%] Building CXX object src/CMakeFiles/MIOpen.dir/lrn_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:45:70: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(lrnDesc, mode, lrnN, lrnAlpha, lrnBeta, lrnK);
+                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:60:70: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(lrnDesc, mode, lrnN, lrnAlpha, lrnBeta, lrnK);
+                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:93:90: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(lrnDesc, alpha, xDesc, x, beta, yDesc, y, do_backward, workSpace);
+                                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:123:85: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        lrnDesc, alpha, yDesc, y, dyDesc, dy, xDesc, x, beta, dxDesc, dx, workSpace);
+                                                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:142:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(lrnDesc);
+                                ^
+5 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:45:70: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(lrnDesc, mode, lrnN, lrnAlpha, lrnBeta, lrnK);
+                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:60:70: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(lrnDesc, mode, lrnN, lrnAlpha, lrnBeta, lrnK);
+                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:93:90: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(lrnDesc, alpha, xDesc, x, beta, yDesc, y, do_backward, workSpace);
+                                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:123:85: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        lrnDesc, alpha, yDesc, y, dyDesc, dy, xDesc, x, beta, dxDesc, dx, workSpace);
+                                                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/lrn_api.cpp:142:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(lrnDesc);
+                                ^
+5 warnings generated.
+[ 24%] Building CXX object src/CMakeFiles/MIOpen.dir/activ_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/activ_api.cpp:35:35: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(activDesc);
+                                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/activ_api.cpp:46:76: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(activDesc, mode, activAlpha, activBeta, activGamma);
+                                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/activ_api.cpp:60:76: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(activDesc, mode, activAlpha, activBeta, activGamma);
+                                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/activ_api.cpp:79:68: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(activDesc, alpha, xDesc, x, beta, yDesc, y);
+                                                                   ^
+4 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/activ_api.cpp:35:35: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(activDesc);
+                                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/activ_api.cpp:46:76: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(activDesc, mode, activAlpha, activBeta, activGamma);
+                                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/activ_api.cpp:60:76: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(activDesc, mode, activAlpha, activBeta, activGamma);
+                                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/activ_api.cpp:79:68: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(activDesc, alpha, xDesc, x, beta, yDesc, y);
+                                                                   ^
+4 warnings generated.
+[ 24%] Building CXX object src/CMakeFiles/MIOpen.dir/handle_api.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/MIOpen.dir/softmax_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/softmax_api.cpp:38:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, xDesc, x, beta, yDesc, y);
+                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/softmax_api.cpp:62:71: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, yDesc, y, dyDesc, dy, beta, dxDesc, dx);
+                                                                      ^
+2 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/softmax_api.cpp:38:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, xDesc, x, beta, yDesc, y);
+                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/softmax_api.cpp:62:71: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, yDesc, y, dyDesc, dy, beta, dxDesc, dx);
+                                                                      ^
+2 warnings generated.
+[ 27%] Building CXX object src/CMakeFiles/MIOpen.dir/batch_norm.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/MIOpen.dir/batch_norm_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/batch_norm_api.cpp:39:55: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(derivedBnDesc, xDesc, bn_mode);
+                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/batch_norm_api.cpp:72:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        epsilon);
+                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/batch_norm_api.cpp:133:47: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        resultSaveInvVariance);
+                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/batch_norm_api.cpp:227:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        savedInvVariance);
+                                         ^
+4 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/batch_norm_api.cpp:39:55: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(derivedBnDesc, xDesc, bn_mode);
+                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/batch_norm_api.cpp:72:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        epsilon);
+                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/batch_norm_api.cpp:133:47: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        resultSaveInvVariance);
+                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/batch_norm_api.cpp:227:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        savedInvVariance);
+                                         ^
+4 warnings generated.
+[ 31%] Building CXX object src/CMakeFiles/MIOpen.dir/rnn.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/MIOpen.dir/rnn_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:35:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc);
+                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:41:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc);
+                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:56:85: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        rnnDesc, rnnMode, algoMode, inputMode, dirMode, biasMode, hiddenSize, layer);
+                                                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:102:87: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        rnnDesc, hsize, nlayers, inMode, direction, rnnMode, biasMode, algo, dataType);
+                                                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:116:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, sequenceLen, xDesc, numBytes);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:130:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, sequenceLen, xDesc, numBytes);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:144:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, xDesc, wDesc, dtype);
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:157:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, xDesc, numBytes, dtype);
+                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:170:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, seqLen, xDesc, numBytes);
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:184:50: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, xDesc, numBytes);
+                                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:199:66: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, paramID, numBytes);
+                                                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:212:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, biasID, numBytes);
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:229:89: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, wDesc, w, paramID, paramDesc, layerParam);
+                                                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:252:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, wDesc, w, biasID, biasDesc, layerBias);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:272:85: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, paramID, paramDesc, layerParamOffset);
+                                                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:286:82: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, biasID, biasDesc, layerBiasOffset);
+                                                                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:303:89: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, wDesc, w, paramID, paramDesc, layerParam);
+                                                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:326:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, wDesc, w, biasID, biasDesc, layerBias);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:381:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        reserveSpaceNumBytes);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:462:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        reserveSpaceNumBytes);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:528:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        reserveSpaceNumBytes);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:588:43: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        workSpaceNumBytes);
+                                          ^
+22 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:35:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc);
+                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:41:33: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc);
+                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:56:85: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        rnnDesc, rnnMode, algoMode, inputMode, dirMode, biasMode, hiddenSize, layer);
+                                                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:102:87: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        rnnDesc, hsize, nlayers, inMode, direction, rnnMode, biasMode, algo, dataType);
+                                                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:116:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, sequenceLen, xDesc, numBytes);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:130:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, sequenceLen, xDesc, numBytes);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:144:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, xDesc, wDesc, dtype);
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:157:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, xDesc, numBytes, dtype);
+                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:170:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, seqLen, xDesc, numBytes);
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:184:50: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, xDesc, numBytes);
+                                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:199:66: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, paramID, numBytes);
+                                                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:212:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, biasID, numBytes);
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:229:89: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, wDesc, w, paramID, paramDesc, layerParam);
+                                                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:252:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, wDesc, w, biasID, biasDesc, layerBias);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:272:85: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, paramID, paramDesc, layerParamOffset);
+                                                                                    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:286:82: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, biasID, biasDesc, layerBiasOffset);
+                                                                                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:303:89: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, wDesc, w, paramID, paramDesc, layerParam);
+                                                                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:326:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(rnnDesc, layer, xDesc, wDesc, w, biasID, biasDesc, layerBias);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:381:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        reserveSpaceNumBytes);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:462:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        reserveSpaceNumBytes);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:528:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        reserveSpaceNumBytes);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/rnn_api.cpp:588:43: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        workSpaceNumBytes);
+                                          ^
+22 warnings generated.
+[ 31%] Building CXX object src/CMakeFiles/MIOpen.dir/temp_file.cpp.o
+[ 34%] Building CXX object src/CMakeFiles/MIOpen.dir/problem_description.cpp.o
+[ 34%] Building CXX object src/CMakeFiles/MIOpen.dir/md_graph.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/md_graph.cpp:1042:6: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    };
+     ^
+1 warning generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/md_graph.cpp:1042:6: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    };
+     ^
+1 warning generated.
+[ 34%] Building CXX object src/CMakeFiles/MIOpen.dir/mdg_expr.cpp.o
+[ 37%] Building CXX object src/CMakeFiles/MIOpen.dir/tensor.cpp.o
+[ 37%] Building CXX object src/CMakeFiles/MIOpen.dir/tensor_api.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:35:36: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc);
+                                   ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:43:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, dataType, n, c, h, w);
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:62:94: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, dataType, n, c, h, w, nStride, cStride, hStride, wStride);
+                                                                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:77:48: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, n, c, h, w);
+                                               ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:88:72: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, nStride, cStride, hStride, wStride);
+                                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:99:51: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, n, c, d, h, w);
+                                                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:114:81: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, nStride, cStride, dStride, hStride, wStride);
+                                                                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:128:71: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, dataType, nbDims, dimsA, stridesA);
+                                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:145:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, numBytes);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:158:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, size);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:168:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, dataType, dimsA, stridesA);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:191:36: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc);
+                                   ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:208:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorOp, alpha1, aDesc, A, alpha2, bDesc, B, beta, cDesc, C);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:230:41: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(yDesc, y, alpha);
+                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:241:41: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(yDesc, y, alpha);
+                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:255:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, xDesc, x, beta, yDesc, y);
+                                                        ^
+16 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:35:36: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc);
+                                   ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:43:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, dataType, n, c, h, w);
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:62:94: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, dataType, n, c, h, w, nStride, cStride, hStride, wStride);
+                                                                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:77:48: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, n, c, h, w);
+                                               ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:88:72: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, nStride, cStride, hStride, wStride);
+                                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:99:51: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, n, c, d, h, w);
+                                                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:114:81: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, nStride, cStride, dStride, hStride, wStride);
+                                                                                ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:128:71: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, dataType, nbDims, dimsA, stridesA);
+                                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:145:46: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, numBytes);
+                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:158:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, size);
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:168:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc, dataType, dimsA, stridesA);
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:191:36: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorDesc);
+                                   ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:208:86: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(tensorOp, alpha1, aDesc, A, alpha2, bDesc, B, beta, cDesc, C);
+                                                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:230:41: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(yDesc, y, alpha);
+                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:241:41: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(yDesc, y, alpha);
+                                        ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/tensor_api.cpp:255:57: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    MIOPEN_LOG_FUNCTION(alpha, xDesc, x, beta, yDesc, y);
+                                                        ^
+16 warnings generated.
+[ 37%] Building CXX object src/CMakeFiles/MIOpen.dir/solver.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_asm_3x3u.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_asm_1x1u.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_asm_1x1u_bias_activ.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_asm_5x10u2v2f1.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_asm_5x10u2v2b1.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_asm_7x7c3h224w224k64u2v2p3q3f1.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_asm_dir_BwdWrW3x3.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_asm_dir_BwdWrW1x1.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_bin_wino3x3U.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_bin_winoRxS.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2D_bwdWrW_2.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2D_bwdWrW_53.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2D_bwdWrW_1x1.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2Dfwdgen.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2D11x11.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2D3x3.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2Dfwd_exhaustive_search.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2Dfwd.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/MIOpen.dir/solver/conv_ocl_dir2Dfwd1x1.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/MIOpen.dir/tmp_dir.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/MIOpen.dir/binary_cache.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/MIOpen.dir/md5.cpp.o
+[ 65%] Building CXX object src/CMakeFiles/MIOpen.dir/activ.cpp.o
+[ 65%] Building CXX object src/CMakeFiles/MIOpen.dir/kernel_cache.cpp.o
+[ 65%] Building CXX object src/CMakeFiles/MIOpen.dir/lrn.cpp.o
+[ 68%] Building CXX object src/CMakeFiles/MIOpen.dir/mlo_dir_conv.cpp.o
+[ 68%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/activ_ocl.cpp.o
+[ 68%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/batchnormocl.cpp.o
+[ 72%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/convolutionocl.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:338:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, 1x1");
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:353:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, non 1x1");
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:693:78: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    MIOPEN_LOG_FUNCTION("convolution, 1x1, h14xw14 || u2xv2");
+                                                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:784:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:821:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1362:74: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1, h14xw14 || u2xv2");
+                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1422:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1434:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1558:59: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transppose, non 1x1");
+                                                          ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1598:55: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transppose, 1x1");
+                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1899:55: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transppose, 1x1");
+                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1911:59: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transppose, non 1x1");
+                                                          ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2389:62: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1 u2xv2");
+                                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2464:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2498:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2806:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1, u2xv2");
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2880:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2892:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3016:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, non 1x1");
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3055:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, 1x1");
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3428:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, 1x1");
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3439:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, non 1x1");
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3688:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3772:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3987:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:4052:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:4178:10: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        };
+         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:4205:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, non 1x1");
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:4245:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, 1x1");
+                                                     ^
+29 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:338:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, 1x1");
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:353:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, non 1x1");
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:693:78: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    MIOPEN_LOG_FUNCTION("convolution, 1x1, h14xw14 || u2xv2");
+                                                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:784:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:821:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1362:74: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1, h14xw14 || u2xv2");
+                                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1422:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1434:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1558:59: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transppose, non 1x1");
+                                                          ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1598:55: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transppose, 1x1");
+                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1899:55: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transppose, 1x1");
+                                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:1911:59: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transppose, non 1x1");
+                                                          ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2389:62: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1 u2xv2");
+                                                             ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2464:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2498:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2806:63: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1, u2xv2");
+                                                              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2880:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:2892:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3016:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, non 1x1");
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3055:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, 1x1");
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3428:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, 1x1");
+                                                     ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3439:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, non 1x1");
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3688:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3772:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:3987:60: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, non 1x1");
+                                                           ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:4052:56: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("convolution, 1x1");
+                                                       ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:4178:10: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        };
+         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:4205:58: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, non 1x1");
+                                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/convolutionocl.cpp:4245:54: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                MIOPEN_LOG_FUNCTION("transpose, 1x1");
+                                                     ^
+29 warnings generated.
+[ 72%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/convolutionocl_fft.cpp.o
+[ 72%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/lrn_ocl.cpp.o
+[ 75%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/mloNeuron.cpp.o
+[ 75%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/mloNorm.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/mloNorm.cpp:301:9: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        ;
+        ^
+1 warning generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/ocl/mloNorm.cpp:301:9: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        ;
+        ^
+1 warning generated.
+[ 75%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/mloPooling.cpp.o
+[ 79%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/pooling_ocl.cpp.o
+[ 79%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/tensorocl.cpp.o
+[ 79%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/softmaxocl.cpp.o
+[ 79%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/rnnocl.cpp.o
+[ 82%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/utilocl.cpp.o
+[ 82%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/gcn_asm_utils.cpp.o
+[ 82%] Building CXX object src/CMakeFiles/MIOpen.dir/pooling.cpp.o
+[ 86%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/fusionopconvocl.cpp.o
+[ 86%] Building CXX object src/CMakeFiles/MIOpen.dir/ocl/fusionopbiasbnactivocl.cpp.o
+[ 86%] Building CXX object src/CMakeFiles/MIOpen.dir/__/db_path.cpp.o
+[ 89%] Building CXX object src/CMakeFiles/MIOpen.dir/__/kernel.cpp.o
+[ 89%] Building CXX object src/CMakeFiles/MIOpen.dir/gemm.cpp.o
+[ 89%] Building CXX object src/CMakeFiles/MIOpen.dir/gemm_v2.cpp.o
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:168:39: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("rocBLAS");
+                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:290:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("MIOpenGEMM");
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:405:39: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("rocBLAS");
+                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:592:39: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("rocBLAS");
+                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:720:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("MIOpenGEMM");
+                                         ^
+5 warnings generated.
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:168:39: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("rocBLAS");
+                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:290:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("MIOpenGEMM");
+                                         ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:405:39: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("rocBLAS");
+                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:592:39: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("rocBLAS");
+                                      ^
+/home/taccuser/Documents/compilerNightly/MIOpen/src/gemm_v2.cpp:720:42: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        MIOPEN_LOG_FUNCTION("MIOpenGEMM");
+                                         ^
+5 warnings generated.
+[ 93%] Building CXX object src/CMakeFiles/MIOpen.dir/miopengemm.cpp.o
+[ 93%] Building CXX object src/CMakeFiles/MIOpen.dir/gemm_geometry.cpp.o
+[ 93%] Building CXX object src/CMakeFiles/MIOpen.dir/hip/hiperrors.cpp.o
+[ 96%] Building CXX object src/CMakeFiles/MIOpen.dir/hip/handlehip.cpp.o
+[ 96%] Building CXX object src/CMakeFiles/MIOpen.dir/hipoc/hipoc_kernel.cpp.o
+[ 96%] Building CXX object src/CMakeFiles/MIOpen.dir/hipoc/hipoc_program.cpp.o
+[100%] Linking CXX shared library ../lib/libMIOpen.so
+[100%] Built target MIOpen
++ sudo make install
+[  3%] Built target addkernels
+[100%] Built target MIOpen
+Install the project...
+-- Install configuration: "Release"
+-- Up-to-date: /opt/rocm/bin/miopen/include
+-- Up-to-date: /opt/rocm/bin/miopen/include/miopen
+-- Up-to-date: /opt/rocm/bin/miopen/include/miopen/miopen.h
+-- Up-to-date: /opt/rocm/bin/miopen/include
+-- Up-to-date: /opt/rocm/bin/miopen/include/miopen
+-- Installing: /opt/rocm/bin/miopen/include/miopen/config.h
+-- Installing: /opt/rocm/bin/miopen/include/miopen/version.h
+-- Installing: /opt/rocm/bin/miopen/include/miopen/export.h
+-- Installing: /opt/rocm/bin/miopen/include/miopen_kernels.h
+-- Installing: /opt/rocm/bin/miopen/lib/libMIOpen.so.1
+-- Up-to-date: /opt/rocm/bin/miopen/lib/libMIOpen.so
+-- Set runtime path of "/opt/rocm/bin/miopen/lib/libMIOpen.so.1" to ""
+-- Old export file "/opt/rocm/bin/miopen/lib/cmake/miopen/miopen-targets.cmake" will be replaced.  Removing files [/opt/rocm/bin/miopen/lib/cmake/miopen/miopen-targets-release.cmake].
+-- Installing: /opt/rocm/bin/miopen/lib/cmake/miopen/miopen-targets.cmake
+-- Installing: /opt/rocm/bin/miopen/lib/cmake/miopen/miopen-targets-release.cmake
+-- Installing: /opt/rocm/bin/miopen/lib/cmake/miopen/miopen-config.cmake
+-- Installing: /opt/rocm/bin/miopen/lib/cmake/miopen/miopen-config-version.cmake
+-- Up-to-date: /opt/rocm/bin/miopen/share/miopen/db/gfx803_36.cd.pdb.txt
+-- Up-to-date: /opt/rocm/bin/miopen/share/miopen/db/gfx803_64.cd.pdb.txt
+-- Up-to-date: /opt/rocm/bin/miopen/share/miopen/db/gfx900_64.cd.pdb.txt
+-- Up-to-date: /opt/rocm/bin/miopen/share/miopen/db/gfx900_56.cd.pdb.txt
+-- Up-to-date: /opt/rocm/bin/miopen/share/miopen/db/gfx906_64.cd.pdb.txt
+-- Up-to-date: /opt/rocm/bin/miopen/share/miopen/db/gfx906_60.cd.pdb.txt
+-- Up-to-date: /opt/rocm/bin/miopen/share/miopen/db/gfx906_56.cd.pdb.txt
+-- symlink: ../../../miopen/lib/cmake/miopen/miopen-targets.cmake -> /opt/rocm/bin/lib/cmake/miopen/miopen-targets.cmake
+-- symlink: ../../../miopen/lib/cmake/miopen/miopen-config-version.cmake -> /opt/rocm/bin/lib/cmake/miopen/miopen-config-version.cmake
+-- symlink: ../../../miopen/lib/cmake/miopen/miopen-targets-release.cmake -> /opt/rocm/bin/lib/cmake/miopen/miopen-targets-release.cmake
+-- symlink: ../../../miopen/lib/cmake/miopen/miopen-config.cmake -> /opt/rocm/bin/lib/cmake/miopen/miopen-config.cmake
+-- symlink: ../miopen/lib/libMIOpen.so -> /opt/rocm/bin/lib/libMIOpen.so
+-- symlink: ../miopen/lib/libMIOpen.so.1 -> /opt/rocm/bin/lib/libMIOpen.so.1
+-- symlink: ../../../miopen/share/miopen/db/gfx906_60.cd.pdb.txt -> /opt/rocm/bin/share/miopen/db/gfx906_60.cd.pdb.txt
+-- symlink: ../../../miopen/share/miopen/db/gfx900_56.cd.pdb.txt -> /opt/rocm/bin/share/miopen/db/gfx900_56.cd.pdb.txt
+-- symlink: ../../../miopen/share/miopen/db/gfx803_64.cd.pdb.txt -> /opt/rocm/bin/share/miopen/db/gfx803_64.cd.pdb.txt
+-- symlink: ../../../miopen/share/miopen/db/gfx906_56.cd.pdb.txt -> /opt/rocm/bin/share/miopen/db/gfx906_56.cd.pdb.txt
+-- symlink: ../../../miopen/share/miopen/db/gfx906_64.cd.pdb.txt -> /opt/rocm/bin/share/miopen/db/gfx906_64.cd.pdb.txt
+-- symlink: ../../../miopen/share/miopen/db/gfx900_64.cd.pdb.txt -> /opt/rocm/bin/share/miopen/db/gfx900_64.cd.pdb.txt
+-- symlink: ../../../miopen/share/miopen/db/gfx803_36.cd.pdb.txt -> /opt/rocm/bin/share/miopen/db/gfx803_36.cd.pdb.txt
+-- symlink: ../../miopen/include/miopen/miopen.h -> /opt/rocm/bin/include/miopen/miopen.h
+-- symlink: ../../miopen/include/miopen/config.h -> /opt/rocm/bin/include/miopen/config.h
+-- symlink: ../../miopen/include/miopen/version.h -> /opt/rocm/bin/include/miopen/version.h
+-- symlink: ../../miopen/include/miopen/export.h -> /opt/rocm/bin/include/miopen/export.h
+-- symlink: ../miopen/include/miopen_kernels.h -> /opt/rocm/bin/include/miopen_kernels.h
++ make MIOpenDriver
+[  3%] Built target addkernels
+[ 96%] Built target MIOpen
+Scanning dependencies of target MIOpenDriver
+[ 96%] Building CXX object driver/CMakeFiles/MIOpenDriver.dir/main.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:30:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/bn_driver.hpp:819:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/bn_driver.hpp:843:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/bn_driver.hpp:1037:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/bn_driver.hpp:1085:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:31:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:745:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:773:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:1140:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:1168:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:1194:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:1224:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:32:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/CBAInferFusion_driver.hpp:163:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/CBAInferFusion_driver.hpp:179:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:35:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lrn_driver.hpp:307:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lrn_driver.hpp:328:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lrn_driver.hpp:371:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lrn_driver.hpp:395:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:36:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/pool_driver.hpp:334:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/pool_driver.hpp:355:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/pool_driver.hpp:395:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/pool_driver.hpp:418:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:37:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/softmax_driver.hpp:231:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/softmax_driver.hpp:249:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/softmax_driver.hpp:283:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/softmax_driver.hpp:303:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:38:
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:30:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_verify_gemm.hpp:583:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_verify_gemm.hpp:596:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_verify_gemm.hpp:622:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_verify_gemm.hpp:919:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:38:
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:31:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lstm_verify_gemm.hpp:100:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:38:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:724:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:777:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:947:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:976:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:1012:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:1029:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+35 warnings generated.
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:30:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/bn_driver.hpp:819:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/bn_driver.hpp:843:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/bn_driver.hpp:1037:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/bn_driver.hpp:1085:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:31:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:745:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:773:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:1140:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:1168:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:1194:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/conv_driver.hpp:1224:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:32:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/CBAInferFusion_driver.hpp:163:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/CBAInferFusion_driver.hpp:179:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:35:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lrn_driver.hpp:307:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lrn_driver.hpp:328:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lrn_driver.hpp:371:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lrn_driver.hpp:395:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:36:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/pool_driver.hpp:334:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/pool_driver.hpp:355:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/pool_driver.hpp:395:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/pool_driver.hpp:418:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:37:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/softmax_driver.hpp:231:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/softmax_driver.hpp:249:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/softmax_driver.hpp:283:15: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    START_TIME;
+              ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/softmax_driver.hpp:303:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:38:
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:30:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_verify_gemm.hpp:583:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_verify_gemm.hpp:596:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_verify_gemm.hpp:622:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_verify_gemm.hpp:919:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:38:
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:31:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/lstm_verify_gemm.hpp:100:5: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ;
+    ^
+In file included from /home/taccuser/Documents/compilerNightly/MIOpen/driver/main.cpp:38:
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:724:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:777:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:947:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:976:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:1012:19: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        START_TIME;
+                  ^
+/home/taccuser/Documents/compilerNightly/MIOpen/driver/rnn_driver.hpp:1029:18: warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        STOP_TIME;
+                 ^
+35 warnings generated.
+[ 96%] Building CXX object driver/CMakeFiles/MIOpenDriver.dir/InputFlags.cpp.o
+[100%] Linking CXX executable ../bin/MIOpenDriver
+[100%] Built target MIOpenDriver
++ make check
+[  1%] Built target addkernels
+[ 52%] Built target MIOpen
+Scanning dependencies of target test_tensor_ops
+[ 52%] Building CXX object test/CMakeFiles/test_tensor_ops.dir/tensor_ops.cpp.o
+[ 54%] Linking CXX executable ../bin/test_tensor_ops
+[ 54%] Built target test_tensor_ops
+Scanning dependencies of target test_conv_bias
+[ 54%] Building CXX object test/CMakeFiles/test_conv_bias.dir/conv_bias.cpp.o
+[ 54%] Linking CXX executable ../bin/test_conv_bias
+[ 54%] Built target test_conv_bias
+Scanning dependencies of target test_na_inference
+[ 54%] Building CXX object test/CMakeFiles/test_na_inference.dir/na_inference.cpp.o
+[ 56%] Linking CXX executable ../bin/test_na_inference
+[ 56%] Built target test_na_inference
+Scanning dependencies of target test_cba_inference
+[ 56%] Building CXX object test/CMakeFiles/test_cba_inference.dir/cba_inference.cpp.o
+[ 58%] Linking CXX executable ../bin/test_cba_inference
+[ 58%] Built target test_cba_inference
+Scanning dependencies of target test_pooling_test
+[ 58%] Building CXX object test/CMakeFiles/test_pooling_test.dir/pooling_test.cpp.o
+[ 60%] Linking CXX executable ../bin/test_pooling_test
+[ 60%] Built target test_pooling_test
+Scanning dependencies of target test_bn_aux
+[ 61%] Building CXX object test/CMakeFiles/test_bn_aux.dir/bn_aux.cpp.o
+[ 61%] Linking CXX executable ../bin/test_bn_aux
+[ 61%] Built target test_bn_aux
+Scanning dependencies of target test_w_supertensor
+[ 61%] Building CXX object test/CMakeFiles/test_w_supertensor.dir/w_supertensor.cpp.o
+[ 63%] Linking CXX executable ../bin/test_w_supertensor
+[ 63%] Built target test_w_supertensor
+Scanning dependencies of target test_bn_3d_spatial_test
+[ 63%] Building CXX object test/CMakeFiles/test_bn_3d_spatial_test.dir/bn_3d_spatial_test.cpp.o
+[ 63%] Linking CXX executable ../bin/test_bn_3d_spatial_test
+[ 63%] Built target test_bn_3d_spatial_test
+Scanning dependencies of target test_mdgraph
+[ 65%] Building CXX object test/CMakeFiles/test_mdgraph.dir/mdgraph.cpp.o
+[ 65%] Linking CXX executable ../bin/test_mdgraph
+[ 65%] Built target test_mdgraph
+Scanning dependencies of target test_tensor_transform
+[ 65%] Building CXX object test/CMakeFiles/test_tensor_transform.dir/tensor_transform.cpp.o
+[ 67%] Linking CXX executable ../bin/test_tensor_transform
+[ 67%] Built target test_tensor_transform
+Scanning dependencies of target test_tensor_test
+[ 67%] Building CXX object test/CMakeFiles/test_tensor_test.dir/tensor_test.cpp.o
+[ 67%] Linking CXX executable ../bin/test_tensor_test
+[ 67%] Built target test_tensor_test
+Scanning dependencies of target test_soft_max
+[ 69%] Building CXX object test/CMakeFiles/test_soft_max.dir/soft_max.cpp.o
+[ 69%] Linking CXX executable ../bin/test_soft_max
+[ 69%] Built target test_soft_max
+Scanning dependencies of target test_tensor_scale
+[ 69%] Building CXX object test/CMakeFiles/test_tensor_scale.dir/tensor_scale.cpp.o
+[ 69%] Linking CXX executable ../bin/test_tensor_scale
+[ 69%] Built target test_tensor_scale
+Scanning dependencies of target test_na_train
+[ 69%] Building CXX object test/CMakeFiles/test_na_train.dir/na_train.cpp.o
+[ 69%] Linking CXX executable ../bin/test_na_train
+[ 69%] Built target test_na_train
+Scanning dependencies of target test_main
+[ 69%] Building CXX object test/CMakeFiles/test_main.dir/main.cpp.o
+[ 69%] Linking CXX executable ../bin/test_main
+[ 69%] Built target test_main
+Scanning dependencies of target test_test_errors
+[ 69%] Building CXX object test/CMakeFiles/test_test_errors.dir/test_errors.cpp.o
+[ 69%] Linking CXX executable ../bin/test_test_errors
+[ 69%] Built target test_test_errors
+Scanning dependencies of target test_bn_spatial_test
+[ 69%] Building CXX object test/CMakeFiles/test_bn_spatial_test.dir/bn_spatial_test.cpp.o
+[ 69%] Linking CXX executable ../bin/test_bn_spatial_test
+[ 69%] Built target test_bn_spatial_test
+Scanning dependencies of target test_type_name
+[ 70%] Building CXX object test/CMakeFiles/test_type_name.dir/type_name.cpp.o
+[ 70%] Linking CXX executable ../bin/test_type_name
+[ 70%] Built target test_type_name
+Scanning dependencies of target test_lstm
+[ 70%] Building CXX object test/CMakeFiles/test_lstm.dir/lstm.cpp.o
+[ 72%] Linking CXX executable ../bin/test_lstm
+[ 72%] Built target test_lstm
+Scanning dependencies of target test_bn_peract_test
+[ 72%] Building CXX object test/CMakeFiles/test_bn_peract_test.dir/bn_peract_test.cpp.o
+[ 74%] Linking CXX executable ../bin/test_bn_peract_test
+[ 74%] Built target test_bn_peract_test
+Scanning dependencies of target test_handle_test
+[ 76%] Building CXX object test/CMakeFiles/test_handle_test.dir/handle_test.cpp.o
+[ 76%] Linking CXX executable ../bin/test_handle_test
+[ 76%] Built target test_handle_test
+Scanning dependencies of target test_lrn_test
+[ 78%] Building CXX object test/CMakeFiles/test_lrn_test.dir/lrn_test.cpp.o
+[ 78%] Linking CXX executable ../bin/test_lrn_test
+[ 78%] Built target test_lrn_test
+Scanning dependencies of target test_cache
+[ 80%] Building CXX object test/CMakeFiles/test_cache.dir/cache.cpp.o
+[ 80%] Linking CXX executable ../bin/test_cache
+[ 80%] Built target test_cache
+Scanning dependencies of target test_bn_3d_peract_test
+[ 80%] Building CXX object test/CMakeFiles/test_bn_3d_peract_test.dir/bn_3d_peract_test.cpp.o
+[ 81%] Linking CXX executable ../bin/test_bn_3d_peract_test
+[ 81%] Built target test_bn_3d_peract_test
+Scanning dependencies of target test_include_inliner
+[ 81%] Building CXX object test/CMakeFiles/test_include_inliner.dir/include_inliner.cpp.o
+[ 81%] Linking CXX executable ../bin/test_include_inliner
+[ 81%] Built target test_include_inliner
+Scanning dependencies of target test_conv
+[ 81%] Building CXX object test/CMakeFiles/test_conv.dir/conv.cpp.o
+[ 83%] Linking CXX executable ../bin/test_conv
+[ 83%] Built target test_conv
+Scanning dependencies of target test_solver
+[ 83%] Building CXX object test/CMakeFiles/test_solver.dir/solver.cpp.o
+[ 85%] Linking CXX executable ../bin/test_solver
+[ 85%] Built target test_solver
+Scanning dependencies of target test_custom_allocator
+[ 87%] Building CXX object test/CMakeFiles/test_custom_allocator.dir/custom_allocator.cpp.o
+[ 87%] Linking CXX executable ../bin/test_custom_allocator
+[ 87%] Built target test_custom_allocator
+Scanning dependencies of target test_tensor_cast
+[ 87%] Building CXX object test/CMakeFiles/test_tensor_cast.dir/tensor_cast.cpp.o
+[ 87%] Linking CXX executable ../bin/test_tensor_cast
+[ 87%] Built target test_tensor_cast
+Scanning dependencies of target test_tensor_set
+[ 89%] Building CXX object test/CMakeFiles/test_tensor_set.dir/tensor_set.cpp.o
+[ 89%] Linking CXX executable ../bin/test_tensor_set
+[ 89%] Built target test_tensor_set
+Scanning dependencies of target test_tensor_copy
+[ 90%] Building CXX object test/CMakeFiles/test_tensor_copy.dir/tensor_copy.cpp.o
+[ 90%] Linking CXX executable ../bin/test_tensor_copy
+[ 90%] Built target test_tensor_copy
+Scanning dependencies of target test_activation
+[ 92%] Building CXX object test/CMakeFiles/test_activation.dir/activation.cpp.o
+[ 92%] Linking CXX executable ../bin/test_activation
+[ 92%] Built target test_activation
+Scanning dependencies of target test_perfdb
+[ 94%] Building CXX object test/CMakeFiles/test_perfdb.dir/perfdb.cpp.o
+[ 94%] Linking CXX executable ../bin/test_perfdb
+[ 94%] Built target test_perfdb
+Scanning dependencies of target test_rnn_vanilla
+[ 94%] Building CXX object test/CMakeFiles/test_rnn_vanilla.dir/rnn_vanilla.cpp.o
+[ 94%] Linking CXX executable ../bin/test_rnn_vanilla
+[ 94%] Built target test_rnn_vanilla
+Scanning dependencies of target test_fusion_aux
+[ 94%] Building CXX object test/CMakeFiles/test_fusion_aux.dir/fusion_aux.cpp.o
+[ 96%] Linking CXX executable ../bin/test_fusion_aux
+[ 96%] Built target test_fusion_aux
+Scanning dependencies of target test_gru
+[ 96%] Building CXX object test/CMakeFiles/test_gru.dir/gru.cpp.o
+[ 96%] Linking CXX executable ../bin/test_gru
+[ 96%] Built target test_gru
+Scanning dependencies of target test_tensor_trans
+[ 98%] Building CXX object test/CMakeFiles/test_tensor_trans.dir/tensor_trans.cpp.o
+[ 98%] Linking CXX executable ../bin/test_tensor_trans
+[ 98%] Built target test_tensor_trans
+Scanning dependencies of target test_cbna_inference
+[ 98%] Building CXX object test/CMakeFiles/test_cbna_inference.dir/cbna_inference.cpp.o
+[ 98%] Linking CXX executable ../bin/test_cbna_inference
+[ 98%] Built target test_cbna_inference
+Scanning dependencies of target test_check_numerics_test
+[100%] Building CXX object test/CMakeFiles/test_check_numerics_test.dir/check_numerics_test.cpp.o
+[100%] Linking CXX executable ../bin/test_check_numerics_test
+[100%] Built target test_check_numerics_test
+Scanning dependencies of target check
+Test project /home/taccuser/Documents/compilerNightly/MIOpen/build/test
+      Start  1: test_soft_max
+ 1/39 Test  #1: test_soft_max ....................***Failed    0.90 sec
+CMake Error at test_test_soft_max.cmake:7 (message):
+  Test failed
+
+
+
+      Start  2: test_bn_spatial_test
+ 2/39 Test  #2: test_bn_spatial_test .............***Failed    0.77 sec
+CMake Error at test_test_bn_spatial_test.cmake:7 (message):
+  Test failed
+
+
+
+      Start  3: test_conv_bias
+ 3/39 Test  #3: test_conv_bias ...................***Failed    0.77 sec
+CMake Error at test_test_conv_bias.cmake:7 (message):
+  Test failed
+
+
+
+      Start  4: test_na_train
+ 4/39 Test  #4: test_na_train ....................***Failed    0.77 sec
+CMake Error at test_test_na_train.cmake:7 (message):
+  Test failed
+
+
+
+      Start  5: test_tensor_scale
+ 5/39 Test  #5: test_tensor_scale ................***Failed    0.78 sec
+CMake Error at test_test_tensor_scale.cmake:7 (message):
+  Test failed
+
+
+
+      Start  6: test_mdgraph
+ 6/39 Test  #6: test_mdgraph .....................   Passed    0.88 sec
+      Start  7: test_bn_peract_test
+ 7/39 Test  #7: test_bn_peract_test ..............***Failed    0.88 sec
+CMake Error at test_test_bn_peract_test.cmake:7 (message):
+  Test failed
+
+
+
+      Start  8: test_w_supertensor
+ 8/39 Test  #8: test_w_supertensor ...............***Failed    0.77 sec
+CMake Error at test_test_w_supertensor.cmake:7 (message):
+  Test failed
+
+
+
+      Start  9: test_cache
+ 9/39 Test  #9: test_cache .......................   Passed    0.77 sec
+      Start 10: test_type_name
+10/39 Test #10: test_type_name ...................   Passed    0.78 sec
+      Start 11: test_tensor_transform
+11/39 Test #11: test_tensor_transform ............   Passed    0.77 sec
+      Start 12: test_conv
+12/39 Test #12: test_conv ........................***Failed    0.84 sec
+CMake Error at test_test_conv.cmake:7 (message):
+  Test failed
+
+
+
+      Start 13: test_custom_allocator
+13/39 Test #13: test_custom_allocator ............   Passed    0.88 sec
+      Start 14: test_tensor_cast
+14/39 Test #14: test_tensor_cast .................***Failed    0.83 sec
+CMake Error at test_test_tensor_cast.cmake:7 (message):
+  Test failed
+
+
+
+      Start 15: test_tensor_set
+15/39 Test #15: test_tensor_set ..................***Failed    0.91 sec
+CMake Error at test_test_tensor_set.cmake:7 (message):
+  Test failed
+
+
+
+      Start 16: test_bn_3d_spatial_test
+16/39 Test #16: test_bn_3d_spatial_test ..........***Failed    0.78 sec
+Choosing smaller input values for low dims
+CMake Error at test_test_bn_3d_spatial_test.cmake:7 (message):
+  Test failed
+
+
+
+      Start 17: test_main
+17/39 Test #17: test_main ........................***Failed    0.84 sec
+CMake Error at test_test_main.cmake:7 (message):
+  Test failed
+
+
+
+      Start 18: test_tensor_copy
+18/39 Test #18: test_tensor_copy .................***Failed    0.97 sec
+CMake Error at test_test_tensor_copy.cmake:7 (message):
+  Test failed
+
+
+
+      Start 19: test_activation
+19/39 Test #19: test_activation ..................***Failed    0.77 sec
+CMake Error at test_test_activation.cmake:7 (message):
+  Test failed
+
+
+
+      Start 20: test_rnn_vanilla
+20/39 Test #20: test_rnn_vanilla .................***Failed    0.77 sec
+Empty batch sequence. Filling uniformly with batch size: 5
+CMake Error at test_test_rnn_vanilla.cmake:7 (message):
+  Test failed
+
+
+
+      Start 21: test_tensor_test
+21/39 Test #21: test_tensor_test .................   Passed    0.77 sec
+      Start 22: test_fusion_aux
+22/39 Test #22: test_fusion_aux ..................   Passed    0.77 sec
+      Start 23: test_include_inliner
+23/39 Test #23: test_include_inliner .............   Passed    0.77 sec
+      Start 24: test_gru
+24/39 Test #24: test_gru .........................***Failed    0.88 sec
+Empty batch sequence. Filling uniformly with batch size: 17
+CMake Error at test_test_gru.cmake:7 (message):
+  Test failed
+
+
+
+      Start 25: test_perfdb
+25/39 Test #25: test_perfdb ......................   Passed    1.95 sec
+      Start 26: test_solver
+26/39 Test #26: test_solver ......................   Passed    0.90 sec
+      Start 27: test_tensor_trans
+27/39 Test #27: test_tensor_trans ................***Failed    1.14 sec
+CMake Error at test_test_tensor_trans.cmake:7 (message):
+  Test failed
+
+
+
+      Start 28: test_lrn_test
+28/39 Test #28: test_lrn_test ....................***Failed    0.89 sec
+CMake Error at test_test_lrn_test.cmake:7 (message):
+  Test failed
+
+
+
+      Start 29: test_handle_test
+29/39 Test #29: test_handle_test .................***Failed    0.89 sec
+CMake Error at test_test_handle_test.cmake:7 (message):
+  Test failed
+
+
+
+      Start 30: test_cbna_inference
+30/39 Test #30: test_cbna_inference ..............***Failed    0.83 sec
+CMake Error at test_test_cbna_inference.cmake:7 (message):
+  Test failed
+
+
+
+      Start 31: test_check_numerics_test
+31/39 Test #31: test_check_numerics_test .........***Failed    0.88 sec
+CMake Error at test_test_check_numerics_test.cmake:7 (message):
+  Test failed
+
+
+
+      Start 32: test_bn_3d_peract_test
+32/39 Test #32: test_bn_3d_peract_test ...........***Failed    0.77 sec
+CMake Error at test_test_bn_3d_peract_test.cmake:7 (message):
+  Test failed
+
+
+
+      Start 33: test_tensor_ops
+33/39 Test #33: test_tensor_ops ..................***Failed    0.80 sec
+CMake Error at test_test_tensor_ops.cmake:7 (message):
+  Test failed
+
+
+
+      Start 34: test_bn_aux
+34/39 Test #34: test_bn_aux ......................   Passed    0.62 sec
+      Start 35: test_pooling_test
+35/39 Test #35: test_pooling_test ................***Failed    0.88 sec
+CMake Error at test_test_pooling_test.cmake:7 (message):
+  Test failed
+
+
+
+      Start 36: test_lstm
+36/39 Test #36: test_lstm ........................***Failed    0.77 sec
+Empty batch sequence. Filling uniformly with batch size: 17
+CMake Error at test_test_lstm.cmake:7 (message):
+  Test failed
+
+
+
+      Start 37: test_cba_inference
+37/39 Test #37: test_cba_inference ...............***Failed    0.84 sec
+CMake Error at test_test_cba_inference.cmake:7 (message):
+  Test failed
+
+
+
+      Start 38: test_na_inference
+38/39 Test #38: test_na_inference ................***Failed    0.88 sec
+CMake Error at test_test_na_inference.cmake:7 (message):
+  Test failed
+
+
+
+      Start 39: test_test_errors
+39/39 Test #39: test_test_errors .................   Passed    0.77 sec
+
+31% tests passed, 27 tests failed out of 39
+
+Total Test time (real) =  33.45 sec
+
+The following tests FAILED:
+	  1 - test_soft_max (Failed)
+	  2 - test_bn_spatial_test (Failed)
+	  3 - test_conv_bias (Failed)
+	  4 - test_na_train (Failed)
+	  5 - test_tensor_scale (Failed)
+	  7 - test_bn_peract_test (Failed)
+	  8 - test_w_supertensor (Failed)
+	 12 - test_conv (Failed)
+	 14 - test_tensor_cast (Failed)
+	 15 - test_tensor_set (Failed)
+	 16 - test_bn_3d_spatial_test (Failed)
+	 17 - test_main (Failed)
+	 18 - test_tensor_copy (Failed)
+	 19 - test_activation (Failed)
+	 20 - test_rnn_vanilla (Failed)
+	 24 - test_gru (Failed)
+	 27 - test_tensor_trans (Failed)
+	 28 - test_lrn_test (Failed)
+	 29 - test_handle_test (Failed)
+	 30 - test_cbna_inference (Failed)
+	 31 - test_check_numerics_test (Failed)
+	 32 - test_bn_3d_peract_test (Failed)
+	 33 - test_tensor_ops (Failed)
+	 35 - test_pooling_test (Failed)
+	 36 - test_lstm (Failed)
+	 37 - test_cba_inference (Failed)
+	 38 - test_na_inference (Failed)
+Errors while running CTest
+test/CMakeFiles/check.dir/build.make:57: recipe for target 'test/CMakeFiles/check' failed
+make[3]: *** [test/CMakeFiles/check] Error 8
+CMakeFiles/Makefile2:5159: recipe for target 'test/CMakeFiles/check.dir/all' failed
+make[2]: *** [test/CMakeFiles/check.dir/all] Error 2
+CMakeFiles/Makefile2:5166: recipe for target 'test/CMakeFiles/check.dir/rule' failed
+make[1]: *** [test/CMakeFiles/check.dir/rule] Error 2
+Makefile:2028: recipe for target 'check' failed
+make: *** [check] Error 2
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

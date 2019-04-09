@@ -1,0 +1,349 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocFFT_Full
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/ROCmSoftwarePlatform/rocFFT.git
+ > /usr/bin/git init /home/taccuser/workspace/CompilerCQE_rocFFT_Full # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocFFT.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocFFT.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocFFT.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocFFT.git # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocFFT.git
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocFFT.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision 50c845276cf90ad6ce80bfeadac1c94326ee7686 (refs/remotes/origin/develop)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 50c845276cf90ad6ce80bfeadac1c94326ee7686
+Commit message: "Merge pull request #156 from feizheng10/develop"
+ > /usr/bin/git rev-list --no-walk 50c845276cf90ad6ce80bfeadac1c94326ee7686 # timeout=10
+[CompilerCQE_rocFFT_Full] $ /bin/sh -xe /tmp/jenkins8976163366128573633.sh
++ + echosudo AH64_uh1 -S
+ ./install.sh -icd
+[32mCreating project build directory in: [33m./build[0m
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://in.archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Ign:3 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial InRelease
+Hit:4 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease
+Get:5 http://in.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Hit:6 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release
+Ign:7 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release.gpg
+Get:8 http://in.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [925 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [807 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [740 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages [678 kB]
+Fetched 3,475 kB in 6s (574 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+102 packages can be upgraded. Run 'apt list --upgradable' to see them.
+~/workspace/CompilerCQE_rocFFT_Full ~/workspace/CompilerCQE_rocFFT_Full
+[32mBuilding [33mgoogletest[32m from source-- Configuring gtest external dependency
+-- ExternalGmock using ( 17 ) cores to build with
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocFFT_Full/build/deps
+Scanning dependencies of target googletest
+[ 12%] Creating directories for 'googletest'
+[ 25%] Performing download step (git clone) for 'googletest'
+Cloning into 'googletest'...
+Note: checking out 'release-1.8.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at ec44c6c... Merge pull request #821 from mazong1123/master
+[ 50%] Performing update step for 'googletest'
+[ 50%] No patch step for 'googletest'
+[ 62%] Performing configure step for 'googletest'
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocFFT_Full/build/deps/gtest/src/googletest-build
+[ 75%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocFFT_Full/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 87%] No install step for 'googletest'
+[100%] Completed 'googletest'
+[100%] Built target googletest
+[ 12%] Performing update step for 'googletest'
+[ 25%] Performing configure step for 'googletest'
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocFFT_Full/build/deps/gtest/src/googletest-build
+[ 37%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocFFT_Full/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 50%] No install step for 'googletest'
+[ 62%] Completed 'googletest'
+[100%] Built target googletest
+Scanning dependencies of target install
+[ 27%] Built target gmock
+[ 63%] Built target gmock_main
+[ 81%] Built target gtest
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/local/lib/libgmock.a
+-- Installing: /usr/local/lib/libgmock_main.a
+-- Up-to-date: /usr/local/include/gmock
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-cardinalities.h
+-- Installing: /usr/local/include/gmock/gmock-spec-builders.h
+-- Up-to-date: /usr/local/include/gmock/internal
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h
+-- Up-to-date: /usr/local/include/gmock/internal/custom
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-port.h
+-- Installing: /usr/local/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h.pump
+-- Installing: /usr/local/include/gmock/internal/gmock-port.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h
+-- Installing: /usr/local/include/gmock/gmock-actions.h
+-- Installing: /usr/local/include/gmock/gmock-more-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/gmock.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-more-actions.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h.pump
+-- Installing: /usr/local/lib/libgtest.a
+-- Installing: /usr/local/lib/libgtest_main.a
+-- Up-to-date: /usr/local/include/gtest
+-- Installing: /usr/local/include/gtest/gtest-death-test.h
+-- Installing: /usr/local/include/gtest/gtest_prod.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h
+-- Up-to-date: /usr/local/include/gtest/internal
+-- Installing: /usr/local/include/gtest/internal/gtest-linked_ptr.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/gtest-filepath.h
+-- Installing: /usr/local/include/gtest/internal/gtest-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h
+-- Up-to-date: /usr/local/include/gtest/internal/custom
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-string.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port-arch.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h
+-- Installing: /usr/local/include/gtest/gtest-test-part.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h.pump
+-- Installing: /usr/local/include/gtest/gtest-spi.h
+-- Installing: /usr/local/include/gtest/gtest-typed-test.h
+-- Installing: /usr/local/include/gtest/gtest.h
+-- Installing: /usr/local/include/gtest/gtest-message.h
+-- Installing: /usr/local/include/gtest/gtest_pred_impl.h
+-- Installing: /usr/local/include/gtest/gtest-printers.h
+[100%] Built target install
+~/workspace/CompilerCQE_rocFFT_Full
+~/workspace/CompilerCQE_rocFFT_Full ~/workspace/CompilerCQE_rocFFT_Full
+-- The CXX compiler identification is Clang 9.0.0
+-- Check for working CXX compiler: /opt/rocm/bin/hcc
+-- Check for working CXX compiler: /opt/rocm/bin/hcc -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- HCC compiler set; ROCm backend selected [ CXX=/opt/rocm/bin/hcc cmake ... ]
+-- Building with ROCm tools
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Found FFTW: /usr/include (Required is at least version "3.0") 
+-- FindFFTW configured variables:
+-- FFTW_INCLUDE_DIRS: /usr/include
+-- FFTW_LIBRARIES: /usr/lib/x86_64-linux-gnu/libfftw3f.so;/usr/lib/x86_64-linux-gnu/libfftw3.so
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106400
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  clients/tests/CMakeLists.txt:30 (find_package)
+
+
+-- Boost version: 1.64.0
+-- Found the following Boost libraries:
+--   program_options
+-- Found GTest: /usr/local/lib/libgtest.a  
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- FindFFTW configured variables:
+-- FFTW_INCLUDE_DIRS: /usr/include
+-- FFTW_LIBRARIES: /usr/lib/x86_64-linux-gnu/libfftw3f.so;/usr/lib/x86_64-linux-gnu/libfftw3.so
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106400
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  clients/selftest/CMakeLists.txt:25 (find_package)
+
+
+-- Boost version: 1.64.0
+-- Found the following Boost libraries:
+--   program_options
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106400
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  clients/rider/CMakeLists.txt:29 (find_package)
+
+
+-- Boost version: 1.64.0
+-- Found the following Boost libraries:
+--   program_options
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocFFT_Full/build/release
+Scanning dependencies of target rocfft-kernel-generator
+[  1%] Building CXX object library/src/device/generator/CMakeFiles/rocfft-kernel-generator.dir/generator.main.cpp.o
+[  3%] Building CXX object library/src/device/generator/CMakeFiles/rocfft-kernel-generator.dir/generator.file.cpp.o
+[  4%] Linking CXX executable rocfft-kernel-generator
+[  4%] Built target rocfft-kernel-generator
+[  6%] Generator producing device kernels for rocfft-device
+Scanning dependencies of target rocfft-device
+[  9%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_large.cpp.o
+[  9%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_large.cpp.o
+[ 16%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_0.cpp.o
+[ 16%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/bluestein.cpp.o
+[ 16%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/transpose.cpp.o
+[ 16%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_1.cpp.o
+[ 18%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_3.cpp.o
+[ 19%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/complex2real.cpp.o
+[ 21%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/real2complex.cpp.o
+[ 22%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_1.cpp.o
+[ 24%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_2.cpp.o
+[ 26%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_2.cpp.o
+[ 27%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/function_pool.cpp.o
+[ 29%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_4.cpp.o
+[ 31%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_0.cpp.o
+[ 32%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_3.cpp.o
+[ 34%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_4.cpp.o
+[ 36%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_5.cpp.o
+[ 37%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_5.cpp.o
+[ 39%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_6.cpp.o
+[ 40%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_6.cpp.o
+[ 42%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_single_7.cpp.o
+[ 44%] Building CXX object library/src/device/CMakeFiles/rocfft-device.dir/kernel_launch_double_7.cpp.o
+FATAL: command execution failed
+java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2681)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3156)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:862)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:358)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:49)
+	at hudson.remoting.Command.readFrom(Command.java:140)
+	at hudson.remoting.Command.readFrom(Command.java:126)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:36)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:63)
+Caused: java.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:77)
+Caused: java.io.IOException: Backing channel 'compiler_elm' is disconnected.
+	at hudson.remoting.RemoteInvocationHandler.channelOrFail(RemoteInvocationHandler.java:214)
+	at hudson.remoting.RemoteInvocationHandler.invoke(RemoteInvocationHandler.java:283)
+	at com.sun.proxy.$Proxy71.isAlive(Unknown Source)
+	at hudson.Launcher$RemoteLauncher$ProcImpl.isAlive(Launcher.java:1143)
+	at hudson.Launcher$RemoteLauncher$ProcImpl.join(Launcher.java:1135)
+	at hudson.tasks.CommandInterpreter.join(CommandInterpreter.java:155)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:109)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:66)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:744)
+	at hudson.model.Build$BuildExecution.build(Build.java:206)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:504)
+	at hudson.model.Run.execute(Run.java:1815)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+FATAL: Unable to delete script file /tmp/jenkins8976163366128573633.sh
+java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2681)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3156)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:862)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:358)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:49)
+	at hudson.remoting.Command.readFrom(Command.java:140)
+	at hudson.remoting.Command.readFrom(Command.java:126)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:36)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:63)
+Caused: java.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:77)
+Caused: hudson.remoting.ChannelClosedException: Channel "unknown": Remote call on compiler_elm failed. The channel is closing down or has closed down
+	at hudson.remoting.Channel.call(Channel.java:948)
+	at hudson.FilePath.act(FilePath.java:1071)
+	at hudson.FilePath.act(FilePath.java:1060)
+	at hudson.FilePath.delete(FilePath.java:1564)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:123)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:66)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:744)
+	at hudson.model.Build$BuildExecution.build(Build.java:206)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:504)
+	at hudson.model.Run.execute(Run.java:1815)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

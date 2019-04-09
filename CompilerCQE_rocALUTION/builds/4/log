@@ -1,0 +1,501 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocALUTION
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/ROCmSoftwarePlatform/rocALUTION.git
+ > /usr/bin/git init /home/taccuser/workspace/CompilerCQE_rocALUTION # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocALUTION.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocALUTION.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocALUTION.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocALUTION.git # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocALUTION.git
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocALUTION.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision be8d0c577bc3db217a8c10caaf9d2627119a3444 (refs/remotes/origin/master)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f be8d0c577bc3db217a8c10caaf9d2627119a3444
+Commit message: "version bump"
+First time build. Skipping changelog.
+[CompilerCQE_rocALUTION] $ /bin/sh -xe /tmp/jenkins3576420671179713350.sh
++ echo AH64_uh1
++ sudo -S ./install.sh -icd
++ tee rocALUTION-build.log
+[32mCreating project build directory in: [33m./build[0m
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu xenial-security InRelease
+Ign:2 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial InRelease
+Hit:3 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release
+Ign:4 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release.gpg
+Hit:5 http://in.archive.ubuntu.com/ubuntu xenial InRelease
+Hit:6 http://in.archive.ubuntu.com/ubuntu xenial-updates InRelease
+Hit:7 http://in.archive.ubuntu.com/ubuntu xenial-backports InRelease
+Hit:8 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+105 packages can be upgraded. Run 'apt list --upgradable' to see them.
+~/workspace/CompilerCQE_rocALUTION ~/workspace/CompilerCQE_rocALUTION
+[32mBuilding [33mgoogletest[32m from source; installing into [33m/usr/local[0m
+-- Configuring gtest external dependency
+-- ExternalGmock using ( 17 ) cores to build with
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocALUTION/build/deps
+Scanning dependencies of target googletest
+[ 12%] Creating directories for 'googletest'
+[ 25%] Performing download step (git clone) for 'googletest'
+Cloning into 'googletest'...
+Note: checking out 'release-1.8.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at ec44c6c... Merge pull request #821 from mazong1123/master
+[ 37%] Performing update step for 'googletest'
+[ 50%] No patch step for 'googletest'
+[ 62%] Performing configure step for 'googletest'
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocALUTION/build/deps/gtest/src/googletest-build
+[ 75%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocALUTION/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 87%] No install step for 'googletest'
+[100%] Completed 'googletest'
+[100%] Built target googletest
+[ 12%] Performing update step for 'googletest'
+[ 25%] Performing configure step for 'googletest'
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocALUTION/build/deps/gtest/src/googletest-build
+[ 37%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocALUTION/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 50%] No install step for 'googletest'
+[ 62%] Completed 'googletest'
+[100%] Built target googletest
+Scanning dependencies of target install
+[ 27%] Built target gmock
+[ 63%] Built target gmock_main
+[ 81%] Built target gtest
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/local/lib/libgmock.a
+-- Installing: /usr/local/lib/libgmock_main.a
+-- Up-to-date: /usr/local/include/gmock
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-cardinalities.h
+-- Installing: /usr/local/include/gmock/gmock-spec-builders.h
+-- Up-to-date: /usr/local/include/gmock/internal
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h
+-- Up-to-date: /usr/local/include/gmock/internal/custom
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-port.h
+-- Installing: /usr/local/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h.pump
+-- Installing: /usr/local/include/gmock/internal/gmock-port.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h
+-- Installing: /usr/local/include/gmock/gmock-actions.h
+-- Installing: /usr/local/include/gmock/gmock-more-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/gmock.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-more-actions.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h.pump
+-- Installing: /usr/local/lib/libgtest.a
+-- Installing: /usr/local/lib/libgtest_main.a
+-- Up-to-date: /usr/local/include/gtest
+-- Installing: /usr/local/include/gtest/gtest-death-test.h
+-- Installing: /usr/local/include/gtest/gtest_prod.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h
+-- Up-to-date: /usr/local/include/gtest/internal
+-- Installing: /usr/local/include/gtest/internal/gtest-linked_ptr.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/gtest-filepath.h
+-- Installing: /usr/local/include/gtest/internal/gtest-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h
+-- Up-to-date: /usr/local/include/gtest/internal/custom
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-string.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port-arch.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h
+-- Installing: /usr/local/include/gtest/gtest-test-part.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h.pump
+-- Installing: /usr/local/include/gtest/gtest-spi.h
+-- Installing: /usr/local/include/gtest/gtest-typed-test.h
+-- Installing: /usr/local/include/gtest/gtest.h
+-- Installing: /usr/local/include/gtest/gtest-message.h
+-- Installing: /usr/local/include/gtest/gtest_pred_impl.h
+-- Installing: /usr/local/include/gtest/gtest-printers.h
+[100%] Built target install
+~/workspace/CompilerCQE_rocALUTION
+~/workspace/CompilerCQE_rocALUTION ~/workspace/CompilerCQE_rocALUTION
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Try OpenMP CXX flag = [-fopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Success
+-- Found OpenMP: -fopenmp  
+-- Found MPI_CXX: /usr/lib/openmpi/lib/libmpi_cxx.so;/usr/lib/openmpi/lib/libmpi.so  
+-- Found HIP: /usr/local (found suitable version "1.5.19122", minimum required is "1.5.19055") 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Git: /usr/bin/git (found version "2.7.4") 
+-- Downloading rocPRIM.
+-- Downloading/updating rocPRIM
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocALUTION/build/release/rocPRIM-download
+Scanning dependencies of target rocPRIM-download
+[ 11%] Creating directories for 'rocPRIM-download'
+[ 22%] Performing download step (git clone) for 'rocPRIM-download'
+-- rocPRIM-download download command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocALUTION/build/release/rocPRIM-download/rocPRIM-download-prefix/src/rocPRIM-download-stamp/rocPRIM-download-download-*.log
+[ 33%] No patch step for 'rocPRIM-download'
+[ 44%] Performing update step for 'rocPRIM-download'
+Current branch master is up to date.
+[ 55%] Performing configure step for 'rocPRIM-download'
+-- rocPRIM-download configure command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocALUTION/build/release/rocPRIM-download/rocPRIM-download-prefix/src/rocPRIM-download-stamp/rocPRIM-download-configure-*.log
+[ 66%] Performing build step for 'rocPRIM-download'
+[ 77%] Performing install step for 'rocPRIM-download'
+-- rocPRIM-download install command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocALUTION/build/release/rocPRIM-download/rocPRIM-download-prefix/src/rocPRIM-download-stamp/rocPRIM-download-install-*.log
+[ 88%] No test step for 'rocPRIM-download'
+[100%] Completed 'rocPRIM-download'
+[100%] Built target rocPRIM-download
+-- Found GTest: /usr/local/lib/libgtest.a  
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocALUTION/build/release
+[  1%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_backend_hip.cpp.o
+[  2%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_matrix_bcsr.cpp.o
+[  2%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_matrix_dense.cpp.o
+[  2%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_sparse.cpp.o
+[  3%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_matrix_hyb.cpp.o
+[  4%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_conversion.cpp.o
+[  5%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_matrix_ell.cpp.o
+[  6%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_blas.cpp.o
+[  7%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_allocate_free.cpp.o
+[  9%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_matrix_coo.cpp.o
+[  9%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_matrix_csr.cpp.o
+[  9%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_matrix_dia.cpp.o
+[  9%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_vector.cpp.o
+[ 10%] Building HIPCC object src/CMakeFiles/rocalution_hip.dir/base/hip/rocalution_hip_generated_hip_matrix_mcsr.cpp.o
+Scanning dependencies of target rocalution_hip
+[ 11%] Linking HIP shared library librocalution_hip.so
+[ 11%] Built target rocalution_hip
+Scanning dependencies of target rocalution
+[ 12%] Building CXX object src/CMakeFiles/rocalution.dir/base/base_rocalution.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/rocalution.dir/base/local_matrix.cpp.o
+[ 14%] Building CXX object src/CMakeFiles/rocalution.dir/base/base_matrix.cpp.o
+[ 14%] Building CXX object src/CMakeFiles/rocalution.dir/base/backend_manager.cpp.o
+[ 15%] Building CXX object src/CMakeFiles/rocalution.dir/base/operator.cpp.o
+[ 16%] Building CXX object src/CMakeFiles/rocalution.dir/base/global_vector.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/rocalution.dir/base/base_vector.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/rocalution.dir/base/parallel_manager.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/rocalution.dir/base/base_stencil.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/rocalution.dir/base/local_stencil.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/rocalution.dir/base/global_matrix.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/rocalution.dir/base/local_vector.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/rocalution.dir/base/vector.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_matrix_bcsr.cpp.o
+[ 21%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_matrix_csr.cpp.o
+[ 22%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_matrix_mcsr.cpp.o
+[ 23%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_matrix_coo.cpp.o
+[ 24%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_matrix_dia.cpp.o
+[ 24%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_matrix_ell.cpp.o
+[ 25%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_matrix_hyb.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_matrix_dense.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_vector.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_conversion.cpp.o
+[ 28%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_affinity.cpp.o
+[ 29%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_io.cpp.o
+[ 29%] Building CXX object src/CMakeFiles/rocalution.dir/base/host/host_stencil_laplace2d.cpp.o
+[ 30%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/cg.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/fcg.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/cr.cpp.o
+[ 32%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/bicgstab.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/bicgstabl.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/qmrcgstab.cpp.o
+[ 34%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/gmres.cpp.o
+[ 35%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/fgmres.cpp.o
+[ 35%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/krylov/idr.cpp.o
+[ 36%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/multigrid/base_multigrid.cpp.o
+[ 37%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/multigrid/base_amg.cpp.o
+[ 38%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/multigrid/multigrid.cpp.o
+[ 38%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/multigrid/unsmoothed_amg.cpp.o
+[ 39%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/multigrid/smoothed_amg.cpp.o
+[ 40%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/multigrid/ruge_stueben_amg.cpp.o
+[ 40%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/multigrid/pairwise_amg.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/multigrid/global_pairwise_amg.cpp.o
+[ 42%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/direct/inversion.cpp.o
+[ 42%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/direct/lu.cpp.o
+[ 43%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/direct/qr.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/solver.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/chebyshev.cpp.o
+[ 45%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/mixed_precision.cpp.o
+[ 46%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner.cpp.o
+[ 47%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_blockjacobi.cpp.o
+[ 47%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_ai.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_as.cpp.o
+[ 49%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o
+[ 49%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o
+[ 52%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o
+[ 53%] Building CXX object src/CMakeFiles/rocalution.dir/solvers/iter_ctrl.cpp.o
+[ 53%] Building CXX object src/CMakeFiles/rocalution.dir/utils/log.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/rocalution.dir/utils/allocate_free.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/rocalution.dir/utils/math_functions.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/rocalution.dir/utils/time_functions.cpp.o
+[ 56%] Linking CXX shared library librocalution.so
+[ 56%] Built target rocalution
+Scanning dependencies of target cg
+Scanning dependencies of target cg-amg
+Scanning dependencies of target fgmres
+Scanning dependencies of target cmk
+Scanning dependencies of target amg
+Scanning dependencies of target fixed-point
+Scanning dependencies of target direct
+Scanning dependencies of target benchmark
+Scanning dependencies of target bicgstab
+Scanning dependencies of target power-method
+Scanning dependencies of target async
+Scanning dependencies of target sp-precond
+Scanning dependencies of target stencil
+Scanning dependencies of target as-precond
+Scanning dependencies of target tns
+Scanning dependencies of target gmres
+[ 56%] Building CXX object clients/samples/CMakeFiles/cg.dir/cg.cpp.o
+[ 57%] Building CXX object clients/samples/CMakeFiles/cg-amg.dir/cg-amg.cpp.o
+[ 57%] Building CXX object clients/samples/CMakeFiles/cmk.dir/cmk.cpp.o
+[ 58%] Building CXX object clients/samples/CMakeFiles/fgmres.dir/fgmres.cpp.o
+[ 58%] Building CXX object clients/samples/CMakeFiles/amg.dir/amg.cpp.o
+[ 58%] Building CXX object clients/samples/CMakeFiles/benchmark.dir/benchmark.cpp.o
+[ 58%] Building CXX object clients/samples/CMakeFiles/fixed-point.dir/fixed-point.cpp.o
+[ 59%] Building CXX object clients/samples/CMakeFiles/bicgstab.dir/bicgstab.cpp.o
+[ 60%] Building CXX object clients/samples/CMakeFiles/power-method.dir/power-method.cpp.o
+[ 62%] Building CXX object clients/samples/CMakeFiles/async.dir/async.cpp.o
+[ 62%] Building CXX object clients/samples/CMakeFiles/direct.dir/direct.cpp.o
+[ 63%] Building CXX object clients/samples/CMakeFiles/stencil.dir/stencil.cpp.o
+[ 64%] Building CXX object clients/samples/CMakeFiles/sp-precond.dir/sp-precond.cpp.o
+[ 65%] Building CXX object clients/samples/CMakeFiles/as-precond.dir/as-precond.cpp.o
+[ 66%] Building CXX object clients/samples/CMakeFiles/gmres.dir/gmres.cpp.o
+[ 66%] Building CXX object clients/samples/CMakeFiles/tns.dir/tns.cpp.o
+[ 66%] Linking CXX executable ../../example/direct
+[ 67%] Linking CXX executable ../../example/cg
+[ 67%] Linking CXX executable ../../example/bicgstab
+[ 67%] Linking CXX executable ../../example/as-precond
+[ 67%] Linking CXX executable ../../example/sp-precond
+[ 68%] Linking CXX executable ../../example/fixed-point
+[ 69%] Linking CXX executable ../../example/cmk
+[ 70%] Linking CXX executable ../../example/fgmres
+[ 71%] Linking CXX executable ../../example/cg-amg
+[ 72%] Linking CXX executable ../../example/stencil
+[ 73%] Linking CXX executable ../../example/tns
+[ 73%] Linking CXX executable ../../example/gmres
+[ 74%] Linking CXX executable ../../example/async
+[ 75%] Linking CXX executable ../../example/amg
+[ 75%] Linking CXX executable ../../example/power-method
+[ 76%] Linking CXX executable ../../example/benchmark
+//usr//local//lib/usrlibrocblas.so.0/:local /undefinedlib /referencelibrocblas.so.0 :to  undefined` hip_implreference: :tokernargs [`abi:hip_implcxx11:]:(kernargs)['abi:
+cxx11/]/(usr)/'local
+//lib//usrlibrocblas.so.0/:local /undefinedlib /referencelibrocblas.so.0 :to  undefined` hip_implreference: :tofunction_names [`abihip_impl::cxx11:](function_namesbool[)abi':
+cxx11/]/(usrbool/)local'/
+lib///usrlibrocblas.so.0/:local /libundefined/ librocblas.so.0reference:  toundefined  `referencehip_impl :to: hipLaunchKernelGGLImpl`(hip_implunsigned: :long,hipLaunchKernelGGLImpl (dim3unsigned  constlong&,,  dim3dim3  constconst&&,,  dim3unsigned  constint&,,  ihipStream_tunsigned* ,int ,void *ihipStream_t**),' 
+void**)'
+collect2: error: ld returned 1 exit status
+collect2: error: ld returned 1 exit status
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+collect2: error: ld returned 1 exit status
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+collect2: error: ld returned 1 exit status
+clients/samples/CMakeFiles/stencil.dir/build.make:95: recipe for target 'example/stencil' failed
+make[2]: *** [example/stencil] Error 1
+clients/samples/CMakeFiles/async.dir/build.make:95: recipe for target 'example/async' failed
+make[2]: *** [example/async] Error 1
+CMakeFiles/Makefile2:691: recipe for target 'clients/samples/CMakeFiles/stencil.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/stencil.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+CMakeFiles/Makefile2:617: recipe for target 'clients/samples/CMakeFiles/async.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/async.dir/all] Error 2
+clients/samples/CMakeFiles/fixed-point.dir/build.make:95: recipe for target 'example/fixed-point' failed
+make[2]: *** [example/fixed-point] Error 1
+CMakeFiles/Makefile2:432: recipe for target 'clients/samples/CMakeFiles/fixed-point.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/fixed-point.dir/all] Error 2
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+collect2: error: ld returned 1 exit status
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+collect2: error: ld returned 1 exit status
+clients/samples/CMakeFiles/tns.dir/build.make:95: recipe for target 'example/tns' failed
+make[2]: *** [example/tns] Error 1
+CMakeFiles/Makefile2:802: recipe for target 'clients/samples/CMakeFiles/tns.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/tns.dir/all] Error 2
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, clients/samples/CMakeFiles/fgmres.dir/build.make:95: recipe for target 'example/fgmres' failed
+ihipStream_t*, voidmake[2]: *** [example/fgmres] Error 1
+**)'
+collect2: error: ld returned 1 exit status
+CMakeFiles/Makefile2:543: recipe for target 'clients/samples/CMakeFiles/fgmres.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/fgmres.dir/all] Error 2
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*clients/samples/CMakeFiles/power-method.dir/build.make:95: recipe for target 'example/power-method' failed
+, void**)'make[2]: *** [example/power-method] Error 1
+
+/collect2: error: ld returned 1 exit status
+/usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+collect2: error: ld returned 1 exit status
+CMakeFiles/Makefile2:469: recipe for target 'clients/samples/CMakeFiles/power-method.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/power-method.dir/all] Error 2
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargscollect2: error: ld returned 1 exit status
+[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+collect2: error: ld returned 1 exit status
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+collect2: error: ld returned 1 exit status
+clients/samples/CMakeFiles/sp-precond.dir/build.make:95: recipe for target 'example/sp-precond' failed
+make[2]: *** [example/sp-precond] Error 1
+clients/samples/CMakeFiles/gmres.dir/build.make:95: recipe for target 'example/gmres' failed
+make[2]: *** [example/gmres] Error 1
+CMakeFiles/Makefile2:358: recipe for target 'clients/samples/CMakeFiles/sp-precond.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/sp-precond.dir/all] Error 2
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3CMakeFiles/Makefile2:765: recipe for target 'clients/samples/CMakeFiles/gmres.dir/all' failed
+ const&, dim3make[1]: *** [clients/samples/CMakeFiles/gmres.dir/all] Error 2
+ const&, unsigned int, ihipStream_t*, void**)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+/collect2: error: ld returned 1 exit status
+/usr/local/lib/librocblas.so.0: undefined /reference /to usr`/hip_impllocal:/:libfunction_names/[abilibrocblas.so.0::clients/samples/CMakeFiles/cmk.dir/build.make:95: recipe for target 'example/cmk' failed
+cxx11] (boolundefined) 'make[2]: *** [example/cmk] Error 1
+
+reference/ /tousr/ local`/hip_impllib::/kernargslibrocblas.so.0[:abi :undefinedcxx11 ]reference( )to '`
+hip_impl/:/:usrhipLaunchKernelGGLImpl(/unsignedlocal /longlib, /dim3 librocblas.so.0const:& , undefineddim3  constreference& ,to unsigned  `inthip_impl,: :ihipStream_tfunction_names*[,abi :voidcxx11*]*()bool')
+'
+//usr/local/lib/librocblas.so.0: undefined reference to `clients/samples/CMakeFiles/cg-amg.dir/build.make:95: recipe for target 'example/cg-amg' failed
+hip_impl::hipLaunchKernelGGLImplmake[2]: *** [example/cg-amg] Error 1
+(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+clients/samples/CMakeFiles/amg.dir/build.make:95: recipe for target 'example/amg' failed
+make[2]: *** [example/amg] Error 1
+CMakeFiles/Makefile2:321: recipe for target 'clients/samples/CMakeFiles/cmk.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/cmk.dir/all] Error 2
+collect2: error: ld returned 1 exit status
+CMakeFiles/Makefile2:395: recipe for target 'clients/samples/CMakeFiles/cg-amg.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/cg-amg.dir/all] Error 2
+CMakeFiles/Makefile2:580: recipe for target 'clients/samples/CMakeFiles/amg.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/amg.dir/all] Error 2
+collect2: error: ld returned 1 exit status
+clients/samples/CMakeFiles/as-precond.dir/build.make:95: recipe for target 'example/as-precond' failed
+make[2]: *** [example/as-precond] Error 1
+CMakeFiles/Makefile2:654: recipe for target 'clients/samples/CMakeFiles/as-precond.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/as-precond.dir/all] Error 2
+clients/samples/CMakeFiles/direct.dir/build.make:95: recipe for target 'example/direct' failed
+make[2]: *** [example/direct] Error 1
+CMakeFiles/Makefile2:284: recipe for target 'clients/samples/CMakeFiles/direct.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/direct.dir/all] Error 2
+clients/samples/CMakeFiles/bicgstab.dir/build.make:95: recipe for target 'example/bicgstab' failed
+make[2]: *** [example/bicgstab] Error 1
+CMakeFiles/Makefile2:506: recipe for target 'clients/samples/CMakeFiles/bicgstab.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/bicgstab.dir/all] Error 2
+clients/samples/CMakeFiles/cg.dir/build.make:95: recipe for target 'example/cg' failed
+make[2]: *** [example/cg] Error 1
+CMakeFiles/Makefile2:247: recipe for target 'clients/samples/CMakeFiles/cg.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/cg.dir/all] Error 2
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11]()'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::function_names[abi:cxx11](bool)'
+//usr/local/lib/librocblas.so.0: undefined reference to `hip_impl::hipLaunchKernelGGLImpl(unsigned long, dim3 const&, dim3 const&, unsigned int, ihipStream_t*, void**)'
+collect2: error: ld returned 1 exit status
+clients/samples/CMakeFiles/benchmark.dir/build.make:95: recipe for target 'example/benchmark' failed
+make[2]: *** [example/benchmark] Error 1
+CMakeFiles/Makefile2:728: recipe for target 'clients/samples/CMakeFiles/benchmark.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/benchmark.dir/all] Error 2
+Makefile:160: recipe for target 'all' failed
+make: *** [all] Error 2
++ cd build/release/clients/tests
++ ./rocalution-test
++ tee rocalution-test.log
+tee: rocalution-test.log: Permission denied
+/tmp/jenkins3576420671179713350.sh: 7: /tmp/jenkins3576420671179713350.sh: ./rocalution-test: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

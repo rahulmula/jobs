@@ -1,0 +1,34 @@
+Started by timer
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_MIOpen_OpenCL_Small
+[CompilerCQE_MIOpen_OpenCL_Small] $ /bin/sh -xe /tmp/jenkins8877175959405918706.sh
++ cd /home/taccuser/Documents
++ cd compilerNightly
++ rm -rf MIOpen
++ git clone https://github.com/ROCmSoftwarePlatform/MIOpen
+Cloning into 'MIOpen'...
++ cd MIOpen
++ sudo cmake -P install_deps.cmake
+CMake Warning (dev) at /usr/local/share/cmake/cmakeget/CMakeGet.cmake:291 (list):
+  Policy CMP0007 is not set: list command no longer ignores empty elements.
+  Run "cmake --help-policy CMP0007" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.  List has value =
+  [https:;;github.com;pfultz2;rocm-recipes;archive;HEAD.tar.gz].
+Call Stack (most recent call first):
+  /usr/local/share/cmake/cmakeget/CMakeGet.cmake:394 (cget_fetch)
+  install_deps.cmake:60 (cmake_get)
+  
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+Downloading https://github.com/pfultz2/rocm-recipes/archive/HEAD.tar.gz
+CMake Error at /usr/local/share/cmake/cmakeget/CMakeGet.cmake:151 (message):
+  Download failed: "Couldn't resolve host name":
+  https://github.com/pfultz2/rocm-recipes/archive/HEAD.tar.gz;/tmp/cget-03-00-30-O95al-1/download/HEAD.tar.gz;SHOW_PROGRESS
+Call Stack (most recent call first):
+  /usr/local/share/cmake/cmakeget/CMakeGet.cmake:293 (cget_download)
+  /usr/local/share/cmake/cmakeget/CMakeGet.cmake:394 (cget_fetch)
+  install_deps.cmake:60 (cmake_get)
+  
+
+
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

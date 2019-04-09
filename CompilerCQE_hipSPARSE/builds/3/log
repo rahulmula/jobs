@@ -1,0 +1,277 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_hipSPARSE
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[CompilerCQE_hipSPARSE] $ /bin/sh -xe /tmp/jenkins7615329765059167330.sh
++ git clone -b develop https://github.com/ROCmSoftwarePlatform/hipSPARSE.git
+Cloning into 'hipSPARSE'...
++ chmod 777 hipSPARSE
++ cd hipSPARSE/
++ ./install.sh -icd
++ tee hipsparse-build.log
+[32mCreating project build directory in: [33m./build[0m
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Hit:3 http://in.archive.ubuntu.com/ubuntu xenial InRelease
+Ign:4 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial InRelease
+Get:5 http://in.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Hit:6 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release
+Ign:7 http://compute-artifactory.amd.com/artifactory/list/rocm-dkms-release-2.1-ubuntu xenial Release.gpg
+Get:8 http://in.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Fetched 325 kB in 2s (152 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+102 packages can be upgraded. Run 'apt list --upgradable' to see them.
+~/workspace/CompilerCQE_hipSPARSE/hipSPARSE ~/workspace/CompilerCQE_hipSPARSE/hipSPARSE
+[32mBuilding [33mgoogletest[32m from source; installing into [33m/usr/local[0m
+-- Configuring gtest external dependency
+-- ExternalGmock using ( 17 ) cores to build with
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_hipSPARSE/hipSPARSE/build/deps
+Scanning dependencies of target googletest
+[ 12%] Creating directories for 'googletest'
+[ 25%] Performing download step (git clone) for 'googletest'
+Cloning into 'googletest'...
+Note: checking out 'release-1.8.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at ec44c6c... Merge pull request #821 from mazong1123/master
+[ 37%] Performing update step for 'googletest'
+[ 50%] No patch step for 'googletest'
+[ 62%] Performing configure step for 'googletest'
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_hipSPARSE/hipSPARSE/build/deps/gtest/src/googletest-build
+[ 75%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_hipSPARSE/hipSPARSE/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 87%] No install step for 'googletest'
+[100%] Completed 'googletest'
+[100%] Built target googletest
+[ 12%] Performing update step for 'googletest'
+[ 25%] Performing configure step for 'googletest'
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_hipSPARSE/hipSPARSE/build/deps/gtest/src/googletest-build
+[ 37%] Performing build step for 'googletest'
+-- googletest build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_hipSPARSE/hipSPARSE/build/deps/gtest/src/googletest-stamp/googletest-build-*.log
+[ 50%] No install step for 'googletest'
+[ 62%] Completed 'googletest'
+[100%] Built target googletest
+Scanning dependencies of target install
+[ 27%] Built target gmock
+[ 63%] Built target gmock_main
+[ 81%] Built target gtest
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/local/lib/libgmock.a
+-- Installing: /usr/local/lib/libgmock_main.a
+-- Up-to-date: /usr/local/include/gmock
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-cardinalities.h
+-- Installing: /usr/local/include/gmock/gmock-spec-builders.h
+-- Up-to-date: /usr/local/include/gmock/internal
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h
+-- Up-to-date: /usr/local/include/gmock/internal/custom
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-port.h
+-- Installing: /usr/local/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /usr/local/include/gmock/internal/gmock-generated-internal-utils.h.pump
+-- Installing: /usr/local/include/gmock/internal/gmock-port.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /usr/local/include/gmock/gmock-generated-function-mockers.h
+-- Installing: /usr/local/include/gmock/gmock-actions.h
+-- Installing: /usr/local/include/gmock/gmock-more-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /usr/local/include/gmock/gmock.h
+-- Installing: /usr/local/include/gmock/gmock-generated-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-more-actions.h
+-- Installing: /usr/local/include/gmock/gmock-generated-nice-strict.h.pump
+-- Installing: /usr/local/lib/libgtest.a
+-- Installing: /usr/local/lib/libgtest_main.a
+-- Up-to-date: /usr/local/include/gtest
+-- Installing: /usr/local/include/gtest/gtest-death-test.h
+-- Installing: /usr/local/include/gtest/gtest_prod.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h
+-- Up-to-date: /usr/local/include/gtest/internal
+-- Installing: /usr/local/include/gtest/internal/gtest-linked_ptr.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/gtest-filepath.h
+-- Installing: /usr/local/include/gtest/internal/gtest-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-tuple.h
+-- Up-to-date: /usr/local/include/gtest/internal/custom
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-string.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h.pump
+-- Installing: /usr/local/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port-arch.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util-generated.h
+-- Installing: /usr/local/include/gtest/gtest-test-part.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h.pump
+-- Installing: /usr/local/include/gtest/gtest-spi.h
+-- Installing: /usr/local/include/gtest/gtest-typed-test.h
+-- Installing: /usr/local/include/gtest/gtest.h
+-- Installing: /usr/local/include/gtest/gtest-message.h
+-- Installing: /usr/local/include/gtest/gtest_pred_impl.h
+-- Installing: /usr/local/include/gtest/gtest-printers.h
+[100%] Built target install
+~/workspace/CompilerCQE_hipSPARSE/hipSPARSE
+~/workspace/CompilerCQE_hipSPARSE/hipSPARSE ~/workspace/CompilerCQE_hipSPARSE/hipSPARSE
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: /usr/bin/git (found version "2.7.4") 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found GTest: /usr/local/lib/libgtest.a  
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+  Downloading and extracting test matrix Bova/rma10.tar.gz
+  Downloading and extracting test matrix JGD_BIBD/bibd_22_8.tar.gz
+  Downloading and extracting test matrix Williams/mac_econ_fwd500.tar.gz
+  Downloading and extracting test matrix Williams/mc2depi.tar.gz
+  Downloading and extracting test matrix Hamm/scircuit.tar.gz
+  Downloading and extracting test matrix Sandia/ASIC_320k.tar.gz
+  Downloading and extracting test matrix GHS_psdef/bmwcra_1.tar.gz
+  Downloading and extracting test matrix HB/nos1.tar.gz
+  Downloading and extracting test matrix HB/nos2.tar.gz
+  Downloading and extracting test matrix HB/nos3.tar.gz
+  Downloading and extracting test matrix HB/nos4.tar.gz
+  Downloading and extracting test matrix HB/nos5.tar.gz
+  Downloading and extracting test matrix HB/nos6.tar.gz
+  Downloading and extracting test matrix HB/nos7.tar.gz
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_hipSPARSE/hipSPARSE/build/release
+Scanning dependencies of target hipsparse
+[  2%] Building CXX object library/CMakeFiles/hipsparse.dir/src/hcc_detail/hipsparse.cpp.o
+[  5%] Linking CXX shared library libhipsparse.so
+[  5%] Built target hipsparse
+Scanning dependencies of target example_hybmv
+Scanning dependencies of target example_csrmv
+Scanning dependencies of target example_handle
+[  8%] Building CXX object clients/samples/CMakeFiles/example_hybmv.dir/example_hybmv.cpp.o
+[ 11%] Building CXX object clients/samples/CMakeFiles/example_csrmv.dir/example_csrmv.cpp.o
+[ 13%] Building CXX object clients/samples/CMakeFiles/example_handle.dir/example_handle.cpp.o
+[ 16%] Building CXX object clients/samples/CMakeFiles/example_hybmv.dir/__/common/utility.cpp.o
+[ 19%] Building CXX object clients/samples/CMakeFiles/example_csrmv.dir/__/common/utility.cpp.o
+[ 22%] Building CXX object clients/samples/CMakeFiles/example_handle.dir/__/common/utility.cpp.o
+Scanning dependencies of target hipsparse-test
+[ 25%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/hipsparse_gtest_main.cpp.o
+[ 27%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_gthr.cpp.o
+[ 30%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_doti.cpp.o
+[ 33%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_axpyi.cpp.o
+[ 38%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csrmv.cpp.o
+[ 36%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_gthrz.cpp.o
+[ 44%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_sctr.cpp.o
+[ 44%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_roti.cpp.o
+[ 47%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csrsv2.cpp.o
+[ 50%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csrmm.cpp.o
+[ 52%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csrilu02.cpp.o
+[ 55%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csr2coo.cpp.o
+[ 58%] Linking CXX executable ../../example/example_hybmv
+[ 61%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csr2csc.cpp.o
+[ 63%] Linking CXX executable ../../example/example_csrmv
+/opt/rocm/lib/librocsparse.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11](bool)'
+collect2: error: ld returned 1 exit status
+clients/samples/CMakeFiles/example_hybmv.dir/build.make:123: recipe for target 'example/example_hybmv' failed
+make[2]: *** [example/example_hybmv] Error 1
+CMakeFiles/Makefile2:165: recipe for target 'clients/samples/CMakeFiles/example_hybmv.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/example_hybmv.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 66%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_coo2csr.cpp.o
+[ 69%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_identity.cpp.o
+[ 72%] Linking CXX executable ../../example/example_handle
+/opt/rocm/lib/librocsparse.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11](bool)'
+collect2: error: ld returned 1 exit status
+clients/samples/CMakeFiles/example_csrmv.dir/build.make:123: recipe for target 'example/example_csrmv' failed
+make[2]: *** [example/example_csrmv] Error 1
+CMakeFiles/Makefile2:202: recipe for target 'clients/samples/CMakeFiles/example_csrmv.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/example_csrmv.dir/all] Error 2
+[ 75%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csrsort.cpp.o
+/opt/rocm/lib/librocsparse.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11](bool)'
+collect2: error: ld returned 1 exit status
+clients/samples/CMakeFiles/example_handle.dir/build.make:123: recipe for target 'example/example_handle' failed
+make[2]: *** [example/example_handle] Error 1
+CMakeFiles/Makefile2:239: recipe for target 'clients/samples/CMakeFiles/example_handle.dir/all' failed
+make[1]: *** [clients/samples/CMakeFiles/example_handle.dir/all] Error 2
+[ 77%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_coosort.cpp.o
+[ 80%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csrilusv.cpp.o
+[ 83%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_hybmv.cpp.o
+[ 86%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/test_csr2hyb.cpp.o
+[ 88%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/__/common/arg_check.cpp.o
+[ 91%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/__/common/unit.cpp.o
+[ 94%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/__/common/utility.cpp.o
+[ 97%] Building CXX object clients/tests/CMakeFiles/hipsparse-test.dir/__/common/hipsparse_template_specialization.cpp.o
+[100%] Linking CXX executable hipsparse-test
+/opt/rocm/lib/librocsparse.so.0: undefined reference to `hip_impl::kernargs[abi:cxx11](bool)'
+collect2: error: ld returned 1 exit status
+clients/tests/CMakeFiles/hipsparse-test.dir/build.make:697: recipe for target 'clients/tests/hipsparse-test' failed
+make[2]: *** [clients/tests/hipsparse-test] Error 1
+CMakeFiles/Makefile2:294: recipe for target 'clients/tests/CMakeFiles/hipsparse-test.dir/all' failed
+make[1]: *** [clients/tests/CMakeFiles/hipsparse-test.dir/all] Error 2
+Makefile:160: recipe for target 'all' failed
+make: *** [all] Error 2
++ cd build/release/clients/tests
++ ./hipsparse-test
++ tee hipsparse-test.log
+/tmp/jenkins7615329765059167330.sh: 8: /tmp/jenkins7615329765059167330.sh: ./hipsparse-test: not found
+Finished: SUCCESS

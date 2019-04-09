@@ -1,0 +1,35 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>hipBLAS</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>compiler_elm</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Printing System config details
+sh ~/Documents/config_details.sh
+
+cd ~/Documents;cd compilerNightly
+rm -rf hipBLAS
+git clone -b master https://github.com/ROCmSoftwarePlatform/hipBLAS.git
+chmod 777 hipBLAS
+cd hipBLAS/
+./install.sh -icd 2&gt;&amp;1 | tee hipblas-build.log
+cd build/release/clients/staging
+#./hipblas-test | tee $current/hipblas-unittest.log &amp;&amp; exit 1 || exit 0
+./hipblas-test | tee hipblas-unittest.log</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.10"/>
+  </buildWrappers>
+</project>

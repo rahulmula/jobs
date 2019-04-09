@@ -1,0 +1,60 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_MIOpen_SMALL
+[CompilerCQE_MIOpen_SMALL] $ /bin/sh -xe /tmp/jenkins4144729365148834318.sh
++ cd /opt/rocm
++ export LD_LIBRARY_PATH=:/opt/rocm/miopen/lib
++ ./bin/MIOpenDriver conv -W 32 -H 32 -c 3 -k 32 -x 5 -y 5 -p 2 -q 2
+MIOpenDriver: conv -W 32 -H 32 -c 3 -k 32 -x 5 -y 5 -p 2 -q 2
+Forward Convolution Verifies on CPU and GPU (2.14667e-08)
+Backward Convolution Data Verifies on CPU and GPU (1.36369e-07)
+Backward Convolution Weights Verifies on CPU and GPU (1.43535e-07)
++ ./bin/MIOpenDriver conv -W 32 -H 32 -c 3 -k 32 -x 5 -y 5 -p 2 -q 2 -s 0 -F 1
+MIOpenDriver: conv -W 32 -H 32 -c 3 -k 32 -x 5 -y 5 -p 2 -q 2 -s 0 -F 1
+Forward Convolution Verifies on CPU and GPU (2.14667e-08)
++ ./bin/MIOpenDriver lrn -t 1
+MIOpenDriver: lrn -t 1
+GPU Kernel Time Forward LRN Elapsed: 0.112960 ms
+Forward LRN Verifies on CPU and GPU (err=0.000000)
+GPU Kernel Time Backward LRN Elapsed: 0.249759 ms
+Backward LRN Verifies on CPU and GPU (err=0.000000)
++ ./bin/MIOpenDriver pool
+MIOpenDriver: pool
+Forward Pooling Verifies on CPU and GPU
+Backward Pooling Verifies on CPU and GPU
++ ./bin/MIOpenDriver bnorm -F 1 -n 32 -c 512 -H 16 -W 16 -m 1 -s 1
+MIOpenDriver: bnorm -F 1 -n 32 -c 512 -H 16 -W 16 -m 1 -s 1
+Forward train batch norm verification passed on saved mean
+Forward train batch norm verification passed on saved inverse variance.
+Forward batch norm verification passed on output
+Forward Batch Norm Verifies on CPU and GPU.
++ ./bin/MIOpenDriver rnn -n 4,4,4,3,3,3,2,2,2,1 -k 10 -H 512 -W 1024 -l 3 -F 0 -b 0 -r 1 -m lstm
+MIOpenDriver: rnn -n 4,4,4,3,3,3,2,2,2,1 -k 10 -H 512 -W 1024 -l 3 -F 0 -b 0 -r 1 -m lstm
+verify lstm fwd 
+Forward RNN Verifies on CPU and GPU
+final hidden Verifies on CPU and GPU
+final cell Verifies on CPU and GPU
+verify lstm bwddata 
+Backward RNN Data Verifies on CPU and GPU
+initial hidden state Verifies on CPU and GPU
+inital cell state Verifies on CPU and GPU
+verify lstm bwdwei 
+Backward RNN Weights Verifies on CPU and GPU
++ ./bin/MIOpenDriver conv -W 341 -H 79 -c 32 -n 4 -k 32 -y 5 -x 10 -p 0 -q 0 -u 2 -v 2 -t 1 -V 0 -i 1
+MIOpenDriver: conv -W 341 -H 79 -c 32 -n 4 -k 32 -y 5 -x 10 -p 0 -q 0 -u 2 -v 2 -t 1 -V 0 -i 1
+MIOpen Forward Conv. Algorithm: 3
+GPU Kernel Time Forward Conv. Elapsed: 0.444158 ms (average)
+MIOpen Backward Data Conv. Algorithm: 3
+GPU Kernel Time Backward Data Conv. Elapsed: 0.504157 ms (average)
+MIOpen Backward Weights Conv. Algorithm: 1
+GPU Kernel Time Backward Weights Conv. Elapsed: 1.030234 ms (average)
++ ./bin/MIOpenDriver conv -n 1 -c 512 -H 256 -W 256 -k 6 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpenDriver: conv -n 1 -c 512 -H 256 -W 256 -k 6 -y 1 -x 1 -p 0 -q 0 -u 1 -v 1 -l 1 -j 1 -m conv -g 1 -t 1
+MIOpen Forward Conv. Algorithm: 1
+GPU Kernel Time Forward Conv. Elapsed: 3.939640 ms (average)
+Forward Convolution Verifies on CPU and GPU (6.35653e-08)
+Memory access fault by GPU node-1 (Agent handle: 0xd78d80) on address 0x509e80000. Reason: Page not present or supervisor privilege.
+MIOpen Backward Data Conv. Algorithm: 0
+GPU Kernel Time Backward Data Conv. Elapsed: 2.388840 ms (average)
+Aborted (core dumped)
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

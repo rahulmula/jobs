@@ -1,0 +1,1270 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_HIP_DirectedTests
+[CompilerCQE_HIP_DirectedTests] $ /bin/sh -xe /tmp/jenkins4441121555969054115.sh
++ cd /home/taccuser/Documents/compilerNightly/HIP/
++ sudo rm -rf build
++ mkdir build
++ cd build
++ cmake .. -DCMAKE_INSTALL_PREFIX=/home/taccuser/Documents/compilerNightly/HIP/build/install
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- HIP Platform: hcc
+-- HIP Compiler: hcc
+-- Looking for HCC in: /opt/rocm/hcc. Found version: 1.3.19115-9b3a740-785f31d-87f982f
+-- Looking for HSA runtime in: /opt/rocm/hsa
+-- HIP will be installed in: /home/taccuser/Documents/compilerNightly/HIP/build/install
+-- Generating profiling promitives: /home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_prof_str.h
+/home/taccuser/Documents/compilerNightly/HIP/hip_prof_gen.py Warning: implementation not found: hipMemcpyToSymbolAsync
+/home/taccuser/Documents/compilerNightly/HIP/hip_prof_gen.py Warning: implementation not found: hipMemcpyFromSymbolAsync
+/home/taccuser/Documents/compilerNightly/HIP/hip_prof_gen.py Warning: implementation not found: hipMemcpyFromSymbol
+/home/taccuser/Documents/compilerNightly/HIP/hip_prof_gen.py Warning: implementation not found: hipGetSymbolAddress
+/home/taccuser/Documents/compilerNightly/HIP/hip_prof_gen.py Warning: implementation not found: hipGetSymbolSize
+/home/taccuser/Documents/compilerNightly/HIP/hip_prof_gen.py Warning: implementation not found: hipMemcpyToSymbol
+/home/taccuser/Documents/compilerNightly/HIP/hip_prof_gen.py Warning: 6 API calls missing in interception layer
+-- Found HIP: /home/taccuser/Documents/compilerNightly/HIP/build/install (found version "1.5.19132") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/Documents/compilerNightly/HIP/build
++ make -j16
+Scanning dependencies of target lpl
+Scanning dependencies of target ca
+[  0%] Building CXX object lpl_ca/CMakeFiles/lpl.dir/lpl.cpp.o
+Scanning dependencies of target hip_hcc
+[  0%] Building CXX object lpl_ca/CMakeFiles/ca.dir/ca.cpp.o
+Scanning dependencies of target hip_hcc_static
+[  0%] Building CXX object lpl_ca/CMakeFiles/ca.dir/__/src/code_object_bundle.cpp.o
+[  0%] Building CXX object CMakeFiles/hip_hcc.dir/src/code_object_bundle.cpp.o
+[  0%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_hcc.cpp.o
+[  0%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/code_object_bundle.cpp.o
+[  0%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_error.cpp.o
+[  9%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_fatbin.cpp.o
+[  9%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_event.cpp.o
+[ 18%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_context.cpp.o
+[ 18%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_clang.cpp.o
+[ 18%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_clang.cpp.o
+[ 18%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_device.cpp.o
+[ 18%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_memory.cpp.o
+[ 18%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_context.cpp.o
+[ 27%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_hcc.cpp.o
+[ 27%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_peer.cpp.o
+In file included from /home/taccuser/Documents/compilerNightly/HIP/lpl_ca/ca.hpp:7:0,
+                 from /home/taccuser/Documents/compilerNightly/HIP/lpl_ca/ca.cpp:1:
+/home/taccuser/Documents/compilerNightly/HIP/lpl_ca/clara/clara.hpp: In member function ‘virtual clara::detail::ParserResult clara::detail::BoundFlagRefBase::setValue(const string&)’:
+/home/taccuser/Documents/compilerNightly/HIP/lpl_ca/clara/clara.hpp:642:34: warning: ‘flag’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         if (result) setFlag(flag);
+                                  ^
+[ 27%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_device.cpp.o
+[ 27%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_stream.cpp.o
+[ 27%] Linking CXX executable ../ca
+[ 27%] Built target ca
+[ 36%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_module.cpp.o
+[ 45%] Linking CXX executable ../lpl
+[ 45%] Built target lpl
+[ 45%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_db.cpp.o
+[ 45%] Building CXX object CMakeFiles/hip_hcc.dir/src/grid_launch.cpp.o
+[ 54%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_texture.cpp.o
+[ 54%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_surface.cpp.o
+[ 54%] Building CXX object CMakeFiles/hip_hcc.dir/src/hip_intercept.cpp.o
+[ 54%] Building CXX object CMakeFiles/hip_hcc.dir/src/env.cpp.o
+[ 63%] Building CXX object CMakeFiles/hip_hcc.dir/src/h2f.cpp.o
+[ 63%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_error.cpp.o
+[ 72%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_event.cpp.o
+[ 72%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_fatbin.cpp.o
+[ 72%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_memory.cpp.o
+[ 72%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_peer.cpp.o
+[ 81%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_stream.cpp.o
+[ 81%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_module.cpp.o
+[ 81%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_db.cpp.o
+[ 81%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/grid_launch.cpp.o
+[ 90%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_texture.cpp.o
+[ 90%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_surface.cpp.o
+[ 90%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/hip_intercept.cpp.o
+[ 90%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/env.cpp.o
+[100%] Building CXX object CMakeFiles/hip_hcc_static.dir/src/h2f.cpp.o
+[100%] Linking CXX shared library libhip_hcc.so
+[100%] Built target hip_hcc
+[100%] Linking CXX static library libhip_hcc_static.a
+[100%] Built target hip_hcc_static
++ make install
+[ 45%] Built target hip_hcc_static
+[ 90%] Built target hip_hcc
+[100%] Built target lpl
+[100%] Built target ca
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/libhip_hcc_static.a
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/libhip_hcc.so
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/.hipInfo
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/bin/.hipVersion
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_surface.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_hcc.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_module.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/AMDGPUPTNote.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_db.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_context.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/functional_grid_launch.inl
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/env.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_stream.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_event.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_clang.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/device_util.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_error.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_peer.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/trace_helper.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_surface.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/AMDGPURuntimeMetadata.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_hcc_internal.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_util.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/grid_launch.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/h2f.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/macro_based_grid_launch.inl
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/env.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_memory.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_intercept.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_texture.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_device.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_fatbin.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_texture.cpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/hip_fatbin.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./src/code_object_bundle.cpp
+-- Up-to-date: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipcc_cmake_linker_helper
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipcc
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipconfig
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipexamine.sh
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipexamine-perl.sh
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipconvertinplace-perl.sh
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipconvertinplace.sh
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipify-perl
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/finduncodep.sh
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipify-cmakefile
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/hipdemangleatp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./bin/findcode.sh
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_surface_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/driver_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/concepts.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/surface_functions.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_prof_api.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/grid_launch.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_memory.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/math_functions.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/code_object_bundle.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_fp16_gcc.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_runtime.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_complex.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/grid_launch_GGL.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_ldg.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/math_fwd.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_fp16_math_fwd.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/cuda
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/cuda/math_functions.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/cuda/cuda.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_prof_str.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/macro_based_grid_launch.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hsa_helpers.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_runtime_api.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/device_functions.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/device_library_decls.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/llvm_intrinsics.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/host_defines.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_vector_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/texture_functions.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_fp16.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/channel_descriptor.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_section.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_segment.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elf_types.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_note.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_strings.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_dump.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_dynamic.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_symbols.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_utils.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_header.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/elfio/elfio_relocation.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/program_state.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/grid_launch.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_db.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/functional_grid_launch.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_texture_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/hip_atomic.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/texture_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hcc_detail/helpers.hpp
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/driver_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/math_functions.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_runtime.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_complex.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_profile.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_hcc.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_runtime_api.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/device_functions.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_vector_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_fp16.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/channel_descriptor.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/nvcc_detail
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/nvcc_detail/hip_runtime.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/nvcc_detail/hip_complex.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/nvcc_detail/hip_runtime_api.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/nvcc_detail/channel_descriptor.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/nvcc_detail/hip_texture_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_common.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/hip_texture_types.h
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./include/hip/texture_types.h
+-- Up-to-date: /home/taccuser/Documents/compilerNightly/HIP/build/install/./cmake
+-- Up-to-date: /home/taccuser/Documents/compilerNightly/HIP/build/install/./cmake/FindHIP
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./cmake/FindHIP/run_make2cmake.cmake
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./cmake/FindHIP/run_hipcc.cmake
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/./cmake/FindHIP.cmake
+-- Up-to-date: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/libhip_hcc_static.a
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/libhip_hcc.so
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/cmake/hip/hip-targets.cmake
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/cmake/hip/hip-targets-release.cmake
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/cmake/hip/hip-config.cmake
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/lib/cmake/hip/hip-config-version.cmake
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/bin/lpl
+-- Installing: /home/taccuser/Documents/compilerNightly/HIP/build/install/bin/ca
+-- Set runtime path of "/home/taccuser/Documents/compilerNightly/HIP/build/install/bin/ca" to ""
++ make check -j16
+[  0%] Building HIPCC object CMakeFiles/directed_tests.Functional.device.hipFuncDeviceSynchronize.dir/tests/src/directed_tests.Functional.device.hipFuncDeviceSynchronize_generated_test_common.cpp.o
+[  1%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_bitextract.dir/tests/src/directed_tests.deviceLib.hip_bitextract_generated_test_common.cpp.o
+[  1%] Building HIPCC object CMakeFiles/directed_tests.Functional.device.hipFuncSetDeviceFlags.dir/tests/src/directed_tests.Functional.device.hipFuncSetDeviceFlags_generated_test_common.cpp.o
+[  1%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestDevice.dir/tests/src/directed_tests.deviceLib.hipTestDevice_generated_test_common.cpp.o
+[  1%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipSinglePrecisionIntrinsics.dir/tests/src/directed_tests.deviceLib.hipSinglePrecisionIntrinsics_generated_test_common.cpp.o
+[  1%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipStdComplex.dir/tests/src/deviceLib/directed_tests.deviceLib.hipStdComplex_generated_hipStdComplex.cpp.o
+[  1%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_ffs.dir/tests/src/directed_tests.deviceLib.hip_ffs_generated_test_common.cpp.o
+[  1%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDoublePrecisionMathDevice.dir/tests/src/directed_tests.deviceLib.hipDoublePrecisionMathDevice_generated_test_common.cpp.o
+[  2%] Building HIPCC object CMakeFiles/directed_tests.Functional.device.hipFuncGetDevice.dir/tests/src/directed_tests.Functional.device.hipFuncGetDevice_generated_test_common.cpp.o
+[  2%] Building HIPCC object CMakeFiles/directed_tests.Functional.device.hipFuncGetDevice.dir/tests/src/Functional/device/directed_tests.Functional.device.hipFuncGetDevice_generated_hipFuncGetDevice.cpp.o
+[  2%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipIntegerIntrinsics.dir/tests/src/directed_tests.deviceLib.hipIntegerIntrinsics_generated_test_common.cpp.o
+[  2%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipSimpleAtomicsTest.dir/tests/src/directed_tests.deviceLib.hipSimpleAtomicsTest_generated_test_common.cpp.o
+[  2%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipSinglePrecisionMathDevice.dir/tests/src/directed_tests.deviceLib.hipSinglePrecisionMathDevice_generated_test_common.cpp.o
+[  2%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDoublePrecisionMathHost.dir/tests/src/directed_tests.deviceLib.hipDoublePrecisionMathHost_generated_test_common.cpp.o
+[  2%] Building HIPCC object CMakeFiles/directed_tests.Functional.device.hipFuncSetDevice.dir/tests/src/directed_tests.Functional.device.hipFuncSetDevice_generated_test_common.cpp.o
+[  3%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDeviceMemcpy.dir/tests/src/directed_tests.deviceLib.hipDeviceMemcpy_generated_test_common.cpp.o
+[  4%] Building HIPCC object CMakeFiles/directed_tests.Functional.device.hipFuncDeviceSynchronize.dir/tests/src/Functional/device/directed_tests.Functional.device.hipFuncDeviceSynchronize_generated_hipFuncDeviceSynchronize.cpp.o
+[  4%] Building HIPCC object CMakeFiles/directed_tests.Functional.device.hipFuncSetDeviceFlags.dir/tests/src/Functional/device/directed_tests.Functional.device.hipFuncSetDeviceFlags_generated_hipFuncSetDeviceFlags.cpp.o
+[  5%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestDevice.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestDevice_generated_hipTestDevice.cpp.o
+[  5%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipSinglePrecisionIntrinsics.dir/tests/src/deviceLib/directed_tests.deviceLib.hipSinglePrecisionIntrinsics_generated_hipSinglePrecisionIntrinsics.cpp.o
+[  5%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDoublePrecisionMathDevice.dir/tests/src/deviceLib/directed_tests.deviceLib.hipDoublePrecisionMathDevice_generated_hipDoublePrecisionMathDevice.cpp.o
+[  6%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipIntegerIntrinsics.dir/tests/src/deviceLib/directed_tests.deviceLib.hipIntegerIntrinsics_generated_hipIntegerIntrinsics.cpp.o
+[  6%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_bitextract.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_bitextract_generated_hip_bitextract.cpp.o
+[  6%] Building HIPCC object CMakeFiles/directed_tests.Functional.device.hipFuncSetDevice.dir/tests/src/Functional/device/directed_tests.Functional.device.hipFuncSetDevice_generated_hipFuncSetDevice.cpp.o
+[  7%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_ffs.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_ffs_generated_hip_ffs.cpp.o
+[  7%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDeviceMemcpy.dir/tests/src/deviceLib/directed_tests.deviceLib.hipDeviceMemcpy_generated_hipDeviceMemcpy.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipStdComplex
+[  8%] Linking HIP executable directed_tests/deviceLib/hipStdComplex
+[  8%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipSimpleAtomicsTest.dir/tests/src/deviceLib/directed_tests.deviceLib.hipSimpleAtomicsTest_generated_hipSimpleAtomicsTest.cpp.o
+[  8%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipSinglePrecisionMathDevice.dir/tests/src/deviceLib/directed_tests.deviceLib.hipSinglePrecisionMathDevice_generated_hipSinglePrecisionMathDevice.cpp.o
+[ 10%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDoublePrecisionMathHost.dir/tests/src/deviceLib/directed_tests.deviceLib.hipDoublePrecisionMathHost_generated_hipDoublePrecisionMathHost.cpp.o
+Scanning dependencies of target directed_tests.Functional.device.hipFuncGetDevice
+[ 10%] Linking HIP executable directed_tests/Functional/device/hipFuncGetDevice
+[ 10%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipThreadFence.dir/tests/src/directed_tests.deviceLib.hipThreadFence_generated_test_common.cpp.o
+[ 10%] Built target directed_tests.deviceLib.hipStdComplex
+[ 11%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_mbcnt.dir/tests/src/directed_tests.deviceLib.hip_mbcnt_generated_test_common.cpp.o
+[ 11%] Built target directed_tests.Functional.device.hipFuncGetDevice
+[ 11%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_mbcnt.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_mbcnt_generated_hip_mbcnt.cpp.o
+Scanning dependencies of target directed_tests.Functional.device.hipFuncSetDeviceFlags
+[ 11%] Linking HIP executable directed_tests/Functional/device/hipFuncSetDeviceFlags
+Scanning dependencies of target directed_tests.deviceLib.hipDoublePrecisionMathHost
+[ 11%] Linking HIP executable directed_tests/deviceLib/hipDoublePrecisionMathHost
+Scanning dependencies of target directed_tests.Functional.device.hipFuncSetDevice
+[ 12%] Linking HIP executable directed_tests/Functional/device/hipFuncSetDevice
+[ 13%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipThreadFence.dir/tests/src/deviceLib/directed_tests.deviceLib.hipThreadFence_generated_hipThreadFence.cpp.o
+[ 13%] Built target directed_tests.Functional.device.hipFuncSetDeviceFlags
+[ 13%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_threadfence_system.dir/tests/src/directed_tests.deviceLib.hip_threadfence_system_generated_test_common.cpp.o
+[ 13%] Built target directed_tests.deviceLib.hipDoublePrecisionMathHost
+[ 14%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_threadfence_system.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_threadfence_system_generated_hip_threadfence_system.cpp.o
+[ 14%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestDotFunctions.dir/tests/src/directed_tests.deviceLib.hipTestDotFunctions_generated_test_common.cpp.o
+[ 14%] Built target directed_tests.Functional.device.hipFuncSetDevice
+[ 14%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestDotFunctions.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestDotFunctions_generated_hipTestDotFunctions.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipSinglePrecisionIntrinsics
+[ 15%] Linking HIP executable directed_tests/deviceLib/hipSinglePrecisionIntrinsics
+Scanning dependencies of target directed_tests.Functional.device.hipFuncDeviceSynchronize
+Scanning dependencies of target directed_tests.deviceLib.hipDoublePrecisionMathDevice
+[ 15%] Linking HIP executable directed_tests/Functional/device/hipFuncDeviceSynchronize
+[ 15%] Linking HIP executable directed_tests/deviceLib/hipDoublePrecisionMathDevice
+Scanning dependencies of target directed_tests.deviceLib.hipSinglePrecisionMathDevice
+Scanning dependencies of target directed_tests.deviceLib.hipIntegerIntrinsics
+[ 15%] Linking HIP executable directed_tests/deviceLib/hipSinglePrecisionMathDevice
+[ 15%] Linking HIP executable directed_tests/deviceLib/hipIntegerIntrinsics
+Scanning dependencies of target directed_tests.deviceLib.hipDeviceMemcpy
+[ 15%] Linking HIP executable directed_tests/deviceLib/hipDeviceMemcpy
+Scanning dependencies of target directed_tests.deviceLib.hip_ffs
+[ 15%] Linking HIP executable directed_tests/deviceLib/hip_ffs
+Scanning dependencies of target directed_tests.deviceLib.hipSimpleAtomicsTest
+[ 16%] Linking HIP executable directed_tests/deviceLib/hipSimpleAtomicsTest
+Scanning dependencies of target directed_tests.deviceLib.hip_bitextract
+[ 16%] Linking HIP executable directed_tests/deviceLib/hip_bitextract
+[ 16%] Built target directed_tests.deviceLib.hipSinglePrecisionIntrinsics
+[ 17%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipMathFunctions.dir/tests/src/directed_tests.deviceLib.hipMathFunctions_generated_test_common.cpp.o
+[ 17%] Built target directed_tests.Functional.device.hipFuncDeviceSynchronize
+[ 17%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_popc.dir/tests/src/directed_tests.deviceLib.hip_popc_generated_test_common.cpp.o
+[ 17%] Built target directed_tests.deviceLib.hipSinglePrecisionMathDevice
+[ 17%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_popc.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_popc_generated_hip_popc.cpp.o
+[ 17%] Built target directed_tests.deviceLib.hipIntegerIntrinsics
+[ 17%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipMathFunctions.dir/tests/src/deviceLib/directed_tests.deviceLib.hipMathFunctions_generated_hipMathFunctions.cpp.o
+[ 17%] Built target directed_tests.deviceLib.hipDoublePrecisionMathDevice
+[ 17%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipSinglePrecisionMathHost.dir/tests/src/directed_tests.deviceLib.hipSinglePrecisionMathHost_generated_test_common.cpp.o
+[ 17%] Built target directed_tests.deviceLib.hipDeviceMemcpy
+[ 17%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipVectorTypesDevice.dir/tests/src/directed_tests.deviceLib.hipVectorTypesDevice_generated_test_common.cpp.o
+[ 17%] Built target directed_tests.deviceLib.hip_ffs
+[ 17%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipVectorTypesDevice.dir/tests/src/deviceLib/directed_tests.deviceLib.hipVectorTypesDevice_generated_hipVectorTypesDevice.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipTestDevice
+[ 17%] Linking HIP executable directed_tests/deviceLib/hipTestDevice
+Scanning dependencies of target directed_tests.deviceLib.hip_mbcnt
+[ 17%] Linking HIP executable directed_tests/deviceLib/hip_mbcnt
+[ 17%] Built target directed_tests.deviceLib.hipSimpleAtomicsTest
+[ 17%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_anyall.dir/tests/src/directed_tests.deviceLib.hip_anyall_generated_test_common.cpp.o
+[ 17%] Built target directed_tests.deviceLib.hip_bitextract
+[ 19%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipSinglePrecisionMathHost.dir/tests/src/deviceLib/directed_tests.deviceLib.hipSinglePrecisionMathHost_generated_hipSinglePrecisionMathHost.cpp.o
+[ 19%] Built target directed_tests.deviceLib.hip_mbcnt
+[ 19%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestClock.dir/tests/src/directed_tests.deviceLib.hipTestClock_generated_test_common.cpp.o
+[ 19%] Built target directed_tests.deviceLib.hipTestDevice
+[ 19%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestClock.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestClock_generated_hipTestClock.cpp.o
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/deviceLib/hipMathFunctions.cpp:36:18: warning: absolute value function 'abs' given an argument of type 'long long' but has parameter of type 'int' which may cause truncation of value [-Wabsolute-value]
+    output[tx] = abs(input[tx]);
+                 ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/deviceLib/hipMathFunctions.cpp:36:18: note: use function 'std::abs' instead
+    output[tx] = abs(input[tx]);
+                 ^~~
+                 std::abs
+[ 19%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_anyall.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_anyall_generated_hip_anyall.cpp.o
+[ 19%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipAsynchronousStreams.dir/tests/src/directed_tests.deviceLib.hipAsynchronousStreams_generated_test_common.cpp.o
+1 warning generated.
+Scanning dependencies of target directed_tests.deviceLib.hipThreadFence
+[ 19%] Linking HIP executable directed_tests/deviceLib/hipThreadFence
+[ 19%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipAsynchronousStreams.dir/tests/src/deviceLib/directed_tests.deviceLib.hipAsynchronousStreams_generated_hipAsynchronousStreams.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipTestDotFunctions
+[ 19%] Linking HIP executable directed_tests/deviceLib/hipTestDotFunctions
+[ 20%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestIncludeMath.dir/tests/src/directed_tests.deviceLib.hipTestIncludeMath_generated_test_common.cpp.o
+[ 20%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestIncludeMath.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestIncludeMath_generated_hipTestIncludeMath.cpp.o
+[ 20%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_trig.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_trig_generated_hip_trig.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hip_threadfence_system
+[ 20%] Linking HIP executable directed_tests/deviceLib/hip_threadfence_system
+[ 20%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipFloatMath.dir/tests/src/deviceLib/directed_tests.deviceLib.hipFloatMath_generated_hipFloatMath.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipSinglePrecisionMathHost
+[ 20%] Linking HIP executable directed_tests/deviceLib/hipSinglePrecisionMathHost
+[ 20%] Built target directed_tests.deviceLib.hipThreadFence
+[ 20%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_ballot.dir/tests/src/directed_tests.deviceLib.hip_ballot_generated_test_common.cpp.o
+[ 20%] Built target directed_tests.deviceLib.hipTestDotFunctions
+[ 21%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_ballot.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_ballot_generated_hip_ballot.cpp.o
+[ 21%] Built target directed_tests.deviceLib.hip_threadfence_system
+[ 22%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestHalf.dir/tests/src/directed_tests.deviceLib.hipTestHalf_generated_test_common.cpp.o
+[ 22%] Built target directed_tests.deviceLib.hipSinglePrecisionMathHost
+[ 22%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_clz.dir/tests/src/directed_tests.deviceLib.hip_clz_generated_test_common.cpp.o
+[ 22%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestHalf.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestHalf_generated_hipTestHalf.cpp.o
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/deviceLib/hipTestIncludeMath.cpp:63:5: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+    cbrtf(0.0f);
+    ^~~~~ ~~~~
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/deviceLib/hipTestIncludeMath.cpp:84:5: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+    fmaf(1.0f, 2.0f, 3.0f);
+    ^~~~ ~~~~~~~~~~~~~~~~
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/deviceLib/hipTestIncludeMath.cpp:111:5: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+    nextafterf(0.0f, 0.0f);
+    ^~~~~~~~~~ ~~~~~~~~~~
+Scanning dependencies of target directed_tests.deviceLib.hipMathFunctions
+[ 22%] Linking HIP executable directed_tests/deviceLib/hipMathFunctions
+[ 22%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_clz.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_clz_generated_hip_clz.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hip_popc
+[ 23%] Linking HIP executable directed_tests/deviceLib/hip_popc
+[ 23%] Built target directed_tests.deviceLib.hipMathFunctions
+3 warnings generated.
+[ 23%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestDeviceSymbol.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestDeviceSymbol_generated_hipTestDeviceSymbol.cpp.o
+[ 23%] Built target directed_tests.deviceLib.hip_popc
+[ 23%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDoublePrecisionIntrinsics.dir/tests/src/directed_tests.deviceLib.hipDoublePrecisionIntrinsics_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipTestClock
+[ 23%] Linking HIP executable directed_tests/deviceLib/hipTestClock
+[ 23%] Built target directed_tests.deviceLib.hipTestClock
+[ 23%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipFloatMathPrecise.dir/tests/src/directed_tests.deviceLib.hipFloatMathPrecise_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hip_anyall
+[ 23%] Linking HIP executable directed_tests/deviceLib/hip_anyall
+[ 23%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipFloatMathPrecise.dir/tests/src/deviceLib/directed_tests.deviceLib.hipFloatMathPrecise_generated_hipFloatMathPrecise.cpp.o
+[ 23%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDoublePrecisionIntrinsics.dir/tests/src/deviceLib/directed_tests.deviceLib.hipDoublePrecisionIntrinsics_generated_hipDoublePrecisionIntrinsics.cpp.o
+[ 23%] Built target directed_tests.deviceLib.hip_anyall
+[ 23%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_test_ldg.dir/tests/src/directed_tests.deviceLib.hip_test_ldg_generated_test_common.cpp.o
+[ 23%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_test_ldg.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_test_ldg_generated_hip_test_ldg.cpp.o
+[ 24%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipVectorTypes.dir/tests/src/directed_tests.deviceLib.hipVectorTypes_generated_test_common.cpp.o
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/deviceLib/hipFloatMathPrecise.cpp:44:5: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+    cbrtf(0.0f);
+    ^~~~~ ~~~~
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/deviceLib/hipFloatMathPrecise.cpp:65:5: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+    fmaf(1.0f, 2.0f, 3.0f);
+    ^~~~ ~~~~~~~~~~~~~~~~
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/deviceLib/hipFloatMathPrecise.cpp:92:5: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+    nextafterf(0.0f, 0.0f);
+    ^~~~~~~~~~ ~~~~~~~~~~
+Scanning dependencies of target directed_tests.deviceLib.hipTestIncludeMath
+[ 24%] Linking HIP executable directed_tests/deviceLib/hipTestIncludeMath
+Scanning dependencies of target directed_tests.deviceLib.hipAsynchronousStreams
+[ 24%] Linking HIP executable directed_tests/deviceLib/hipAsynchronousStreams
+Scanning dependencies of target directed_tests.deviceLib.hip_trig
+[ 25%] Linking HIP executable directed_tests/deviceLib/hip_trig
+Scanning dependencies of target directed_tests.deviceLib.hipFloatMath
+[ 26%] Linking HIP executable directed_tests/deviceLib/hipFloatMath
+[ 26%] Built target directed_tests.deviceLib.hipTestIncludeMath
+[ 26%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipVectorTypes.dir/tests/src/deviceLib/directed_tests.deviceLib.hipVectorTypes_generated_hipVectorTypes.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hip_ballot
+[ 26%] Linking HIP executable directed_tests/deviceLib/hip_ballot
+3 warnings generated.
+[ 28%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipDeviceMalloc.dir/tests/src/deviceLib/directed_tests.deviceLib.hipDeviceMalloc_generated_hipDeviceMalloc.cpp.o
+[ 28%] Built target directed_tests.deviceLib.hip_trig
+[ 29%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_bitinsert.dir/tests/src/directed_tests.deviceLib.hip_bitinsert_generated_test_common.cpp.o
+[ 29%] Built target directed_tests.deviceLib.hipAsynchronousStreams
+[ 29%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestNativeHalf.dir/tests/src/directed_tests.deviceLib.hipTestNativeHalf_generated_test_common.cpp.o
+[ 29%] Built target directed_tests.deviceLib.hipFloatMath
+[ 29%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_bitinsert.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_bitinsert_generated_hip_bitinsert.cpp.o
+[ 29%] Built target directed_tests.deviceLib.hip_ballot
+[ 29%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestFMA.dir/tests/src/directed_tests.deviceLib.hipTestFMA_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipTestHalf
+[ 29%] Linking HIP executable directed_tests/deviceLib/hipTestHalf
+[ 30%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestFMA.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestFMA_generated_hipTestFMA.cpp.o
+[ 30%] Built target directed_tests.deviceLib.hipTestHalf
+[ 30%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_brev.dir/tests/src/directed_tests.deviceLib.hip_brev_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hip_clz
+[ 30%] Linking HIP executable directed_tests/deviceLib/hip_clz
+[ 30%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hip_brev.dir/tests/src/deviceLib/directed_tests.deviceLib.hip_brev_generated_hip_brev.cpp.o
+[ 30%] Built target directed_tests.deviceLib.hip_clz
+[ 30%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestNew.dir/tests/src/directed_tests.deviceLib.hipTestNew_generated_test_common.cpp.o
+[ 30%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestNew.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestNew_generated_hipTestNew.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipTestDeviceSymbol
+[ 31%] Linking HIP executable directed_tests/deviceLib/hipTestDeviceSymbol
+Scanning dependencies of target directed_tests.deviceLib.hipFloatMathPrecise
+[ 31%] Linking HIP executable directed_tests/deviceLib/hipFloatMathPrecise
+[ 31%] Built target directed_tests.deviceLib.hipTestDeviceSymbol
+Scanning dependencies of target directed_tests.Negative.Device
+[ 31%] Built target directed_tests.Negative.Device
+Scanning dependencies of target directed_tests.g++
+[ 31%] Built target directed_tests.g++
+[ 31%] Building HIPCC object CMakeFiles/directed_tests.texture.hipTextureRef2D.dir/tests/src/directed_tests.texture.hipTextureRef2D_generated_test_common.cpp.o
+[ 31%] Built target directed_tests.deviceLib.hipFloatMathPrecise
+[ 32%] Building HIPCC object CMakeFiles/directed_tests.texture.hipTextureObj2D.dir/tests/src/directed_tests.texture.hipTextureObj2D_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipDoublePrecisionIntrinsics
+[ 33%] Linking HIP executable directed_tests/deviceLib/hipDoublePrecisionIntrinsics
+[ 33%] Building HIPCC object CMakeFiles/directed_tests.texture.hipTextureObj2D.dir/tests/src/texture/directed_tests.texture.hipTextureObj2D_generated_hipTextureObj2D.cpp.o
+[ 33%] Built target directed_tests.deviceLib.hipDoublePrecisionIntrinsics
+[ 33%] Building HIPCC object CMakeFiles/directed_tests.texture.hipBindTexRef1DFetch.dir/tests/src/directed_tests.texture.hipBindTexRef1DFetch_generated_test_common.cpp.o
+[ 33%] Building HIPCC object CMakeFiles/directed_tests.deviceLib.hipTestNativeHalf.dir/tests/src/deviceLib/directed_tests.deviceLib.hipTestNativeHalf_generated_hipTestNativeHalf.cpp.o
+[ 33%] Building HIPCC object CMakeFiles/directed_tests.texture.hipBindTexRef1DFetch.dir/tests/src/texture/directed_tests.texture.hipBindTexRef1DFetch_generated_hipBindTexRef1DFetch.cpp.o
+[ 33%] Building HIPCC object CMakeFiles/directed_tests.texture.hipTextureObj1DFetch.dir/tests/src/directed_tests.texture.hipTextureObj1DFetch_generated_test_common.cpp.o
+[ 34%] Building HIPCC object CMakeFiles/directed_tests.texture.hipTextureObj1DFetch.dir/tests/src/texture/directed_tests.texture.hipTextureObj1DFetch_generated_hipTextureObj1DFetch.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hip_bitinsert
+[ 34%] Linking HIP executable directed_tests/deviceLib/hip_bitinsert
+Scanning dependencies of target directed_tests.deviceLib.hipDeviceMalloc
+[ 34%] Linking HIP executable directed_tests/deviceLib/hipDeviceMalloc
+Scanning dependencies of target directed_tests.deviceLib.hipTestFMA
+[ 34%] Linking HIP executable directed_tests/deviceLib/hipTestFMA
+[ 34%] Built target directed_tests.deviceLib.hip_bitinsert
+[ 34%] Building HIPCC object CMakeFiles/directed_tests.texture.hipTextureRef2D.dir/tests/src/texture/directed_tests.texture.hipTextureRef2D_generated_hipTextureRef2D.cpp.o
+[ 34%] Building HIPCC object CMakeFiles/directed_tests.texture.hipGetChanDesc.dir/tests/src/directed_tests.texture.hipGetChanDesc_generated_test_common.cpp.o
+[ 34%] Built target directed_tests.deviceLib.hipDeviceMalloc
+[ 34%] Building HIPCC object CMakeFiles/directed_tests.texture.hipGetChanDesc.dir/tests/src/texture/directed_tests.texture.hipGetChanDesc_generated_hipGetChanDesc.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hip_test_ldg
+[ 34%] Linking HIP executable directed_tests/deviceLib/hip_test_ldg
+[ 34%] Building HIPCC object CMakeFiles/directed_tests.compiler.hipClassKernel.dir/tests/src/directed_tests.compiler.hipClassKernel_generated_test_common.cpp.o
+[ 34%] Built target directed_tests.deviceLib.hipTestFMA
+Scanning dependencies of target directed_tests.experimental.xcompile
+[ 34%] Built target directed_tests.experimental.xcompile
+Scanning dependencies of target directed_tests.gcc
+[ 34%] Built target directed_tests.gcc
+[ 35%] Building HIPCC object CMakeFiles/directed_tests.compiler.hipClassKernel.dir/tests/src/compiler/directed_tests.compiler.hipClassKernel_generated_hipClassKernel.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hip_brev
+[ 37%] Linking HIP executable directed_tests/deviceLib/hip_brev
+Scanning dependencies of target directed_tests.deviceLib.hipTestNew
+[ 37%] Linking HIP executable directed_tests/deviceLib/hipTestNew
+Scanning dependencies of target directed_tests.stress
+[ 37%] Built target directed_tests.stress
+[ 37%] Building HIPCC object CMakeFiles/directed_tests.hipEnvVarDriver.dir/tests/src/directed_tests.hipEnvVarDriver_generated_test_common.cpp.o
+[ 37%] Built target directed_tests.deviceLib.hip_test_ldg
+[ 37%] Building HIPCC object CMakeFiles/directed_tests.kernel.inline_asm_vadd.dir/tests/src/kernel/directed_tests.kernel.inline_asm_vadd_generated_inline_asm_vadd.cpp.o
+[ 37%] Built target directed_tests.deviceLib.hip_brev
+[ 38%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipLaunchParm.dir/tests/src/directed_tests.kernel.hipLaunchParm_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.deviceLib.hipVectorTypes
+[ 38%] Linking HIP executable directed_tests/deviceLib/hipVectorTypes
+[ 38%] Built target directed_tests.deviceLib.hipTestNew
+[ 38%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipGridLaunch.dir/tests/src/directed_tests.kernel.hipGridLaunch_generated_test_common.cpp.o
+[ 38%] Built target directed_tests.deviceLib.hipVectorTypes
+[ 38%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipLanguageExtensions.dir/tests/src/directed_tests.kernel.hipLanguageExtensions_generated_test_common.cpp.o
+[ 39%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipLanguageExtensions.dir/tests/src/kernel/directed_tests.kernel.hipLanguageExtensions_generated_hipLanguageExtensions.cpp.o
+Scanning dependencies of target directed_tests.texture.hipTextureObj2D
+[ 39%] Linking HIP executable directed_tests/texture/hipTextureObj2D
+Scanning dependencies of target directed_tests.texture.hipBindTexRef1DFetch
+[ 40%] Linking HIP executable directed_tests/texture/hipBindTexRef1DFetch
+Scanning dependencies of target directed_tests.deviceLib.hipTestNativeHalf
+[ 41%] Linking HIP executable directed_tests/deviceLib/hipTestNativeHalf
+[ 41%] Built target directed_tests.texture.hipTextureObj2D
+[ 41%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipTestGlobalVariable.dir/tests/src/directed_tests.kernel.hipTestGlobalVariable_generated_test_common.cpp.o
+[ 41%] Built target directed_tests.texture.hipBindTexRef1DFetch
+[ 42%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipTestMemKernel.dir/tests/src/directed_tests.kernel.hipTestMemKernel_generated_test_common.cpp.o
+[ 42%] Building HIPCC object CMakeFiles/directed_tests.hipEnvVarDriver.dir/tests/src/directed_tests.hipEnvVarDriver_generated_hipEnvVarDriver.cpp.o
+[ 42%] Built target directed_tests.deviceLib.hipTestNativeHalf
+[ 42%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipLaunchParmFunctor.dir/tests/src/directed_tests.kernel.hipLaunchParmFunctor_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.texture.hipGetChanDesc
+[ 42%] Linking HIP executable directed_tests/texture/hipGetChanDesc
+[ 42%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipLaunchParmFunctor.dir/tests/src/kernel/directed_tests.kernel.hipLaunchParmFunctor_generated_hipLaunchParmFunctor.cpp.o
+[ 42%] Built target directed_tests.texture.hipGetChanDesc
+[ 42%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipTestConstant.dir/tests/src/directed_tests.kernel.hipTestConstant_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.texture.hipTextureObj1DFetch
+[ 42%] Linking HIP executable directed_tests/texture/hipTextureObj1DFetch
+[ 43%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipTestConstant.dir/tests/src/kernel/directed_tests.kernel.hipTestConstant_generated_hipTestConstant.cpp.o
+[ 43%] Built target directed_tests.texture.hipTextureObj1DFetch
+[ 43%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipEmptyKernel.dir/tests/src/directed_tests.kernel.hipEmptyKernel_generated_test_common.cpp.o
+[ 43%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipLaunchParm.dir/tests/src/kernel/directed_tests.kernel.hipLaunchParm_generated_hipLaunchParm.cpp.o
+[ 43%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipGridLaunch.dir/tests/src/kernel/directed_tests.kernel.hipGridLaunch_generated_hipGridLaunch.cpp.o
+Scanning dependencies of target directed_tests.texture.hipTextureRef2D
+[ 44%] Linking HIP executable directed_tests/texture/hipTextureRef2D
+[ 44%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipPrintfKernel.dir/tests/src/directed_tests.kernel.hipPrintfKernel_generated_test_common.cpp.o
+[ 44%] Built target directed_tests.texture.hipTextureRef2D
+[ 44%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipPrintfKernel.dir/tests/src/kernel/directed_tests.kernel.hipPrintfKernel_generated_hipPrintfKernel.cpp.o
+Scanning dependencies of target directed_tests.compiler.hipClassKernel
+[ 44%] Linking HIP executable directed_tests/compiler/hipClassKernel
+Scanning dependencies of target directed_tests.kernel.inline_asm_vadd
+[ 44%] Linking HIP executable directed_tests/kernel/inline_asm_vadd
+[ 44%] Built target directed_tests.compiler.hipClassKernel
+[ 44%] Building HIPCC object CMakeFiles/directed_tests.surface.hipSurfaceObj2D.dir/tests/src/directed_tests.surface.hipSurfaceObj2D_generated_test_common.cpp.o
+[ 46%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipTestGlobalVariable.dir/tests/src/kernel/directed_tests.kernel.hipTestGlobalVariable_generated_hipTestGlobalVariable.cpp.o
+[ 46%] Built target directed_tests.kernel.inline_asm_vadd
+[ 46%] Building HIPCC object CMakeFiles/directed_tests.p2p.hipPeerToPeer_simple.dir/tests/src/directed_tests.p2p.hipPeerToPeer_simple_generated_test_common.cpp.o
+[ 46%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipTestMemKernel.dir/tests/src/kernel/directed_tests.kernel.hipTestMemKernel_generated_hipTestMemKernel.cpp.o
+[ 47%] Building HIPCC object CMakeFiles/directed_tests.p2p.hipPeerToPeer_simple.dir/tests/src/p2p/directed_tests.p2p.hipPeerToPeer_simple_generated_hipPeerToPeer_simple.cpp.o
+Scanning dependencies of target directed_tests.hipEnvVarDriver
+[ 47%] Linking HIP executable directed_tests/hipEnvVarDriver
+Scanning dependencies of target directed_tests.kernel.hipLanguageExtensions
+[ 47%] Linking HIP executable directed_tests/kernel/hipLanguageExtensions
+[ 47%] Built target directed_tests.hipEnvVarDriver
+[ 48%] Building HIPCC object CMakeFiles/directed_tests.hipHcc.dir/tests/src/directed_tests.hipHcc_generated_hipHcc.cpp.o
+[ 48%] Building HIPCC object CMakeFiles/directed_tests.kernel.hipEmptyKernel.dir/tests/src/kernel/directed_tests.kernel.hipEmptyKernel_generated_hipEmptyKernel.cpp.o
+[ 48%] Built target directed_tests.kernel.hipLanguageExtensions
+[ 49%] Building HIPCC object CMakeFiles/directed_tests.context.hipCtx_simple.dir/tests/src/directed_tests.context.hipCtx_simple_generated_test_common.cpp.o
+[ 49%] Building HIPCC object CMakeFiles/directed_tests.context.hipCtx_simple.dir/tests/src/context/directed_tests.context.hipCtx_simple_generated_hipCtx_simple.cpp.o
+[ 49%] Building HIPCC object CMakeFiles/directed_tests.context.hipMemsetD8.dir/tests/src/directed_tests.context.hipMemsetD8_generated_test_common.cpp.o
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:43:14: warning: 'hipCtxCreate' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxCreate(&ctx, 0, device));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2111:1: note: 'hipCtxCreate' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:44:14: warning: 'hipCtxGetCurrent' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxGetCurrent(&ctx1));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2176:1: note: 'hipCtxGetCurrent' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:45:14: warning: 'hipCtxGetDevice' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxGetDevice(&device1));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2190:1: note: 'hipCtxGetDevice' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:46:14: warning: 'hipCtxPopCurrent' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxPopCurrent(&ctx1));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2137:1: note: 'hipCtxPopCurrent' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:47:14: warning: 'hipCtxGetCurrent' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxGetCurrent(&ctx1));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2176:1: note: 'hipCtxGetCurrent' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:49:14: warning: 'hipCtxDestroy' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxDestroy(ctx));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2124:1: note: 'hipCtxDestroy' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+Scanning dependencies of target directed_tests.kernel.hipTestConstant
+[ 49%] Linking HIP executable directed_tests/kernel/hipTestConstant
+[ 49%] Building HIPCC object CMakeFiles/directed_tests.surface.hipSurfaceObj2D.dir/tests/src/surface/directed_tests.surface.hipSurfaceObj2D_generated_hipSurfaceObj2D.cpp.o
+6 warnings generated.
+[ 49%] Building HIPCC object CMakeFiles/directed_tests.context.hipMemsetD8.dir/tests/src/context/directed_tests.context.hipMemsetD8_generated_hipMemsetD8.cpp.o
+Scanning dependencies of target directed_tests.kernel.hipGridLaunch
+[ 49%] Linking HIP executable directed_tests/kernel/hipGridLaunch
+[ 49%] Built target directed_tests.kernel.hipTestConstant
+Scanning dependencies of target directed_tests.Performance.memory
+[ 49%] Built target directed_tests.Performance.memory
+Scanning dependencies of target directed_tests.dynamicLoading
+[ 49%] Built target directed_tests.dynamicLoading
+[ 49%] Building HIPCC object CMakeFiles/directed_tests.hipEnvVar.dir/tests/src/directed_tests.hipEnvVar_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.p2p.hipPeerToPeer_simple
+[ 49%] Linking HIP executable directed_tests/p2p/hipPeerToPeer_simple
+Scanning dependencies of target directed_tests.kernel.hipPrintfKernel
+[ 49%] Linking HIP executable directed_tests/kernel/hipPrintfKernel
+[ 49%] Built target directed_tests.kernel.hipGridLaunch
+[ 50%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.error.hipPeekAtLastError.dir/tests/src/directed_tests.runtimeApi.error.hipPeekAtLastError_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.hipHcc
+[ 50%] Linking HIP executable directed_tests/hipHcc
+Scanning dependencies of target directed_tests.kernel.hipLaunchParmFunctor
+[ 50%] Built target directed_tests.p2p.hipPeerToPeer_simple
+[ 50%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.error.hipPeekAtLastError.dir/tests/src/runtimeApi/error/directed_tests.runtimeApi.error.hipPeekAtLastError_generated_hipPeekAtLastError.cpp.o
+[ 51%] Linking HIP executable directed_tests/kernel/hipLaunchParmFunctor
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:43:14: warning: 'hipCtxCreate' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxCreate(&ctx, 0, device));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2111:1: note: 'hipCtxCreate' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:44:14: warning: 'hipCtxGetCurrent' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxGetCurrent(&ctx1));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2176:1: note: 'hipCtxGetCurrent' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:45:14: warning: 'hipCtxGetDevice' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxGetDevice(&device1));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2190:1: note: 'hipCtxGetDevice' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:46:14: warning: 'hipCtxPopCurrent' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxPopCurrent(&ctx1));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2137:1: note: 'hipCtxPopCurrent' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:47:14: warning: 'hipCtxGetCurrent' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxGetCurrent(&ctx1));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2176:1: note: 'hipCtxGetCurrent' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+/home/taccuser/Documents/compilerNightly/HIP/tests/src/context/hipCtx_simple.cpp:49:14: warning: 'hipCtxDestroy' is deprecated: This API is marked as deprecated and may not be supported in future releases.For more details please refer https://github.com/ROCm-Developer-Tools/HIP/tree/master/docs/markdown/hip_deprecated_api_list [-Wdeprecated-declarations]
+    HIPCHECK(hipCtxDestroy(ctx));
+             ^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:2124:1: note: 'hipCtxDestroy' has been explicitly marked deprecated here
+DEPRECATED(DEPRECATED_MSG)
+^
+/home/taccuser/Documents/compilerNightly/HIP/include/hip/hcc_detail/hip_runtime_api.h:56:41: note: expanded from macro 'DEPRECATED'
+#define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+                                        ^
+[ 52%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.module.hipFuncGetAttributes.dir/tests/src/directed_tests.runtimeApi.module.hipFuncGetAttributes_generated_test_common.cpp.o
+[ 52%] Built target directed_tests.kernel.hipPrintfKernel
+[ 52%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.module.hipFuncSetCacheConfig.dir/tests/src/directed_tests.runtimeApi.module.hipFuncSetCacheConfig_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.kernel.hipLaunchParm
+[ 52%] Linking HIP executable directed_tests/kernel/hipLaunchParm
+[ 52%] Built target directed_tests.hipHcc
+[ 52%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.module.hipFuncGetAttributes.dir/tests/src/runtimeApi/module/directed_tests.runtimeApi.module.hipFuncGetAttributes_generated_hipFuncGetAttributes.cpp.o
+[ 52%] Built target directed_tests.kernel.hipLaunchParmFunctor
+[ 52%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.event.record_event.dir/tests/src/directed_tests.runtimeApi.event.record_event_generated_test_common.cpp.o
+6 warnings generated.
+Scanning dependencies of target directed_tests.context.hipCtx_simple
+[ 52%] Linking HIP executable directed_tests/context/hipCtx_simple
+Scanning dependencies of target directed_tests.kernel.hipTestMemKernel
+[ 52%] Linking HIP executable directed_tests/kernel/hipTestMemKernel
+Scanning dependencies of target directed_tests.kernel.hipTestGlobalVariable
+[ 52%] Linking HIP executable directed_tests/kernel/hipTestGlobalVariable
+[ 52%] Built target directed_tests.context.hipCtx_simple
+[ 52%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.event.hipEventRecord.dir/tests/src/directed_tests.runtimeApi.event.hipEventRecord_generated_test_common.cpp.o
+[ 52%] Built target directed_tests.kernel.hipLaunchParm
+[ 53%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.synchronization.copy_coherency.dir/tests/src/directed_tests.runtimeApi.synchronization.copy_coherency_generated_test_common.cpp.o
+[ 53%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.event.record_event.dir/tests/src/runtimeApi/event/directed_tests.runtimeApi.event.record_event_generated_record_event.cpp.o
+[ 53%] Built target directed_tests.kernel.hipTestGlobalVariable
+[ 53%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.event.hipEventRecord.dir/tests/src/runtimeApi/event/directed_tests.runtimeApi.event.hipEventRecord_generated_hipEventRecord.cpp.o
+[ 53%] Built target directed_tests.kernel.hipTestMemKernel
+[ 53%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.synchronization.copy_coherency.dir/tests/src/runtimeApi/synchronization/directed_tests.runtimeApi.synchronization.copy_coherency_generated_copy_coherency.cpp.o
+Scanning dependencies of target directed_tests.kernel.hipEmptyKernel
+[ 55%] Linking HIP executable directed_tests/kernel/hipEmptyKernel
+[ 55%] Built target directed_tests.kernel.hipEmptyKernel
+[ 55%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.multiThread.hipMultiThreadStreams1.dir/tests/src/directed_tests.runtimeApi.multiThread.hipMultiThreadStreams1_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.context.hipMemsetD8
+[ 56%] Linking HIP executable directed_tests/context/hipMemsetD8
+[ 56%] Building HIPCC object CMakeFiles/directed_tests.hipEnvVar.dir/tests/src/directed_tests.hipEnvVar_generated_hipEnvVar.cpp.o
+[ 56%] Built target directed_tests.context.hipMemsetD8
+[ 56%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.multiThread.hipMultiThreadDevice.dir/tests/src/directed_tests.runtimeApi.multiThread.hipMultiThreadDevice_generated_test_common.cpp.o
+[ 56%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.multiThread.hipMultiThreadDevice.dir/tests/src/runtimeApi/multiThread/directed_tests.runtimeApi.multiThread.hipMultiThreadDevice_generated_hipMultiThreadDevice.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.error.hipPeekAtLastError
+[ 56%] Linking HIP executable directed_tests/runtimeApi/error/hipPeekAtLastError
+[ 56%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.module.hipFuncSetCacheConfig.dir/tests/src/runtimeApi/module/directed_tests.runtimeApi.module.hipFuncSetCacheConfig_generated_hipFuncSetCacheConfig.cpp.o
+[ 57%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.multiThread.hipMultiThreadStreams2.dir/tests/src/directed_tests.runtimeApi.multiThread.hipMultiThreadStreams2_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.module.hipFuncGetAttributes
+[ 57%] Linking HIP executable directed_tests/runtimeApi/module/hipFuncGetAttributes
+[ 57%] Built target directed_tests.runtimeApi.error.hipPeekAtLastError
+[ 57%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.multiThread.hipMultiThreadStreams2.dir/tests/src/runtimeApi/multiThread/directed_tests.runtimeApi.multiThread.hipMultiThreadStreams2_generated_hipMultiThreadStreams2.cpp.o
+Scanning dependencies of target directed_tests.surface.hipSurfaceObj2D
+[ 58%] Linking HIP executable directed_tests/surface/hipSurfaceObj2D
+[ 58%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceGetByPCIBusId.dir/tests/src/directed_tests.runtimeApi.device.hipDeviceGetByPCIBusId_generated_test_common.cpp.o
+[ 58%] Built target directed_tests.runtimeApi.module.hipFuncGetAttributes
+[ 58%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipGetDevice.dir/tests/src/directed_tests.runtimeApi.device.hipGetDevice_generated_test_common.cpp.o
+[ 58%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipGetDevice.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipGetDevice_generated_hipGetDevice.cpp.o
+[ 58%] Built target directed_tests.surface.hipSurfaceObj2D
+[ 58%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceComputeCapability.dir/tests/src/directed_tests.runtimeApi.device.hipDeviceComputeCapability_generated_test_common.cpp.o
+[ 58%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceComputeCapability.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipDeviceComputeCapability_generated_hipDeviceComputeCapability.cpp.o
+[ 59%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.multiThread.hipMultiThreadStreams1.dir/tests/src/runtimeApi/multiThread/directed_tests.runtimeApi.multiThread.hipMultiThreadStreams1_generated_hipMultiThreadStreams1.cpp.o
+[ 60%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipRuntimeGetVersion.dir/tests/src/directed_tests.runtimeApi.device.hipRuntimeGetVersion_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.hipEnvVar
+[ 61%] Linking HIP executable directed_tests/hipEnvVar
+Scanning dependencies of target directed_tests.runtimeApi.event.record_event
+[ 62%] Linking HIP executable directed_tests/runtimeApi/event/record_event
+Scanning dependencies of target directed_tests.runtimeApi.event.hipEventRecord
+[ 64%] Linking HIP executable directed_tests/runtimeApi/event/hipEventRecord
+[ 64%] Built target directed_tests.hipEnvVar
+[ 64%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipGetDeviceAttribute.dir/tests/src/directed_tests.runtimeApi.device.hipGetDeviceAttribute_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.synchronization.copy_coherency
+[ 64%] Linking HIP executable directed_tests/runtimeApi/synchronization/copy_coherency
+Scanning dependencies of target directed_tests.runtimeApi.multiThread.hipMultiThreadDevice
+[ 64%] Linking HIP executable directed_tests/runtimeApi/multiThread/hipMultiThreadDevice
+[ 64%] Built target directed_tests.runtimeApi.event.record_event
+[ 64%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipSetDeviceFlags.dir/tests/src/directed_tests.runtimeApi.device.hipSetDeviceFlags_generated_test_common.cpp.o
+[ 64%] Built target directed_tests.runtimeApi.event.hipEventRecord
+Scanning dependencies of target directed_tests.runtimeApi.module.hipFuncSetCacheConfig
+[ 65%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipSetDeviceFlags.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipSetDeviceFlags_generated_hipSetDeviceFlags.cpp.o
+[ 66%] Linking HIP executable directed_tests/runtimeApi/module/hipFuncSetCacheConfig
+[ 67%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceSynchronize.dir/tests/src/directed_tests.runtimeApi.device.hipDeviceSynchronize_generated_test_common.cpp.o
+[ 67%] Built target directed_tests.runtimeApi.multiThread.hipMultiThreadDevice
+[ 67%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipSetCachceConfig.dir/tests/src/directed_tests.runtimeApi.device.hipSetCachceConfig_generated_test_common.cpp.o
+[ 67%] Built target directed_tests.runtimeApi.synchronization.copy_coherency
+[ 67%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipSetCachceConfig.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipSetCachceConfig_generated_hipSetCachceConfig.cpp.o
+[ 67%] Built target directed_tests.runtimeApi.module.hipFuncSetCacheConfig
+[ 67%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipSetDevice.dir/tests/src/directed_tests.runtimeApi.device.hipSetDevice_generated_test_common.cpp.o
+[ 67%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceGetByPCIBusId.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipDeviceGetByPCIBusId_generated_hipDeviceGetByPCIBusId.cpp.o
+[ 67%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipSetDevice.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipSetDevice_generated_hipSetDevice.cpp.o
+[ 67%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceGetName.dir/tests/src/directed_tests.runtimeApi.device.hipDeviceGetName_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipDeviceComputeCapability
+[ 68%] Linking HIP executable directed_tests/runtimeApi/device/hipDeviceComputeCapability
+Scanning dependencies of target directed_tests.runtimeApi.device.hipGetDevice
+[ 68%] Linking HIP executable directed_tests/runtimeApi/device/hipGetDevice
+[ 68%] Built target directed_tests.runtimeApi.device.hipDeviceComputeCapability
+[ 69%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipChooseDevice.dir/tests/src/directed_tests.runtimeApi.device.hipChooseDevice_generated_test_common.cpp.o
+[ 69%] Built target directed_tests.runtimeApi.device.hipGetDevice
+[ 70%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceGetPCIBusId.dir/tests/src/directed_tests.runtimeApi.device.hipDeviceGetPCIBusId_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.multiThread.hipMultiThreadStreams2
+[ 70%] Linking HIP executable directed_tests/runtimeApi/multiThread/hipMultiThreadStreams2
+[ 70%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipRuntimeGetVersion.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipRuntimeGetVersion_generated_hipRuntimeGetVersion.cpp.o
+[ 70%] Built target directed_tests.runtimeApi.multiThread.hipMultiThreadStreams2
+[ 70%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceTotalMem.dir/tests/src/directed_tests.runtimeApi.device.hipDeviceTotalMem_generated_test_common.cpp.o
+[ 71%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipGetDeviceAttribute.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipGetDeviceAttribute_generated_hipGetDeviceAttribute.cpp.o
+[ 71%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceTotalMem.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipDeviceTotalMem_generated_hipDeviceTotalMem.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipSetDeviceFlags
+[ 71%] Linking HIP executable directed_tests/runtimeApi/device/hipSetDeviceFlags
+[ 71%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceSynchronize.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipDeviceSynchronize_generated_hipDeviceSynchronize.cpp.o
+[ 71%] Built target directed_tests.runtimeApi.device.hipSetDeviceFlags
+[ 71%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemoryAllocateCoherent.dir/tests/src/directed_tests.runtimeApi.memory.hipMemoryAllocateCoherent_generated_test_common.cpp.o
+[ 71%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemoryAllocateCoherent.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemoryAllocateCoherent_generated_hipMemoryAllocateCoherent.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipSetCachceConfig
+[ 73%] Linking HIP executable directed_tests/runtimeApi/device/hipSetCachceConfig
+Scanning dependencies of target directed_tests.runtimeApi.multiThread.hipMultiThreadStreams1
+[ 73%] Linking HIP executable directed_tests/runtimeApi/multiThread/hipMultiThreadStreams1
+Scanning dependencies of target directed_tests.runtimeApi.device.hipDeviceGetByPCIBusId
+[ 73%] Linking HIP executable directed_tests/runtimeApi/device/hipDeviceGetByPCIBusId
+[ 73%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyDtoD.dir/tests/src/directed_tests.runtimeApi.memory.hipMemcpyDtoD_generated_test_common.cpp.o
+[ 73%] Built target directed_tests.runtimeApi.device.hipSetCachceConfig
+[ 74%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpy_simple.dir/tests/src/directed_tests.runtimeApi.memory.hipMemcpy_simple_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipSetDevice
+[ 74%] Linking HIP executable directed_tests/runtimeApi/device/hipSetDevice
+[ 74%] Built target directed_tests.runtimeApi.device.hipDeviceGetByPCIBusId
+[ 74%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpy_simple.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemcpy_simple_generated_hipMemcpy_simple.cpp.o
+[ 75%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceGetName.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipDeviceGetName_generated_hipDeviceGetName.cpp.o
+[ 75%] Built target directed_tests.runtimeApi.multiThread.hipMultiThreadStreams1
+[ 75%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipChooseDevice.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipChooseDevice_generated_hipChooseDevice.cpp.o
+[ 75%] Built target directed_tests.runtimeApi.device.hipSetDevice
+[ 75%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.device.hipDeviceGetPCIBusId.dir/tests/src/runtimeApi/device/directed_tests.runtimeApi.device.hipDeviceGetPCIBusId_generated_hipDeviceGetPCIBusId.cpp.o
+[ 75%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyDtoD.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemcpyDtoD_generated_hipMemcpyDtoD.cpp.o
+[ 75%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemoryAllocateCoherentDriver.dir/tests/src/directed_tests.runtimeApi.memory.hipMemoryAllocateCoherentDriver_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipRuntimeGetVersion
+[ 75%] Linking HIP executable directed_tests/runtimeApi/device/hipRuntimeGetVersion
+[ 75%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemoryAllocateCoherentDriver.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemoryAllocateCoherentDriver_generated_hipMemoryAllocateCoherentDriver.cpp.o
+[ 75%] Built target directed_tests.runtimeApi.device.hipRuntimeGetVersion
+[ 75%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyDtoDAsync.dir/tests/src/directed_tests.runtimeApi.memory.hipMemcpyDtoDAsync_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipGetDeviceAttribute
+[ 75%] Linking HIP executable directed_tests/runtimeApi/device/hipGetDeviceAttribute
+Scanning dependencies of target directed_tests.runtimeApi.device.hipDeviceTotalMem
+[ 76%] Linking HIP executable directed_tests/runtimeApi/device/hipDeviceTotalMem
+[ 76%] Built target directed_tests.runtimeApi.device.hipGetDeviceAttribute
+[ 76%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.p2p_copy_coherency.dir/tests/src/directed_tests.runtimeApi.memory.p2p_copy_coherency_generated_test_common.cpp.o
+[ 77%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.p2p_copy_coherency.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.p2p_copy_coherency_generated_p2p_copy_coherency.cpp.o
+[ 77%] Built target directed_tests.runtimeApi.device.hipDeviceTotalMem
+[ 77%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyDtoDAsync.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemcpyDtoDAsync_generated_hipMemcpyDtoDAsync.cpp.o
+[ 77%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemset.dir/tests/src/directed_tests.runtimeApi.memory.hipMemset_generated_test_common.cpp.o
+[ 78%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemset.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemset_generated_hipMemset.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipDeviceGetName
+[ 78%] Linking HIP executable directed_tests/runtimeApi/device/hipDeviceGetName
+Scanning dependencies of target directed_tests.runtimeApi.device.hipChooseDevice
+[ 78%] Linking HIP executable directed_tests/runtimeApi/device/hipChooseDevice
+[ 78%] Built target directed_tests.runtimeApi.device.hipDeviceGetName
+[ 78%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemset3D.dir/tests/src/directed_tests.runtimeApi.memory.hipMemset3D_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipDeviceGetPCIBusId
+[ 78%] Linking HIP executable directed_tests/runtimeApi/device/hipDeviceGetPCIBusId
+[ 78%] Built target directed_tests.runtimeApi.device.hipChooseDevice
+[ 79%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemset2D.dir/tests/src/directed_tests.runtimeApi.memory.hipMemset2D_generated_test_common.cpp.o
+[ 79%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemset2D.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemset2D_generated_hipMemset2D.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.device.hipDeviceSynchronize
+[ 79%] Linking HIP executable directed_tests/runtimeApi/device/hipDeviceSynchronize
+[ 79%] Built target directed_tests.runtimeApi.device.hipDeviceGetPCIBusId
+[ 79%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipRandomMemcpyAsync.dir/tests/src/directed_tests.runtimeApi.memory.hipRandomMemcpyAsync_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemoryAllocateCoherent
+[ 80%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemoryAllocateCoherent
+[ 80%] Built target directed_tests.runtimeApi.device.hipDeviceSynchronize
+[ 80%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipRandomMemcpyAsync.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipRandomMemcpyAsync_generated_hipRandomMemcpyAsync.cpp.o
+[ 80%] Built target directed_tests.runtimeApi.memory.hipMemoryAllocateCoherent
+[ 80%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyPeerAsync.dir/tests/src/directed_tests.runtimeApi.memory.hipMemcpyPeerAsync_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemoryAllocateCoherentDriver
+[ 80%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemoryAllocateCoherentDriver
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemcpy_simple
+[ 80%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemcpy_simple
+[ 80%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpy.dir/tests/src/directed_tests.runtimeApi.memory.hipMemcpy_generated_test_common.cpp.o
+[ 80%] Built target directed_tests.runtimeApi.memory.hipMemoryAllocateCoherentDriver
+[ 80%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipHostGetFlags.dir/tests/src/directed_tests.runtimeApi.memory.hipHostGetFlags_generated_test_common.cpp.o
+[ 80%] Built target directed_tests.runtimeApi.memory.hipMemcpy_simple
+[ 80%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipHostGetFlags.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipHostGetFlags_generated_hipHostGetFlags.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemcpyDtoD
+[ 82%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemcpyDtoD
+[ 82%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipHostMalloc.dir/tests/src/directed_tests.runtimeApi.memory.hipHostMalloc_generated_test_common.cpp.o
+[ 82%] Built target directed_tests.runtimeApi.memory.hipMemcpyDtoD
+[ 83%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipHostMalloc.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipHostMalloc_generated_hipHostMalloc.cpp.o
+[ 83%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyPeer.dir/tests/src/directed_tests.runtimeApi.memory.hipMemcpyPeer_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemset
+[ 83%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemset
+[ 83%] Built target directed_tests.runtimeApi.memory.hipMemset
+[ 83%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipTestMemcpyPin.dir/tests/src/directed_tests.runtimeApi.memory.hipTestMemcpyPin_generated_test_common.cpp.o
+[ 83%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemset3D.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemset3D_generated_hipMemset3D.cpp.o
+[ 83%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipTestMemcpyPin.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipTestMemcpyPin_generated_hipTestMemcpyPin.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemset2D
+[ 83%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemset2D
+[ 83%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemPtrGetInfo.dir/tests/src/directed_tests.runtimeApi.memory.hipMemPtrGetInfo_generated_test_common.cpp.o
+[ 83%] Built target directed_tests.runtimeApi.memory.hipMemset2D
+[ 84%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyAsync2.dir/tests/src/directed_tests.runtimeApi.memory.hipMemcpyAsync2_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemcpyDtoDAsync
+[ 85%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemcpyDtoDAsync
+Scanning dependencies of target directed_tests.runtimeApi.memory.p2p_copy_coherency
+[ 85%] Linking HIP executable directed_tests/runtimeApi/memory/p2p_copy_coherency
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipRandomMemcpyAsync
+[ 86%] Linking HIP executable directed_tests/runtimeApi/memory/hipRandomMemcpyAsync
+[ 87%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyPeerAsync.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemcpyPeerAsync_generated_hipMemcpyPeerAsync.cpp.o
+[ 87%] Built target directed_tests.runtimeApi.memory.hipMemcpyDtoDAsync
+[ 88%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipHostRegister.dir/tests/src/directed_tests.runtimeApi.memory.hipHostRegister_generated_test_common.cpp.o
+[ 88%] Built target directed_tests.runtimeApi.memory.hipRandomMemcpyAsync
+[ 88%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyAll.dir/tests/src/directed_tests.runtimeApi.memory.hipMemcpyAll_generated_test_common.cpp.o
+[ 88%] Built target directed_tests.runtimeApi.memory.p2p_copy_coherency
+[ 89%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyAll.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemcpyAll_generated_hipMemcpyAll.cpp.o
+[ 89%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpy.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemcpy_generated_hipMemcpy.cpp.o
+[ 89%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipHostRegister.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipHostRegister_generated_hipHostRegister.cpp.o
+[ 89%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyAsync2.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemcpyAsync2_generated_hipMemcpyAsync2.cpp.o
+[ 89%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemcpyPeer.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemcpyPeer_generated_hipMemcpyPeer.cpp.o
+[ 89%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.memory.hipMemPtrGetInfo.dir/tests/src/runtimeApi/memory/directed_tests.runtimeApi.memory.hipMemPtrGetInfo_generated_hipMemPtrGetInfo.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipTestMemcpyPin
+[ 89%] Linking HIP executable directed_tests/runtimeApi/memory/hipTestMemcpyPin
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemset3D
+[ 91%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemset3D
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipHostGetFlags
+[ 91%] Linking HIP executable directed_tests/runtimeApi/memory/hipHostGetFlags
+[ 91%] Built target directed_tests.runtimeApi.memory.hipTestMemcpyPin
+[ 91%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamL5.dir/tests/src/directed_tests.runtimeApi.stream.hipStreamL5_generated_test_common.cpp.o
+[ 91%] Built target directed_tests.runtimeApi.memory.hipMemset3D
+[ 91%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamSync2.dir/tests/src/directed_tests.runtimeApi.stream.hipStreamSync2_generated_test_common.cpp.o
+[ 92%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamSync2.dir/tests/src/runtimeApi/stream/directed_tests.runtimeApi.stream.hipStreamSync2_generated_hipStreamSync2.cpp.o
+[ 92%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamL5.dir/tests/src/runtimeApi/stream/directed_tests.runtimeApi.stream.hipStreamL5_generated_hipStreamL5.cpp.o
+[ 92%] Built target directed_tests.runtimeApi.memory.hipHostGetFlags
+[ 92%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipNullStream.dir/tests/src/directed_tests.runtimeApi.stream.hipNullStream_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipHostMalloc
+[ 92%] Linking HIP executable directed_tests/runtimeApi/memory/hipHostMalloc
+[ 92%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipNullStream.dir/tests/src/runtimeApi/stream/directed_tests.runtimeApi.stream.hipNullStream_generated_hipNullStream.cpp.o
+[ 93%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamCreateWithPriority.dir/tests/src/directed_tests.runtimeApi.stream.hipStreamCreateWithPriority_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemcpyAll
+[ 93%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemcpyAll
+[ 93%] Built target directed_tests.runtimeApi.memory.hipHostMalloc
+[ 93%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamGetFlags.dir/tests/src/directed_tests.runtimeApi.stream.hipStreamGetFlags_generated_test_common.cpp.o
+[ 93%] Built target directed_tests.runtimeApi.memory.hipMemcpyAll
+[ 93%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipAPIStreamEnable.dir/tests/src/directed_tests.runtimeApi.stream.hipAPIStreamEnable_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemcpyAsync2
+[ 93%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemcpyAsync2
+[ 93%] Built target directed_tests.runtimeApi.memory.hipMemcpyAsync2
+[ 93%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipAPIStreamDisable.dir/tests/src/directed_tests.runtimeApi.stream.hipAPIStreamDisable_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemcpyPeerAsync
+[ 93%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemcpyPeerAsync
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemPtrGetInfo
+[ 94%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemPtrGetInfo
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipHostRegister
+[ 94%] Linking HIP executable directed_tests/runtimeApi/memory/hipHostRegister
+[ 94%] Built target directed_tests.runtimeApi.memory.hipMemcpyPeerAsync
+[ 94%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipAPIStreamDisable.dir/tests/src/runtimeApi/stream/directed_tests.runtimeApi.stream.hipAPIStreamDisable_generated_hipAPIStreamDisable.cpp.o
+[ 94%] Built target directed_tests.runtimeApi.memory.hipMemPtrGetInfo
+[ 94%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipAPIStreamEnable.dir/tests/src/runtimeApi/stream/directed_tests.runtimeApi.stream.hipAPIStreamEnable_generated_hipAPIStreamEnable.cpp.o
+[ 94%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamCreateWithPriority.dir/tests/src/runtimeApi/stream/directed_tests.runtimeApi.stream.hipStreamCreateWithPriority_generated_hipStreamCreateWithPriority.cpp.o
+[ 94%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamGetFlags.dir/tests/src/runtimeApi/stream/directed_tests.runtimeApi.stream.hipStreamGetFlags_generated_hipStreamGetFlags.cpp.o
+[ 94%] Built target directed_tests.runtimeApi.memory.hipHostRegister
+[ 94%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamAddCallback.dir/tests/src/directed_tests.runtimeApi.stream.hipStreamAddCallback_generated_test_common.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemcpy
+[ 94%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemcpy
+Scanning dependencies of target directed_tests.nvcc.Device
+[ 94%] Built target directed_tests.nvcc.Device
+Scanning dependencies of target directed_tests.Functional.device
+[ 94%] Built target directed_tests.Functional.device
+Scanning dependencies of target directed_tests.Negative
+[ 94%] Built target directed_tests.Negative
+Scanning dependencies of target directed_tests.texture
+[ 94%] Built target directed_tests.texture
+Scanning dependencies of target directed_tests.compiler
+[ 94%] Built target directed_tests.compiler
+Scanning dependencies of target directed_tests.experimental
+[ 94%] Built target directed_tests.experimental
+[ 95%] Building HIPCC object CMakeFiles/directed_tests.runtimeApi.stream.hipStreamAddCallback.dir/tests/src/runtimeApi/stream/directed_tests.runtimeApi.stream.hipStreamAddCallback_generated_hipStreamAddCallback.cpp.o
+Scanning dependencies of target directed_tests.runtimeApi.memory.hipMemcpyPeer
+[ 95%] Linking HIP executable directed_tests/runtimeApi/memory/hipMemcpyPeer
+[ 95%] Built target directed_tests.runtimeApi.memory.hipMemcpy
+Scanning dependencies of target directed_tests.kernel
+[ 95%] Built target directed_tests.kernel
+Scanning dependencies of target directed_tests.surface
+[ 95%] Built target directed_tests.surface
+Scanning dependencies of target directed_tests.p2p
+[ 95%] Built target directed_tests.p2p
+Scanning dependencies of target directed_tests.context
+[ 95%] Built target directed_tests.context
+Scanning dependencies of target directed_tests.Performance
+[ 95%] Built target directed_tests.Performance
+Scanning dependencies of target directed_tests.runtimeApi.error
+[ 95%] Built target directed_tests.runtimeApi.error
+Scanning dependencies of target directed_tests.runtimeApi.module
+[ 95%] Built target directed_tests.runtimeApi.module
+Scanning dependencies of target directed_tests.runtimeApi.event
+[ 95%] Built target directed_tests.runtimeApi.event
+Scanning dependencies of target directed_tests.runtimeApi.synchronization
+[ 95%] Built target directed_tests.runtimeApi.synchronization
+Scanning dependencies of target directed_tests.runtimeApi.multiThread
+[ 95%] Built target directed_tests.runtimeApi.multiThread
+Scanning dependencies of target directed_tests.runtimeApi.device
+[ 95%] Built target directed_tests.runtimeApi.device
+Scanning dependencies of target directed_tests.nvcc
+[ 95%] Built target directed_tests.nvcc
+Scanning dependencies of target directed_tests.Functional
+[ 95%] Built target directed_tests.Functional
+[ 95%] Built target directed_tests.runtimeApi.memory.hipMemcpyPeer
+Scanning dependencies of target directed_tests.runtimeApi.memory
+[ 95%] Built target directed_tests.runtimeApi.memory
+Scanning dependencies of target directed_tests.runtimeApi.stream.hipStreamL5
+[ 95%] Linking HIP executable directed_tests/runtimeApi/stream/hipStreamL5
+Scanning dependencies of target directed_tests.runtimeApi.stream.hipStreamSync2
+[ 95%] Linking HIP executable directed_tests/runtimeApi/stream/hipStreamSync2
+[ 95%] Built target directed_tests.runtimeApi.stream.hipStreamL5
+[ 95%] Built target directed_tests.runtimeApi.stream.hipStreamSync2
+Scanning dependencies of target directed_tests.runtimeApi.stream.hipNullStream
+[ 95%] Linking HIP executable directed_tests/runtimeApi/stream/hipNullStream
+[ 95%] Built target directed_tests.runtimeApi.stream.hipNullStream
+Scanning dependencies of target directed_tests.runtimeApi.stream.hipStreamGetFlags
+[ 96%] Linking HIP executable directed_tests/runtimeApi/stream/hipStreamGetFlags
+[ 96%] Built target directed_tests.runtimeApi.stream.hipStreamGetFlags
+Scanning dependencies of target directed_tests.runtimeApi.stream.hipStreamCreateWithPriority
+[ 96%] Linking HIP executable directed_tests/runtimeApi/stream/hipStreamCreateWithPriority
+Scanning dependencies of target directed_tests.runtimeApi.stream.hipAPIStreamEnable
+[ 97%] Linking HIP executable directed_tests/runtimeApi/stream/hipAPIStreamEnable
+Scanning dependencies of target directed_tests.runtimeApi.stream.hipAPIStreamDisable
+[ 98%] Linking HIP executable directed_tests/runtimeApi/stream/hipAPIStreamDisable
+[ 98%] Built target directed_tests.runtimeApi.stream.hipStreamCreateWithPriority
+Scanning dependencies of target directed_tests.runtimeApi.stream.hipStreamAddCallback
+[ 98%] Linking HIP executable directed_tests/runtimeApi/stream/hipStreamAddCallback
+[ 98%] Built target directed_tests.runtimeApi.stream.hipAPIStreamEnable
+[ 98%] Built target directed_tests.runtimeApi.stream.hipAPIStreamDisable
+[ 98%] Built target directed_tests.runtimeApi.stream.hipStreamAddCallback
+Scanning dependencies of target directed_tests.runtimeApi.stream
+[ 98%] Built target directed_tests.runtimeApi.stream
+Scanning dependencies of target directed_tests.runtimeApi
+[ 98%] Built target directed_tests.runtimeApi
+Scanning dependencies of target directed_tests.deviceLib.hipVectorTypesDevice
+[100%] Linking HIP executable directed_tests/deviceLib/hipVectorTypesDevice
+[100%] Built target directed_tests.deviceLib.hipVectorTypesDevice
+Scanning dependencies of target directed_tests.deviceLib
+[100%] Built target directed_tests.deviceLib
+Scanning dependencies of target directed_tests
+[100%] Built target directed_tests
+Scanning dependencies of target build_tests
+[100%] Built target build_tests
+Scanning dependencies of target check
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Running tests...
+Test project /home/taccuser/Documents/compilerNightly/HIP/build
+        Start   1: directed_tests/hipEnvVarDriver.tst
+  1/120 Test   #1: directed_tests/hipEnvVarDriver.tst .............................................................   Passed    1.22 sec
+        Start   2: directed_tests/context/hipCtx_simple.tst
+  2/120 Test   #2: directed_tests/context/hipCtx_simple.tst .......................................................   Passed    0.59 sec
+        Start   3: directed_tests/context/hipMemsetD8.tst
+  3/120 Test   #3: directed_tests/context/hipMemsetD8.tst .........................................................   Passed    0.86 sec
+        Start   4: directed_tests/context/hipMemsetD8-N10--memsetval0x42.tst
+  4/120 Test   #4: directed_tests/context/hipMemsetD8-N10--memsetval0x42.tst ......................................   Passed    0.61 sec
+        Start   5: directed_tests/context/hipMemsetD8-N10013--memsetval0x5a.tst
+  5/120 Test   #5: directed_tests/context/hipMemsetD8-N10013--memsetval0x5a.tst ...................................   Passed    0.61 sec
+        Start   6: directed_tests/context/hipMemsetD8-N256M--memsetval0xa6.tst
+  6/120 Test   #6: directed_tests/context/hipMemsetD8-N256M--memsetval0xa6.tst ....................................   Passed    1.23 sec
+        Start   7: directed_tests/runtimeApi/synchronization/copy_coherency.tst
+  7/120 Test   #7: directed_tests/runtimeApi/synchronization/copy_coherency.tst ...................................   Passed    1.84 sec
+        Start   8: directed_tests/runtimeApi/multiThread/hipMultiThreadDevice-serial.tst
+  8/120 Test   #8: directed_tests/runtimeApi/multiThread/hipMultiThreadDevice-serial.tst ..........................   Passed    0.77 sec
+        Start   9: directed_tests/runtimeApi/multiThread/hipMultiThreadDevice-pyramid.tst
+  9/120 Test   #9: directed_tests/runtimeApi/multiThread/hipMultiThreadDevice-pyramid.tst .........................   Passed    0.77 sec
+        Start  10: directed_tests/runtimeApi/multiThread/hipMultiThreadDevice-nearzero.tst
+ 10/120 Test  #10: directed_tests/runtimeApi/multiThread/hipMultiThreadDevice-nearzero.tst ........................   Passed    0.77 sec
+        Start  11: directed_tests/runtimeApi/multiThread/hipMultiThreadStreams2.tst
+ 11/120 Test  #11: directed_tests/runtimeApi/multiThread/hipMultiThreadStreams2.tst ...............................   Passed    0.82 sec
+        Start  12: directed_tests/runtimeApi/multiThread/hipMultiThreadStreams1.tst
+ 12/120 Test  #12: directed_tests/runtimeApi/multiThread/hipMultiThreadStreams1.tst ...............................   Passed    4.63 sec
+        Start  13: directed_tests/runtimeApi/event/hipEventRecord--iterations10.tst
+ 13/120 Test  #13: directed_tests/runtimeApi/event/hipEventRecord--iterations10.tst ...............................   Passed    0.87 sec
+        Start  14: directed_tests/runtimeApi/event/record_event.tst
+ 14/120 Test  #14: directed_tests/runtimeApi/event/record_event.tst ...............................................   Passed   68.46 sec
+        Start  15: directed_tests/runtimeApi/memory/hipMemset2D.tst
+ 15/120 Test  #15: directed_tests/runtimeApi/memory/hipMemset2D.tst ...............................................   Passed    0.77 sec
+        Start  16: directed_tests/runtimeApi/memory/hipMemset.tst
+ 16/120 Test  #16: directed_tests/runtimeApi/memory/hipMemset.tst .................................................   Passed    0.77 sec
+        Start  17: directed_tests/runtimeApi/memory/hipMemset-N10--memsetval0x42--memsetD32val0x101.tst
+ 17/120 Test  #17: directed_tests/runtimeApi/memory/hipMemset-N10--memsetval0x42--memsetD32val0x101.tst ...........   Passed    0.77 sec
+        Start  18: directed_tests/runtimeApi/memory/hipMemset-N10013--memsetval0x5a--memsetD32val0xDEADBEEF.tst
+ 18/120 Test  #18: directed_tests/runtimeApi/memory/hipMemset-N10013--memsetval0x5a--memsetD32val0xDEADBEEF.tst ...   Passed    0.77 sec
+        Start  19: directed_tests/runtimeApi/memory/hipMemset-N256M--memsetval0xa6--memsetD32val0xCAFEBABE.tst
+ 19/120 Test  #19: directed_tests/runtimeApi/memory/hipMemset-N256M--memsetval0xa6--memsetD32val0xCAFEBABE.tst ....   Passed    3.88 sec
+        Start  20: directed_tests/runtimeApi/memory/hipRandomMemcpyAsync.tst
+ 20/120 Test  #20: directed_tests/runtimeApi/memory/hipRandomMemcpyAsync.tst ......................................   Passed    0.88 sec
+        Start  21: directed_tests/runtimeApi/memory/hipMemcpyPeerAsync.tst
+ 21/120 Test  #21: directed_tests/runtimeApi/memory/hipMemcpyPeerAsync.tst ........................................   Passed    0.59 sec
+        Start  22: directed_tests/runtimeApi/memory/hipHostGetFlags.tst
+ 22/120 Test  #22: directed_tests/runtimeApi/memory/hipHostGetFlags.tst ...........................................   Passed    0.63 sec
+        Start  23: directed_tests/runtimeApi/memory/hipHostMalloc.tst
+ 23/120 Test  #23: directed_tests/runtimeApi/memory/hipHostMalloc.tst .............................................   Passed    0.67 sec
+        Start  24: directed_tests/runtimeApi/memory/hipMemcpy-modes.tst
+ 24/120 Test  #24: directed_tests/runtimeApi/memory/hipMemcpy-modes.tst ...........................................   Passed    3.44 sec
+        Start  25: directed_tests/runtimeApi/memory/hipMemcpy-size.tst
+ 25/120 Test  #25: directed_tests/runtimeApi/memory/hipMemcpy-size.tst ............................................   Passed   15.07 sec
+        Start  26: directed_tests/runtimeApi/memory/hipMemcpy-dev-offsets.tst
+ 26/120 Test  #26: directed_tests/runtimeApi/memory/hipMemcpy-dev-offsets.tst .....................................   Passed    5.02 sec
+        Start  27: directed_tests/runtimeApi/memory/hipMemcpy-host-offsets.tst
+ 27/120 Test  #27: directed_tests/runtimeApi/memory/hipMemcpy-host-offsets.tst ....................................   Passed    4.82 sec
+        Start  28: directed_tests/runtimeApi/memory/hipMemcpy-multithreaded.tst
+ 28/120 Test  #28: directed_tests/runtimeApi/memory/hipMemcpy-multithreaded.tst ...................................   Passed    1.49 sec
+        Start  29: directed_tests/runtimeApi/memory/hipMemoryAllocateCoherentDriver.tst
+ 29/120 Test  #29: directed_tests/runtimeApi/memory/hipMemoryAllocateCoherentDriver.tst ...........................   Passed    0.77 sec
+        Start  30: directed_tests/runtimeApi/memory/hipMemcpyPeer.tst
+ 30/120 Test  #30: directed_tests/runtimeApi/memory/hipMemcpyPeer.tst .............................................   Passed    0.77 sec
+        Start  31: directed_tests/runtimeApi/memory/hipMemset3D.tst
+ 31/120 Test  #31: directed_tests/runtimeApi/memory/hipMemset3D.tst ...............................................   Passed    0.77 sec
+        Start  32: directed_tests/runtimeApi/memory/hipTestMemcpyPin.tst
+ 32/120 Test  #32: directed_tests/runtimeApi/memory/hipTestMemcpyPin.tst ..........................................   Passed    0.77 sec
+        Start  33: directed_tests/runtimeApi/memory/hipMemPtrGetInfo.tst
+ 33/120 Test  #33: directed_tests/runtimeApi/memory/hipMemPtrGetInfo.tst ..........................................   Passed    0.77 sec
+        Start  34: directed_tests/runtimeApi/memory/hipHostRegister.tst
+ 34/120 Test  #34: directed_tests/runtimeApi/memory/hipHostRegister.tst ...........................................   Passed    8.26 sec
+        Start  35: directed_tests/runtimeApi/memory/hipMemcpyDtoDAsync.tst
+ 35/120 Test  #35: directed_tests/runtimeApi/memory/hipMemcpyDtoDAsync.tst ........................................   Passed    0.77 sec
+        Start  36: directed_tests/runtimeApi/memory/hipMemcpy_simple.tst
+ 36/120 Test  #36: directed_tests/runtimeApi/memory/hipMemcpy_simple.tst ..........................................   Passed    0.84 sec
+        Start  37: directed_tests/runtimeApi/memory/hipMemcpyAsync-simple.tst
+ 37/120 Test  #37: directed_tests/runtimeApi/memory/hipMemcpyAsync-simple.tst .....................................   Passed    0.84 sec
+        Start  38: directed_tests/runtimeApi/memory/hipMemcpyDtoD.tst
+ 38/120 Test  #38: directed_tests/runtimeApi/memory/hipMemcpyDtoD.tst .............................................   Passed    0.77 sec
+        Start  39: directed_tests/runtimeApi/error/hipPeekAtLastError.tst
+ 39/120 Test  #39: directed_tests/runtimeApi/error/hipPeekAtLastError.tst .........................................   Passed    0.59 sec
+        Start  40: directed_tests/runtimeApi/stream/hipStreamGetFlags.tst
+ 40/120 Test  #40: directed_tests/runtimeApi/stream/hipStreamGetFlags.tst .........................................   Passed    0.59 sec
+        Start  41: directed_tests/runtimeApi/stream/hipNullStream.tst
+ 41/120 Test  #41: directed_tests/runtimeApi/stream/hipNullStream.tst .............................................   Passed    3.60 sec
+        Start  42: directed_tests/runtimeApi/stream/hipStreamAddCallback.tst
+ 42/120 Test  #42: directed_tests/runtimeApi/stream/hipStreamAddCallback.tst ......................................   Passed    0.89 sec
+        Start  43: directed_tests/runtimeApi/stream/hipStreamCreateWithPriority.tst
+ 43/120 Test  #43: directed_tests/runtimeApi/stream/hipStreamCreateWithPriority.tst ...............................   Passed    1.22 sec
+        Start  44: directed_tests/runtimeApi/stream/hipStreamL5.tst
+ 44/120 Test  #44: directed_tests/runtimeApi/stream/hipStreamL5.tst ...............................................   Passed    1.56 sec
+        Start  45: directed_tests/runtimeApi/stream/hipStreamSync2.tst
+ 45/120 Test  #45: directed_tests/runtimeApi/stream/hipStreamSync2.tst ............................................   Passed   15.34 sec
+        Start  46: directed_tests/runtimeApi/device/hipDeviceGetPCIBusId.tst
+ 46/120 Test  #46: directed_tests/runtimeApi/device/hipDeviceGetPCIBusId.tst ......................................   Passed    0.77 sec
+        Start  47: directed_tests/runtimeApi/device/hipSetDevice.tst
+ 47/120 Test  #47: directed_tests/runtimeApi/device/hipSetDevice.tst ..............................................   Passed    0.77 sec
+        Start  48: directed_tests/runtimeApi/device/hipDeviceTotalMem.tst
+ 48/120 Test  #48: directed_tests/runtimeApi/device/hipDeviceTotalMem.tst .........................................   Passed    0.77 sec
+        Start  49: directed_tests/runtimeApi/device/hipSetCachceConfig.tst
+ 49/120 Test  #49: directed_tests/runtimeApi/device/hipSetCachceConfig.tst ........................................   Passed    0.77 sec
+        Start  50: directed_tests/runtimeApi/device/hipChooseDevice.tst
+ 50/120 Test  #50: directed_tests/runtimeApi/device/hipChooseDevice.tst ...........................................   Passed    0.77 sec
+        Start  51: directed_tests/runtimeApi/device/hipDeviceSynchronize.tst
+ 51/120 Test  #51: directed_tests/runtimeApi/device/hipDeviceSynchronize.tst ......................................   Passed    0.77 sec
+        Start  52: directed_tests/runtimeApi/device/hipDeviceGetName.tst
+ 52/120 Test  #52: directed_tests/runtimeApi/device/hipDeviceGetName.tst ..........................................   Passed    0.77 sec
+        Start  53: directed_tests/runtimeApi/device/hipGetDeviceAttribute.tst
+ 53/120 Test  #53: directed_tests/runtimeApi/device/hipGetDeviceAttribute.tst .....................................   Passed    0.77 sec
+        Start  54: directed_tests/runtimeApi/device/hipRuntimeGetVersion.tst
+ 54/120 Test  #54: directed_tests/runtimeApi/device/hipRuntimeGetVersion.tst ......................................   Passed    0.77 sec
+        Start  55: directed_tests/runtimeApi/device/hipDeviceGetByPCIBusId.tst
+ 55/120 Test  #55: directed_tests/runtimeApi/device/hipDeviceGetByPCIBusId.tst ....................................   Passed    0.77 sec
+        Start  56: directed_tests/runtimeApi/device/hipDeviceComputeCapability.tst
+ 56/120 Test  #56: directed_tests/runtimeApi/device/hipDeviceComputeCapability.tst ................................   Passed    0.77 sec
+        Start  57: directed_tests/runtimeApi/device/hipGetDevice.tst
+ 57/120 Test  #57: directed_tests/runtimeApi/device/hipGetDevice.tst ..............................................   Passed    0.77 sec
+        Start  58: directed_tests/runtimeApi/device/hipSetDeviceFlags.tst
+ 58/120 Test  #58: directed_tests/runtimeApi/device/hipSetDeviceFlags.tst .........................................   Passed    0.77 sec
+        Start  59: directed_tests/runtimeApi/module/hipFuncGetAttributes.tst
+ 59/120 Test  #59: directed_tests/runtimeApi/module/hipFuncGetAttributes.tst ......................................   Passed    0.77 sec
+        Start  60: directed_tests/runtimeApi/module/hipFuncSetCacheConfig.tst
+ 60/120 Test  #60: directed_tests/runtimeApi/module/hipFuncSetCacheConfig.tst .....................................   Passed    0.77 sec
+        Start  61: directed_tests/Functional/device/hipFuncGetDevice.tst
+ 61/120 Test  #61: directed_tests/Functional/device/hipFuncGetDevice.tst ..........................................   Passed    0.77 sec
+        Start  62: directed_tests/Functional/device/hipFuncSetDevice.tst
+ 62/120 Test  #62: directed_tests/Functional/device/hipFuncSetDevice.tst ..........................................   Passed    0.77 sec
+        Start  63: directed_tests/Functional/device/hipFuncDeviceSynchronize.tst
+ 63/120 Test  #63: directed_tests/Functional/device/hipFuncDeviceSynchronize.tst ..................................   Passed    0.77 sec
+        Start  64: directed_tests/Functional/device/hipFuncSetDeviceFlags.tst
+ 64/120 Test  #64: directed_tests/Functional/device/hipFuncSetDeviceFlags.tst .....................................   Passed    0.83 sec
+        Start  65: directed_tests/kernel/hipLaunchParmFunctor.tst
+ 65/120 Test  #65: directed_tests/kernel/hipLaunchParmFunctor.tst .................................................   Passed    0.61 sec
+        Start  66: directed_tests/kernel/hipTestMemKernel.tst
+ 66/120 Test  #66: directed_tests/kernel/hipTestMemKernel.tst .....................................................   Passed    0.62 sec
+        Start  67: directed_tests/kernel/hipTestGlobalVariable.tst
+ 67/120 Test  #67: directed_tests/kernel/hipTestGlobalVariable.tst ................................................   Passed    0.62 sec
+        Start  68: directed_tests/kernel/hipLanguageExtensions.tst
+ 68/120 Test  #68: directed_tests/kernel/hipLanguageExtensions.tst ................................................   Passed    0.59 sec
+        Start  69: directed_tests/kernel/hipEmptyKernel.tst
+ 69/120 Test  #69: directed_tests/kernel/hipEmptyKernel.tst .......................................................   Passed    0.64 sec
+        Start  70: directed_tests/kernel/hipGridLaunch.tst
+ 70/120 Test  #70: directed_tests/kernel/hipGridLaunch.tst ........................................................   Passed    0.84 sec
+        Start  71: directed_tests/kernel/hipLaunchParm.tst
+ 71/120 Test  #71: directed_tests/kernel/hipLaunchParm.tst ........................................................   Passed    0.77 sec
+        Start  72: directed_tests/kernel/inline_asm_vadd.tst
+ 72/120 Test  #72: directed_tests/kernel/inline_asm_vadd.tst ......................................................   Passed    0.77 sec
+        Start  73: directed_tests/kernel/hipTestConstant.tst
+ 73/120 Test  #73: directed_tests/kernel/hipTestConstant.tst ......................................................   Passed    0.83 sec
+        Start  74: directed_tests/kernel/hipPrintfKernel.tst
+ 74/120 Test  #74: directed_tests/kernel/hipPrintfKernel.tst ......................................................   Passed    0.64 sec
+        Start  75: directed_tests/deviceLib/hipTestNativeHalf.tst
+ 75/120 Test  #75: directed_tests/deviceLib/hipTestNativeHalf.tst .................................................   Passed    0.62 sec
+        Start  76: directed_tests/deviceLib/hipStdComplex.tst
+ 76/120 Test  #76: directed_tests/deviceLib/hipStdComplex.tst .....................................................   Passed    0.59 sec
+        Start  77: directed_tests/deviceLib/hip_bitextract.tst
+ 77/120 Test  #77: directed_tests/deviceLib/hip_bitextract.tst ....................................................   Passed    0.63 sec
+        Start  78: directed_tests/deviceLib/hipTestNew.tst
+ 78/120 Test  #78: directed_tests/deviceLib/hipTestNew.tst ........................................................   Passed    0.62 sec
+        Start  79: directed_tests/deviceLib/hipDoublePrecisionMathHost.tst
+ 79/120 Test  #79: directed_tests/deviceLib/hipDoublePrecisionMathHost.tst ........................................   Passed    0.59 sec
+        Start  80: directed_tests/deviceLib/hipDoublePrecisionMathDevice.tst
+ 80/120 Test  #80: directed_tests/deviceLib/hipDoublePrecisionMathDevice.tst ......................................   Passed    0.65 sec
+        Start  81: directed_tests/deviceLib/hipTestFMA.tst
+ 81/120 Test  #81: directed_tests/deviceLib/hipTestFMA.tst ........................................................   Passed    0.62 sec
+        Start  82: directed_tests/deviceLib/hipSinglePrecisionIntrinsics.tst
+ 82/120 Test  #82: directed_tests/deviceLib/hipSinglePrecisionIntrinsics.tst ......................................   Passed    0.64 sec
+        Start  83: directed_tests/deviceLib/hip_trig.tst
+ 83/120 Test  #83: directed_tests/deviceLib/hip_trig.tst ..........................................................   Passed    0.62 sec
+        Start  84: directed_tests/deviceLib/hip_ffs.tst
+ 84/120 Test  #84: directed_tests/deviceLib/hip_ffs.tst ...........................................................   Passed    0.62 sec
+        Start  85: directed_tests/deviceLib/hip_ballot.tst
+ 85/120 Test  #85: directed_tests/deviceLib/hip_ballot.tst ........................................................   Passed    0.63 sec
+        Start  86: directed_tests/deviceLib/hip_anyall.tst
+ 86/120 Test  #86: directed_tests/deviceLib/hip_anyall.tst ........................................................   Passed    0.62 sec
+        Start  87: directed_tests/deviceLib/hipTestHalf.tst
+ 87/120 Test  #87: directed_tests/deviceLib/hipTestHalf.tst .......................................................   Passed    0.83 sec
+        Start  88: directed_tests/deviceLib/hipVectorTypesDevice.tst
+ 88/120 Test  #88: directed_tests/deviceLib/hipVectorTypesDevice.tst ..............................................   Passed    0.62 sec
+        Start  89: directed_tests/deviceLib/hipThreadFence.tst
+ 89/120 Test  #89: directed_tests/deviceLib/hipThreadFence.tst ....................................................   Passed    0.63 sec
+        Start  90: directed_tests/deviceLib/hipDeviceMemcpy.tst
+ 90/120 Test  #90: directed_tests/deviceLib/hipDeviceMemcpy.tst ...................................................   Passed    0.63 sec
+        Start  91: directed_tests/deviceLib/hipTestDeviceSymbol.tst
+ 91/120 Test  #91: directed_tests/deviceLib/hipTestDeviceSymbol.tst ...............................................   Passed    0.63 sec
+        Start  92: directed_tests/deviceLib/hipSimpleAtomicsTest.tst
+ 92/120 Test  #92: directed_tests/deviceLib/hipSimpleAtomicsTest.tst ..............................................   Passed    0.63 sec
+        Start  93: directed_tests/deviceLib/hipTestIncludeMath.tst
+ 93/120 Test  #93: directed_tests/deviceLib/hipTestIncludeMath.tst ................................................   Passed    0.62 sec
+        Start  94: directed_tests/deviceLib/hipSinglePrecisionMathDevice.tst
+ 94/120 Test  #94: directed_tests/deviceLib/hipSinglePrecisionMathDevice.tst ......................................   Passed    0.64 sec
+        Start  95: directed_tests/deviceLib/hip_clz.tst
+ 95/120 Test  #95: directed_tests/deviceLib/hip_clz.tst ...........................................................   Passed    0.62 sec
+        Start  96: directed_tests/deviceLib/hip_test_ldg.tst
+ 96/120 Test  #96: directed_tests/deviceLib/hip_test_ldg.tst ......................................................   Passed    0.65 sec
+        Start  97: directed_tests/deviceLib/hipFloatMathPrecise.tst
+ 97/120 Test  #97: directed_tests/deviceLib/hipFloatMathPrecise.tst ...............................................   Passed    0.62 sec
+        Start  98: directed_tests/deviceLib/hipIntegerIntrinsics.tst
+ 98/120 Test  #98: directed_tests/deviceLib/hipIntegerIntrinsics.tst ..............................................   Passed    0.62 sec
+        Start  99: directed_tests/deviceLib/hipAsynchronousStreams.tst
+ 99/120 Test  #99: directed_tests/deviceLib/hipAsynchronousStreams.tst ............................................   Passed    0.90 sec
+        Start 100: directed_tests/deviceLib/hipSinglePrecisionMathHost.tst
+100/120 Test #100: directed_tests/deviceLib/hipSinglePrecisionMathHost.tst ........................................   Passed    0.59 sec
+        Start 101: directed_tests/deviceLib/hipDeviceMalloc.tst
+101/120 Test #101: directed_tests/deviceLib/hipDeviceMalloc.tst ...................................................   Passed    0.83 sec
+        Start 102: directed_tests/deviceLib/hip_popc.tst
+102/120 Test #102: directed_tests/deviceLib/hip_popc.tst ..........................................................   Passed    0.62 sec
+        Start 103: directed_tests/deviceLib/hipMathFunctions.tst
+103/120 Test #103: directed_tests/deviceLib/hipMathFunctions.tst ..................................................   Passed    0.62 sec
+        Start 104: directed_tests/deviceLib/hipTestClock.tst
+104/120 Test #104: directed_tests/deviceLib/hipTestClock.tst ......................................................   Passed    0.62 sec
+        Start 105: directed_tests/deviceLib/hipFloatMath.tst
+105/120 Test #105: directed_tests/deviceLib/hipFloatMath.tst ......................................................   Passed    0.63 sec
+        Start 106: directed_tests/deviceLib/hipDoublePrecisionIntrinsics.tst
+106/120 Test #106: directed_tests/deviceLib/hipDoublePrecisionIntrinsics.tst ......................................   Passed    0.65 sec
+        Start 107: directed_tests/deviceLib/hip_threadfence_system.tst
+107/120 Test #107: directed_tests/deviceLib/hip_threadfence_system.tst ............................................   Passed    0.64 sec
+        Start 108: directed_tests/deviceLib/hipVectorTypes.tst
+108/120 Test #108: directed_tests/deviceLib/hipVectorTypes.tst ....................................................   Passed    0.59 sec
+        Start 109: directed_tests/deviceLib/hip_mbcnt.tst
+109/120 Test #109: directed_tests/deviceLib/hip_mbcnt.tst .........................................................   Passed    0.62 sec
+        Start 110: directed_tests/deviceLib/hipTestDotFunctions.tst
+110/120 Test #110: directed_tests/deviceLib/hipTestDotFunctions.tst ...............................................   Passed    0.62 sec
+        Start 111: directed_tests/deviceLib/hip_brev.tst
+111/120 Test #111: directed_tests/deviceLib/hip_brev.tst ..........................................................   Passed    0.62 sec
+        Start 112: directed_tests/deviceLib/hip_bitinsert.tst
+112/120 Test #112: directed_tests/deviceLib/hip_bitinsert.tst .....................................................   Passed    0.65 sec
+        Start 113: directed_tests/deviceLib/hipTestDevice.tst
+113/120 Test #113: directed_tests/deviceLib/hipTestDevice.tst .....................................................   Passed    0.63 sec
+        Start 114: directed_tests/surface/hipSurfaceObj2D.tst
+114/120 Test #114: directed_tests/surface/hipSurfaceObj2D.tst .....................................................   Passed    0.62 sec
+        Start 115: directed_tests/texture/hipTextureRef2D.tst
+115/120 Test #115: directed_tests/texture/hipTextureRef2D.tst .....................................................   Passed    0.64 sec
+        Start 116: directed_tests/texture/hipTextureObj1DFetch.tst
+116/120 Test #116: directed_tests/texture/hipTextureObj1DFetch.tst ................................................   Passed    0.64 sec
+        Start 117: directed_tests/texture/hipBindTexRef1DFetch.tst
+117/120 Test #117: directed_tests/texture/hipBindTexRef1DFetch.tst ................................................   Passed    0.64 sec
+        Start 118: directed_tests/texture/hipTextureObj2D.tst
+118/120 Test #118: directed_tests/texture/hipTextureObj2D.tst .....................................................   Passed    0.83 sec
+        Start 119: directed_tests/texture/hipGetChanDesc.tst
+119/120 Test #119: directed_tests/texture/hipGetChanDesc.tst ......................................................   Passed    0.59 sec
+        Start 120: directed_tests/compiler/hipClassKernel.tst
+120/120 Test #120: directed_tests/compiler/hipClassKernel.tst .....................................................   Passed    0.65 sec
+
+100% tests passed, 0 tests failed out of 120
+
+Total Test time (real) = 214.14 sec
+[100%] Built target check
+Finished: SUCCESS

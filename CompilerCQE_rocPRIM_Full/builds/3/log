@@ -1,0 +1,3053 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_rocPRIM_Full
+ > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/ROCmSoftwarePlatform/rocPRIM.git # timeout=10
+Fetching upstream changes from https://github.com/ROCmSoftwarePlatform/rocPRIM.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress https://github.com/ROCmSoftwarePlatform/rocPRIM.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision da9372a4d612f91099e452682c6e37a2d4ebc469 (refs/remotes/origin/develop)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f da9372a4d612f91099e452682c6e37a2d4ebc469
+Commit message: "Add definition to max_grid_size and shared_impl_max_bins (#51)"
+ > /usr/bin/git rev-list --no-walk da9372a4d612f91099e452682c6e37a2d4ebc469 # timeout=10
+[CompilerCQE_rocPRIM_Full] $ /bin/sh -xe /tmp/jenkins4460912008855762393.sh
++ rm -rf build/
++ mkdir build
++ cd build
++ CXX=/opt/rocm/hcc/bin/hcc cmake -DBUILD_BENCHMARK=OFF ../.
++ tee rocPRIM_build.log
+-- The CXX compiler identification is Clang 9.0.0
+-- Check for working CXX compiler: /opt/rocm/hcc/bin/hcc
+-- Check for working CXX compiler: /opt/rocm/hcc/bin/hcc -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Setting build type to 'Release' as none was specified.
+-- Found HIP: /usr/local (found suitable version "1.5.19122", minimum required is "1.5.18263") 
+-- HIP Compiler: hcc
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Git: /usr/bin/git (found version "2.7.4") 
+-- Downloading and building GTest.
+-- Downloading/updating googletest
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download
+Scanning dependencies of target googletest-download
+[ 11%] Creating directories for 'googletest-download'
+[ 22%] Performing download step (git clone) for 'googletest-download'
+-- googletest-download download command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-download-*.log
+[ 33%] No patch step for 'googletest-download'
+[ 44%] Skipping update step for 'googletest-download'
+[ 55%] Performing configure step for 'googletest-download'
+-- googletest-download configure command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-configure-*.log
+[ 66%] Performing build step for 'googletest-download'
+-- googletest-download build command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-build-*.log
+[ 77%] Performing install step for 'googletest-download'
+-- googletest-download install command succeeded.  See also /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-install-*.log
+[ 88%] No test step for 'googletest-download'
+[100%] Completed 'googletest-download'
+[100%] Built target googletest-download
+-- Found GTest: /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/gtest/lib/libgtest.so  
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- ******** Summary ********
+-- General:
+--   System                : Linux
+--   HIP ROOT              : /usr/local
+--   C++ compiler          : /opt/rocm/hcc/bin/hcc
+--   C++ compiler version  : 9.0.0
+--   CXX flags             : -Wno-unused-command-line-argument -Wall -Wextra
+--   Build type            : Release
+--   Install prefix        : /opt/rocm
+--   Device targets        : gfx803;gfx900;gfx906
+-- 
+--   BUILD_TEST            : ON
+--   BUILD_BENCHMARK       : OFF
+--   BUILD_EXAMPLE         : OFF
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build
++ make -j16
++ tee -a rocPRIM_build.log
+Scanning dependencies of target test_hc_api
+Scanning dependencies of target test_hip_api
+[  0%] Building CXX object test/CMakeFiles/test_hc_api.dir/test_hc_api.cpp.o
+[  1%] Building CXX object test/CMakeFiles/test_hip_api.dir/test_hip_api.cpp.o
+Scanning dependencies of target test_hip_device_reduce_by_key
+Scanning dependencies of target test_hip_device_radix_sort
+Scanning dependencies of target test_hip_device_partition
+Scanning dependencies of target test_hip_device_run_length_encode
+Scanning dependencies of target test_hip_device_histogram
+Scanning dependencies of target test_hip_device_segmented_radix_sort
+Scanning dependencies of target test_hip_device_transform
+Scanning dependencies of target test_hip_device_merge_sort
+Scanning dependencies of target test_hip_zip_iterator
+Scanning dependencies of target test_hip_warp_sort
+Scanning dependencies of target test_hc_device_scan
+Scanning dependencies of target test_hip_device_segmented_reduce
+Scanning dependencies of target test_hip_device_reduce
+Scanning dependencies of target test_hip_device_merge
+[  3%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_partition.dir/test_hip_device_partition.cpp.o
+[  3%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_histogram.dir/test_hip_device_histogram.cpp.o
+[  4%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_reduce_by_key.dir/test_hip_device_reduce_by_key.cpp.o
+[  4%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_radix_sort.dir/test_hip_device_radix_sort.cpp.o
+[  4%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_segmented_radix_sort.dir/test_hip_device_segmented_radix_sort.cpp.o
+[  5%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_transform.dir/test_hip_device_transform.cpp.o
+[  5%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_run_length_encode.dir/test_hip_device_run_length_encode.cpp.o
+[  6%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_merge_sort.dir/test_hip_device_merge_sort.cpp.o
+[  7%] Building CXX object test/rocprim/CMakeFiles/test_hip_zip_iterator.dir/test_hip_zip_iterator.cpp.o
+[  7%] Building CXX object test/rocprim/CMakeFiles/test_hip_warp_sort.dir/test_hip_warp_sort.cpp.o
+[  8%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_scan.dir/test_hc_device_scan.cpp.o
+[  9%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_segmented_reduce.dir/test_hip_device_segmented_reduce.cpp.o
+[ 10%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_merge.dir/test_hip_device_merge.cpp.o
+[ 10%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_reduce.dir/test_hip_device_reduce.cpp.o
+[ 11%] Linking CXX executable test_hc_api
+[ 11%] Built target test_hc_api
+Scanning dependencies of target test_hc_device_partition
+[ 11%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_partition.dir/test_hc_device_partition.cpp.o
+[ 11%] Linking CXX executable test_hip_api
+[ 11%] Built target test_hip_api
+Scanning dependencies of target test_hip_transform_iterator
+[ 11%] Building CXX object test/rocprim/CMakeFiles/test_hip_transform_iterator.dir/test_hip_transform_iterator.cpp.o
+[ 11%] Linking CXX executable test_hip_zip_iterator
+[ 11%] Linking CXX executable test_hip_device_transform
+[ 11%] Built target test_hip_zip_iterator
+Scanning dependencies of target test_hip_block_sort
+[ 11%] Linking CXX executable test_hip_device_merge
+[ 11%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_sort.dir/test_hip_block_sort.cpp.o
+[ 12%] Linking CXX executable test_hip_warp_sort
+[ 12%] Linking CXX executable test_hip_device_segmented_reduce
+[ 12%] Built target test_hip_device_transform
+Scanning dependencies of target test_hc_device_segmented_radix_sort
+[ 13%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_segmented_radix_sort.dir/test_hc_device_segmented_radix_sort.cpp.o
+[ 13%] Built target test_hip_device_merge
+Scanning dependencies of target test_hip_warp_reduce
+[ 13%] Building CXX object test/rocprim/CMakeFiles/test_hip_warp_reduce.dir/test_hip_warp_reduce.cpp.o
+[ 13%] Built target test_hip_warp_sort
+Scanning dependencies of target test_hc_arg_index_iterator
+[ 13%] Building CXX object test/rocprim/CMakeFiles/test_hc_arg_index_iterator.dir/test_hc_arg_index_iterator.cpp.o
+[ 13%] Linking CXX executable test_hip_device_partition
+[ 14%] Linking CXX executable test_hc_device_partition
+[ 14%] Built target test_hip_device_segmented_reduce
+Scanning dependencies of target test_hc_device_segmented_scan
+[ 15%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_segmented_scan.dir/test_hc_device_segmented_scan.cpp.o
+[ 15%] Built target test_hip_device_partition
+Scanning dependencies of target test_hc_block_histogram
+[ 16%] Linking CXX executable test_hip_transform_iterator
+[ 16%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_histogram.dir/test_hc_block_histogram.cpp.o
+[ 17%] Linking CXX executable test_hip_device_reduce
+[ 17%] Built target test_hc_device_partition
+Scanning dependencies of target test_hc_device_reduce_by_key
+[ 17%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_reduce_by_key.dir/test_hc_device_reduce_by_key.cpp.o
+[ 17%] Built target test_hip_transform_iterator
+Scanning dependencies of target test_hc_device_radix_sort
+[ 17%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_radix_sort.dir/test_hc_device_radix_sort.cpp.o
+[ 18%] Linking CXX executable test_hc_arg_index_iterator
+[ 18%] Built target test_hip_device_reduce
+Scanning dependencies of target test_hc_device_merge
+[ 19%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_merge.dir/test_hc_device_merge.cpp.o
+[ 19%] Built target test_hc_arg_index_iterator
+Scanning dependencies of target test_hc_device_histogram
+[ 20%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_histogram.dir/test_hc_device_histogram.cpp.o
+[ 21%] Linking CXX executable test_hip_device_reduce_by_key
+[ 22%] Linking CXX executable test_hc_block_histogram
+[ 22%] Linking CXX executable test_hc_device_merge
+[ 22%] Built target test_hc_block_histogram
+[ 22%] Linking CXX executable test_hip_device_histogram
+Scanning dependencies of target test_hc_counting_iterator
+[ 23%] Building CXX object test/rocprim/CMakeFiles/test_hc_counting_iterator.dir/test_hc_counting_iterator.cpp.o
+[ 23%] Linking CXX executable test_hip_device_merge_sort
+[ 23%] Built target test_hc_device_merge
+Scanning dependencies of target test_hip_block_exchange
+[ 24%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_exchange.dir/test_hip_block_exchange.cpp.o
+[ 25%] Linking CXX executable test_hip_block_sort
+[ 25%] Built target test_hip_device_reduce_by_key
+Scanning dependencies of target test_hc_constant_iterator
+[ 26%] Building CXX object test/rocprim/CMakeFiles/test_hc_constant_iterator.dir/test_hc_constant_iterator.cpp.o
+[ 26%] Built target test_hip_device_merge_sort
+Scanning dependencies of target test_hip_block_scan
+[ 26%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_scan.dir/test_hip_block_scan.cpp.o
+[ 26%] Built target test_hip_device_histogram
+Scanning dependencies of target test_hc_block_load_store
+[ 26%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_load_store.dir/test_hc_block_load_store.cpp.o
+[ 27%] Linking CXX executable test_hc_device_reduce_by_key
+[ 28%] Linking CXX executable test_hip_device_run_length_encode
+[ 28%] Linking CXX executable test_hc_counting_iterator
+[ 28%] Built target test_hc_counting_iterator
+Scanning dependencies of target test_hc_block_exchange
+[ 29%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_exchange.dir/test_hc_block_exchange.cpp.o
+[ 29%] Linking CXX executable test_hc_constant_iterator
+[ 29%] Built target test_hc_constant_iterator
+Scanning dependencies of target test_hc_block_discontinuity
+[ 30%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_discontinuity.dir/test_hc_block_discontinuity.cpp.o
+[ 30%] Built target test_hip_block_sort
+Scanning dependencies of target test_hip_intrinsics
+[ 31%] Building CXX object test/rocprim/CMakeFiles/test_hip_intrinsics.dir/test_hip_intrinsics.cpp.o
+[ 31%] Linking CXX executable test_hc_device_segmented_scan
+[ 31%] Built target test_hc_device_reduce_by_key
+Scanning dependencies of target test_hc_device_merge_sort
+[ 32%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_merge_sort.dir/test_hc_device_merge_sort.cpp.o
+[ 32%] Linking CXX executable test_hc_device_histogram
+[ 32%] Built target test_hip_device_run_length_encode
+Scanning dependencies of target test_hip_constant_iterator
+[ 32%] Building CXX object test/rocprim/CMakeFiles/test_hip_constant_iterator.dir/test_hip_constant_iterator.cpp.o
+[ 32%] Linking CXX executable test_hc_device_scan
+[ 33%] Linking CXX executable test_hip_warp_reduce
+[ 33%] Built target test_hc_device_histogram
+Scanning dependencies of target test_hip_texture_cache_iterator
+[ 33%] Building CXX object test/rocprim/CMakeFiles/test_hip_texture_cache_iterator.dir/test_hip_texture_cache_iterator.cpp.o
+[ 34%] Linking CXX executable test_hip_intrinsics
+[ 34%] Built target test_hip_intrinsics
+Scanning dependencies of target test_hc_block_reduce
+[ 34%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_reduce.dir/test_hc_block_reduce.cpp.o
+[ 35%] Linking CXX executable test_hip_constant_iterator
+[ 35%] Built target test_hip_warp_reduce
+Scanning dependencies of target test_hc_device_segmented_reduce
+[ 36%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_segmented_reduce.dir/test_hc_device_segmented_reduce.cpp.o
+[ 36%] Linking CXX executable test_hc_block_discontinuity
+[ 36%] Built target test_hip_constant_iterator
+Scanning dependencies of target test_hc_device_select
+[ 37%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_select.dir/test_hc_device_select.cpp.o
+[ 37%] Built target test_hc_device_segmented_scan
+Scanning dependencies of target test_hip_warp_scan
+[ 37%] Building CXX object test/rocprim/CMakeFiles/test_hip_warp_scan.dir/test_hip_warp_scan.cpp.o
+[ 37%] Built target test_hc_block_discontinuity
+Scanning dependencies of target test_hc_block_sort
+[ 38%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_sort.dir/test_hc_block_sort.cpp.o
+[ 39%] Linking CXX executable test_hc_block_exchange
+[ 40%] Linking CXX executable test_hc_device_merge_sort
+[ 41%] Linking CXX executable test_hip_texture_cache_iterator
+[ 41%] Linking CXX executable test_hip_block_exchange
+[ 42%] Linking CXX executable test_hc_block_load_store
+[ 42%] Built target test_hip_texture_cache_iterator
+Scanning dependencies of target test_hip_block_radix_sort
+[ 43%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_radix_sort.dir/test_hip_block_radix_sort.cpp.o
+[ 43%] Built target test_hc_block_exchange
+Scanning dependencies of target test_hip_discard_iterator
+[ 44%] Building CXX object test/rocprim/CMakeFiles/test_hip_discard_iterator.dir/test_hip_discard_iterator.cpp.o
+[ 44%] Linking CXX executable test_hc_device_segmented_reduce
+[ 44%] Built target test_hc_device_merge_sort
+Scanning dependencies of target test_hc_device_transform
+[ 45%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_transform.dir/test_hc_device_transform.cpp.o
+[ 45%] Built target test_hip_block_exchange
+Scanning dependencies of target test_hc_zip_iterator
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hc_zip_iterator.dir/test_hc_zip_iterator.cpp.o
+[ 46%] Built target test_hc_block_load_store
+Scanning dependencies of target test_hip_device_scan
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_scan.dir/test_hip_device_scan.cpp.o
+[ 46%] Linking CXX executable test_hc_device_select
+[ 46%] Built target test_hc_device_segmented_reduce
+Scanning dependencies of target test_hc_block_radix_sort
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_radix_sort.dir/test_hc_block_radix_sort.cpp.o
+[ 46%] Built target test_hc_device_select
+Scanning dependencies of target test_hc_discard_iterator
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hc_discard_iterator.dir/test_hc_discard_iterator.cpp.o
+[ 46%] Built target test_hc_device_scan
+Scanning dependencies of target test_hc_intrinsics
+[ 46%] Building CXX object test/rocprim/CMakeFiles/test_hc_intrinsics.dir/test_hc_intrinsics.cpp.o
+[ 47%] Linking CXX executable test_hc_device_transform
+[ 47%] Linking CXX executable test_hip_discard_iterator
+[ 47%] Built target test_hc_device_transform
+Scanning dependencies of target test_hip_device_segmented_scan
+[ 48%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_segmented_scan.dir/test_hip_device_segmented_scan.cpp.o
+[ 48%] Linking CXX executable test_hc_zip_iterator
+[ 48%] Built target test_hip_discard_iterator
+Scanning dependencies of target test_hc_transform_iterator
+[ 48%] Building CXX object test/rocprim/CMakeFiles/test_hc_transform_iterator.dir/test_hc_transform_iterator.cpp.o
+[ 49%] Linking CXX executable test_hc_discard_iterator
+[ 49%] Built target test_hc_zip_iterator
+Scanning dependencies of target test_hc_warp_sort
+[ 50%] Building CXX object test/rocprim/CMakeFiles/test_hc_warp_sort.dir/test_hc_warp_sort.cpp.o
+[ 50%] Built target test_hc_discard_iterator
+Scanning dependencies of target test_hip_block_load_store
+[ 51%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_load_store.dir/test_hip_block_load_store.cpp.o
+[ 52%] Linking CXX executable test_hc_intrinsics
+[ 52%] Linking CXX executable test_hc_block_sort
+[ 52%] Built target test_hc_intrinsics
+Scanning dependencies of target test_hc_device_reduce
+[ 52%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_reduce.dir/test_hc_device_reduce.cpp.o
+[ 53%] Linking CXX executable test_hc_block_reduce
+[ 53%] Linking CXX executable test_hc_warp_sort
+[ 54%] Linking CXX executable test_hc_transform_iterator
+[ 55%] Linking CXX executable test_hip_device_segmented_radix_sort
+[ 55%] Built target test_hc_warp_sort
+Scanning dependencies of target test_hc_block_scan
+[ 55%] Building CXX object test/rocprim/CMakeFiles/test_hc_block_scan.dir/test_hc_block_scan.cpp.o
+[ 55%] Built target test_hc_block_reduce
+Scanning dependencies of target test_hc_tuple
+[ 55%] Building CXX object test/rocprim/CMakeFiles/test_hc_tuple.dir/test_hc_tuple.cpp.o
+[ 55%] Built target test_hc_transform_iterator
+Scanning dependencies of target test_hc_basic
+[ 55%] Building CXX object test/rocprim/CMakeFiles/test_hc_basic.dir/test_hc_basic.cpp.o
+[ 55%] Built target test_hc_block_sort
+Scanning dependencies of target test_hc_warp_scan
+[ 56%] Building CXX object test/rocprim/CMakeFiles/test_hc_warp_scan.dir/test_hc_warp_scan.cpp.o
+[ 57%] Linking CXX executable test_hc_block_radix_sort
+[ 58%] Building CXX object test/rocprim/CMakeFiles/test_hc_basic.dir/detail/get_rocprim_version_hc.cpp.o
+[ 59%] Linking CXX executable test_hip_device_radix_sort
+[ 60%] Linking CXX executable test_hc_device_reduce
+[ 61%] Linking CXX executable test_hc_tuple
+[ 61%] Linking CXX executable test_hc_device_segmented_radix_sort
+[ 61%] Built target test_hc_block_radix_sort
+Scanning dependencies of target test_hip_counting_iterator
+[ 62%] Building CXX object test/rocprim/CMakeFiles/test_hip_counting_iterator.dir/test_hip_counting_iterator.cpp.o
+[ 62%] Linking CXX executable test_hc_basic
+[ 62%] Built target test_hc_tuple
+Scanning dependencies of target test_hip_basic
+[ 63%] Building CXX object test/rocprim/CMakeFiles/test_hip_basic.dir/test_hip_basic.cpp.o
+[ 64%] Linking CXX executable test_hip_block_radix_sort
+[ 64%] Built target test_hc_basic
+Scanning dependencies of target test_hip_arg_index_iterator
+[ 65%] Building CXX object test/rocprim/CMakeFiles/test_hip_arg_index_iterator.dir/test_hip_arg_index_iterator.cpp.o
+[ 65%] Built target test_hc_device_reduce
+[ 66%] Building CXX object test/rocprim/CMakeFiles/test_hip_basic.dir/detail/get_rocprim_version_hip.cpp.o
+[ 67%] Linking CXX executable test_hip_warp_scan
+[ 67%] Built target test_hip_block_radix_sort
+Scanning dependencies of target test_hc_warp_reduce
+[ 67%] Building CXX object test/rocprim/CMakeFiles/test_hc_warp_reduce.dir/test_hc_warp_reduce.cpp.o
+Scanning dependencies of target test_hip_block_discontinuity
+[ 68%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_discontinuity.dir/test_hip_block_discontinuity.cpp.o
+[ 68%] Built target test_hip_warp_scan
+Scanning dependencies of target test_hc_device_run_length_encode
+[ 68%] Building CXX object test/rocprim/CMakeFiles/test_hc_device_run_length_encode.dir/test_hc_device_run_length_encode.cpp.o
+[ 68%] Linking CXX executable test_hip_counting_iterator
+[ 68%] Built target test_hip_counting_iterator
+Scanning dependencies of target test_hip_block_histogram
+[ 69%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_histogram.dir/test_hip_block_histogram.cpp.o
+[ 69%] Linking CXX executable test_hip_basic
+[ 69%] Linking CXX executable test_hip_arg_index_iterator
+[ 69%] Built target test_hip_basic
+Scanning dependencies of target test_hip_device_select
+[ 70%] Building CXX object test/rocprim/CMakeFiles/test_hip_device_select.dir/test_hip_device_select.cpp.o
+[ 71%] Linking CXX executable test_hip_block_scan
+[ 71%] Built target test_hip_arg_index_iterator
+Scanning dependencies of target test_hip_block_reduce
+[ 71%] Building CXX object test/rocprim/CMakeFiles/test_hip_block_reduce.dir/test_hip_block_reduce.cpp.o
+[ 71%] Linking CXX executable test_hip_block_load_store
+[ 71%] Linking CXX executable test_hip_device_segmented_scan
+[ 71%] Built target test_hip_block_load_store
+Scanning dependencies of target test_hipcub_device_radix_sort
+[ 72%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_radix_sort.dir/test_hipcub_device_radix_sort.cpp.o
+[ 72%] Built target test_hip_block_scan
+Scanning dependencies of target test_hipcub_block_exchange
+[ 72%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_exchange.dir/test_hipcub_block_exchange.cpp.o
+[ 72%] Linking CXX executable test_hc_warp_scan
+[ 72%] Linking CXX executable test_hip_block_histogram
+[ 72%] Built target test_hc_warp_scan
+Scanning dependencies of target test_hipcub_block_scan
+[ 73%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_scan.dir/test_hipcub_block_scan.cpp.o
+[ 73%] Built target test_hip_block_histogram
+Scanning dependencies of target test_hipcub_block_reduce
+[ 74%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_reduce.dir/test_hipcub_block_reduce.cpp.o
+[ 74%] Linking CXX executable test_hip_block_discontinuity
+[ 74%] Linking CXX executable test_hip_device_select
+[ 74%] Built target test_hip_block_discontinuity
+Scanning dependencies of target test_hipcub_block_load_store
+[ 75%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_load_store.dir/test_hipcub_block_load_store.cpp.o
+[ 75%] Built target test_hip_device_segmented_scan
+Scanning dependencies of target test_hipcub_basic
+[ 76%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_basic.dir/test_hipcub_basic.cpp.o
+[ 76%] Built target test_hip_device_select
+[ 76%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_basic.dir/detail/get_hipcub_version.cpp.o
+[ 77%] Linking CXX executable test_hc_warp_reduce
+[ 78%] Linking CXX executable test_hc_device_run_length_encode
+[ 78%] Built target test_hc_warp_reduce
+Scanning dependencies of target test_hipcub_block_discontinuity
+[ 78%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_discontinuity.dir/test_hipcub_block_discontinuity.cpp.o
+Scanning dependencies of target test_hipcub_device_run_length_encode
+[ 78%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_run_length_encode.dir/test_hipcub_device_run_length_encode.cpp.o
+[ 79%] Linking CXX executable test_hipcub_basic
+[ 79%] Built target test_hipcub_basic
+Scanning dependencies of target test_hipcub_block_histogram
+[ 79%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_histogram.dir/test_hipcub_block_histogram.cpp.o
+[ 80%] Linking CXX executable test_hc_block_scan
+[ 80%] Linking CXX executable test_hipcub_block_reduce
+[ 81%] Linking CXX executable test_hipcub_block_exchange
+[ 81%] Built target test_hc_device_run_length_encode
+Scanning dependencies of target test_hipcub_warp_reduce
+[ 82%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_warp_reduce.dir/test_hipcub_warp_reduce.cpp.o
+[ 82%] Built target test_hipcub_block_reduce
+[ 83%] Linking CXX executable test_hip_block_reduce
+[ 83%] Built target test_hipcub_block_exchange
+Scanning dependencies of target test_hipcub_device_reduce
+[ 83%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_reduce.dir/test_hipcub_device_reduce.cpp.o
+Scanning dependencies of target test_hipcub_device_reduce_by_key
+[ 83%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_reduce_by_key.dir/test_hipcub_device_reduce_by_key.cpp.o
+[ 83%] Built target test_hc_block_scan
+Scanning dependencies of target test_hipcub_block_radix_sort
+[ 84%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_block_radix_sort.dir/test_hipcub_block_radix_sort.cpp.o
+[ 84%] Built target test_hip_block_reduce
+Scanning dependencies of target test_hipcub_device_scan
+[ 84%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_scan.dir/test_hipcub_device_scan.cpp.o
+[ 85%] Linking CXX executable test_hip_device_scan
+[ 86%] Linking CXX executable test_hipcub_block_histogram
+[ 86%] Built target test_hip_device_segmented_radix_sort
+Scanning dependencies of target test_hipcub_device_segmented_radix_sort
+[ 86%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_segmented_radix_sort.dir/test_hipcub_device_segmented_radix_sort.cpp.o
+[ 86%] Built target test_hipcub_block_histogram
+[ 87%] Linking CXX executable test_hipcub_block_discontinuity
+Scanning dependencies of target test_hipcub_device_segmented_reduce
+[ 88%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_segmented_reduce.dir/test_hipcub_device_segmented_reduce.cpp.o
+[ 88%] Built target test_hipcub_block_discontinuity
+Scanning dependencies of target test_hipcub_util_ptx
+[ 89%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_util_ptx.dir/test_hipcub_util_ptx.cpp.o
+[ 89%] Linking CXX executable test_hipcub_block_load_store
+[ 89%] Built target test_hipcub_block_load_store
+Scanning dependencies of target test_hipcub_device_select
+[ 90%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_select.dir/test_hipcub_device_select.cpp.o
+[ 91%] Linking CXX executable test_hipcub_device_scan
+[ 91%] Built target test_hipcub_device_scan
+Scanning dependencies of target test_hipcub_warp_scan
+[ 92%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_warp_scan.dir/test_hipcub_warp_scan.cpp.o
+[ 93%] Linking CXX executable test_hipcub_device_reduce
+[ 94%] Linking CXX executable test_hipcub_device_reduce_by_key
+[ 94%] Linking CXX executable test_hipcub_warp_reduce
+[ 95%] Linking CXX executable test_hipcub_device_run_length_encode
+[ 95%] Linking CXX executable test_hipcub_device_segmented_reduce
+[ 95%] Built target test_hipcub_warp_reduce
+Scanning dependencies of target test_hipcub_device_histogram
+[ 96%] Building CXX object test/hipcub/CMakeFiles/test_hipcub_device_histogram.dir/test_hipcub_device_histogram.cpp.o
+[ 96%] Linking CXX executable test_hipcub_util_ptx
+[ 96%] Built target test_hipcub_device_segmented_reduce
+[ 96%] Built target test_hipcub_util_ptx
+[ 96%] Linking CXX executable test_hipcub_device_select
+[ 96%] Built target test_hipcub_device_reduce_by_key
+[ 96%] Built target test_hipcub_device_reduce
+[ 96%] Built target test_hc_device_segmented_radix_sort
+[ 96%] Built target test_hipcub_device_select
+[ 96%] Linking CXX executable test_hipcub_block_radix_sort
+[ 96%] Linking CXX executable test_hipcub_block_scan
+[ 96%] Built target test_hip_device_radix_sort
+[ 96%] Built target test_hipcub_device_run_length_encode
+[ 96%] Built target test_hip_device_scan
+[ 96%] Built target test_hipcub_block_radix_sort
+[ 96%] Built target test_hipcub_block_scan
+[ 97%] Linking CXX executable test_hipcub_warp_scan
+[ 97%] Built target test_hipcub_warp_scan
+[ 97%] Linking CXX executable test_hipcub_device_histogram
+[ 97%] Built target test_hipcub_device_histogram
+[ 98%] Linking CXX executable test_hipcub_device_radix_sort
+[ 99%] Linking CXX executable test_hc_device_radix_sort
+[100%] Linking CXX executable test_hipcub_device_segmented_radix_sort
+[100%] Built target test_hipcub_device_radix_sort
+[100%] Built target test_hipcub_device_segmented_radix_sort
+[100%] Built target test_hc_device_radix_sort
++ ctest --output-on-failure
++ tee rocPRIM_unittest.log
+Test project /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build
+      Start  1: hip.device_api
+ 1/90 Test  #1: hip.device_api ............................   Passed    0.67 sec
+      Start  2: hc.device_api
+ 2/90 Test  #2: hc.device_api .............................   Passed    0.59 sec
+      Start  3: rocprim.hc.basic_test
+ 3/90 Test  #3: rocprim.hc.basic_test .....................   Passed    0.59 sec
+      Start  4: rocprim.hc.arg_index_iterator
+ 4/90 Test  #4: rocprim.hc.arg_index_iterator .............   Passed    0.85 sec
+      Start  5: rocprim.hc.block_discontinuity
+ 5/90 Test  #5: rocprim.hc.block_discontinuity ............   Passed    4.91 sec
+      Start  6: rocprim.hc.block_exchange
+ 6/90 Test  #6: rocprim.hc.block_exchange .................   Passed    0.94 sec
+      Start  7: rocprim.hc.block_histogram
+ 7/90 Test  #7: rocprim.hc.block_histogram ................   Passed    0.65 sec
+      Start  8: rocprim.hc.block_load_store
+ 8/90 Test  #8: rocprim.hc.block_load_store ...............   Passed    1.39 sec
+      Start  9: rocprim.hc.block_radix_sort
+ 9/90 Test  #9: rocprim.hc.block_radix_sort ...............   Passed    3.42 sec
+      Start 10: rocprim.hc.block_reduce
+10/90 Test #10: rocprim.hc.block_reduce ...................   Passed    0.81 sec
+      Start 11: rocprim.hc.block_scan
+11/90 Test #11: rocprim.hc.block_scan .....................   Passed    1.15 sec
+      Start 12: rocprim.hc.block_sort
+12/90 Test #12: rocprim.hc.block_sort .....................   Passed    1.92 sec
+      Start 13: rocprim.hc.constant_iterator
+13/90 Test #13: rocprim.hc.constant_iterator ..............   Passed    0.63 sec
+      Start 14: rocprim.hc.counting_iterator
+14/90 Test #14: rocprim.hc.counting_iterator ..............   Passed    0.60 sec
+      Start 15: rocprim.hc.device_histogram
+15/90 Test #15: rocprim.hc.device_histogram ...............   Passed    8.97 sec
+      Start 16: rocprim.hc.device_merge
+16/90 Test #16: rocprim.hc.device_merge ...................   Passed    3.16 sec
+      Start 17: rocprim.hc.device_merge_sort
+17/90 Test #17: rocprim.hc.device_merge_sort ..............   Passed    1.95 sec
+      Start 18: rocprim.hc.device_partition
+18/90 Test #18: rocprim.hc.device_partition ...............   Passed    1.04 sec
+      Start 19: rocprim.hc.device_radix_sort
+19/90 Test #19: rocprim.hc.device_radix_sort ..............   Passed   12.83 sec
+      Start 20: rocprim.hc.device_reduce_by_key
+20/90 Test #20: rocprim.hc.device_reduce_by_key ...........   Passed    9.30 sec
+      Start 21: rocprim.hc.device_reduce
+21/90 Test #21: rocprim.hc.device_reduce ..................   Passed    1.27 sec
+      Start 22: rocprim.hc.device_run_length_encode
+22/90 Test #22: rocprim.hc.device_run_length_encode .......   Passed    3.97 sec
+      Start 23: rocprim.hc.device_scan
+23/90 Test #23: rocprim.hc.device_scan ....................   Passed    8.44 sec
+      Start 24: rocprim.hc.device_segmented_radix_sort
+24/90 Test #24: rocprim.hc.device_segmented_radix_sort ....   Passed   10.89 sec
+      Start 25: rocprim.hc.device_segmented_reduce
+25/90 Test #25: rocprim.hc.device_segmented_reduce ........   Passed    2.46 sec
+      Start 26: rocprim.hc.device_segmented_scan
+26/90 Test #26: rocprim.hc.device_segmented_scan ..........   Passed    4.32 sec
+      Start 27: rocprim.hc.device_select
+27/90 Test #27: rocprim.hc.device_select ..................   Passed    1.62 sec
+      Start 28: rocprim.hc.device_transform
+28/90 Test #28: rocprim.hc.device_transform ...............   Passed    1.13 sec
+      Start 29: rocprim.hc.discard_iterator
+29/90 Test #29: rocprim.hc.discard_iterator ...............   Passed    0.62 sec
+      Start 30: rocprim.hc.intrinsics
+30/90 Test #30: rocprim.hc.intrinsics .....................   Passed    0.59 sec
+      Start 31: rocprim.hc.transform_iterator
+31/90 Test #31: rocprim.hc.transform_iterator .............   Passed    0.62 sec
+      Start 32: rocprim.hc.tuple
+32/90 Test #32: rocprim.hc.tuple ..........................   Passed    0.59 sec
+      Start 33: rocprim.hc.warp_reduce
+33/90 Test #33: rocprim.hc.warp_reduce ....................   Passed    0.70 sec
+      Start 34: rocprim.hc.warp_scan
+34/90 Test #34: rocprim.hc.warp_scan ......................   Passed    0.69 sec
+      Start 35: rocprim.hc.warp_sort
+35/90 Test #35: rocprim.hc.warp_sort ......................   Passed    0.60 sec
+      Start 36: rocprim.hc.zip_iterator
+36/90 Test #36: rocprim.hc.zip_iterator ...................   Passed    0.61 sec
+      Start 37: rocprim.hip.basic_test
+37/90 Test #37: rocprim.hip.basic_test ....................   Passed    0.63 sec
+      Start 38: rocprim.hip.arg_index_iterator
+38/90 Test #38: rocprim.hip.arg_index_iterator ............   Passed    0.89 sec
+      Start 39: rocprim.hip.block_discontinuity
+39/90 Test #39: rocprim.hip.block_discontinuity ...........   Passed    4.58 sec
+      Start 40: rocprim.hip.block_exchange
+40/90 Test #40: rocprim.hip.block_exchange ................   Passed    0.85 sec
+      Start 41: rocprim.hip.block_histogram
+41/90 Test #41: rocprim.hip.block_histogram ...............   Passed    0.67 sec
+      Start 42: rocprim.hip.block_load_store
+42/90 Test #42: rocprim.hip.block_load_store ..............   Passed    1.41 sec
+      Start 43: rocprim.hip.block_radix_sort
+43/90 Test #43: rocprim.hip.block_radix_sort ..............   Passed    3.51 sec
+      Start 44: rocprim.hip.block_reduce
+44/90 Test #44: rocprim.hip.block_reduce ..................   Passed    0.79 sec
+      Start 45: rocprim.hip.block_scan
+45/90 Test #45: rocprim.hip.block_scan ....................   Passed    1.26 sec
+      Start 46: rocprim.hip.block_sort
+46/90 Test #46: rocprim.hip.block_sort ....................   Passed    1.97 sec
+      Start 47: rocprim.hip.constant_iterator
+47/90 Test #47: rocprim.hip.constant_iterator .............   Passed    0.66 sec
+      Start 48: rocprim.hip.counting_iterator
+48/90 Test #48: rocprim.hip.counting_iterator .............   Passed    0.63 sec
+      Start 49: rocprim.hip.device_histogram
+49/90 Test #49: rocprim.hip.device_histogram ..............   Passed    8.22 sec
+      Start 50: rocprim.hip.device_merge
+50/90 Test #50: rocprim.hip.device_merge ..................   Passed    3.13 sec
+      Start 51: rocprim.hip.device_merge_sort
+51/90 Test #51: rocprim.hip.device_merge_sort .............   Passed    4.83 sec
+      Start 52: rocprim.hip.device_partition
+52/90 Test #52: rocprim.hip.device_partition ..............   Passed   10.74 sec
+      Start 53: rocprim.hip.device_radix_sort
+53/90 Test #53: rocprim.hip.device_radix_sort .............   Passed   12.30 sec
+      Start 54: rocprim.hip.device_reduce_by_key
+54/90 Test #54: rocprim.hip.device_reduce_by_key ..........   Passed    8.04 sec
+      Start 55: rocprim.hip.device_reduce
+55/90 Test #55: rocprim.hip.device_reduce .................   Passed    1.13 sec
+      Start 56: rocprim.hip.device_run_length_encode
+56/90 Test #56: rocprim.hip.device_run_length_encode ......   Passed    3.46 sec
+      Start 57: rocprim.hip.device_scan
+57/90 Test #57: rocprim.hip.device_scan ...................   Passed   10.56 sec
+      Start 58: rocprim.hip.device_segmented_radix_sort
+58/90 Test #58: rocprim.hip.device_segmented_radix_sort ...   Passed    9.80 sec
+      Start 59: rocprim.hip.device_segmented_reduce
+59/90 Test #59: rocprim.hip.device_segmented_reduce .......   Passed    2.44 sec
+      Start 60: rocprim.hip.device_segmented_scan
+60/90 Test #60: rocprim.hip.device_segmented_scan .........   Passed    4.18 sec
+      Start 61: rocprim.hip.device_select
+61/90 Test #61: rocprim.hip.device_select .................   Passed    1.56 sec
+      Start 62: rocprim.hip.device_transform
+62/90 Test #62: rocprim.hip.device_transform ..............   Passed    1.02 sec
+      Start 63: rocprim.hip.discard_iterator
+63/90 Test #63: rocprim.hip.discard_iterator ..............   Passed    0.63 sec
+      Start 64: rocprim.hip.texture_cache_iterator
+64/90 Test #64: rocprim.hip.texture_cache_iterator ........   Passed    0.64 sec
+      Start 65: rocprim.hip.transform_iterator
+65/90 Test #65: rocprim.hip.transform_iterator ............   Passed    0.63 sec
+      Start 66: rocprim.hip.intrinsics
+66/90 Test #66: rocprim.hip.intrinsics ....................   Passed    0.67 sec
+      Start 67: rocprim.hip.warp_reduce
+67/90 Test #67: rocprim.hip.warp_reduce ...................***Failed    0.66 sec
+Running main() from /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 154 tests from 22 test cases.
+[----------] Global test environment set-up.
+[----------] 7 tests from RocprimWarpReduceTests/0, where TypeParam = params<int, 2u>
+[ RUN      ] RocprimWarpReduceTests/0.ReduceSum
+[       OK ] RocprimWarpReduceTests/0.ReduceSum (30 ms)
+[ RUN      ] RocprimWarpReduceTests/0.AllReduceSum
+[       OK ] RocprimWarpReduceTests/0.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/0.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/0.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/0.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/0.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/0.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/0.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/0.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/0.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/0.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/0.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/0 (30 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/1, where TypeParam = params<int, 4u>
+[ RUN      ] RocprimWarpReduceTests/1.ReduceSum
+[       OK ] RocprimWarpReduceTests/1.ReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/1.AllReduceSum
+[       OK ] RocprimWarpReduceTests/1.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/1.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/1.ReduceSumValid (1 ms)
+[ RUN      ] RocprimWarpReduceTests/1.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/1.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/1.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/1.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/1.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/1.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/1.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/1.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/1 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/2, where TypeParam = params<int, 8u>
+[ RUN      ] RocprimWarpReduceTests/2.ReduceSum
+[       OK ] RocprimWarpReduceTests/2.ReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/2.AllReduceSum
+[       OK ] RocprimWarpReduceTests/2.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/2.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/2.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/2.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/2.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/2.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/2.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/2.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/2.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/2.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/2.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/2 (0 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/3, where TypeParam = params<int, 16u>
+[ RUN      ] RocprimWarpReduceTests/3.ReduceSum
+[       OK ] RocprimWarpReduceTests/3.ReduceSum (1 ms)
+[ RUN      ] RocprimWarpReduceTests/3.AllReduceSum
+[       OK ] RocprimWarpReduceTests/3.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/3.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/3.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/3.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/3.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/3.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/3.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/3.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/3.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/3.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/3.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/3 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/4, where TypeParam = params<int, 32u>
+[ RUN      ] RocprimWarpReduceTests/4.ReduceSum
+[       OK ] RocprimWarpReduceTests/4.ReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/4.AllReduceSum
+[       OK ] RocprimWarpReduceTests/4.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/4.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/4.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/4.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/4.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/4.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/4.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/4.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/4.HeadSegmentedReduceSum (1 ms)
+[ RUN      ] RocprimWarpReduceTests/4.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/4.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/4 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/5, where TypeParam = params<int, 64u>
+[ RUN      ] RocprimWarpReduceTests/5.ReduceSum
+[       OK ] RocprimWarpReduceTests/5.ReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/5.AllReduceSum
+[       OK ] RocprimWarpReduceTests/5.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/5.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/5.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/5.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/5.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/5.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/5.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/5.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/5.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/5.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/5.TailSegmentedReduceSum (1 ms)
+[----------] 7 tests from RocprimWarpReduceTests/5 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/6, where TypeParam = params<float, 2u>
+[ RUN      ] RocprimWarpReduceTests/6.ReduceSum
+[       OK ] RocprimWarpReduceTests/6.ReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/6.AllReduceSum
+[       OK ] RocprimWarpReduceTests/6.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/6.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/6.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/6.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/6.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/6.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/6.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/6.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/6.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/6.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/6.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/6 (0 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/7, where TypeParam = params<float, 4u>
+[ RUN      ] RocprimWarpReduceTests/7.ReduceSum
+[       OK ] RocprimWarpReduceTests/7.ReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/7.AllReduceSum
+[       OK ] RocprimWarpReduceTests/7.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/7.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/7.ReduceSumValid (1 ms)
+[ RUN      ] RocprimWarpReduceTests/7.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/7.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/7.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/7.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/7.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/7.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/7.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/7.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/7 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/8, where TypeParam = params<float, 8u>
+[ RUN      ] RocprimWarpReduceTests/8.ReduceSum
+[       OK ] RocprimWarpReduceTests/8.ReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/8.AllReduceSum
+[       OK ] RocprimWarpReduceTests/8.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/8.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/8.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/8.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/8.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/8.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/8.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/8.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/8.HeadSegmentedReduceSum (1 ms)
+[ RUN      ] RocprimWarpReduceTests/8.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/8.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/8 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/9, where TypeParam = params<float, 16u>
+[ RUN      ] RocprimWarpReduceTests/9.ReduceSum
+[       OK ] RocprimWarpReduceTests/9.ReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/9.AllReduceSum
+[       OK ] RocprimWarpReduceTests/9.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/9.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/9.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/9.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/9.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/9.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/9.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/9.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/9.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/9.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/9.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/9 (0 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/10, where TypeParam = params<float, 32u>
+[ RUN      ] RocprimWarpReduceTests/10.ReduceSum
+[       OK ] RocprimWarpReduceTests/10.ReduceSum (1 ms)
+[ RUN      ] RocprimWarpReduceTests/10.AllReduceSum
+[       OK ] RocprimWarpReduceTests/10.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/10.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/10.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/10.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/10.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/10.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/10.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/10.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/10.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/10.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/10.TailSegmentedReduceSum (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/10 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/11, where TypeParam = params<float, 64u>
+[ RUN      ] RocprimWarpReduceTests/11.ReduceSum
+[       OK ] RocprimWarpReduceTests/11.ReduceSum (1 ms)
+[ RUN      ] RocprimWarpReduceTests/11.AllReduceSum
+[       OK ] RocprimWarpReduceTests/11.AllReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/11.ReduceSumValid
+[       OK ] RocprimWarpReduceTests/11.ReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/11.AllReduceSumValid
+[       OK ] RocprimWarpReduceTests/11.AllReduceSumValid (0 ms)
+[ RUN      ] RocprimWarpReduceTests/11.ReduceSumCustomStruct
+[       OK ] RocprimWarpReduceTests/11.ReduceSumCustomStruct (0 ms)
+[ RUN      ] RocprimWarpReduceTests/11.HeadSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/11.HeadSegmentedReduceSum (0 ms)
+[ RUN      ] RocprimWarpReduceTests/11.TailSegmentedReduceSum
+[       OK ] RocprimWarpReduceTests/11.TailSegmentedReduceSum (1 ms)
+[----------] 7 tests from RocprimWarpReduceTests/11 (2 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/12, where TypeParam = params<int, 3u>
+[ RUN      ] RocprimWarpReduceTests/12.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:179: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 223
+[  FAILED  ] RocprimWarpReduceTests/12.ReduceSum, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/12.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:287: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 31
+[  FAILED  ] RocprimWarpReduceTests/12.AllReduceSum, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/12.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:395: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 1
+[  FAILED  ] RocprimWarpReduceTests/12.ReduceSumValid, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/12.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:504: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -118
+[  FAILED  ] RocprimWarpReduceTests/12.AllReduceSumValid, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/12.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 145, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 145, and
+diffx evaluates to 0.
+[  FAILED  ] RocprimWarpReduceTests/12.ReduceSumCustomStruct, where TypeParam = params<int, 3u> (1 ms)
+[ RUN      ] RocprimWarpReduceTests/12.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 1, which exceeds diff, where
+output[i] evaluates to 6,
+expected[i] evaluates to 7, and
+diff evaluates to 0.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/12.HeadSegmentedReduceSum, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/12.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 5, which exceeds diff, where
+output[index] evaluates to 6,
+expected[index] evaluates to 11, and
+diff evaluates to 0.
+ with index: 126
+[  FAILED  ] RocprimWarpReduceTests/12.TailSegmentedReduceSum, where TypeParam = params<int, 3u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/12 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/13, where TypeParam = params<int, 7u>
+[ RUN      ] RocprimWarpReduceTests/13.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:179: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -68
+[  FAILED  ] RocprimWarpReduceTests/13.ReduceSum, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/13.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:287: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 74
+[  FAILED  ] RocprimWarpReduceTests/13.AllReduceSum, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/13.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:395: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -25
+[  FAILED  ] RocprimWarpReduceTests/13.ReduceSumValid, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/13.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:504: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -11
+[  FAILED  ] RocprimWarpReduceTests/13.AllReduceSumValid, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/13.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 350, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 350, and
+diffx evaluates to 0.
+[  FAILED  ] RocprimWarpReduceTests/13.ReduceSumCustomStruct, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/13.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 3, which exceeds diff, where
+output[i] evaluates to 1,
+expected[i] evaluates to 4, and
+diff evaluates to 0.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/13.HeadSegmentedReduceSum, where TypeParam = params<int, 7u> (1 ms)
+[ RUN      ] RocprimWarpReduceTests/13.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 39, which exceeds diff, where
+output[index] evaluates to 4,
+expected[index] evaluates to 43, and
+diff evaluates to 0.
+ with index: 0
+[  FAILED  ] RocprimWarpReduceTests/13.TailSegmentedReduceSum, where TypeParam = params<int, 7u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/13 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/14, where TypeParam = params<int, 15u>
+[ RUN      ] RocprimWarpReduceTests/14.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:179: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -203
+[  FAILED  ] RocprimWarpReduceTests/14.ReduceSum, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/14.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:287: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -525
+[  FAILED  ] RocprimWarpReduceTests/14.AllReduceSum, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/14.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:395: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -300
+[  FAILED  ] RocprimWarpReduceTests/14.ReduceSumValid, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/14.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:504: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 259
+[  FAILED  ] RocprimWarpReduceTests/14.AllReduceSumValid, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/14.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 618, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 618, and
+diffx evaluates to 0.
+[  FAILED  ] RocprimWarpReduceTests/14.ReduceSumCustomStruct, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/14.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 21, which exceeds diff, where
+output[i] evaluates to 1,
+expected[i] evaluates to 22, and
+diff evaluates to 0.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/14.HeadSegmentedReduceSum, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/14.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 1, which exceeds diff, where
+output[index] evaluates to 8,
+expected[index] evaluates to 9, and
+diff evaluates to 0.
+ with index: 120
+[  FAILED  ] RocprimWarpReduceTests/14.TailSegmentedReduceSum, where TypeParam = params<int, 15u> (1 ms)
+[----------] 7 tests from RocprimWarpReduceTests/14 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/15, where TypeParam = params<int, 37u>
+[ RUN      ] RocprimWarpReduceTests/15.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:179: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -251
+[  FAILED  ] RocprimWarpReduceTests/15.ReduceSum, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/15.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:287: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -433
+[  FAILED  ] RocprimWarpReduceTests/15.AllReduceSum, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/15.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:395: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 457
+[  FAILED  ] RocprimWarpReduceTests/15.ReduceSumValid, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/15.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:504: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -76
+[  FAILED  ] RocprimWarpReduceTests/15.AllReduceSumValid, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/15.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 2088, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 2088, and
+diffx evaluates to 0.
+[  FAILED  ] RocprimWarpReduceTests/15.ReduceSumCustomStruct, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/15.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 8, which exceeds diff, where
+output[i] evaluates to 1,
+expected[i] evaluates to 9, and
+diff evaluates to 0.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/15.HeadSegmentedReduceSum, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/15.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 27, which exceeds diff, where
+output[index] evaluates to 7,
+expected[index] evaluates to 34, and
+diff evaluates to 0.
+ with index: 37
+[  FAILED  ] RocprimWarpReduceTests/15.TailSegmentedReduceSum, where TypeParam = params<int, 37u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/15 (0 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/16, where TypeParam = params<int, 61u>
+[ RUN      ] RocprimWarpReduceTests/16.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:179: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -310
+[  FAILED  ] RocprimWarpReduceTests/16.ReduceSum, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/16.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:287: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 182
+[  FAILED  ] RocprimWarpReduceTests/16.AllReduceSum, where TypeParam = params<int, 61u> (1 ms)
+[ RUN      ] RocprimWarpReduceTests/16.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:395: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -455
+[  FAILED  ] RocprimWarpReduceTests/16.ReduceSumValid, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/16.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:504: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 188
+[  FAILED  ] RocprimWarpReduceTests/16.AllReduceSumValid, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/16.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 2963, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 2963, and
+diffx evaluates to 0.
+[  FAILED  ] RocprimWarpReduceTests/16.ReduceSumCustomStruct, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/16.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 11, which exceeds diff, where
+output[i] evaluates to 10,
+expected[i] evaluates to 21, and
+diff evaluates to 0.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/16.HeadSegmentedReduceSum, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/16.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 53, which exceeds diff, where
+output[index] evaluates to 10,
+expected[index] evaluates to 63, and
+diff evaluates to 0.
+ with index: 61
+[  FAILED  ] RocprimWarpReduceTests/16.TailSegmentedReduceSum, where TypeParam = params<int, 61u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/16 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/17, where TypeParam = params<float, 3u>
+[ RUN      ] RocprimWarpReduceTests/17.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:184: Failure
+The difference between output[i] and expected[i] is 38.847175598144531, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -38.847175598144531, and
+tolerance evaluates to 3.8847177028656006.
+[  FAILED  ] RocprimWarpReduceTests/17.ReduceSum, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/17.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:292: Failure
+The difference between output[i] and expected[i] is 89.712287902832031, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 89.712287902832031, and
+tolerance evaluates to 8.9712285995483398.
+[  FAILED  ] RocprimWarpReduceTests/17.AllReduceSum, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/17.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:400: Failure
+The difference between output[i] and expected[i] is 20.113273620605469, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -20.113273620605469, and
+tolerance evaluates to 2.0113275051116943.
+[  FAILED  ] RocprimWarpReduceTests/17.ReduceSumValid, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/17.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:509: Failure
+The difference between output[i] and expected[i] is 6.3021392822265625, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -6.3021392822265625, and
+tolerance evaluates to 0.63021391630172729.
+[  FAILED  ] RocprimWarpReduceTests/17.AllReduceSumValid, where TypeParam = params<float, 3u> (1 ms)
+[ RUN      ] RocprimWarpReduceTests/17.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 192.37718200683594, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 192.37718200683594, and
+diffx evaluates to 19.23771858215332.
+[  FAILED  ] RocprimWarpReduceTests/17.ReduceSumCustomStruct, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/17.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 8.7560949325561523, which exceeds diff, where
+output[i] evaluates to 5.8271570205688477,
+expected[i] evaluates to 14.583251953125, and
+diff evaluates to 1.4583252668380737.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/17.HeadSegmentedReduceSum, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/17.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 5.5176253318786621, which exceeds diff, where
+output[index] evaluates to 5.0534014701843262,
+expected[index] evaluates to 10.571026802062988, and
+diff evaluates to 1.3811556100845337.
+ with index: 127
+[  FAILED  ] RocprimWarpReduceTests/17.TailSegmentedReduceSum, where TypeParam = params<float, 3u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/17 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/18, where TypeParam = params<float, 7u>
+[ RUN      ] RocprimWarpReduceTests/18.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:184: Failure
+The difference between output[i] and expected[i] is 124.71512603759766, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 124.71512603759766, and
+tolerance evaluates to 12.471512794494629.
+[  FAILED  ] RocprimWarpReduceTests/18.ReduceSum, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/18.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:292: Failure
+The difference between output[i] and expected[i] is 47.695365905761719, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 47.695365905761719, and
+tolerance evaluates to 4.7695364952087402.
+[  FAILED  ] RocprimWarpReduceTests/18.AllReduceSum, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/18.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:400: Failure
+The difference between output[i] and expected[i] is 200.264404296875, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 200.264404296875, and
+tolerance evaluates to 20.02644157409668.
+[  FAILED  ] RocprimWarpReduceTests/18.ReduceSumValid, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/18.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:509: Failure
+The difference between output[i] and expected[i] is 7.318878173828125, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 7.318878173828125, and
+tolerance evaluates to 0.7318878173828125.
+[  FAILED  ] RocprimWarpReduceTests/18.AllReduceSumValid, where TypeParam = params<float, 7u> (1 ms)
+[ RUN      ] RocprimWarpReduceTests/18.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 255.31475830078125, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 255.31475830078125, and
+diffx evaluates to 25.531476974487305.
+[  FAILED  ] RocprimWarpReduceTests/18.ReduceSumCustomStruct, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/18.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 9.9408378601074219, which exceeds diff, where
+output[i] evaluates to 8.3522186279296875,
+expected[i] evaluates to 18.293056488037109, and
+diff evaluates to 1.8293056488037109.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/18.HeadSegmentedReduceSum, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/18.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 28.942522048950195, which exceeds diff, where
+output[index] evaluates to 8.1757450103759766,
+expected[index] evaluates to 37.118267059326172, and
+diff evaluates to 0.0099999997764825821.
+ with index: 126
+[  FAILED  ] RocprimWarpReduceTests/18.TailSegmentedReduceSum, where TypeParam = params<float, 7u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/18 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/19, where TypeParam = params<float, 15u>
+[ RUN      ] RocprimWarpReduceTests/19.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:184: Failure
+The difference between output[i] and expected[i] is 291.1260986328125, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -291.1260986328125, and
+tolerance evaluates to 29.11260986328125.
+[  FAILED  ] RocprimWarpReduceTests/19.ReduceSum, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/19.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:292: Failure
+The difference between output[i] and expected[i] is 251.69369506835938, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 251.69369506835938, and
+tolerance evaluates to 25.169370651245117.
+[  FAILED  ] RocprimWarpReduceTests/19.AllReduceSum, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/19.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:400: Failure
+The difference between output[i] and expected[i] is 47.804939270019531, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -47.804939270019531, and
+tolerance evaluates to 4.780494213104248.
+[  FAILED  ] RocprimWarpReduceTests/19.ReduceSumValid, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/19.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:509: Failure
+The difference between output[i] and expected[i] is 7.0306396484375, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 7.0306396484375, and
+tolerance evaluates to 0.70306396484375.
+[  FAILED  ] RocprimWarpReduceTests/19.AllReduceSumValid, where TypeParam = params<float, 15u> (1 ms)
+[ RUN      ] RocprimWarpReduceTests/19.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 662.045166015625, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 662.045166015625, and
+diffx evaluates to 66.204521179199219.
+[  FAILED  ] RocprimWarpReduceTests/19.ReduceSumCustomStruct, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/19.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 54.177527904510498, which exceeds diff, where
+output[i] evaluates to 7.3406033515930176,
+expected[i] evaluates to 61.518131256103516, and
+diff evaluates to 6.1518130302429199.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/19.HeadSegmentedReduceSum, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/19.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 33.928468227386475, which exceeds diff, where
+output[index] evaluates to 2.8453469276428223,
+expected[index] evaluates to 36.773815155029297, and
+diff evaluates to 3.6773815155029297.
+ with index: 0
+[  FAILED  ] RocprimWarpReduceTests/19.TailSegmentedReduceSum, where TypeParam = params<float, 15u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/19 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/20, where TypeParam = params<float, 37u>
+[ RUN      ] RocprimWarpReduceTests/20.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:184: Failure
+The difference between output[i] and expected[i] is 14.807220458984375, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -14.807220458984375, and
+tolerance evaluates to 1.4807220697402954.
+[  FAILED  ] RocprimWarpReduceTests/20.ReduceSum, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/20.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:292: Failure
+The difference between output[i] and expected[i] is 100.20298767089844, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 100.20298767089844, and
+tolerance evaluates to 10.020298957824707.
+[  FAILED  ] RocprimWarpReduceTests/20.AllReduceSum, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/20.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:400: Failure
+The difference between output[i] and expected[i] is 447.45721435546875, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -447.45721435546875, and
+tolerance evaluates to 44.745723724365234.
+[  FAILED  ] RocprimWarpReduceTests/20.ReduceSumValid, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/20.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:509: Failure
+The difference between output[i] and expected[i] is 312.50411987304688, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -312.50411987304688, and
+tolerance evaluates to 31.250411987304688.
+[  FAILED  ] RocprimWarpReduceTests/20.AllReduceSumValid, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/20.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 2091.87255859375, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 2091.87255859375, and
+diffx evaluates to 209.187255859375.
+[  FAILED  ] RocprimWarpReduceTests/20.ReduceSumCustomStruct, where TypeParam = params<float, 37u> (1 ms)
+[ RUN      ] RocprimWarpReduceTests/20.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 14.840441703796387, which exceeds diff, where
+output[i] evaluates to 4.1397790908813477,
+expected[i] evaluates to 18.980220794677734, and
+diff evaluates to 1.8980220556259155.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/20.HeadSegmentedReduceSum, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/20.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 2.9800231456756592, which exceeds diff, where
+output[index] evaluates to 3.5907328128814697,
+expected[index] evaluates to 6.5707559585571289, and
+diff evaluates to 1.8484146595001221.
+ with index: 74
+[  FAILED  ] RocprimWarpReduceTests/20.TailSegmentedReduceSum, where TypeParam = params<float, 37u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/20 (1 ms total)
+
+[----------] 7 tests from RocprimWarpReduceTests/21, where TypeParam = params<float, 61u>
+[ RUN      ] RocprimWarpReduceTests/21.ReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:184: Failure
+The difference between output[i] and expected[i] is 421.78857421875, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 421.78857421875, and
+tolerance evaluates to 42.178859710693359.
+[  FAILED  ] RocprimWarpReduceTests/21.ReduceSum, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/21.AllReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:292: Failure
+The difference between output[i] and expected[i] is 344.65982055664062, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 344.65982055664062, and
+tolerance evaluates to 34.465984344482422.
+[  FAILED  ] RocprimWarpReduceTests/21.AllReduceSum, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/21.ReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:400: Failure
+The difference between output[i] and expected[i] is 1.0632247924804688, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -1.0632247924804688, and
+tolerance evaluates to 0.10632248222827911.
+[  FAILED  ] RocprimWarpReduceTests/21.ReduceSumValid, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/21.AllReduceSumValid
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:509: Failure
+The difference between output[i] and expected[i] is 47.254707336425781, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to 47.254707336425781, and
+tolerance evaluates to 4.725471019744873.
+[  FAILED  ] RocprimWarpReduceTests/21.AllReduceSumValid, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/21.ReduceSumCustomStruct
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:598: Failure
+The difference between output[i].x and expected[i].x is 2953.24658203125, which exceeds diffx, where
+output[i].x evaluates to 0,
+expected[i].x evaluates to 2953.24658203125, and
+diffx evaluates to 295.32467651367188.
+[  FAILED  ] RocprimWarpReduceTests/21.ReduceSumCustomStruct, where TypeParam = params<float, 61u> (1 ms)
+[ RUN      ] RocprimWarpReduceTests/21.HeadSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:727: Failure
+The difference between output[i] and expected[i] is 24.986259937286377, which exceeds diff, where
+output[i] evaluates to 5.2398200035095215,
+expected[i] evaluates to 30.226079940795898, and
+diff evaluates to 3.0226080417633057.
+ with index: 1
+[  FAILED  ] RocprimWarpReduceTests/21.HeadSegmentedReduceSum, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpReduceTests/21.TailSegmentedReduceSum
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_reduce.cpp:864: Failure
+The difference between output[index] and expected[index] is 6.1416230201721191, which exceeds diff, where
+output[index] evaluates to 7.1862998008728027,
+expected[index] evaluates to 13.327922821044922, and
+diff evaluates to 1.3327922821044922.
+ with index: 0
+[  FAILED  ] RocprimWarpReduceTests/21.TailSegmentedReduceSum, where TypeParam = params<float, 61u> (0 ms)
+[----------] 7 tests from RocprimWarpReduceTests/21 (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 154 tests from 22 test cases ran. (48 ms total)
+[  PASSED  ] 84 tests.
+[  FAILED  ] 70 tests, listed below:
+[  FAILED  ] RocprimWarpReduceTests/12.ReduceSum, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpReduceTests/12.AllReduceSum, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpReduceTests/12.ReduceSumValid, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpReduceTests/12.AllReduceSumValid, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpReduceTests/12.ReduceSumCustomStruct, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpReduceTests/12.HeadSegmentedReduceSum, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpReduceTests/12.TailSegmentedReduceSum, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpReduceTests/13.ReduceSum, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpReduceTests/13.AllReduceSum, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpReduceTests/13.ReduceSumValid, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpReduceTests/13.AllReduceSumValid, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpReduceTests/13.ReduceSumCustomStruct, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpReduceTests/13.HeadSegmentedReduceSum, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpReduceTests/13.TailSegmentedReduceSum, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpReduceTests/14.ReduceSum, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpReduceTests/14.AllReduceSum, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpReduceTests/14.ReduceSumValid, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpReduceTests/14.AllReduceSumValid, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpReduceTests/14.ReduceSumCustomStruct, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpReduceTests/14.HeadSegmentedReduceSum, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpReduceTests/14.TailSegmentedReduceSum, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpReduceTests/15.ReduceSum, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpReduceTests/15.AllReduceSum, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpReduceTests/15.ReduceSumValid, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpReduceTests/15.AllReduceSumValid, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpReduceTests/15.ReduceSumCustomStruct, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpReduceTests/15.HeadSegmentedReduceSum, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpReduceTests/15.TailSegmentedReduceSum, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpReduceTests/16.ReduceSum, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpReduceTests/16.AllReduceSum, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpReduceTests/16.ReduceSumValid, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpReduceTests/16.AllReduceSumValid, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpReduceTests/16.ReduceSumCustomStruct, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpReduceTests/16.HeadSegmentedReduceSum, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpReduceTests/16.TailSegmentedReduceSum, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpReduceTests/17.ReduceSum, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpReduceTests/17.AllReduceSum, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpReduceTests/17.ReduceSumValid, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpReduceTests/17.AllReduceSumValid, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpReduceTests/17.ReduceSumCustomStruct, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpReduceTests/17.HeadSegmentedReduceSum, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpReduceTests/17.TailSegmentedReduceSum, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpReduceTests/18.ReduceSum, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpReduceTests/18.AllReduceSum, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpReduceTests/18.ReduceSumValid, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpReduceTests/18.AllReduceSumValid, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpReduceTests/18.ReduceSumCustomStruct, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpReduceTests/18.HeadSegmentedReduceSum, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpReduceTests/18.TailSegmentedReduceSum, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpReduceTests/19.ReduceSum, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpReduceTests/19.AllReduceSum, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpReduceTests/19.ReduceSumValid, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpReduceTests/19.AllReduceSumValid, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpReduceTests/19.ReduceSumCustomStruct, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpReduceTests/19.HeadSegmentedReduceSum, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpReduceTests/19.TailSegmentedReduceSum, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpReduceTests/20.ReduceSum, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpReduceTests/20.AllReduceSum, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpReduceTests/20.ReduceSumValid, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpReduceTests/20.AllReduceSumValid, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpReduceTests/20.ReduceSumCustomStruct, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpReduceTests/20.HeadSegmentedReduceSum, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpReduceTests/20.TailSegmentedReduceSum, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpReduceTests/21.ReduceSum, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpReduceTests/21.AllReduceSum, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpReduceTests/21.ReduceSumValid, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpReduceTests/21.AllReduceSumValid, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpReduceTests/21.ReduceSumCustomStruct, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpReduceTests/21.HeadSegmentedReduceSum, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpReduceTests/21.TailSegmentedReduceSum, where TypeParam = params<float, 61u>
+
+70 FAILED TESTS
+
+      Start 68: rocprim.hip.warp_scan
+68/90 Test #68: rocprim.hip.warp_scan .....................***Failed    0.66 sec
+Running main() from /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 154 tests from 22 test cases.
+[----------] Global test environment set-up.
+[----------] 7 tests from RocprimWarpScanTests/0, where TypeParam = params<int, 2u>
+[ RUN      ] RocprimWarpScanTests/0.InclusiveScan
+[       OK ] RocprimWarpScanTests/0.InclusiveScan (29 ms)
+[ RUN      ] RocprimWarpScanTests/0.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/0.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/0.ExclusiveScan
+[       OK ] RocprimWarpScanTests/0.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/0.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/0.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/0.Scan
+[       OK ] RocprimWarpScanTests/0.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/0.ScanReduce
+[       OK ] RocprimWarpScanTests/0.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/0.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/0.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/0 (29 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/1, where TypeParam = params<int, 4u>
+[ RUN      ] RocprimWarpScanTests/1.InclusiveScan
+[       OK ] RocprimWarpScanTests/1.InclusiveScan (1 ms)
+[ RUN      ] RocprimWarpScanTests/1.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/1.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/1.ExclusiveScan
+[       OK ] RocprimWarpScanTests/1.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/1.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/1.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/1.Scan
+[       OK ] RocprimWarpScanTests/1.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/1.ScanReduce
+[       OK ] RocprimWarpScanTests/1.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/1.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/1.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/1 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/2, where TypeParam = params<int, 8u>
+[ RUN      ] RocprimWarpScanTests/2.InclusiveScan
+[       OK ] RocprimWarpScanTests/2.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/2.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/2.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/2.ExclusiveScan
+[       OK ] RocprimWarpScanTests/2.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/2.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/2.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/2.Scan
+[       OK ] RocprimWarpScanTests/2.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/2.ScanReduce
+[       OK ] RocprimWarpScanTests/2.ScanReduce (1 ms)
+[ RUN      ] RocprimWarpScanTests/2.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/2.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/2 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/3, where TypeParam = params<int, 16u>
+[ RUN      ] RocprimWarpScanTests/3.InclusiveScan
+[       OK ] RocprimWarpScanTests/3.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/3.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/3.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/3.ExclusiveScan
+[       OK ] RocprimWarpScanTests/3.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/3.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/3.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/3.Scan
+[       OK ] RocprimWarpScanTests/3.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/3.ScanReduce
+[       OK ] RocprimWarpScanTests/3.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/3.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/3.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/3 (0 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/4, where TypeParam = params<int, 32u>
+[ RUN      ] RocprimWarpScanTests/4.InclusiveScan
+[       OK ] RocprimWarpScanTests/4.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/4.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/4.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/4.ExclusiveScan
+[       OK ] RocprimWarpScanTests/4.ExclusiveScan (1 ms)
+[ RUN      ] RocprimWarpScanTests/4.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/4.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/4.Scan
+[       OK ] RocprimWarpScanTests/4.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/4.ScanReduce
+[       OK ] RocprimWarpScanTests/4.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/4.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/4.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/4 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/5, where TypeParam = params<int, 64u>
+[ RUN      ] RocprimWarpScanTests/5.InclusiveScan
+[       OK ] RocprimWarpScanTests/5.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/5.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/5.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/5.ExclusiveScan
+[       OK ] RocprimWarpScanTests/5.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/5.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/5.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/5.Scan
+[       OK ] RocprimWarpScanTests/5.Scan (1 ms)
+[ RUN      ] RocprimWarpScanTests/5.ScanReduce
+[       OK ] RocprimWarpScanTests/5.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/5.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/5.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/5 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/6, where TypeParam = params<float, 2u>
+[ RUN      ] RocprimWarpScanTests/6.InclusiveScan
+[       OK ] RocprimWarpScanTests/6.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/6.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/6.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/6.ExclusiveScan
+[       OK ] RocprimWarpScanTests/6.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/6.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/6.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/6.Scan
+[       OK ] RocprimWarpScanTests/6.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/6.ScanReduce
+[       OK ] RocprimWarpScanTests/6.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/6.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/6.InclusiveScanCustomType (1 ms)
+[----------] 7 tests from RocprimWarpScanTests/6 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/7, where TypeParam = params<float, 4u>
+[ RUN      ] RocprimWarpScanTests/7.InclusiveScan
+[       OK ] RocprimWarpScanTests/7.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/7.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/7.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/7.ExclusiveScan
+[       OK ] RocprimWarpScanTests/7.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/7.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/7.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/7.Scan
+[       OK ] RocprimWarpScanTests/7.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/7.ScanReduce
+[       OK ] RocprimWarpScanTests/7.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/7.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/7.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/7 (0 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/8, where TypeParam = params<float, 8u>
+[ RUN      ] RocprimWarpScanTests/8.InclusiveScan
+[       OK ] RocprimWarpScanTests/8.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/8.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/8.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/8.ExclusiveScan
+[       OK ] RocprimWarpScanTests/8.ExclusiveScan (1 ms)
+[ RUN      ] RocprimWarpScanTests/8.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/8.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/8.Scan
+[       OK ] RocprimWarpScanTests/8.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/8.ScanReduce
+[       OK ] RocprimWarpScanTests/8.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/8.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/8.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/8 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/9, where TypeParam = params<float, 16u>
+[ RUN      ] RocprimWarpScanTests/9.InclusiveScan
+[       OK ] RocprimWarpScanTests/9.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/9.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/9.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/9.ExclusiveScan
+[       OK ] RocprimWarpScanTests/9.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/9.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/9.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/9.Scan
+[       OK ] RocprimWarpScanTests/9.Scan (1 ms)
+[ RUN      ] RocprimWarpScanTests/9.ScanReduce
+[       OK ] RocprimWarpScanTests/9.ScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/9.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/9.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/9 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/10, where TypeParam = params<float, 32u>
+[ RUN      ] RocprimWarpScanTests/10.InclusiveScan
+[       OK ] RocprimWarpScanTests/10.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/10.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/10.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/10.ExclusiveScan
+[       OK ] RocprimWarpScanTests/10.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/10.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/10.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/10.Scan
+[       OK ] RocprimWarpScanTests/10.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/10.ScanReduce
+[       OK ] RocprimWarpScanTests/10.ScanReduce (1 ms)
+[ RUN      ] RocprimWarpScanTests/10.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/10.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/10 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/11, where TypeParam = params<float, 64u>
+[ RUN      ] RocprimWarpScanTests/11.InclusiveScan
+[       OK ] RocprimWarpScanTests/11.InclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/11.InclusiveScanReduce
+[       OK ] RocprimWarpScanTests/11.InclusiveScanReduce (0 ms)
+[ RUN      ] RocprimWarpScanTests/11.ExclusiveScan
+[       OK ] RocprimWarpScanTests/11.ExclusiveScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/11.ExclusiveReduceScan
+[       OK ] RocprimWarpScanTests/11.ExclusiveReduceScan (0 ms)
+[ RUN      ] RocprimWarpScanTests/11.Scan
+[       OK ] RocprimWarpScanTests/11.Scan (0 ms)
+[ RUN      ] RocprimWarpScanTests/11.ScanReduce
+[       OK ] RocprimWarpScanTests/11.ScanReduce (1 ms)
+[ RUN      ] RocprimWarpScanTests/11.InclusiveScanCustomType
+[       OK ] RocprimWarpScanTests/11.InclusiveScanCustomType (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/11 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/12, where TypeParam = params<int, 3u>
+[ RUN      ] RocprimWarpScanTests/12.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:187: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 55
+  expected[i]
+    Which is: 91
+[  FAILED  ] RocprimWarpScanTests/12.InclusiveScan, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/12.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:321: Failure
+Expected equality of these values:
+  output[i]
+    Which is: -62
+  expected[i]
+    Which is: -112
+[  FAILED  ] RocprimWarpScanTests/12.InclusiveScanReduce, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/12.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:443: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 97
+  expected[i]
+    Which is: 34
+[  FAILED  ] RocprimWarpScanTests/12.ExclusiveScan, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/12.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:586: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 33
+  expected[i]
+    Which is: 69
+[  FAILED  ] RocprimWarpScanTests/12.ExclusiveReduceScan, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/12.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:740: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 11
+  expected_inclusive[i]
+    Which is: -57
+[  FAILED  ] RocprimWarpScanTests/12.Scan, where TypeParam = params<int, 3u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/12.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:911: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 93
+  expected_inclusive[i]
+    Which is: 149
+[  FAILED  ] RocprimWarpScanTests/12.ScanReduce, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/12.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1026: Failure
+Expected equality of these values:
+  output[i]
+    Which is: [6; 96]
+  expected[i]
+    Which is: [41; 115]
+[  FAILED  ] RocprimWarpScanTests/12.InclusiveScanCustomType, where TypeParam = params<int, 3u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/12 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/13, where TypeParam = params<int, 7u>
+[ RUN      ] RocprimWarpScanTests/13.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:187: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 44
+  expected[i]
+    Which is: 20
+[  FAILED  ] RocprimWarpScanTests/13.InclusiveScan, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/13.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:321: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 69
+  expected[i]
+    Which is: 21
+[  FAILED  ] RocprimWarpScanTests/13.InclusiveScanReduce, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/13.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:443: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 93
+  expected[i]
+    Which is: 44
+[  FAILED  ] RocprimWarpScanTests/13.ExclusiveScan, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/13.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:586: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 98
+  expected[i]
+    Which is: 43
+[  FAILED  ] RocprimWarpScanTests/13.ExclusiveReduceScan, where TypeParam = params<int, 7u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/13.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:740: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: -36
+  expected_inclusive[i]
+    Which is: -49
+[  FAILED  ] RocprimWarpScanTests/13.Scan, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/13.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:911: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: -80
+  expected_inclusive[i]
+    Which is: -32
+[  FAILED  ] RocprimWarpScanTests/13.ScanReduce, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/13.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1026: Failure
+Expected equality of these values:
+  output[i]
+    Which is: [48; 81]
+  expected[i]
+    Which is: [117; 144]
+[  FAILED  ] RocprimWarpScanTests/13.InclusiveScanCustomType, where TypeParam = params<int, 7u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/13 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/14, where TypeParam = params<int, 15u>
+[ RUN      ] RocprimWarpScanTests/14.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:187: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 58
+  expected[i]
+    Which is: 89
+[  FAILED  ] RocprimWarpScanTests/14.InclusiveScan, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/14.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:321: Failure
+Expected equality of these values:
+  output[i]
+    Which is: -31
+  expected[i]
+    Which is: -25
+[  FAILED  ] RocprimWarpScanTests/14.InclusiveScanReduce, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/14.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:443: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 78
+  expected[i]
+    Which is: 27
+[  FAILED  ] RocprimWarpScanTests/14.ExclusiveScan, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/14.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:586: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 37
+  expected[i]
+    Which is: -44
+[  FAILED  ] RocprimWarpScanTests/14.ExclusiveReduceScan, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/14.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:740: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: -81
+  expected_inclusive[i]
+    Which is: -60
+[  FAILED  ] RocprimWarpScanTests/14.Scan, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/14.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:911: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 10
+  expected_inclusive[i]
+    Which is: 18
+[  FAILED  ] RocprimWarpScanTests/14.ScanReduce, where TypeParam = params<int, 15u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/14.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1026: Failure
+Expected equality of these values:
+  output[i]
+    Which is: [15; 99]
+  expected[i]
+    Which is: [90; 125]
+[  FAILED  ] RocprimWarpScanTests/14.InclusiveScanCustomType, where TypeParam = params<int, 15u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/14 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/15, where TypeParam = params<int, 37u>
+[ RUN      ] RocprimWarpScanTests/15.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:187: Failure
+Expected equality of these values:
+  output[i]
+    Which is: -30
+  expected[i]
+    Which is: -114
+[  FAILED  ] RocprimWarpScanTests/15.InclusiveScan, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/15.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:321: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 63
+  expected[i]
+    Which is: 29
+[  FAILED  ] RocprimWarpScanTests/15.InclusiveScanReduce, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/15.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:443: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 59
+  expected[i]
+    Which is: 23
+[  FAILED  ] RocprimWarpScanTests/15.ExclusiveScan, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/15.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:586: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 54
+  expected[i]
+    Which is: 113
+[  FAILED  ] RocprimWarpScanTests/15.ExclusiveReduceScan, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/15.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:740: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: -82
+  expected_inclusive[i]
+    Which is: -55
+[  FAILED  ] RocprimWarpScanTests/15.Scan, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/15.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:911: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 91
+  expected_inclusive[i]
+    Which is: 181
+[  FAILED  ] RocprimWarpScanTests/15.ScanReduce, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/15.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1026: Failure
+Expected equality of these values:
+  output[i]
+    Which is: [59; 24]
+  expected[i]
+    Which is: [152; 40]
+[  FAILED  ] RocprimWarpScanTests/15.InclusiveScanCustomType, where TypeParam = params<int, 37u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/15 (0 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/16, where TypeParam = params<int, 61u>
+[ RUN      ] RocprimWarpScanTests/16.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:187: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 7
+  expected[i]
+    Which is: 32
+[  FAILED  ] RocprimWarpScanTests/16.InclusiveScan, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/16.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:321: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 98
+  expected[i]
+    Which is: 191
+[  FAILED  ] RocprimWarpScanTests/16.InclusiveScanReduce, where TypeParam = params<int, 61u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/16.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:443: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 74
+  expected[i]
+    Which is: 133
+[  FAILED  ] RocprimWarpScanTests/16.ExclusiveScan, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/16.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:586: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 81
+  expected[i]
+    Which is: -16
+[  FAILED  ] RocprimWarpScanTests/16.ExclusiveReduceScan, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/16.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:740: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 72
+  expected_inclusive[i]
+    Which is: 7
+[  FAILED  ] RocprimWarpScanTests/16.Scan, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/16.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:911: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: -16
+  expected_inclusive[i]
+    Which is: -25
+[  FAILED  ] RocprimWarpScanTests/16.ScanReduce, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/16.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1026: Failure
+Expected equality of these values:
+  output[i]
+    Which is: [25; 80]
+  expected[i]
+    Which is: [36; 151]
+[  FAILED  ] RocprimWarpScanTests/16.InclusiveScanCustomType, where TypeParam = params<int, 61u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/16 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/17, where TypeParam = params<float, 3u>
+[ RUN      ] RocprimWarpScanTests/17.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:195: Failure
+The difference between output[i] and expected[i] is 69.43621826171875, which exceeds tolerance, where
+output[i] evaluates to -14.536552429199219,
+expected[i] evaluates to -83.972770690917969, and
+tolerance evaluates to 8.3972768783569336.
+[  FAILED  ] RocprimWarpScanTests/17.InclusiveScan, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/17.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:334: Failure
+The difference between output[i] and expected[i] is 51.042312622070312, which exceeds tolerance, where
+output[i] evaluates to 68.264373779296875,
+expected[i] evaluates to 119.30668640136719, and
+tolerance evaluates to 11.930668830871582.
+[  FAILED  ] RocprimWarpScanTests/17.InclusiveScanReduce, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/17.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:451: Failure
+The difference between output[i] and expected[i] is 41.188282012939453, which exceeds tolerance, where
+output[i] evaluates to 86,
+expected[i] evaluates to 44.811717987060547, and
+tolerance evaluates to 4.4811720848083496.
+[  FAILED  ] RocprimWarpScanTests/17.ExclusiveScan, where TypeParam = params<float, 3u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/17.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:599: Failure
+The difference between output[i] and expected[i] is 17.32550048828125, which exceeds tolerance, where
+output[i] evaluates to 5,
+expected[i] evaluates to 22.32550048828125, and
+tolerance evaluates to 2.2325501441955566.
+[  FAILED  ] RocprimWarpScanTests/17.ExclusiveReduceScan, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/17.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:749: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 84.999191284179688, which exceeds tolerance, where
+output_inclusive[i] evaluates to -18.635848999023438,
+expected_inclusive[i] evaluates to 66.36334228515625, and
+tolerance evaluates to 6.6363344192504883.
+[  FAILED  ] RocprimWarpScanTests/17.Scan, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/17.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:925: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 20.53314208984375, which exceeds tolerance, where
+output_inclusive[i] evaluates to 99.42266845703125,
+expected_inclusive[i] evaluates to 78.8895263671875, and
+tolerance evaluates to 7.8889527320861816.
+[  FAILED  ] RocprimWarpScanTests/17.ScanReduce, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/17.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1035: Failure
+The difference between output[i].x and expected[i].x is 81.360218048095703, which exceeds tolerance_x, where
+output[i].x evaluates to 21.233455657958984,
+expected[i].x evaluates to 102.59367370605469, and
+tolerance_x evaluates to 10.259367942810059.
+[  FAILED  ] RocprimWarpScanTests/17.InclusiveScanCustomType, where TypeParam = params<float, 3u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/17 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/18, where TypeParam = params<float, 7u>
+[ RUN      ] RocprimWarpScanTests/18.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:195: Failure
+The difference between output[i] and expected[i] is 13.57977294921875, which exceeds tolerance, where
+output[i] evaluates to -35.293746948242188,
+expected[i] evaluates to -48.873519897460938, and
+tolerance evaluates to 4.8873519897460938.
+[  FAILED  ] RocprimWarpScanTests/18.InclusiveScan, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/18.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:334: Failure
+The difference between output[i] and expected[i] is 68.275901794433594, which exceeds tolerance, where
+output[i] evaluates to -49.280662536621094,
+expected[i] evaluates to -117.55656433105469, and
+tolerance evaluates to 11.755656242370605.
+[  FAILED  ] RocprimWarpScanTests/18.InclusiveScanReduce, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/18.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:451: Failure
+The difference between output[i] and expected[i] is 22.20367431640625, which exceeds tolerance, where
+output[i] evaluates to 58,
+expected[i] evaluates to 80.20367431640625, and
+tolerance evaluates to 8.0203676223754883.
+[  FAILED  ] RocprimWarpScanTests/18.ExclusiveScan, where TypeParam = params<float, 7u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/18.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:599: Failure
+The difference between output[i] and expected[i] is 81.710342407226562, which exceeds tolerance, where
+output[i] evaluates to 10,
+expected[i] evaluates to -71.710342407226562, and
+tolerance evaluates to 7.1710343360900879.
+[  FAILED  ] RocprimWarpScanTests/18.ExclusiveReduceScan, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/18.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:749: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 5.4250030517578125, which exceeds tolerance, where
+output_inclusive[i] evaluates to 22.055397033691406,
+expected_inclusive[i] evaluates to 16.630393981933594, and
+tolerance evaluates to 1.6630394458770752.
+[  FAILED  ] RocprimWarpScanTests/18.Scan, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/18.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:925: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 59.73309326171875, which exceeds tolerance, where
+output_inclusive[i] evaluates to -65.909881591796875,
+expected_inclusive[i] evaluates to -6.176788330078125, and
+tolerance evaluates to 0.61767882108688354.
+[  FAILED  ] RocprimWarpScanTests/18.ScanReduce, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/18.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1035: Failure
+The difference between output[i].x and expected[i].x is 45.110313415527344, which exceeds tolerance_x, where
+output[i].x evaluates to 69.085540771484375,
+expected[i].x evaluates to 114.19585418701172, and
+tolerance_x evaluates to 11.419585227966309.
+[  FAILED  ] RocprimWarpScanTests/18.InclusiveScanCustomType, where TypeParam = params<float, 7u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/18 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/19, where TypeParam = params<float, 15u>
+[ RUN      ] RocprimWarpScanTests/19.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:195: Failure
+The difference between output[i] and expected[i] is 50.141983032226562, which exceeds tolerance, where
+output[i] evaluates to 63.688751220703125,
+expected[i] evaluates to 13.546768188476562, and
+tolerance evaluates to 1.3546768426895142.
+[  FAILED  ] RocprimWarpScanTests/19.InclusiveScan, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/19.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:334: Failure
+The difference between output[i] and expected[i] is 24.034133911132812, which exceeds tolerance, where
+output[i] evaluates to 58.305435180664062,
+expected[i] evaluates to 34.27130126953125, and
+tolerance evaluates to 3.4271302223205566.
+[  FAILED  ] RocprimWarpScanTests/19.InclusiveScanReduce, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/19.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:451: Failure
+The difference between output[i] and expected[i] is 45.862567901611328, which exceeds tolerance, where
+output[i] evaluates to 10,
+expected[i] evaluates to -35.862567901611328, and
+tolerance evaluates to 3.586256742477417.
+[  FAILED  ] RocprimWarpScanTests/19.ExclusiveScan, where TypeParam = params<float, 15u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/19.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:599: Failure
+The difference between output[i] and expected[i] is 60.388664245605469, which exceeds tolerance, where
+output[i] evaluates to 45,
+expected[i] evaluates to -15.388664245605469, and
+tolerance evaluates to 1.538866400718689.
+[  FAILED  ] RocprimWarpScanTests/19.ExclusiveReduceScan, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/19.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:749: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 85.0321044921875, which exceeds tolerance, where
+output_inclusive[i] evaluates to 65.392929077148438,
+expected_inclusive[i] evaluates to -19.639175415039062, and
+tolerance evaluates to 1.96391761302948.
+[  FAILED  ] RocprimWarpScanTests/19.Scan, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/19.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:925: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 57.954841613769531, which exceeds tolerance, where
+output_inclusive[i] evaluates to -47.031379699707031,
+expected_inclusive[i] evaluates to -104.98622131347656, and
+tolerance evaluates to 10.498621940612793.
+[  FAILED  ] RocprimWarpScanTests/19.ScanReduce, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/19.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1035: Failure
+The difference between output[i].x and expected[i].x is 45.379035949707031, which exceeds tolerance_x, where
+output[i].x evaluates to 85.383491516113281,
+expected[i].x evaluates to 130.76252746582031, and
+tolerance_x evaluates to 13.076252937316895.
+[  FAILED  ] RocprimWarpScanTests/19.InclusiveScanCustomType, where TypeParam = params<float, 15u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/19 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/20, where TypeParam = params<float, 37u>
+[ RUN      ] RocprimWarpScanTests/20.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:195: Failure
+The difference between output[i] and expected[i] is 27.849822998046875, which exceeds tolerance, where
+output[i] evaluates to -71.984832763671875,
+expected[i] evaluates to -99.83465576171875, and
+tolerance evaluates to 9.9834661483764648.
+[  FAILED  ] RocprimWarpScanTests/20.InclusiveScan, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/20.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:334: Failure
+The difference between output[i] and expected[i] is 46.984603881835938, which exceeds tolerance, where
+output[i] evaluates to 70.22650146484375,
+expected[i] evaluates to 117.21110534667969, and
+tolerance evaluates to 11.721110343933105.
+[  FAILED  ] RocprimWarpScanTests/20.InclusiveScanReduce, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/20.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:451: Failure
+The difference between output[i] and expected[i] is 20.9344482421875, which exceeds tolerance, where
+output[i] evaluates to 72,
+expected[i] evaluates to 92.9344482421875, and
+tolerance evaluates to 9.2934446334838867.
+[  FAILED  ] RocprimWarpScanTests/20.ExclusiveScan, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/20.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:599: Failure
+The difference between output[i] and expected[i] is 86.566558837890625, which exceeds tolerance, where
+output[i] evaluates to 32,
+expected[i] evaluates to -54.566558837890625, and
+tolerance evaluates to 5.4566559791564941.
+[  FAILED  ] RocprimWarpScanTests/20.ExclusiveReduceScan, where TypeParam = params<float, 37u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/20.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:749: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 34.756050109863281, which exceeds tolerance, where
+output_inclusive[i] evaluates to 55.146759033203125,
+expected_inclusive[i] evaluates to 20.390708923339844, and
+tolerance evaluates to 2.0390708446502686.
+[  FAILED  ] RocprimWarpScanTests/20.Scan, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/20.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:925: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 31.50640869140625, which exceeds tolerance, where
+output_inclusive[i] evaluates to 71.794921875,
+expected_inclusive[i] evaluates to 40.28851318359375, and
+tolerance evaluates to 4.0288515090942383.
+[  FAILED  ] RocprimWarpScanTests/20.ScanReduce, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/20.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1035: Failure
+The difference between output[i].x and expected[i].x is 49.417560577392578, which exceeds tolerance_x, where
+output[i].x evaluates to 60.845027923583984,
+expected[i].x evaluates to 110.26258850097656, and
+tolerance_x evaluates to 11.026259422302246.
+[  FAILED  ] RocprimWarpScanTests/20.InclusiveScanCustomType, where TypeParam = params<float, 37u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/20 (1 ms total)
+
+[----------] 7 tests from RocprimWarpScanTests/21, where TypeParam = params<float, 61u>
+[ RUN      ] RocprimWarpScanTests/21.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:195: Failure
+The difference between output[i] and expected[i] is 51.348983764648438, which exceeds tolerance, where
+output[i] evaluates to 22.416900634765625,
+expected[i] evaluates to 73.765884399414062, and
+tolerance evaluates to 7.3765883445739746.
+[  FAILED  ] RocprimWarpScanTests/21.InclusiveScan, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/21.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:334: Failure
+The difference between output[i] and expected[i] is 13.583518981933594, which exceeds tolerance, where
+output[i] evaluates to -98.159835815429688,
+expected[i] evaluates to -111.74335479736328, and
+tolerance evaluates to 11.174335479736328.
+[  FAILED  ] RocprimWarpScanTests/21.InclusiveScanReduce, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/21.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:451: Failure
+The difference between output[i] and expected[i] is 55.497623443603516, which exceeds tolerance, where
+output[i] evaluates to 81,
+expected[i] evaluates to 25.502376556396484, and
+tolerance evaluates to 2.5502376556396484.
+[  FAILED  ] RocprimWarpScanTests/21.ExclusiveScan, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/21.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:599: Failure
+The difference between output[i] and expected[i] is 32.54864501953125, which exceeds tolerance, where
+output[i] evaluates to 67,
+expected[i] evaluates to 99.54864501953125, and
+tolerance evaluates to 9.954864501953125.
+[  FAILED  ] RocprimWarpScanTests/21.ExclusiveReduceScan, where TypeParam = params<float, 61u> (1 ms)
+[ RUN      ] RocprimWarpScanTests/21.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:749: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 91.43798828125, which exceeds tolerance, where
+output_inclusive[i] evaluates to -1.884735107421875,
+expected_inclusive[i] evaluates to 89.553253173828125, and
+tolerance evaluates to 8.9553251266479492.
+[  FAILED  ] RocprimWarpScanTests/21.Scan, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/21.ScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:925: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 26.290008544921875, which exceeds tolerance, where
+output_inclusive[i] evaluates to 56.26495361328125,
+expected_inclusive[i] evaluates to 82.554962158203125, and
+tolerance evaluates to 8.2554960250854492.
+[  FAILED  ] RocprimWarpScanTests/21.ScanReduce, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] RocprimWarpScanTests/21.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/rocprim/test_hip_warp_scan.cpp:1035: Failure
+The difference between output[i].x and expected[i].x is 57.7100830078125, which exceeds tolerance_x, where
+output[i].x evaluates to 33.449432373046875,
+expected[i].x evaluates to 91.159515380859375, and
+tolerance_x evaluates to 9.1159515380859375.
+[  FAILED  ] RocprimWarpScanTests/21.InclusiveScanCustomType, where TypeParam = params<float, 61u> (0 ms)
+[----------] 7 tests from RocprimWarpScanTests/21 (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 154 tests from 22 test cases ran. (47 ms total)
+[  PASSED  ] 84 tests.
+[  FAILED  ] 70 tests, listed below:
+[  FAILED  ] RocprimWarpScanTests/12.InclusiveScan, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpScanTests/12.InclusiveScanReduce, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpScanTests/12.ExclusiveScan, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpScanTests/12.ExclusiveReduceScan, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpScanTests/12.Scan, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpScanTests/12.ScanReduce, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpScanTests/12.InclusiveScanCustomType, where TypeParam = params<int, 3u>
+[  FAILED  ] RocprimWarpScanTests/13.InclusiveScan, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpScanTests/13.InclusiveScanReduce, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpScanTests/13.ExclusiveScan, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpScanTests/13.ExclusiveReduceScan, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpScanTests/13.Scan, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpScanTests/13.ScanReduce, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpScanTests/13.InclusiveScanCustomType, where TypeParam = params<int, 7u>
+[  FAILED  ] RocprimWarpScanTests/14.InclusiveScan, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpScanTests/14.InclusiveScanReduce, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpScanTests/14.ExclusiveScan, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpScanTests/14.ExclusiveReduceScan, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpScanTests/14.Scan, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpScanTests/14.ScanReduce, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpScanTests/14.InclusiveScanCustomType, where TypeParam = params<int, 15u>
+[  FAILED  ] RocprimWarpScanTests/15.InclusiveScan, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpScanTests/15.InclusiveScanReduce, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpScanTests/15.ExclusiveScan, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpScanTests/15.ExclusiveReduceScan, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpScanTests/15.Scan, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpScanTests/15.ScanReduce, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpScanTests/15.InclusiveScanCustomType, where TypeParam = params<int, 37u>
+[  FAILED  ] RocprimWarpScanTests/16.InclusiveScan, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpScanTests/16.InclusiveScanReduce, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpScanTests/16.ExclusiveScan, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpScanTests/16.ExclusiveReduceScan, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpScanTests/16.Scan, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpScanTests/16.ScanReduce, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpScanTests/16.InclusiveScanCustomType, where TypeParam = params<int, 61u>
+[  FAILED  ] RocprimWarpScanTests/17.InclusiveScan, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpScanTests/17.InclusiveScanReduce, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpScanTests/17.ExclusiveScan, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpScanTests/17.ExclusiveReduceScan, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpScanTests/17.Scan, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpScanTests/17.ScanReduce, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpScanTests/17.InclusiveScanCustomType, where TypeParam = params<float, 3u>
+[  FAILED  ] RocprimWarpScanTests/18.InclusiveScan, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpScanTests/18.InclusiveScanReduce, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpScanTests/18.ExclusiveScan, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpScanTests/18.ExclusiveReduceScan, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpScanTests/18.Scan, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpScanTests/18.ScanReduce, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpScanTests/18.InclusiveScanCustomType, where TypeParam = params<float, 7u>
+[  FAILED  ] RocprimWarpScanTests/19.InclusiveScan, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpScanTests/19.InclusiveScanReduce, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpScanTests/19.ExclusiveScan, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpScanTests/19.ExclusiveReduceScan, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpScanTests/19.Scan, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpScanTests/19.ScanReduce, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpScanTests/19.InclusiveScanCustomType, where TypeParam = params<float, 15u>
+[  FAILED  ] RocprimWarpScanTests/20.InclusiveScan, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpScanTests/20.InclusiveScanReduce, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpScanTests/20.ExclusiveScan, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpScanTests/20.ExclusiveReduceScan, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpScanTests/20.Scan, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpScanTests/20.ScanReduce, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpScanTests/20.InclusiveScanCustomType, where TypeParam = params<float, 37u>
+[  FAILED  ] RocprimWarpScanTests/21.InclusiveScan, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpScanTests/21.InclusiveScanReduce, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpScanTests/21.ExclusiveScan, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpScanTests/21.ExclusiveReduceScan, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpScanTests/21.Scan, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpScanTests/21.ScanReduce, where TypeParam = params<float, 61u>
+[  FAILED  ] RocprimWarpScanTests/21.InclusiveScanCustomType, where TypeParam = params<float, 61u>
+
+70 FAILED TESTS
+
+      Start 69: rocprim.hip.warp_sort
+69/90 Test #69: rocprim.hip.warp_sort .....................   Passed    0.64 sec
+      Start 70: rocprim.hip.zip_iterator
+70/90 Test #70: rocprim.hip.zip_iterator ..................   Passed    0.64 sec
+      Start 71: hipcub.BasicTest
+71/90 Test #71: hipcub.BasicTest ..........................   Passed    0.63 sec
+      Start 72: hipcub.BlockDiscontinuity
+72/90 Test #72: hipcub.BlockDiscontinuity .................   Passed    3.38 sec
+      Start 73: hipcub.BlockExchange
+73/90 Test #73: hipcub.BlockExchange ......................   Passed    0.80 sec
+      Start 74: hipcub.BlockHistogram
+74/90 Test #74: hipcub.BlockHistogram .....................   Passed    0.65 sec
+      Start 75: hipcub.BlockLoadStore
+75/90 Test #75: hipcub.BlockLoadStore .....................   Passed    1.56 sec
+      Start 76: hipcub.BlockRadixSort
+76/90 Test #76: hipcub.BlockRadixSort .....................   Passed    2.55 sec
+      Start 77: hipcub.BlockReduce
+77/90 Test #77: hipcub.BlockReduce ........................   Passed    0.73 sec
+      Start 78: hipcub.BlockScan
+78/90 Test #78: hipcub.BlockScan ..........................   Passed    1.03 sec
+      Start 79: hipcub.DeviceHistogram
+79/90 Test #79: hipcub.DeviceHistogram ....................   Passed    8.27 sec
+      Start 80: hipcub.DeviceRadixSort
+80/90 Test #80: hipcub.DeviceRadixSort ....................   Passed   11.70 sec
+      Start 81: hipcub.DeviceReduce
+81/90 Test #81: hipcub.DeviceReduce .......................   Passed    1.14 sec
+      Start 82: hipcub.DeviceRunLengthEncode
+82/90 Test #82: hipcub.DeviceRunLengthEncode ..............   Passed    2.43 sec
+      Start 83: hipcub.DeviceReduceByKey
+83/90 Test #83: hipcub.DeviceReduceByKey ..................   Passed    4.80 sec
+      Start 84: hipcub.DeviceScan
+84/90 Test #84: hipcub.DeviceScan .........................   Passed    0.77 sec
+      Start 85: hipcub.DeviceSegmentedRadixSort
+85/90 Test #85: hipcub.DeviceSegmentedRadixSort ...........   Passed    9.84 sec
+      Start 86: hipcub.DeviceSegmentedReduce
+86/90 Test #86: hipcub.DeviceSegmentedReduce ..............   Passed    2.98 sec
+      Start 87: hipcub.DeviceSelect
+87/90 Test #87: hipcub.DeviceSelect .......................   Passed    1.31 sec
+      Start 88: hipcub.UtilPtx
+88/90 Test #88: hipcub.UtilPtx ............................   Passed    0.85 sec
+      Start 89: hipcub.WarpReduce
+89/90 Test #89: hipcub.WarpReduce .........................   Passed    0.86 sec
+      Start 90: hipcub.WarpScan
+90/90 Test #90: hipcub.WarpScan ...........................***Failed    0.87 sec
+Running main() from /home/taccuser/workspace/CompilerCQE_rocPRIM_Full/build/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 132 tests from 22 test cases.
+[----------] Global test environment set-up.
+[----------] 6 tests from HipcubWarpScanTests/0, where TypeParam = params<int, 2u>
+[ RUN      ] HipcubWarpScanTests/0.InclusiveScan
+[       OK ] HipcubWarpScanTests/0.InclusiveScan (42 ms)
+[ RUN      ] HipcubWarpScanTests/0.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/0.InclusiveScanReduce (0 ms)
+[ RUN      ] HipcubWarpScanTests/0.ExclusiveScan
+[       OK ] HipcubWarpScanTests/0.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/0.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/0.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/0.Scan
+[       OK ] HipcubWarpScanTests/0.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/0.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/0.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/0 (42 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/1, where TypeParam = params<int, 4u>
+[ RUN      ] HipcubWarpScanTests/1.InclusiveScan
+[       OK ] HipcubWarpScanTests/1.InclusiveScan (1 ms)
+[ RUN      ] HipcubWarpScanTests/1.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/1.InclusiveScanReduce (0 ms)
+[ RUN      ] HipcubWarpScanTests/1.ExclusiveScan
+[       OK ] HipcubWarpScanTests/1.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/1.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/1.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/1.Scan
+[       OK ] HipcubWarpScanTests/1.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/1.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/1.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/1 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/2, where TypeParam = params<int, 8u>
+[ RUN      ] HipcubWarpScanTests/2.InclusiveScan
+[       OK ] HipcubWarpScanTests/2.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/2.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/2.InclusiveScanReduce (1 ms)
+[ RUN      ] HipcubWarpScanTests/2.ExclusiveScan
+[       OK ] HipcubWarpScanTests/2.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/2.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/2.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/2.Scan
+[       OK ] HipcubWarpScanTests/2.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/2.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/2.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/2 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/3, where TypeParam = params<int, 16u>
+[ RUN      ] HipcubWarpScanTests/3.InclusiveScan
+[       OK ] HipcubWarpScanTests/3.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/3.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/3.InclusiveScanReduce (1 ms)
+[ RUN      ] HipcubWarpScanTests/3.ExclusiveScan
+[       OK ] HipcubWarpScanTests/3.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/3.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/3.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/3.Scan
+[       OK ] HipcubWarpScanTests/3.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/3.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/3.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/3 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/4, where TypeParam = params<int, 32u>
+[ RUN      ] HipcubWarpScanTests/4.InclusiveScan
+[       OK ] HipcubWarpScanTests/4.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/4.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/4.InclusiveScanReduce (0 ms)
+[ RUN      ] HipcubWarpScanTests/4.ExclusiveScan
+[       OK ] HipcubWarpScanTests/4.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/4.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/4.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/4.Scan
+[       OK ] HipcubWarpScanTests/4.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/4.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/4.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/4 (12 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/5, where TypeParam = params<int, 64u>
+[ RUN      ] HipcubWarpScanTests/5.InclusiveScan
+[       OK ] HipcubWarpScanTests/5.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/5.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/5.InclusiveScanReduce (1 ms)
+[ RUN      ] HipcubWarpScanTests/5.ExclusiveScan
+[       OK ] HipcubWarpScanTests/5.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/5.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/5.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/5.Scan
+[       OK ] HipcubWarpScanTests/5.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/5.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/5.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/5 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/6, where TypeParam = params<float, 2u>
+[ RUN      ] HipcubWarpScanTests/6.InclusiveScan
+[       OK ] HipcubWarpScanTests/6.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/6.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/6.InclusiveScanReduce (1 ms)
+[ RUN      ] HipcubWarpScanTests/6.ExclusiveScan
+[       OK ] HipcubWarpScanTests/6.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/6.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/6.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/6.Scan
+[       OK ] HipcubWarpScanTests/6.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/6.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/6.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/6 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/7, where TypeParam = params<float, 4u>
+[ RUN      ] HipcubWarpScanTests/7.InclusiveScan
+[       OK ] HipcubWarpScanTests/7.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/7.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/7.InclusiveScanReduce (1 ms)
+[ RUN      ] HipcubWarpScanTests/7.ExclusiveScan
+[       OK ] HipcubWarpScanTests/7.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/7.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/7.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/7.Scan
+[       OK ] HipcubWarpScanTests/7.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/7.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/7.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/7 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/8, where TypeParam = params<float, 8u>
+[ RUN      ] HipcubWarpScanTests/8.InclusiveScan
+[       OK ] HipcubWarpScanTests/8.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/8.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/8.InclusiveScanReduce (0 ms)
+[ RUN      ] HipcubWarpScanTests/8.ExclusiveScan
+[       OK ] HipcubWarpScanTests/8.ExclusiveScan (1 ms)
+[ RUN      ] HipcubWarpScanTests/8.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/8.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/8.Scan
+[       OK ] HipcubWarpScanTests/8.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/8.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/8.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/8 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/9, where TypeParam = params<float, 16u>
+[ RUN      ] HipcubWarpScanTests/9.InclusiveScan
+[       OK ] HipcubWarpScanTests/9.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/9.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/9.InclusiveScanReduce (0 ms)
+[ RUN      ] HipcubWarpScanTests/9.ExclusiveScan
+[       OK ] HipcubWarpScanTests/9.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/9.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/9.ExclusiveReduceScan (1 ms)
+[ RUN      ] HipcubWarpScanTests/9.Scan
+[       OK ] HipcubWarpScanTests/9.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/9.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/9.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/9 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/10, where TypeParam = params<float, 32u>
+[ RUN      ] HipcubWarpScanTests/10.InclusiveScan
+[       OK ] HipcubWarpScanTests/10.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/10.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/10.InclusiveScanReduce (0 ms)
+[ RUN      ] HipcubWarpScanTests/10.ExclusiveScan
+[       OK ] HipcubWarpScanTests/10.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/10.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/10.ExclusiveReduceScan (1 ms)
+[ RUN      ] HipcubWarpScanTests/10.Scan
+[       OK ] HipcubWarpScanTests/10.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/10.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/10.InclusiveScanCustomType (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/10 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/11, where TypeParam = params<float, 64u>
+[ RUN      ] HipcubWarpScanTests/11.InclusiveScan
+[       OK ] HipcubWarpScanTests/11.InclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/11.InclusiveScanReduce
+[       OK ] HipcubWarpScanTests/11.InclusiveScanReduce (0 ms)
+[ RUN      ] HipcubWarpScanTests/11.ExclusiveScan
+[       OK ] HipcubWarpScanTests/11.ExclusiveScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/11.ExclusiveReduceScan
+[       OK ] HipcubWarpScanTests/11.ExclusiveReduceScan (0 ms)
+[ RUN      ] HipcubWarpScanTests/11.Scan
+[       OK ] HipcubWarpScanTests/11.Scan (0 ms)
+[ RUN      ] HipcubWarpScanTests/11.InclusiveScanCustomType
+[       OK ] HipcubWarpScanTests/11.InclusiveScanCustomType (1 ms)
+[----------] 6 tests from HipcubWarpScanTests/11 (2 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/12, where TypeParam = params<int, 3u>
+[ RUN      ] HipcubWarpScanTests/12.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:195: Failure
+Expected equality of these values:
+  output[i]
+    Which is: -4
+  expected[i]
+    Which is: -30
+[  FAILED  ] HipcubWarpScanTests/12.InclusiveScan, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/12.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:337: Failure
+Expected equality of these values:
+  output[i]
+    Which is: -28
+  expected[i]
+    Which is: 68
+[  FAILED  ] HipcubWarpScanTests/12.InclusiveScanReduce, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/12.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:460: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 11
+  expected[i]
+    Which is: -67
+[  FAILED  ] HipcubWarpScanTests/12.ExclusiveScan, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/12.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:604: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 41
+  expected[i]
+    Which is: 8
+[  FAILED  ] HipcubWarpScanTests/12.ExclusiveReduceScan, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/12.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:760: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 29
+  expected_inclusive[i]
+    Which is: -9
+[  FAILED  ] HipcubWarpScanTests/12.Scan, where TypeParam = params<int, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/12.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:864: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 8-byte object <1C-00 00-00 5C-00 00-00>
+  expected[i]
+    Which is: 8-byte object <4B-00 00-00 86-00 00-00>
+[  FAILED  ] HipcubWarpScanTests/12.InclusiveScanCustomType, where TypeParam = params<int, 3u> (16 ms)
+[----------] 6 tests from HipcubWarpScanTests/12 (16 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/13, where TypeParam = params<int, 7u>
+[ RUN      ] HipcubWarpScanTests/13.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:195: Failure
+Expected equality of these values:
+  output[i]
+    Which is: -67
+  expected[i]
+    Which is: 27
+[  FAILED  ] HipcubWarpScanTests/13.InclusiveScan, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/13.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:337: Failure
+Expected equality of these values:
+  output[i]
+    Which is: -60
+  expected[i]
+    Which is: -95
+[  FAILED  ] HipcubWarpScanTests/13.InclusiveScanReduce, where TypeParam = params<int, 7u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/13.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:460: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 89
+  expected[i]
+    Which is: 35
+[  FAILED  ] HipcubWarpScanTests/13.ExclusiveScan, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/13.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:604: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 17
+  expected[i]
+    Which is: 62
+[  FAILED  ] HipcubWarpScanTests/13.ExclusiveReduceScan, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/13.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:760: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 110
+  expected_inclusive[i]
+    Which is: 172
+[  FAILED  ] HipcubWarpScanTests/13.Scan, where TypeParam = params<int, 7u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/13.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:864: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 8-byte object <21-00 00-00 03-00 00-00>
+  expected[i]
+    Which is: 8-byte object <26-00 00-00 25-00 00-00>
+[  FAILED  ] HipcubWarpScanTests/13.InclusiveScanCustomType, where TypeParam = params<int, 7u> (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/13 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/14, where TypeParam = params<int, 15u>
+[ RUN      ] HipcubWarpScanTests/14.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:195: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 21
+  expected[i]
+    Which is: -28
+[  FAILED  ] HipcubWarpScanTests/14.InclusiveScan, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/14.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:337: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 7
+  expected[i]
+    Which is: -59
+[  FAILED  ] HipcubWarpScanTests/14.InclusiveScanReduce, where TypeParam = params<int, 15u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/14.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:460: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 79
+  expected[i]
+    Which is: 50
+[  FAILED  ] HipcubWarpScanTests/14.ExclusiveScan, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/14.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:604: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: -77
+[  FAILED  ] HipcubWarpScanTests/14.ExclusiveReduceScan, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/14.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:760: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 48
+  expected_inclusive[i]
+    Which is: -47
+[  FAILED  ] HipcubWarpScanTests/14.Scan, where TypeParam = params<int, 15u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/14.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:864: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 8-byte object <2A-00 00-00 59-00 00-00>
+  expected[i]
+    Which is: 8-byte object <67-00 00-00 A8-00 00-00>
+[  FAILED  ] HipcubWarpScanTests/14.InclusiveScanCustomType, where TypeParam = params<int, 15u> (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/14 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/15, where TypeParam = params<int, 37u>
+[ RUN      ] HipcubWarpScanTests/15.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:195: Failure
+Expected equality of these values:
+  output[i]
+    Which is: -63
+  expected[i]
+    Which is: 18
+[  FAILED  ] HipcubWarpScanTests/15.InclusiveScan, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/15.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:337: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 0
+  expected[i]
+    Which is: 88
+[  FAILED  ] HipcubWarpScanTests/15.InclusiveScanReduce, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/15.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:460: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 71
+  expected[i]
+    Which is: -26
+[  FAILED  ] HipcubWarpScanTests/15.ExclusiveScan, where TypeParam = params<int, 37u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/15.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:604: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 42
+  expected[i]
+    Which is: -32
+[  FAILED  ] HipcubWarpScanTests/15.ExclusiveReduceScan, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/15.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:760: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 24
+  expected_inclusive[i]
+    Which is: 85
+[  FAILED  ] HipcubWarpScanTests/15.Scan, where TypeParam = params<int, 37u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/15.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:864: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 8-byte object <36-00 00-00 22-00 00-00>
+  expected[i]
+    Which is: 8-byte object <5A-00 00-00 67-00 00-00>
+[  FAILED  ] HipcubWarpScanTests/15.InclusiveScanCustomType, where TypeParam = params<int, 37u> (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/15 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/16, where TypeParam = params<int, 61u>
+[ RUN      ] HipcubWarpScanTests/16.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:195: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 89
+  expected[i]
+    Which is: 138
+[  FAILED  ] HipcubWarpScanTests/16.InclusiveScan, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/16.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:337: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 90
+  expected[i]
+    Which is: 14
+[  FAILED  ] HipcubWarpScanTests/16.InclusiveScanReduce, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/16.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:460: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 55
+  expected[i]
+    Which is: 84
+[  FAILED  ] HipcubWarpScanTests/16.ExclusiveScan, where TypeParam = params<int, 61u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/16.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:604: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 12
+  expected[i]
+    Which is: 50
+[  FAILED  ] HipcubWarpScanTests/16.ExclusiveReduceScan, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/16.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:760: Failure
+Expected equality of these values:
+  output_inclusive[i]
+    Which is: 55
+  expected_inclusive[i]
+    Which is: 114
+[  FAILED  ] HipcubWarpScanTests/16.Scan, where TypeParam = params<int, 61u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/16.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:864: Failure
+Expected equality of these values:
+  output[i]
+    Which is: 8-byte object <64-00 00-00 15-00 00-00>
+  expected[i]
+    Which is: 8-byte object <77-00 00-00 27-00 00-00>
+[  FAILED  ] HipcubWarpScanTests/16.InclusiveScanCustomType, where TypeParam = params<int, 61u> (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/16 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/17, where TypeParam = params<float, 3u>
+[ RUN      ] HipcubWarpScanTests/17.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:203: Failure
+The difference between output[i] and expected[i] is 92.008071899414062, which exceeds tolerance, where
+output[i] evaluates to -20.1798095703125,
+expected[i] evaluates to 71.828262329101562, and
+tolerance evaluates to 7.1828265190124512.
+[  FAILED  ] HipcubWarpScanTests/17.InclusiveScan, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/17.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:350: Failure
+The difference between output[i] and expected[i] is 5.4876708984375, which exceeds tolerance, where
+output[i] evaluates to -31.195457458496094,
+expected[i] evaluates to -36.683128356933594, and
+tolerance evaluates to 3.6683127880096436.
+[  FAILED  ] HipcubWarpScanTests/17.InclusiveScanReduce, where TypeParam = params<float, 3u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/17.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:468: Failure
+The difference between output[i] and expected[i] is 36.49468994140625, which exceeds tolerance, where
+output[i] evaluates to 73,
+expected[i] evaluates to 109.49468994140625, and
+tolerance evaluates to 10.949469566345215.
+[  FAILED  ] HipcubWarpScanTests/17.ExclusiveScan, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/17.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:617: Failure
+The difference between output[i] and expected[i] is 69.982498168945312, which exceeds tolerance, where
+output[i] evaluates to 86,
+expected[i] evaluates to 155.98249816894531, and
+tolerance evaluates to 15.598250389099121.
+[  FAILED  ] HipcubWarpScanTests/17.ExclusiveReduceScan, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/17.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:769: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 35.761306762695312, which exceeds tolerance, where
+output_inclusive[i] evaluates to 118.23448181152344,
+expected_inclusive[i] evaluates to 153.99578857421875, and
+tolerance evaluates to 15.399579048156738.
+[  FAILED  ] HipcubWarpScanTests/17.Scan, where TypeParam = params<float, 3u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/17.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:873: Failure
+The difference between output[i].x and expected[i].x is 87.210186004638672, which exceeds tolerance_x, where
+output[i].x evaluates to 41.583683013916016,
+expected[i].x evaluates to 128.79386901855469, and
+tolerance_x evaluates to 12.879386901855469.
+[  FAILED  ] HipcubWarpScanTests/17.InclusiveScanCustomType, where TypeParam = params<float, 3u> (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/17 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/18, where TypeParam = params<float, 7u>
+[ RUN      ] HipcubWarpScanTests/18.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:203: Failure
+The difference between output[i] and expected[i] is 36.797218322753906, which exceeds tolerance, where
+output[i] evaluates to -50.864761352539062,
+expected[i] evaluates to -87.661979675292969, and
+tolerance evaluates to 8.7661981582641602.
+[  FAILED  ] HipcubWarpScanTests/18.InclusiveScan, where TypeParam = params<float, 7u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/18.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:350: Failure
+The difference between output[i] and expected[i] is 57.36151123046875, which exceeds tolerance, where
+output[i] evaluates to 74.76715087890625,
+expected[i] evaluates to 132.128662109375, and
+tolerance evaluates to 13.21286678314209.
+[  FAILED  ] HipcubWarpScanTests/18.InclusiveScanReduce, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/18.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:468: Failure
+The difference between output[i] and expected[i] is 4.57147216796875, which exceeds tolerance, where
+output[i] evaluates to 38,
+expected[i] evaluates to 33.42852783203125, and
+tolerance evaluates to 3.3428528308868408.
+[  FAILED  ] HipcubWarpScanTests/18.ExclusiveScan, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/18.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:617: Failure
+The difference between output[i] and expected[i] is 64.537216186523438, which exceeds tolerance, where
+output[i] evaluates to 66,
+expected[i] evaluates to 130.53721618652344, and
+tolerance evaluates to 13.05372142791748.
+[  FAILED  ] HipcubWarpScanTests/18.ExclusiveReduceScan, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/18.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:769: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 64.633285522460938, which exceeds tolerance, where
+output_inclusive[i] evaluates to -33.5889892578125,
+expected_inclusive[i] evaluates to -98.222274780273438, and
+tolerance evaluates to 9.8222274780273438.
+[  FAILED  ] HipcubWarpScanTests/18.Scan, where TypeParam = params<float, 7u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/18.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:873: Failure
+The difference between output[i].x and expected[i].x is 25.657064437866211, which exceeds tolerance_x, where
+output[i].x evaluates to 18.283491134643555,
+expected[i].x evaluates to 43.940555572509766, and
+tolerance_x evaluates to 4.3940558433532715.
+[  FAILED  ] HipcubWarpScanTests/18.InclusiveScanCustomType, where TypeParam = params<float, 7u> (1 ms)
+[----------] 6 tests from HipcubWarpScanTests/18 (2 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/19, where TypeParam = params<float, 15u>
+[ RUN      ] HipcubWarpScanTests/19.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:203: Failure
+The difference between output[i] and expected[i] is 90.749992370605469, which exceeds tolerance, where
+output[i] evaluates to -35.152442932128906,
+expected[i] evaluates to -125.90243530273438, and
+tolerance evaluates to 12.590243339538574.
+[  FAILED  ] HipcubWarpScanTests/19.InclusiveScan, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/19.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:350: Failure
+The difference between output[i] and expected[i] is 44.214645385742188, which exceeds tolerance, where
+output[i] evaluates to -84.509971618652344,
+expected[i] evaluates to -40.295326232910156, and
+tolerance evaluates to 4.0295329093933105.
+[  FAILED  ] HipcubWarpScanTests/19.InclusiveScanReduce, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/19.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:468: Failure
+The difference between output[i] and expected[i] is 94.245307922363281, which exceeds tolerance, where
+output[i] evaluates to 73,
+expected[i] evaluates to -21.245307922363281, and
+tolerance evaluates to 2.1245307922363281.
+[  FAILED  ] HipcubWarpScanTests/19.ExclusiveScan, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/19.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:617: Failure
+The difference between output[i] and expected[i] is 68.575469970703125, which exceeds tolerance, where
+output[i] evaluates to 11,
+expected[i] evaluates to -57.575469970703125, and
+tolerance evaluates to 5.7575469017028809.
+[  FAILED  ] HipcubWarpScanTests/19.ExclusiveReduceScan, where TypeParam = params<float, 15u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/19.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:769: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 32.709243774414062, which exceeds tolerance, where
+output_inclusive[i] evaluates to 143.83544921875,
+expected_inclusive[i] evaluates to 111.12620544433594, and
+tolerance evaluates to 11.11262035369873.
+[  FAILED  ] HipcubWarpScanTests/19.Scan, where TypeParam = params<float, 15u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/19.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:873: Failure
+The difference between output[i].x and expected[i].x is 91.434368133544922, which exceeds tolerance_x, where
+output[i].x evaluates to 37.470294952392578,
+expected[i].x evaluates to 128.9046630859375, and
+tolerance_x evaluates to 12.890466690063477.
+[  FAILED  ] HipcubWarpScanTests/19.InclusiveScanCustomType, where TypeParam = params<float, 15u> (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/19 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/20, where TypeParam = params<float, 37u>
+[ RUN      ] HipcubWarpScanTests/20.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:203: Failure
+The difference between output[i] and expected[i] is 53.531906127929688, which exceeds tolerance, where
+output[i] evaluates to -89.154335021972656,
+expected[i] evaluates to -35.622428894042969, and
+tolerance evaluates to 3.5622429847717285.
+[  FAILED  ] HipcubWarpScanTests/20.InclusiveScan, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/20.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:350: Failure
+The difference between output[i] and expected[i] is 48.900924682617188, which exceeds tolerance, where
+output[i] evaluates to 77.839736938476562,
+expected[i] evaluates to 126.74066162109375, and
+tolerance evaluates to 12.674066543579102.
+[  FAILED  ] HipcubWarpScanTests/20.InclusiveScanReduce, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/20.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:468: Failure
+The difference between output[i] and expected[i] is 74.69451904296875, which exceeds tolerance, where
+output[i] evaluates to 0,
+expected[i] evaluates to -74.69451904296875, and
+tolerance evaluates to 7.469451904296875.
+[  FAILED  ] HipcubWarpScanTests/20.ExclusiveScan, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/20.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:617: Failure
+The difference between output[i] and expected[i] is 33.422225952148438, which exceeds tolerance, where
+output[i] evaluates to 79,
+expected[i] evaluates to 112.42222595214844, and
+tolerance evaluates to 11.242222785949707.
+[  FAILED  ] HipcubWarpScanTests/20.ExclusiveReduceScan, where TypeParam = params<float, 37u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/20.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:769: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 8.0925827026367188, which exceeds tolerance, where
+output_inclusive[i] evaluates to 49.117973327636719,
+expected_inclusive[i] evaluates to 57.210556030273438, and
+tolerance evaluates to 5.7210555076599121.
+[  FAILED  ] HipcubWarpScanTests/20.Scan, where TypeParam = params<float, 37u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/20.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:873: Failure
+The difference between output[i].x and expected[i].x is 65.999137878417969, which exceeds tolerance_x, where
+output[i].x evaluates to 47.543113708496094,
+expected[i].x evaluates to 113.54225158691406, and
+tolerance_x evaluates to 11.354225158691406.
+[  FAILED  ] HipcubWarpScanTests/20.InclusiveScanCustomType, where TypeParam = params<float, 37u> (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/20 (1 ms total)
+
+[----------] 6 tests from HipcubWarpScanTests/21, where TypeParam = params<float, 61u>
+[ RUN      ] HipcubWarpScanTests/21.InclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:203: Failure
+The difference between output[i] and expected[i] is 70.961803436279297, which exceeds tolerance, where
+output[i] evaluates to -55.005771636962891,
+expected[i] evaluates to -125.96757507324219, and
+tolerance evaluates to 12.596757888793945.
+[  FAILED  ] HipcubWarpScanTests/21.InclusiveScan, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/21.InclusiveScanReduce
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:350: Failure
+The difference between output[i] and expected[i] is 54.156497955322266, which exceeds tolerance, where
+output[i] evaluates to -8.238922119140625,
+expected[i] evaluates to -62.395420074462891, and
+tolerance evaluates to 6.2395420074462891.
+[  FAILED  ] HipcubWarpScanTests/21.InclusiveScanReduce, where TypeParam = params<float, 61u> (1 ms)
+[ RUN      ] HipcubWarpScanTests/21.ExclusiveScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:468: Failure
+The difference between output[i] and expected[i] is 54.81549072265625, which exceeds tolerance, where
+output[i] evaluates to 89,
+expected[i] evaluates to 143.81549072265625, and
+tolerance evaluates to 14.381548881530762.
+[  FAILED  ] HipcubWarpScanTests/21.ExclusiveScan, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/21.ExclusiveReduceScan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:617: Failure
+The difference between output[i] and expected[i] is 93.5784912109375, which exceeds tolerance, where
+output[i] evaluates to 52,
+expected[i] evaluates to -41.5784912109375, and
+tolerance evaluates to 4.1578493118286133.
+[  FAILED  ] HipcubWarpScanTests/21.ExclusiveReduceScan, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/21.Scan
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:769: Failure
+The difference between output_inclusive[i] and expected_inclusive[i] is 43.145786285400391, which exceeds tolerance, where
+output_inclusive[i] evaluates to 106.74473571777344,
+expected_inclusive[i] evaluates to 63.598949432373047, and
+tolerance evaluates to 6.3598952293395996.
+[  FAILED  ] HipcubWarpScanTests/21.Scan, where TypeParam = params<float, 61u> (0 ms)
+[ RUN      ] HipcubWarpScanTests/21.InclusiveScanCustomType
+/home/taccuser/workspace/CompilerCQE_rocPRIM_Full/test/hipcub/test_hipcub_warp_scan.cpp:873: Failure
+The difference between output[i].x and expected[i].x is 73.752773284912109, which exceeds tolerance_x, where
+output[i].x evaluates to 62.800724029541016,
+expected[i].x evaluates to 136.55349731445312, and
+tolerance_x evaluates to 13.655349731445312.
+[  FAILED  ] HipcubWarpScanTests/21.InclusiveScanCustomType, where TypeParam = params<float, 61u> (0 ms)
+[----------] 6 tests from HipcubWarpScanTests/21 (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 132 tests from 22 test cases ran. (91 ms total)
+[  PASSED  ] 72 tests.
+[  FAILED  ] 60 tests, listed below:
+[  FAILED  ] HipcubWarpScanTests/12.InclusiveScan, where TypeParam = params<int, 3u>
+[  FAILED  ] HipcubWarpScanTests/12.InclusiveScanReduce, where TypeParam = params<int, 3u>
+[  FAILED  ] HipcubWarpScanTests/12.ExclusiveScan, where TypeParam = params<int, 3u>
+[  FAILED  ] HipcubWarpScanTests/12.ExclusiveReduceScan, where TypeParam = params<int, 3u>
+[  FAILED  ] HipcubWarpScanTests/12.Scan, where TypeParam = params<int, 3u>
+[  FAILED  ] HipcubWarpScanTests/12.InclusiveScanCustomType, where TypeParam = params<int, 3u>
+[  FAILED  ] HipcubWarpScanTests/13.InclusiveScan, where TypeParam = params<int, 7u>
+[  FAILED  ] HipcubWarpScanTests/13.InclusiveScanReduce, where TypeParam = params<int, 7u>
+[  FAILED  ] HipcubWarpScanTests/13.ExclusiveScan, where TypeParam = params<int, 7u>
+[  FAILED  ] HipcubWarpScanTests/13.ExclusiveReduceScan, where TypeParam = params<int, 7u>
+[  FAILED  ] HipcubWarpScanTests/13.Scan, where TypeParam = params<int, 7u>
+[  FAILED  ] HipcubWarpScanTests/13.InclusiveScanCustomType, where TypeParam = params<int, 7u>
+[  FAILED  ] HipcubWarpScanTests/14.InclusiveScan, where TypeParam = params<int, 15u>
+[  FAILED  ] HipcubWarpScanTests/14.InclusiveScanReduce, where TypeParam = params<int, 15u>
+[  FAILED  ] HipcubWarpScanTests/14.ExclusiveScan, where TypeParam = params<int, 15u>
+[  FAILED  ] HipcubWarpScanTests/14.ExclusiveReduceScan, where TypeParam = params<int, 15u>
+[  FAILED  ] HipcubWarpScanTests/14.Scan, where TypeParam = params<int, 15u>
+[  FAILED  ] HipcubWarpScanTests/14.InclusiveScanCustomType, where TypeParam = params<int, 15u>
+[  FAILED  ] HipcubWarpScanTests/15.InclusiveScan, where TypeParam = params<int, 37u>
+[  FAILED  ] HipcubWarpScanTests/15.InclusiveScanReduce, where TypeParam = params<int, 37u>
+[  FAILED  ] HipcubWarpScanTests/15.ExclusiveScan, where TypeParam = params<int, 37u>
+[  FAILED  ] HipcubWarpScanTests/15.ExclusiveReduceScan, where TypeParam = params<int, 37u>
+[  FAILED  ] HipcubWarpScanTests/15.Scan, where TypeParam = params<int, 37u>
+[  FAILED  ] HipcubWarpScanTests/15.InclusiveScanCustomType, where TypeParam = params<int, 37u>
+[  FAILED  ] HipcubWarpScanTests/16.InclusiveScan, where TypeParam = params<int, 61u>
+[  FAILED  ] HipcubWarpScanTests/16.InclusiveScanReduce, where TypeParam = params<int, 61u>
+[  FAILED  ] HipcubWarpScanTests/16.ExclusiveScan, where TypeParam = params<int, 61u>
+[  FAILED  ] HipcubWarpScanTests/16.ExclusiveReduceScan, where TypeParam = params<int, 61u>
+[  FAILED  ] HipcubWarpScanTests/16.Scan, where TypeParam = params<int, 61u>
+[  FAILED  ] HipcubWarpScanTests/16.InclusiveScanCustomType, where TypeParam = params<int, 61u>
+[  FAILED  ] HipcubWarpScanTests/17.InclusiveScan, where TypeParam = params<float, 3u>
+[  FAILED  ] HipcubWarpScanTests/17.InclusiveScanReduce, where TypeParam = params<float, 3u>
+[  FAILED  ] HipcubWarpScanTests/17.ExclusiveScan, where TypeParam = params<float, 3u>
+[  FAILED  ] HipcubWarpScanTests/17.ExclusiveReduceScan, where TypeParam = params<float, 3u>
+[  FAILED  ] HipcubWarpScanTests/17.Scan, where TypeParam = params<float, 3u>
+[  FAILED  ] HipcubWarpScanTests/17.InclusiveScanCustomType, where TypeParam = params<float, 3u>
+[  FAILED  ] HipcubWarpScanTests/18.InclusiveScan, where TypeParam = params<float, 7u>
+[  FAILED  ] HipcubWarpScanTests/18.InclusiveScanReduce, where TypeParam = params<float, 7u>
+[  FAILED  ] HipcubWarpScanTests/18.ExclusiveScan, where TypeParam = params<float, 7u>
+[  FAILED  ] HipcubWarpScanTests/18.ExclusiveReduceScan, where TypeParam = params<float, 7u>
+[  FAILED  ] HipcubWarpScanTests/18.Scan, where TypeParam = params<float, 7u>
+[  FAILED  ] HipcubWarpScanTests/18.InclusiveScanCustomType, where TypeParam = params<float, 7u>
+[  FAILED  ] HipcubWarpScanTests/19.InclusiveScan, where TypeParam = params<float, 15u>
+[  FAILED  ] HipcubWarpScanTests/19.InclusiveScanReduce, where TypeParam = params<float, 15u>
+[  FAILED  ] HipcubWarpScanTests/19.ExclusiveScan, where TypeParam = params<float, 15u>
+[  FAILED  ] HipcubWarpScanTests/19.ExclusiveReduceScan, where TypeParam = params<float, 15u>
+[  FAILED  ] HipcubWarpScanTests/19.Scan, where TypeParam = params<float, 15u>
+[  FAILED  ] HipcubWarpScanTests/19.InclusiveScanCustomType, where TypeParam = params<float, 15u>
+[  FAILED  ] HipcubWarpScanTests/20.InclusiveScan, where TypeParam = params<float, 37u>
+[  FAILED  ] HipcubWarpScanTests/20.InclusiveScanReduce, where TypeParam = params<float, 37u>
+[  FAILED  ] HipcubWarpScanTests/20.ExclusiveScan, where TypeParam = params<float, 37u>
+[  FAILED  ] HipcubWarpScanTests/20.ExclusiveReduceScan, where TypeParam = params<float, 37u>
+[  FAILED  ] HipcubWarpScanTests/20.Scan, where TypeParam = params<float, 37u>
+[  FAILED  ] HipcubWarpScanTests/20.InclusiveScanCustomType, where TypeParam = params<float, 37u>
+[  FAILED  ] HipcubWarpScanTests/21.InclusiveScan, where TypeParam = params<float, 61u>
+[  FAILED  ] HipcubWarpScanTests/21.InclusiveScanReduce, where TypeParam = params<float, 61u>
+[  FAILED  ] HipcubWarpScanTests/21.ExclusiveScan, where TypeParam = params<float, 61u>
+[  FAILED  ] HipcubWarpScanTests/21.ExclusiveReduceScan, where TypeParam = params<float, 61u>
+[  FAILED  ] HipcubWarpScanTests/21.Scan, where TypeParam = params<float, 61u>
+[  FAILED  ] HipcubWarpScanTests/21.InclusiveScanCustomType, where TypeParam = params<float, 61u>
+
+60 FAILED TESTS
+
+
+97% tests passed, 3 tests failed out of 90
+
+Total Test time (real) = 257.12 sec
+
+The following tests FAILED:
+	 67 - rocprim.hip.warp_reduce (Failed)
+	 68 - rocprim.hip.warp_scan (Failed)
+	 90 - hipcub.WarpScan (Failed)
+Errors while running CTest
+Finished: SUCCESS

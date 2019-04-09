@@ -1,0 +1,1020 @@
+Started by user [8mha:////4CURAIiNWWsszHitDZzw/SQsyFufprafLWvjiRrsdsvLAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgY+/dLi1CL9ktTiEhADAGlS9sPDAAAA[0mTest
+Building remotely on [8mha:////4OB7cu/k1b0zzn0Gobhexk1ZT1HLUIbBBlttNb/26OLsAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQiMCMzJ7UoPjUnFwB8SDOrywAAAA==[0mcompiler_elm in workspace /home/taccuser/workspace/CompilerCQE_ocltst
+[CompilerCQE_ocltst] $ /bin/sh -xe /tmp/jenkins1667814300758781874.sh
++ cd /home/taccuser/Documents
++ sh config_details.sh
+********************** CONFIG DETAILS ***********************
+GFXID      :  gfx803
+ROCm build :  roc-master-10159
+llvm HEAD  :  8d8ed04 Merge branch amd-common into amd-common
+clang HEAD :  a1953e7 SWDEV-179954 - OpenCL/LC - Merge branch amd-master into amd-common
+lld HEAD   :  15de464 SWDEV-179954 - OpenCL/LC - Merge branch amd-master into amd-common
+*************************************************************
++ cd compilerNightly
++ rm -rf ocltst
++ mkdir ocltst
++ cd ocltst
++ wget http://compute-artifactory.amd.com/artifactory/rocm-generic-local/amd/lightning-support-files/ocltst.zip
+--2019-04-02 18:28:49--  http://compute-artifactory.amd.com/artifactory/rocm-generic-local/amd/lightning-support-files/ocltst.zip
+Resolving compute-artifactory.amd.com (compute-artifactory.amd.com)... 172.27.226.104
+Connecting to compute-artifactory.amd.com (compute-artifactory.amd.com)|172.27.226.104|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3048164 (2.9M) [application/zip]
+Saving to: ‘ocltst.zip’
+
+     0K .......... .......... .......... .......... ..........  1% 1.41M 2s
+    50K .......... .......... .......... .......... ..........  3%  611K 3s
+   100K .......... .......... .......... .......... ..........  5%  445K 4s
+   150K .......... .......... .......... .......... ..........  6%  850K 4s
+   200K .......... .......... .......... .......... ..........  8% 3.79M 3s
+   250K .......... .......... .......... .......... .......... 10%  835K 3s
+   300K .......... .......... .......... .......... .......... 11%  180K 5s
+   350K .......... .......... .......... .......... .......... 13%  538M 4s
+   400K .......... .......... .......... .......... .......... 15% 1.22M 4s
+   450K .......... .......... .......... .......... .......... 16%  240K 4s
+   500K .......... .......... .......... .......... .......... 18% 1.85M 4s
+   550K .......... .......... .......... .......... .......... 20% 1.38M 4s
+   600K .......... .......... .......... .......... .......... 21% 1006K 4s
+   650K .......... .......... .......... .......... .......... 23%  368K 4s
+   700K .......... .......... .......... .......... .......... 25%  968K 4s
+   750K .......... .......... .......... .......... .......... 26%  931K 3s
+   800K .......... .......... .......... .......... .......... 28% 4.12M 3s
+   850K .......... .......... .......... .......... .......... 30% 1.48M 3s
+   900K .......... .......... .......... .......... .......... 31%  805K 3s
+   950K .......... .......... .......... .......... .......... 33%  113K 4s
+  1000K .......... .......... .......... .......... .......... 35%  834K 3s
+  1050K .......... .......... .......... .......... .......... 36% 1.68M 3s
+  1100K .......... .......... .......... .......... .......... 38% 1.18M 3s
+  1150K .......... .......... .......... .......... .......... 40%  991K 3s
+  1200K .......... .......... .......... .......... .......... 41% 1.29M 3s
+  1250K .......... .......... .......... .......... .......... 43%  919K 3s
+  1300K .......... .......... .......... .......... .......... 45% 2.56M 3s
+  1350K .......... .......... .......... .......... .......... 47% 1.02M 2s
+  1400K .......... .......... .......... .......... .......... 48%  768K 2s
+  1450K .......... .......... .......... .......... .......... 50% 1.24M 2s
+  1500K .......... .......... .......... .......... .......... 52%  663K 2s
+  1550K .......... .......... .......... .......... .......... 53% 1.74M 2s
+  1600K .......... .......... .......... .......... .......... 55%  966K 2s
+  1650K .......... .......... .......... .......... .......... 57%  959K 2s
+  1700K .......... .......... .......... .......... .......... 58% 1.91M 2s
+  1750K .......... .......... .......... .......... .......... 60% 1.20M 2s
+  1800K .......... .......... .......... .......... .......... 62% 1.31M 2s
+  1850K .......... .......... .......... .......... .......... 63% 1.29M 1s
+  1900K .......... .......... .......... .......... .......... 65%  976K 1s
+  1950K .......... .......... .......... .......... .......... 67% 1.33M 1s
+  2000K .......... .......... .......... .......... .......... 68% 1.17M 1s
+  2050K .......... .......... .......... .......... .......... 70% 1.05M 1s
+  2100K .......... .......... .......... .......... .......... 72% 1.57M 1s
+  2150K .......... .......... .......... .......... .......... 73%  682K 1s
+  2200K .......... .......... .......... .......... .......... 75% 2.32M 1s
+  2250K .......... .......... .......... .......... .......... 77% 1.31M 1s
+  2300K .......... .......... .......... .......... .......... 78% 1.47M 1s
+  2350K .......... .......... .......... .......... .......... 80% 2.11M 1s
+  2400K .......... .......... .......... .......... .......... 82%  659K 1s
+  2450K .......... .......... .......... .......... .......... 83% 1.52M 1s
+  2500K .......... .......... .......... .......... .......... 85%  650K 1s
+  2550K .......... .......... .......... .......... .......... 87% 1.66M 0s
+  2600K .......... .......... .......... .......... .......... 89% 1.10M 0s
+  2650K .......... .......... .......... .......... .......... 90% 1.80M 0s
+  2700K .......... .......... .......... .......... .......... 92% 1.92M 0s
+  2750K .......... .......... .......... .......... .......... 94%  649K 0s
+  2800K .......... .......... .......... .......... .......... 95% 1.58M 0s
+  2850K .......... .......... .......... .......... .......... 97% 2.59M 0s
+  2900K .......... .......... .......... .......... .......... 99% 1.46M 0s
+  2950K .......... .......... ......                          100% 1.14M=3.5s
+
+2019-04-02 18:28:54 (857 KB/s) - ‘ocltst.zip’ saved [3048164/3048164]
+
++ unzip ocltst.zip
+Archive:  ocltst.zip
+  inflating: ocltst/x86_64/libocllog.so  
+  inflating: ocltst/x86_64/oclcompiler.exclude  
+  inflating: ocltst/x86_64/oclcompiler.so  
+  inflating: ocltst/x86_64/ocldebugger.exclude  
+  inflating: ocltst/x86_64/ocldebugger.so  
+  inflating: ocltst/x86_64/ocldx.exclude  
+  inflating: ocltst/x86_64/ocldx.so  
+  inflating: ocltst/x86_64/oclfrontend.exclude  
+  inflating: ocltst/x86_64/oclfrontend.so  
+  inflating: ocltst/x86_64/oclgl.exclude  
+  inflating: ocltst/x86_64/oclgl.so  
+  inflating: ocltst/x86_64/oclmediafunc.exclude  
+  inflating: ocltst/x86_64/oclmediafunc.so  
+  inflating: ocltst/x86_64/oclperf.exclude  
+  inflating: ocltst/x86_64/oclperf.so  
+  inflating: ocltst/x86_64/oclprofiler.exclude  
+  inflating: ocltst/x86_64/oclprofiler.so  
+  inflating: ocltst/x86_64/oclregression.exclude  
+  inflating: ocltst/x86_64/oclregression.so  
+  inflating: ocltst/x86_64/oclruntime.exclude  
+  inflating: ocltst/x86_64/oclruntime.so  
+  inflating: ocltst/x86_64/ocltst    
++ cd ocltst/x86_64
++ export LD_LIBRARY_PATH=:/home/taccuser/Documents/compilerNightly/ocltst/ocltst/x86_64
++ ./ocltst -m oclcompiler.so -A oclcompiler.exclude -o ocltst.log
+
+Compute Device info:
+	Platform Version: OpenCL 2.1 AMD-APP (2864.0)
+	Device Name: gfx803
+	Vendor: Advanced Micro Devices, Inc.
+	Device Version: OpenCL 1.2 
+	Driver Version: 2864.0 (HSA1.1,LC)
+	Board Name: Device 67df
+	Device Topology: PCI[ B#6, D#0, F#0]
+
+-------------------------------------------------
+The OpenCL Testing Module oclcompiler Version = 0 
+------------------------------
+Warning: skip the test for the CPU device due to clCreateContextFromType failure.
+OCLBinaryOperations[  0]         PASSED: GPU[0] T[0] [  0],      0.000
+OCLBinaryOperations[  1]         PASSED: GPU[0] T[0] [  1],      0.000
+OCLBinaryOperations[  2]         PASSED: GPU[0] T[0] [  2],      0.000
+OCLBinaryOperations[  3]         PASSED: GPU[0] T[0] [  3],      0.000
+OCLBinaryOperations[  4]         PASSED: GPU[0] T[0] [  4],      0.000
+OCLBinaryOperations[  5]         PASSED: GPU[0] T[0] [  5],      0.000
+OCLBinaryOperations[  6]         PASSED: GPU[0] T[0] [  6],      0.000
+OCLBinaryOperations[  7]         PASSED: GPU[0] T[0] [  7],      0.000
+OCLBinaryOperations[  8]         PASSED: GPU[0] T[0] [  8],      0.000
+Warning: skip the test for the CPU device due to clCreateContextFromType failure.
+OCLByteOperations[  0]           PASSED: GPU[0] T[0] [  0],      0.000
+OCLByteOperations[  1]           PASSED: GPU[0] T[0] [  1],      0.000
+OCLByteOperations[  2]           PASSED: GPU[0] T[0] [  2],      0.000
+OCLByteOperations[  3]           PASSED: GPU[0] T[0] [  3],      0.000
+OCLByteOperations[  4]           PASSED: GPU[0] T[0] [  4],      0.000
+OCLByteOperations[  5]           PASSED: GPU[0] T[0] [  5],      0.000
+OCLByteOperations[  6]           PASSED: GPU[0] T[0] [  6],      0.000
+OCLByteOperations[  7]           PASSED: GPU[0] T[0] [  7],      0.000
+OCLByteOperations[  8]           PASSED: GPU[0] T[0] [  8],      0.000
+OCLByteOperations[  9]           PASSED: GPU[0] T[0] [  9],      0.000
+OCLByteOperations[ 10]           PASSED: GPU[0] T[0] [ 10],      0.000
+OCLByteOperations[ 11]           PASSED: GPU[0] T[0] [ 11],      0.000
+OCLByteOperations[ 12]           PASSED: GPU[0] T[0] [ 12],      0.000
+OCLByteOperations[ 13]           PASSED: GPU[0] T[0] [ 13],      0.000
+OCLByteOperations[ 14]           PASSED: GPU[0] T[0] [ 14],      0.000
+OCLByteOperations[ 15]           PASSED: GPU[0] T[0] [ 15],      0.000
+OCLByteOperations[ 16]           PASSED: GPU[0] T[0] [ 16],      0.000
+OCLByteOperations[ 17]           PASSED: GPU[0] T[0] [ 17],      0.000
+OCLByteOperations[ 18]           PASSED: GPU[0] T[0] [ 18],      0.000
+OCLByteOperations[ 19]           PASSED: GPU[0] T[0] [ 19],      0.000
+OCLByteOperations[ 20]           PASSED: GPU[0] T[0] [ 20],      0.000
+OCLByteOperations[ 21]           PASSED: GPU[0] T[0] [ 21],      0.000
+OCLByteOperations[ 22]           PASSED: GPU[0] T[0] [ 22],      0.000
+OCLByteOperations[ 23]           PASSED: GPU[0] T[0] [ 23],      0.000
+OCLByteOperations[ 24]           PASSED: GPU[0] T[0] [ 24],      0.000
+OCLByteOperations[ 25]           PASSED: GPU[0] T[0] [ 25],      0.000
+OCLByteOperations[ 26]           PASSED: GPU[0] T[0] [ 26],      0.000
+OCLByteOperations[ 27]           PASSED: GPU[0] T[0] [ 27],      0.000
+OCLByteOperations[ 28]           PASSED: GPU[0] T[0] [ 28],      0.000
+OCLByteOperations[ 29]           PASSED: GPU[0] T[0] [ 29],      0.000
+OCLByteOperations[ 30]           PASSED: GPU[0] T[0] [ 30],      0.000
+OCLByteOperations[ 31]           PASSED: GPU[0] T[0] [ 31],      0.000
+OCLByteOperations[ 32]           PASSED: GPU[0] T[0] [ 32],      0.000
+OCLByteOperations[ 33]           PASSED: GPU[0] T[0] [ 33],      0.000
+OCLByteOperations[ 34]           PASSED: GPU[0] T[0] [ 34],      0.000
+OCLByteOperations[ 35]           PASSED: GPU[0] T[0] [ 35],      0.000
+OCLByteOperations[ 36]           PASSED: GPU[0] T[0] [ 36],      0.000
+OCLByteOperations[ 37]           PASSED: GPU[0] T[0] [ 37],      0.000
+OCLByteOperations[ 38]           PASSED: GPU[0] T[0] [ 38],      0.000
+OCLByteOperations[ 39]           PASSED: GPU[0] T[0] [ 39],      0.000
+OCLByteOperations[ 40]           PASSED: GPU[0] T[0] [ 40],      0.000
+OCLByteOperations[ 41]           PASSED: GPU[0] T[0] [ 41],      0.000
+OCLByteOperations[ 42]           PASSED: GPU[0] T[0] [ 42],      0.000
+OCLByteOperations[ 43]           PASSED: GPU[0] T[0] [ 43],      0.000
+OCLByteOperations[ 44]           PASSED: GPU[0] T[0] [ 44],      0.000
+OCLByteOperations[ 45]           PASSED: GPU[0] T[0] [ 45],      0.000
+OCLByteOperations[ 46]           PASSED: GPU[0] T[0] [ 46],      0.000
+OCLByteOperations[ 47]           PASSED: GPU[0] T[0] [ 47],      0.000
+OCLByteOperations[ 48]           PASSED: GPU[0] T[0] [ 48],      0.000
+OCLByteOperations[ 49]           PASSED: GPU[0] T[0] [ 49],      0.000
+OCLByteOperations[ 50]           PASSED: GPU[0] T[0] [ 50],      0.000
+OCLByteOperations[ 51]           PASSED: GPU[0] T[0] [ 51],      0.000
+OCLByteOperations[ 52]           PASSED: GPU[0] T[0] [ 52],      0.000
+OCLByteOperations[ 53]           PASSED: GPU[0] T[0] [ 53],      0.000
+OCLByteOperations[ 54]           PASSED: GPU[0] T[0] [ 54],      0.000
+OCLByteOperations[ 55]           PASSED: GPU[0] T[0] [ 55],      0.000
+OCLByteOperations[ 56]           PASSED: GPU[0] T[0] [ 56],      0.000
+OCLByteOperations[ 57]           PASSED: GPU[0] T[0] [ 57],      0.000
+OCLByteOperations[ 58]           PASSED: GPU[0] T[0] [ 58],      0.000
+OCLByteOperations[ 59]           PASSED: GPU[0] T[0] [ 59],      0.000
+OCLByteOperations[ 60]           PASSED: GPU[0] T[0] [ 60],      0.000
+OCLByteOperations[ 61]           PASSED: GPU[0] T[0] [ 61],      0.000
+OCLByteOperations[ 62]           PASSED: GPU[0] T[0] [ 62],      0.000
+OCLByteOperations[ 63]           PASSED: GPU[0] T[0] [ 63],      0.000
+OCLByteOperations[ 64]           PASSED: GPU[0] T[0] [ 64],      0.000
+OCLByteOperations[ 65]           PASSED: GPU[0] T[0] [ 65],      0.000
+OCLByteOperations[ 66]           PASSED: GPU[0] T[0] [ 66],      0.000
+OCLByteOperations[ 67]           PASSED: GPU[0] T[0] [ 67],      0.000
+OCLByteOperations[ 68]           PASSED: GPU[0] T[0] [ 68],      0.000
+OCLByteOperations[ 69]           PASSED: GPU[0] T[0] [ 69],      0.000
+OCLByteOperations[ 70]           PASSED: GPU[0] T[0] [ 70],      0.000
+OCLByteOperations[ 71]           PASSED: GPU[0] T[0] [ 71],      0.000
+Warning: skip the test for the CPU device due to clCreateContextFromType failure.
+OCLFlowControl[  0]              PASSED: GPU[0] T[0] [  0],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  1]              PASSED: GPU[0] T[0] [  1],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  2]              PASSED: GPU[0] T[0] [  2],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  3]              PASSED: GPU[0] T[0] [  3],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  4]              PASSED: GPU[0] T[0] [  4],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  5]              PASSED: GPU[0] T[0] [  5],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  6]              PASSED: GPU[0] T[0] [  6],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  7]              PASSED: GPU[0] T[0] [  7],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  8]              PASSED: GPU[0] T[0] [  8],      0.000                      (chksum 0x00000001)
+OCLFlowControl[  9]              PASSED: GPU[0] T[0] [  9],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 10]              PASSED: GPU[0] T[0] [ 10],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 11]              PASSED: GPU[0] T[0] [ 11],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 12]              PASSED: GPU[0] T[0] [ 12],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 13]              PASSED: GPU[0] T[0] [ 13],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 14]              PASSED: GPU[0] T[0] [ 14],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 15]              PASSED: GPU[0] T[0] [ 15],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 16]              PASSED: GPU[0] T[0] [ 16],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 17]              PASSED: GPU[0] T[0] [ 17],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 18]              PASSED: GPU[0] T[0] [ 18],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 19]              PASSED: GPU[0] T[0] [ 19],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 20]              PASSED: GPU[0] T[0] [ 20],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 21]              PASSED: GPU[0] T[0] [ 21],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 22]              PASSED: GPU[0] T[0] [ 22],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 23]              PASSED: GPU[0] T[0] [ 23],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 24]              PASSED: GPU[0] T[0] [ 24],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 25]              PASSED: GPU[0] T[0] [ 25],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 26]              PASSED: GPU[0] T[0] [ 26],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 27]              PASSED: GPU[0] T[0] [ 27],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 28]              PASSED: GPU[0] T[0] [ 28],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 29]              PASSED: GPU[0] T[0] [ 29],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 30]              PASSED: GPU[0] T[0] [ 30],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 31]              PASSED: GPU[0] T[0] [ 31],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 32]              PASSED: GPU[0] T[0] [ 32],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 33]              PASSED: GPU[0] T[0] [ 33],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 34]              PASSED: GPU[0] T[0] [ 34],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 35]              PASSED: GPU[0] T[0] [ 35],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 36]              PASSED: GPU[0] T[0] [ 36],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 37]              PASSED: GPU[0] T[0] [ 37],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 38]              PASSED: GPU[0] T[0] [ 38],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 39]              PASSED: GPU[0] T[0] [ 39],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 40]              PASSED: GPU[0] T[0] [ 40],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 41]              PASSED: GPU[0] T[0] [ 41],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 42]              PASSED: GPU[0] T[0] [ 42],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 43]              PASSED: GPU[0] T[0] [ 43],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 44]              PASSED: GPU[0] T[0] [ 44],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 45]              PASSED: GPU[0] T[0] [ 45],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 46]              PASSED: GPU[0] T[0] [ 46],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 47]              PASSED: GPU[0] T[0] [ 47],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 48]              PASSED: GPU[0] T[0] [ 48],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 49]              PASSED: GPU[0] T[0] [ 49],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 50]              PASSED: GPU[0] T[0] [ 50],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 51]              PASSED: GPU[0] T[0] [ 51],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 52]              PASSED: GPU[0] T[0] [ 52],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 53]              PASSED: GPU[0] T[0] [ 53],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 54]              PASSED: GPU[0] T[0] [ 54],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 55]              PASSED: GPU[0] T[0] [ 55],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 56]              PASSED: GPU[0] T[0] [ 56],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 57]              PASSED: GPU[0] T[0] [ 57],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 58]              PASSED: GPU[0] T[0] [ 58],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 59]              PASSED: GPU[0] T[0] [ 59],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 60]              PASSED: GPU[0] T[0] [ 60],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 61]              PASSED: GPU[0] T[0] [ 61],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 62]              PASSED: GPU[0] T[0] [ 62],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 63]              PASSED: GPU[0] T[0] [ 63],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 64]              PASSED: GPU[0] T[0] [ 64],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 65]              PASSED: GPU[0] T[0] [ 65],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 66]              PASSED: GPU[0] T[0] [ 66],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 67]              PASSED: GPU[0] T[0] [ 67],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 68]              PASSED: GPU[0] T[0] [ 68],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 69]              PASSED: GPU[0] T[0] [ 69],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 70]              PASSED: GPU[0] T[0] [ 70],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 71]              PASSED: GPU[0] T[0] [ 71],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 72]              PASSED: GPU[0] T[0] [ 72],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 73]              PASSED: GPU[0] T[0] [ 73],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 74]              PASSED: GPU[0] T[0] [ 74],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 75]              PASSED: GPU[0] T[0] [ 75],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 76]              PASSED: GPU[0] T[0] [ 76],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 77]              PASSED: GPU[0] T[0] [ 77],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 78]              PASSED: GPU[0] T[0] [ 78],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 79]              PASSED: GPU[0] T[0] [ 79],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 80]              PASSED: GPU[0] T[0] [ 80],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 81]              PASSED: GPU[0] T[0] [ 81],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 82]              PASSED: GPU[0] T[0] [ 82],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 83]              PASSED: GPU[0] T[0] [ 83],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 84]              PASSED: GPU[0] T[0] [ 84],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 85]              PASSED: GPU[0] T[0] [ 85],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 86]              PASSED: GPU[0] T[0] [ 86],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 87]              PASSED: GPU[0] T[0] [ 87],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 88]              PASSED: GPU[0] T[0] [ 88],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 89]              PASSED: GPU[0] T[0] [ 89],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 90]              PASSED: GPU[0] T[0] [ 90],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 91]              PASSED: GPU[0] T[0] [ 91],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 92]              PASSED: GPU[0] T[0] [ 92],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 93]              PASSED: GPU[0] T[0] [ 93],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 94]              PASSED: GPU[0] T[0] [ 94],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 95]              PASSED: GPU[0] T[0] [ 95],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 96]              PASSED: GPU[0] T[0] [ 96],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 97]              PASSED: GPU[0] T[0] [ 97],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 98]              PASSED: GPU[0] T[0] [ 98],      0.000                      (chksum 0x00000001)
+OCLFlowControl[ 99]              PASSED: GPU[0] T[0] [ 99],      0.000                      (chksum 0x00000001)
+OCLFlowControl[100]              PASSED: GPU[0] T[0] [100],      0.000                      (chksum 0x00000001)
+OCLFlowControl[101]              PASSED: GPU[0] T[0] [101],      0.000                      (chksum 0x00000001)
+OCLFlowControl[102]              PASSED: GPU[0] T[0] [102],      0.000                      (chksum 0x00000001)
+OCLFlowControl[103]              PASSED: GPU[0] T[0] [103],      0.000                      (chksum 0x00000001)
+OCLFlowControl[104]              PASSED: GPU[0] T[0] [104],      0.000                      (chksum 0x00000001)
+OCLFlowControl[105]              PASSED: GPU[0] T[0] [105],      0.000                      (chksum 0x00000001)
+OCLFlowControl[106]              PASSED: GPU[0] T[0] [106],      0.000                      (chksum 0x00000001)
+OCLFlowControl[107]              PASSED: GPU[0] T[0] [107],      0.000                      (chksum 0x00000001)
+OCLFlowControl[108]              PASSED: GPU[0] T[0] [108],      0.000                      (chksum 0x00000001)
+OCLFlowControl[109]              PASSED: GPU[0] T[0] [109],      0.000                      (chksum 0x00000001)
+OCLFlowControl[110]              PASSED: GPU[0] T[0] [110],      0.000                      (chksum 0x00000001)
+OCLFlowControl[111]              PASSED: GPU[0] T[0] [111],      0.000                      (chksum 0x00000001)
+OCLFlowControl[112]              PASSED: GPU[0] T[0] [112],      0.000                      (chksum 0x00000001)
+OCLFlowControl[113]              PASSED: GPU[0] T[0] [113],      0.000                      (chksum 0x00000001)
+OCLFlowControl[114]              PASSED: GPU[0] T[0] [114],      0.000                      (chksum 0x00000001)
+OCLFlowControl[115]              PASSED: GPU[0] T[0] [115],      0.000                      (chksum 0x00000001)
+OCLFlowControl[116]              PASSED: GPU[0] T[0] [116],      0.000                      (chksum 0x00000001)
+OCLFlowControl[117]              PASSED: GPU[0] T[0] [117],      0.000                      (chksum 0x00000001)
+OCLFlowControl[118]              PASSED: GPU[0] T[0] [118],      0.000                      (chksum 0x00000001)
+OCLFlowControl[119]              PASSED: GPU[0] T[0] [119],      0.000                      (chksum 0x00000001)
+OCLFlowControl[120]              PASSED: GPU[0] T[0] [120],      0.000                      (chksum 0x00000001)
+OCLFlowControl[121]              PASSED: GPU[0] T[0] [121],      0.000                      (chksum 0x00000001)
+OCLFlowControl[122]              PASSED: GPU[0] T[0] [122],      0.000                      (chksum 0x00000001)
+OCLFlowControl[123]              PASSED: GPU[0] T[0] [123],      0.000                      (chksum 0x00000001)
+OCLFlowControl[124]              PASSED: GPU[0] T[0] [124],      0.000                      (chksum 0x00000001)
+OCLFlowControl[125]              PASSED: GPU[0] T[0] [125],      0.000                      (chksum 0x00000001)
+OCLFlowControl[126]              PASSED: GPU[0] T[0] [126],      0.000                      (chksum 0x00000001)
+OCLFlowControl[127]              PASSED: GPU[0] T[0] [127],      0.000                      (chksum 0x00000001)
+OCLFlowControl[128]              PASSED: GPU[0] T[0] [128],      0.000                      (chksum 0x00000001)
+OCLFlowControl[129]              PASSED: GPU[0] T[0] [129],      0.000                      (chksum 0x00000001)
+OCLFlowControl[130]              PASSED: GPU[0] T[0] [130],      0.000                      (chksum 0x00000001)
+OCLFlowControl[131]              PASSED: GPU[0] T[0] [131],      0.000                      (chksum 0x00000001)
+OCLFlowControl[132]              PASSED: GPU[0] T[0] [132],      0.000                      (chksum 0x00000001)
+OCLFlowControl[133]              PASSED: GPU[0] T[0] [133],      0.000                      (chksum 0x00000001)
+OCLFlowControl[134]              PASSED: GPU[0] T[0] [134],      0.000                      (chksum 0x00000001)
+OCLFlowControl[135]              PASSED: GPU[0] T[0] [135],      0.000                      (chksum 0x00000001)
+OCLFlowControl[136]              PASSED: GPU[0] T[0] [136],      0.000                      (chksum 0x00000001)
+OCLFlowControl[137]              PASSED: GPU[0] T[0] [137],      0.000                      (chksum 0x00000001)
+OCLFlowControl[138]              PASSED: GPU[0] T[0] [138],      0.000                      (chksum 0x00000001)
+OCLFlowControl[139]              PASSED: GPU[0] T[0] [139],      0.000                      (chksum 0x00000001)
+OCLFlowControl[140]              PASSED: GPU[0] T[0] [140],      0.000                      (chksum 0x00000001)
+OCLFlowControl[141]              PASSED: GPU[0] T[0] [141],      0.000                      (chksum 0x00000001)
+OCLFlowControl[142]              PASSED: GPU[0] T[0] [142],      0.000                      (chksum 0x00000001)
+OCLFlowControl[143]              PASSED: GPU[0] T[0] [143],      0.000                      (chksum 0x00000001)
+OCLFlowControl[144]              PASSED: GPU[0] T[0] [144],      0.000                      (chksum 0x00000001)
+OCLFlowControl[145]              PASSED: GPU[0] T[0] [145],      0.000                      (chksum 0x00000001)
+OCLFlowControl[146]              PASSED: GPU[0] T[0] [146],      0.000                      (chksum 0x00000001)
+OCLFlowControl[147]              PASSED: GPU[0] T[0] [147],      0.000                      (chksum 0x00000001)
+OCLFlowControl[148]              PASSED: GPU[0] T[0] [148],      0.000                      (chksum 0x00000001)
+OCLFlowControl[149]              PASSED: GPU[0] T[0] [149],      0.000                      (chksum 0x00000001)
+OCLFlowControl[150]              PASSED: GPU[0] T[0] [150],      0.000                      (chksum 0x00000001)
+OCLFlowControl[151]              PASSED: GPU[0] T[0] [151],      0.000                      (chksum 0x00000001)
+OCLFlowControl[152]              PASSED: GPU[0] T[0] [152],      0.000                      (chksum 0x00000001)
+OCLFlowControl[153]              PASSED: GPU[0] T[0] [153],      0.000                      (chksum 0x00000001)
+OCLFlowControl[154]              PASSED: GPU[0] T[0] [154],      0.000                      (chksum 0x00000001)
+OCLFlowControl[155]              PASSED: GPU[0] T[0] [155],      0.000                      (chksum 0x00000001)
+OCLFlowControl[156]              PASSED: GPU[0] T[0] [156],      0.000                      (chksum 0x00000001)
+OCLFlowControl[157]              PASSED: GPU[0] T[0] [157],      0.000                      (chksum 0x00000001)
+OCLFlowControl[158]              PASSED: GPU[0] T[0] [158],      0.000                      (chksum 0x00000001)
+OCLFlowControl[159]              PASSED: GPU[0] T[0] [159],      0.000                      (chksum 0x00000001)
+OCLFlowControl[160]              PASSED: GPU[0] T[0] [160],      0.000                      (chksum 0x00000001)
+OCLFlowControl[161]              PASSED: GPU[0] T[0] [161],      0.000                      (chksum 0x00000001)
+OCLFlowControl[162]              PASSED: GPU[0] T[0] [162],      0.000                      (chksum 0x00000001)
+OCLFlowControl[163]              PASSED: GPU[0] T[0] [163],      0.000                      (chksum 0x00000001)
+OCLFlowControl[164]              PASSED: GPU[0] T[0] [164],      0.000                      (chksum 0x00000001)
+OCLFlowControl[165]              PASSED: GPU[0] T[0] [165],      0.000                      (chksum 0x00000001)
+OCLFlowControl[166]              PASSED: GPU[0] T[0] [166],      0.000                      (chksum 0x00000001)
+OCLFlowControl[167]              PASSED: GPU[0] T[0] [167],      0.000                      (chksum 0x00000001)
+OCLFlowControl[168]              PASSED: GPU[0] T[0] [168],      0.000                      (chksum 0x00000001)
+OCLFlowControl[169]              PASSED: GPU[0] T[0] [169],      0.000                      (chksum 0x00000001)
+OCLFlowControl[170]              PASSED: GPU[0] T[0] [170],      0.000                      (chksum 0x00000001)
+OCLFlowControl[171]              PASSED: GPU[0] T[0] [171],      0.000                      (chksum 0x00000001)
+OCLFlowControl[172]              PASSED: GPU[0] T[0] [172],      0.000                      (chksum 0x00000001)
+OCLFlowControl[173]              PASSED: GPU[0] T[0] [173],      0.000                      (chksum 0x00000001)
+OCLFlowControl[174]              PASSED: GPU[0] T[0] [174],      0.000                      (chksum 0x00000001)
+OCLFlowControl[175]              PASSED: GPU[0] T[0] [175],      0.000                      (chksum 0x00000001)
+OCLFlowControl[176]              PASSED: GPU[0] T[0] [176],      0.000                      (chksum 0x00000001)
+OCLFlowControl[177]              PASSED: GPU[0] T[0] [177],      0.000                      (chksum 0x00000001)
+OCLFlowControl[178]              PASSED: GPU[0] T[0] [178],      0.000                      (chksum 0x00000001)
+OCLFlowControl[179]              PASSED: GPU[0] T[0] [179],      0.000                      (chksum 0x00000001)
+OCLFlowControl[180]              PASSED: GPU[0] T[0] [180],      0.000                      (chksum 0x00000001)
+OCLFlowControl[181]              PASSED: GPU[0] T[0] [181],      0.000                      (chksum 0x00000001)
+OCLFlowControl[182]              PASSED: GPU[0] T[0] [182],      0.000                      (chksum 0x00000001)
+OCLFlowControl[183]              PASSED: GPU[0] T[0] [183],      0.000                      (chksum 0x00000001)
+OCLFlowControl[184]              PASSED: GPU[0] T[0] [184],      0.000                      (chksum 0x00000001)
+OCLFlowControl[185]              PASSED: GPU[0] T[0] [185],      0.000                      (chksum 0x00000001)
+OCLFlowControl[186]              PASSED: GPU[0] T[0] [186],      0.000                      (chksum 0x00000001)
+OCLFlowControl[187]              PASSED: GPU[0] T[0] [187],      0.000                      (chksum 0x00000001)
+OCLFlowControl[188]              PASSED: GPU[0] T[0] [188],      0.000                      (chksum 0x00000001)
+OCLFlowControl[189]              PASSED: GPU[0] T[0] [189],      0.000                      (chksum 0x00000001)
+OCLFlowControl[190]              PASSED: GPU[0] T[0] [190],      0.000                      (chksum 0x00000001)
+OCLFlowControl[191]              PASSED: GPU[0] T[0] [191],      0.000                      (chksum 0x00000001)
+OCLFlowControl[192]              PASSED: GPU[0] T[0] [192],      0.000                      (chksum 0x00000001)
+OCLFlowControl[193]              PASSED: GPU[0] T[0] [193],      0.000                      (chksum 0x00000001)
+OCLFlowControl[194]              PASSED: GPU[0] T[0] [194],      0.000                      (chksum 0x00000001)
+OCLFlowControl[195]              PASSED: GPU[0] T[0] [195],      0.000                      (chksum 0x00000001)
+OCLFlowControl[196]              PASSED: GPU[0] T[0] [196],      0.000                      (chksum 0x00000001)
+OCLFlowControl[197]              PASSED: GPU[0] T[0] [197],      0.000                      (chksum 0x00000001)
+OCLFlowControl[198]              PASSED: GPU[0] T[0] [198],      0.000                      (chksum 0x00000001)
+OCLFlowControl[199]              PASSED: GPU[0] T[0] [199],      0.000                      (chksum 0x00000001)
+OCLFlowControl[200]              PASSED: GPU[0] T[0] [200],      0.000                      (chksum 0x00000001)
+OCLFlowControl[201]              PASSED: GPU[0] T[0] [201],      0.000                      (chksum 0x00000001)
+OCLFlowControl[202]              PASSED: GPU[0] T[0] [202],      0.000                      (chksum 0x00000001)
+OCLFlowControl[203]              PASSED: GPU[0] T[0] [203],      0.000                      (chksum 0x00000001)
+OCLFlowControl[204]              PASSED: GPU[0] T[0] [204],      0.000                      (chksum 0x00000001)
+OCLFlowControl[205]              PASSED: GPU[0] T[0] [205],      0.000                      (chksum 0x00000001)
+OCLFlowControl[206]              PASSED: GPU[0] T[0] [206],      0.000                      (chksum 0x00000001)
+OCLFlowControl[207]              PASSED: GPU[0] T[0] [207],      0.000                      (chksum 0x00000001)
+OCLFlowControl[208]              PASSED: GPU[0] T[0] [208],      0.000                      (chksum 0x00000001)
+OCLFlowControl[209]              PASSED: GPU[0] T[0] [209],      0.000                      (chksum 0x00000001)
+OCLFlowControl[210]              PASSED: GPU[0] T[0] [210],      0.000                      (chksum 0x00000001)
+OCLFlowControl[211]              PASSED: GPU[0] T[0] [211],      0.000                      (chksum 0x00000001)
+OCLFlowControl[212]              PASSED: GPU[0] T[0] [212],      0.000                      (chksum 0x00000001)
+OCLFlowControl[213]              PASSED: GPU[0] T[0] [213],      0.000                      (chksum 0x00000001)
+OCLFlowControl[214]              PASSED: GPU[0] T[0] [214],      0.000                      (chksum 0x00000001)
+OCLFlowControl[215]              PASSED: GPU[0] T[0] [215],      0.000                      (chksum 0x00000001)
+OCLFlowControl[216]              PASSED: GPU[0] T[0] [216],      0.000                      (chksum 0x00000001)
+OCLFlowControl[217]              PASSED: GPU[0] T[0] [217],      0.000                      (chksum 0x00000001)
+OCLFlowControl[218]              PASSED: GPU[0] T[0] [218],      0.000                      (chksum 0x00000001)
+OCLFlowControl[219]              PASSED: GPU[0] T[0] [219],      0.000                      (chksum 0x00000001)
+OCLFlowControl[220]              PASSED: GPU[0] T[0] [220],      0.000                      (chksum 0x00000001)
+OCLFlowControl[221]              PASSED: GPU[0] T[0] [221],      0.000                      (chksum 0x00000001)
+OCLFlowControl[222]              PASSED: GPU[0] T[0] [222],      0.000                      (chksum 0x00000001)
+OCLFlowControl[223]              PASSED: GPU[0] T[0] [223],      0.000                      (chksum 0x00000001)
+OCLFlowControl[224]              PASSED: GPU[0] T[0] [224],      0.000                      (chksum 0x00000001)
+OCLFlowControl[225]              PASSED: GPU[0] T[0] [225],      0.000                      (chksum 0x00000001)
+OCLFlowControl[226]              PASSED: GPU[0] T[0] [226],      0.000                      (chksum 0x00000001)
+OCLFlowControl[227]              PASSED: GPU[0] T[0] [227],      0.000                      (chksum 0x00000001)
+OCLFlowControl[228]              PASSED: GPU[0] T[0] [228],      0.000                      (chksum 0x00000001)
+OCLFlowControl[229]              PASSED: GPU[0] T[0] [229],      0.000                      (chksum 0x00000001)
+OCLFlowControl[230]              PASSED: GPU[0] T[0] [230],      0.000                      (chksum 0x00000001)
+OCLFlowControl[231]              PASSED: GPU[0] T[0] [231],      0.000                      (chksum 0x00000001)
+OCLFlowControl[232]              PASSED: GPU[0] T[0] [232],      0.000                      (chksum 0x00000001)
+OCLFlowControl[233]              PASSED: GPU[0] T[0] [233],      0.000                      (chksum 0x00000001)
+OCLFlowControl[234]              PASSED: GPU[0] T[0] [234],      0.000                      (chksum 0x00000001)
+OCLFlowControl[235]              PASSED: GPU[0] T[0] [235],      0.000                      (chksum 0x00000001)
+OCLFlowControl[236]              PASSED: GPU[0] T[0] [236],      0.000                      (chksum 0x00000001)
+OCLFlowControl[237]              PASSED: GPU[0] T[0] [237],      0.000                      (chksum 0x00000001)
+OCLFlowControl[238]              PASSED: GPU[0] T[0] [238],      0.000                      (chksum 0x00000001)
+OCLFlowControl[239]              PASSED: GPU[0] T[0] [239],      0.000                      (chksum 0x00000001)
+OCLFlowControl[240]              PASSED: GPU[0] T[0] [240],      0.000                      (chksum 0x00000001)
+OCLFlowControl[241]              PASSED: GPU[0] T[0] [241],      0.000                      (chksum 0x00000001)
+OCLFlowControl[242]              PASSED: GPU[0] T[0] [242],      0.000                      (chksum 0x00000001)
+OCLFlowControl[243]              PASSED: GPU[0] T[0] [243],      0.000                      (chksum 0x00000001)
+OCLFlowControl[244]              PASSED: GPU[0] T[0] [244],      0.000                      (chksum 0x00000001)
+OCLFlowControl[245]              PASSED: GPU[0] T[0] [245],      0.000                      (chksum 0x00000001)
+OCLFlowControl[246]              PASSED: GPU[0] T[0] [246],      0.000                      (chksum 0x00000001)
+OCLFlowControl[247]              PASSED: GPU[0] T[0] [247],      0.000                      (chksum 0x00000001)
+OCLFlowControl[248]              PASSED: GPU[0] T[0] [248],      0.000                      (chksum 0x00000001)
+OCLFlowControl[249]              PASSED: GPU[0] T[0] [249],      0.000                      (chksum 0x00000001)
+OCLGlobalConstPtr[  0]          Warning: skip the test for the CPU device due to clCreateContextFromType failure.
+ PASSED: GPU[0] T[0] [  0],      0.000
+OCLLDSOperations[  0]           Warning: skip the test for the CPU device due to clCreateContextFromType failure.
+ PASSED: GPU[0] T[0] [  0],      0.000
+OCLMemoryOperations[  0]         PASSED: GPU[0] T[0] [  0],      0.000
+OCLSeparateCompile[  0]         /tmp/AMD_26441_396/t_26441_398.cl:4:23: error: expected '}'
+    dst[id] = src[id];
+                      ^
+/tmp/AMD_26441_396/t_26441_398.cl:2:1: note: to match this '{'
+{
+^
+1 error generated.
+/tmp/AMD_26441_400/t_26441_402.cl:4:23: error: expected '}'
+    dst[id] = src[id];
+                      ^
+/tmp/AMD_26441_400/t_26441_402.cl:2:1: note: to match this '{'
+{
+^
+1 error generated.
+ PASSED: GPU[0] T[0] [  0],      0.000
+OCLSeparateCompile[  1]          PASSED: GPU[0] T[0] [  1],      0.000
+OCLSeparateCompile[  2]          PASSED: GPU[0] T[0] [  2],      0.000
+OCLSeparateCompile[  3]          PASSED: GPU[0] T[0] [  3],      0.000
+OCLSeparateCompile[  4]          PASSED: GPU[0] T[0] [  4],      0.000
+OCLSeparateCompile[  5]          PASSED: GPU[0] T[0] [  5],      0.000
+OCLSeparateCompile[  6]          PASSED: GPU[0] T[0] [  6],      0.000
+OCLSeparateCompile[  7]          PASSED: GPU[0] T[0] [  7],      0.000
+OCLSeparateCompile[  8]          PASSED: GPU[0] T[0] [  8],      0.000
+OCLStackOperations[  0]          PASSED: GPU[0] T[0] [  0],      0.000
+OCLStructOperations[  0]        AO_RayCopyStructLocal PASSED: GPU[0] T[0] [  0],      0.000
+OCLStructOperations[  1]        AO_RayCopyElement PASSED: GPU[0] T[0] [  1],      0.000
+OCLStructOperations[  2]        AO_RayCopyStructVariable PASSED: GPU[0] T[0] [  2],      0.000
+OCLStructOperations[  3]        AO_RayCopyStructGlobal PASSED: GPU[0] T[0] [  3],      0.000
+OCLStructOperations[  4]        AO_RayCopyStructConstant PASSED: GPU[0] T[0] [  4],      0.000
+OCLStructOperations[  5]        AO_PlaneCopyStructLocal PASSED: GPU[0] T[0] [  5],      0.000
+OCLStructOperations[  6]        AO_PlaneCopyElement PASSED: GPU[0] T[0] [  6],      0.000
+OCLStructOperations[  7]        AO_PlaneCopyStructVariable PASSED: GPU[0] T[0] [  7],      0.000
+OCLStructOperations[  8]        AO_PlaneCopyStructGlobal PASSED: GPU[0] T[0] [  8],      0.000
+OCLStructOperations[  9]        AO_PlaneCopyStructConstant PASSED: GPU[0] T[0] [  9],      0.000
+OCLStructOperations[ 10]        AO_CenterCopyStructLocal PASSED: GPU[0] T[0] [ 10],      0.000
+OCLStructOperations[ 11]        AO_CenterCopyElement PASSED: GPU[0] T[0] [ 11],      0.000
+OCLStructOperations[ 12]        AO_CenterCopyStructVariable PASSED: GPU[0] T[0] [ 12],      0.000
+OCLStructOperations[ 13]        AO_CenterCopyStructGlobal PASSED: GPU[0] T[0] [ 13],      0.000
+OCLStructOperations[ 14]        AO_CenterCopyStructConstant PASSED: GPU[0] T[0] [ 14],      0.000
+OCLStructOperations[ 15]        AO_RadiusCopyStructLocal PASSED: GPU[0] T[0] [ 15],      0.000
+OCLStructOperations[ 16]        AO_RadiusCopyElement PASSED: GPU[0] T[0] [ 16],      0.000
+OCLStructOperations[ 17]        AO_RadiusCopyStructVariable PASSED: GPU[0] T[0] [ 17],      0.000
+OCLStructOperations[ 18]        AO_RadiusCopyStructGlobal PASSED: GPU[0] T[0] [ 18],      0.000
+OCLStructOperations[ 19]        AO_RadiusCopyStructConstant PASSED: GPU[0] T[0] [ 19],      0.000
+OCLStructOperations[ 20]        AO_SphereCopyStructLocal PASSED: GPU[0] T[0] [ 20],      0.000
+OCLStructOperations[ 21]        AO_SphereCopyElement PASSED: GPU[0] T[0] [ 21],      0.000
+OCLStructOperations[ 22]        AO_SphereCopyStructVariable PASSED: GPU[0] T[0] [ 22],      0.000
+OCLStructOperations[ 23]        AO_SphereCopyStructGlobal PASSED: GPU[0] T[0] [ 23],      0.000
+OCLStructOperations[ 24]        AO_SphereCopyStructConstant PASSED: GPU[0] T[0] [ 24],      0.000
+OCLStructOperations[ 25]        AO_IntersectionCopyStructLocal PASSED: GPU[0] T[0] [ 25],      0.000
+OCLStructOperations[ 26]        AO_IntersectionCopyElement PASSED: GPU[0] T[0] [ 26],      0.000
+OCLStructOperations[ 27]        AO_IntersectionCopyStructVariable PASSED: GPU[0] T[0] [ 27],      0.000
+OCLStructOperations[ 28]        AO_IntersectionCopyStructGlobal PASSED: GPU[0] T[0] [ 28],      0.000
+OCLStructOperations[ 29]        AO_IntersectionCopyStructConstant PASSED: GPU[0] T[0] [ 29],      0.000
+OCLStructOperations[ 30]        ComplexStructCopyStructLocal PASSED: GPU[0] T[0] [ 30],      0.000
+OCLStructOperations[ 31]        ComplexStructCopyElement PASSED: GPU[0] T[0] [ 31],      0.000
+OCLStructOperations[ 32]        ComplexStructCopyStructVariable PASSED: GPU[0] T[0] [ 32],      0.000
+OCLStructOperations[ 33]        ComplexStructCopyStructGlobal PASSED: GPU[0] T[0] [ 33],      0.000
+OCLStructOperations[ 34]        ComplexStructCopyStructConstant PASSED: GPU[0] T[0] [ 34],      0.000
+OCLStructOperations[ 35]        ComplexStructByteCopyStructLocal PASSED: GPU[0] T[0] [ 35],      0.000
+OCLStructOperations[ 36]        ComplexStructByteCopyElement PASSED: GPU[0] T[0] [ 36],      0.000
+OCLStructOperations[ 37]        ComplexStructByteCopyStructVariable PASSED: GPU[0] T[0] [ 37],      0.000
+OCLStructOperations[ 38]        ComplexStructByteCopyStructGlobal PASSED: GPU[0] T[0] [ 38],      0.000
+OCLStructOperations[ 39]        ComplexStructByteCopyStructConstant PASSED: GPU[0] T[0] [ 39],      0.000
+OCLStructOperations[ 40]        sphere_intersect_kernel PASSED: GPU[0] T[0] [ 40],      0.000
+OCLStructOperations[ 41]        plane_intersect_kernel PASSED: GPU[0] T[0] [ 41],      0.000
+OCLStructOperations[ 42]        intersect_kernel PASSED: GPU[0] T[0] [ 42],      0.000
+OCLStructOperations[ 43]        SimpleStructSOCopyStructLocal PASSED: GPU[0] T[0] [ 43],      0.000
+OCLStructOperations[ 44]        SimpleStructSOCopyElement PASSED: GPU[0] T[0] [ 44],      0.000
+OCLStructOperations[ 45]        SimpleStructSOCopyStructVariable PASSED: GPU[0] T[0] [ 45],      0.000
+OCLStructOperations[ 46]        SimpleStructSOCopyStructGlobal PASSED: GPU[0] T[0] [ 46],      0.000
+OCLStructOperations[ 47]        SimpleStructSOCopyStructConstant PASSED: GPU[0] T[0] [ 47],      0.000
+OCLStructOperations[ 48]        SimpleStructSOUnionCopyStructLocal PASSED: GPU[0] T[0] [ 48],      0.000
+OCLStructOperations[ 49]        SimpleStructSOUnionCopyElement PASSED: GPU[0] T[0] [ 49],      0.000
+OCLStructOperations[ 50]        SimpleStructSOUnionCopyStructVariable PASSED: GPU[0] T[0] [ 50],      0.000
+OCLStructOperations[ 51]        SimpleStructSOUnionCopyStructGlobal PASSED: GPU[0] T[0] [ 51],      0.000
+OCLStructOperations[ 52]        SimpleStructSOUnionCopyStructConstant PASSED: GPU[0] T[0] [ 52],      0.000
+OCLStructOperations[ 53]        SimpleStructSOArrayCopyStructLocal PASSED: GPU[0] T[0] [ 53],      0.000
+OCLStructOperations[ 54]        SimpleStructSOArrayCopyElement PASSED: GPU[0] T[0] [ 54],      0.000
+OCLStructOperations[ 55]        SimpleStructSOArrayCopyStructVariable PASSED: GPU[0] T[0] [ 55],      0.000
+OCLStructOperations[ 56]        SimpleStructSOArrayCopyStructGlobal PASSED: GPU[0] T[0] [ 56],      0.000
+OCLStructOperations[ 57]        SimpleStructSOArrayCopyStructConstant PASSED: GPU[0] T[0] [ 57],      0.000
+OCLStructOperations[ 58]        HardStructCopyStructLocal PASSED: GPU[0] T[0] [ 58],      0.000
+OCLStructOperations[ 59]        HardStructCopyElement PASSED: GPU[0] T[0] [ 59],      0.000
+OCLStructOperations[ 60]        HardStructCopyStructVariable PASSED: GPU[0] T[0] [ 60],      0.000
+OCLStructOperations[ 61]        HardStructCopyStructGlobal PASSED: GPU[0] T[0] [ 61],      0.000
+OCLStructOperations[ 62]        HardStructCopyStructConstant PASSED: GPU[0] T[0] [ 62],      0.000
+OCLStructOperations[ 63]        IntPairSOCopyStructLocal PASSED: GPU[0] T[0] [ 63],      0.000
+OCLStructOperations[ 64]        IntPairSOCopyElement PASSED: GPU[0] T[0] [ 64],      0.000
+OCLStructOperations[ 65]        IntPairSOCopyStructVariable PASSED: GPU[0] T[0] [ 65],      0.000
+OCLStructOperations[ 66]        IntPairSOCopyStructGlobal PASSED: GPU[0] T[0] [ 66],      0.000
+OCLStructOperations[ 67]        IntPairSOCopyStructConstant PASSED: GPU[0] T[0] [ 67],      0.000
+OCLStructOperations[ 68]        TaskParamsSOCopyStructLocal PASSED: GPU[0] T[0] [ 68],      0.000
+OCLStructOperations[ 69]        TaskParamsSOCopyElement PASSED: GPU[0] T[0] [ 69],      0.000
+OCLStructOperations[ 70]        TaskParamsSOCopyStructVariable PASSED: GPU[0] T[0] [ 70],      0.000
+OCLStructOperations[ 71]        TaskParamsSOCopyStructGlobal PASSED: GPU[0] T[0] [ 71],      0.000
+OCLStructOperations[ 72]        TaskParamsSOCopyStructConstant PASSED: GPU[0] T[0] [ 72],      0.000
+OCLStructOperations[ 73]        TaskSOCopyStructLocal PASSED: GPU[0] T[0] [ 73],      0.000
+OCLStructOperations[ 74]        TaskSOCopyElement PASSED: GPU[0] T[0] [ 74],      0.000
+OCLStructOperations[ 75]        TaskSOCopyStructVariable PASSED: GPU[0] T[0] [ 75],      0.000
+OCLStructOperations[ 76]        TaskSOCopyStructGlobal PASSED: GPU[0] T[0] [ 76],      0.000
+OCLStructOperations[ 77]        TaskSOCopyStructConstant PASSED: GPU[0] T[0] [ 77],      0.000
+OCLStructOperations[ 78]        CircularArraySOCopyStructLocal PASSED: GPU[0] T[0] [ 78],      0.000
+OCLStructOperations[ 79]        CircularArraySOCopyElement PASSED: GPU[0] T[0] [ 79],      0.000
+OCLStructOperations[ 80]        CircularArraySOCopyStructVariable PASSED: GPU[0] T[0] [ 80],      0.000
+OCLStructOperations[ 81]        CircularArraySOCopyStructGlobal PASSED: GPU[0] T[0] [ 81],      0.000
+OCLStructOperations[ 82]        CircularArraySOCopyStructConstant PASSED: GPU[0] T[0] [ 82],      0.000
+OCLStructOperations[ 83]        CircularWSDequeSOCopyStructLocal PASSED: GPU[0] T[0] [ 83],      0.000
+OCLStructOperations[ 84]        CircularWSDequeSOCopyElement PASSED: GPU[0] T[0] [ 84],      0.000
+OCLStructOperations[ 85]        CircularWSDequeSOCopyStructVariable PASSED: GPU[0] T[0] [ 85],      0.000
+OCLStructOperations[ 86]        CircularWSDequeSOCopyStructGlobal PASSED: GPU[0] T[0] [ 86],      0.000
+OCLStructOperations[ 87]        CircularWSDequeSOCopyStructConstant PASSED: GPU[0] T[0] [ 87],      0.000
+OCLStructOperations[ 88]        initizeWSDeque PASSED: GPU[0] T[0] [ 88],      0.000
+OCLStructOperations[ 89]        HardStructUnionCopyStructLocal PASSED: GPU[0] T[0] [ 89],      0.000
+OCLStructOperations[ 90]        HardStructUnionCopyElement PASSED: GPU[0] T[0] [ 90],      0.000
+OCLStructOperations[ 91]        HardStructUnionCopyStructVariable PASSED: GPU[0] T[0] [ 91],      0.000
+OCLStructOperations[ 92]        HardStructUnionCopyStructGlobal PASSED: GPU[0] T[0] [ 92],      0.000
+OCLStructOperations[ 93]        HardStructUnionCopyStructConstant PASSED: GPU[0] T[0] [ 93],      0.000
+OCLBitInsertOpt[  0]             PASSED: GPU[0] T[0] [  0],      0.000
+OCLBitInsertOpt[  1]             PASSED: GPU[0] T[0] [  1],      0.000
+OCLBitInsertOpt[  2]             PASSED: GPU[0] T[0] [  2],      0.000
+OCLBitInsertOpt[  3]             PASSED: GPU[0] T[0] [  3],      0.000
+OCLBitInsertOpt[  4]             PASSED: GPU[0] T[0] [  4],      0.000
+OCLBitInsertOpt[  5]             PASSED: GPU[0] T[0] [  5],      0.000
+OCLBitInsertOpt[  6]             PASSED: GPU[0] T[0] [  6],      0.000
+OCLBitInsertOpt[  7]             PASSED: GPU[0] T[0] [  7],      0.000
+OCLBitInsertOpt[  8]             PASSED: GPU[0] T[0] [  8],      0.000
+OCLBitInsertOpt[  9]             PASSED: GPU[0] T[0] [  9],      0.000
+OCLBitInsertOpt[ 10]             PASSED: GPU[0] T[0] [ 10],      0.000
+OCLBitInsertOpt[ 11]             PASSED: GPU[0] T[0] [ 11],      0.000
+OCLBitInsertOpt[ 12]             PASSED: GPU[0] T[0] [ 12],      0.000
+OCLBitInsertOpt[ 13]             PASSED: GPU[0] T[0] [ 13],      0.000
+OCLBitInsertOpt[ 14]             PASSED: GPU[0] T[0] [ 14],      0.000
+OCLBitInsertOpt[ 15]             PASSED: GPU[0] T[0] [ 15],      0.000
+OCLBitInsertOpt[ 16]             PASSED: GPU[0] T[0] [ 16],      0.000
+OCLBitInsertOpt[ 17]             PASSED: GPU[0] T[0] [ 17],      0.000
+OCLBitInsertOpt[ 18]             PASSED: GPU[0] T[0] [ 18],      0.000
+OCLBitInsertOpt[ 19]             PASSED: GPU[0] T[0] [ 19],      0.000
+OCLBitInsertOpt[ 20]             PASSED: GPU[0] T[0] [ 20],      0.000
+OCLBitInsertOpt[ 21]             PASSED: GPU[0] T[0] [ 21],      0.000
+OCLBitInsertOpt[ 22]             PASSED: GPU[0] T[0] [ 22],      0.000
+OCLBitInsertOpt[ 23]             PASSED: GPU[0] T[0] [ 23],      0.000
+OCLBitInsertOpt[ 24]             PASSED: GPU[0] T[0] [ 24],      0.000
+OCLBitInsertOpt[ 25]             PASSED: GPU[0] T[0] [ 25],      0.000
+OCLBitInsertOpt[ 26]             PASSED: GPU[0] T[0] [ 26],      0.000
+OCLBitInsertOpt[ 27]             PASSED: GPU[0] T[0] [ 27],      0.000
+OCLBitInsertOpt[ 28]             PASSED: GPU[0] T[0] [ 28],      0.000
+OCLBitInsertOpt[ 29]             PASSED: GPU[0] T[0] [ 29],      0.000
+OCLMathFail_fmodD3[  0]         math_kernel3 PASSED: GPU[0] T[0] [  0],      0.000
+OCLRelationalFail_bitselect_int[  0]bitselect_int PASSED: GPU[0] T[0] [  0],      0.000
+OCLBitAlign[  0]                 PASSED: GPU[0] T[0] [  0],      0.000
+OCLBitAlign[  1]                 PASSED: GPU[0] T[0] [  1],      0.000
+OCLPack[  0]                     PASSED: GPU[0] T[0] [  0],      0.000
+OCLPack[  1]                     PASSED: GPU[0] T[0] [  1],      0.000
+OCLFoldLibFunc[  0]              PASSED: GPU[0] T[0] [  0],      0.000
+OCLFoldLibFunc[  1]              PASSED: GPU[0] T[0] [  1],      0.000
+OCLFoldLibFunc[  2]              PASSED: GPU[0] T[0] [  2],      0.000
+OCLFoldLibFunc[  3]              PASSED: GPU[0] T[0] [  3],      0.000
+OCLFoldLibFuncVector[  0]        PASSED: GPU[0] T[0] [  0],      0.000
+OCLFoldLibFuncVector[  1]        PASSED: GPU[0] T[0] [  1],      0.000
+OCLFoldLibFuncVector[  2]        PASSED: GPU[0] T[0] [  2],      0.000
+OCLFoldLibFuncVector[  3]        PASSED: GPU[0] T[0] [  3],      0.000
+OCLFunctionSupport[  0]         run test 0: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 1: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 2: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 3: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 4: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 5: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 6: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 7: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 8: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 9: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 10: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 11: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 12: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 13: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 14: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 15: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 16: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+run test 17: functionSupport0 with option -ilkth=0 -ilcth=0 -ilsth=1 -fmacro-call -fmulti-level-call
+psss
+psss
+psss
+psss
+ PASSED: GPU[0] T[0] [  0],      0.000
+OCLUnifrmOptionMask[  0]         PASSED: GPU[0] T[0] [  0],      0.000
+OCLUnifrmOptionMask[  1]         PASSED: GPU[0] T[0] [  1],      0.000
+/tmp/AMD_26441_2113/t_26441_2115.cl:6:4: error: no matching function for call to 'write_imagef'
+   write_imagef(img2D, pos, (float4)(pos.x, pos.y, 0.0f, 0.0f));   
+   ^~~~~~~~~~~~
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15001:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image2d_t' for 1st argument
+void __ovld write_imagef(write_only image2d_t image, int2 coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15017:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image1d_array_t' for 1st argument
+void __ovld write_imagef(write_only image1d_array_t image_array, int2 coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15005:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image2d_array_t' for 1st argument
+void __ovld write_imagef(write_only image2d_array_t image_array, int4 coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15009:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image1d_t' for 1st argument
+void __ovld write_imagef(write_only image1d_t image, int coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15013:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image1d_buffer_t' for 1st argument
+void __ovld write_imagef(write_only image1d_buffer_t image, int coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15022:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image3d_t' for 1st argument
+void __ovld write_imagef(write_only image3d_t image, int4 coord, float4 color);
+            ^
+1 error generated.
+OCLImageQualifier[  0]           PASSED: GPU[0] T[0] [  0],      0.000
+OCLImageQualifier[  1]           PASSED: GPU[0] T[0] [  1],      0.000
+/tmp/AMD_26441_2134/t_26441_2136.cl:6:4: error: no matching function for call to 'write_imagef'
+   write_imagef(img2D, pos, (float4)(pos.x, pos.y, 0.0f, 0.0f));   
+   ^~~~~~~~~~~~
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15001:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image2d_t' for 1st argument
+void __ovld write_imagef(write_only image2d_t image, int2 coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15017:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image1d_array_t' for 1st argument
+void __ovld write_imagef(write_only image1d_array_t image_array, int2 coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15005:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image2d_array_t' for 1st argument
+void __ovld write_imagef(write_only image2d_array_t image_array, int4 coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15009:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image1d_t' for 1st argument
+void __ovld write_imagef(write_only image1d_t image, int coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15013:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image1d_buffer_t' for 1st argument
+void __ovld write_imagef(write_only image1d_buffer_t image, int coord, float4 color);
+            ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:15022:13: note: candidate function not viable: no known conversion from '__read_only image2d_t' to '__write_only image3d_t' for 1st argument
+void __ovld write_imagef(write_only image3d_t image, int4 coord, float4 color);
+            ^
+1 error generated.
+OCLImageQualifier[  2]           PASSED: GPU[0] T[0] [  2],      0.000
+OCLImageQualifier[  3]           PASSED: GPU[0] T[0] [  3],      0.000
+/tmp/AMD_26441_2155/t_26441_2157.cl:7:13: error: no matching function for call to 'read_imagef'
+    pixel = read_imagef(img2D, sampler, (int4)(xout,yout,0,0));    
+            ^~~~~~~~~~~
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14604:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image3d_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image3d_t image, sampler_t sampler, int4 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14613:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image2d_array_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image2d_array_t image_array, sampler_t sampler, int4 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14596:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image2d_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image2d_t image, sampler_t sampler, int2 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14597:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image2d_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image2d_t image, sampler_t sampler, float2 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14605:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image3d_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image3d_t image, sampler_t sampler, float4 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14614:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image2d_array_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image2d_array_t image_array, sampler_t sampler, float4 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14622:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image1d_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image1d_t image, sampler_t sampler, int coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14623:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image1d_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image1d_t image, sampler_t sampler, float coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14631:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image1d_array_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image1d_array_t image_array, sampler_t sampler, int2 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14632:24: note: candidate function not viable: no known conversion from '__write_only image2d_array_t' to '__read_only image1d_array_t' for 1st argument
+float4 __purefn __ovld read_imagef(read_only image1d_array_t image_array, sampler_t sampler, float2 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14772:24: note: candidate function not viable: requires 2 arguments, but 3 were provided
+float4 __purefn __ovld read_imagef(read_only image3d_t image, int4 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14763:24: note: candidate function not viable: requires 2 arguments, but 3 were provided
+float4 __purefn __ovld read_imagef(read_only image2d_array_t image, int4 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14759:24: note: candidate function not viable: requires 2 arguments, but 3 were provided
+float4 __purefn __ovld read_imagef(read_only image2d_t image, int2 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14755:24: note: candidate function not viable: requires 2 arguments, but 3 were provided
+float4 __purefn __ovld read_imagef(read_only image1d_array_t image, int2 coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14751:24: note: candidate function not viable: requires 2 arguments, but 3 were provided
+float4 __purefn __ovld read_imagef(read_only image1d_buffer_t image, int coord);
+                       ^
+/home/jenkins/jenkins-root/workspace/compute-roc-master/out/ubuntu-16.04/16.04/srctf/ocl_lc/drivers/opencl/library/amdgcn/headers/build/lnx64a/B_rel/<stdin>:14747:24: note: candidate function not viable: requires 2 arguments, but 3 were provided
+float4 __purefn __ovld read_imagef(read_only image1d_t image, int coord);
+                       ^
+1 error generated.
+OCLImageQualifier[  4]           PASSED: GPU[0] T[0] [  4],      0.000
+OCLImageQualifier[  5]           PASSED: GPU[0] T[0] [  5],      0.000
+OCLImageQualifier[  6]           PASSED: GPU[0] T[0] [  6],      0.000
+OCLImageQualifier[  7]           PASSED: GPU[0] T[0] [  7],      0.000
+
+OpenCL 2.0 not supported
+OCLPipeQualifier[  0]            PASSED: GPU[0] T[0] [  0],      0.000
+
+OpenCL 2.0 not supported
+OCLPipeQualifier[  1]            PASSED: GPU[0] T[0] [  1],      0.000
+
+OpenCL 2.0 not supported
+OCLPipeQualifier[  2]            PASSED: GPU[0] T[0] [  2],      0.000
+
+OpenCL 2.0 not supported
+OCLPipeQualifier[  3]            PASSED: GPU[0] T[0] [  3],      0.000
+
+OpenCL 2.0 not supported
+OCLPipeQualifier[  4]            PASSED: GPU[0] T[0] [  4],      0.000
+
+OpenCL 2.0 not supported
+OCLPipeQualifier[  5]            PASSED: GPU[0] T[0] [  5],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  0]     PASSED: GPU[0] T[0] [  0],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  1]     PASSED: GPU[0] T[0] [  1],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  2]     PASSED: GPU[0] T[0] [  2],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  3]     PASSED: GPU[0] T[0] [  3],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  4]     PASSED: GPU[0] T[0] [  4],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  5]     PASSED: GPU[0] T[0] [  5],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  6]     PASSED: GPU[0] T[0] [  6],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  7]     PASSED: GPU[0] T[0] [  7],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  8]     PASSED: GPU[0] T[0] [  8],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[  9]     PASSED: GPU[0] T[0] [  9],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 10]     PASSED: GPU[0] T[0] [ 10],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 11]     PASSED: GPU[0] T[0] [ 11],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 12]     PASSED: GPU[0] T[0] [ 12],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 13]     PASSED: GPU[0] T[0] [ 13],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 14]     PASSED: GPU[0] T[0] [ 14],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 15]     PASSED: GPU[0] T[0] [ 15],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 16]     PASSED: GPU[0] T[0] [ 16],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 17]     PASSED: GPU[0] T[0] [ 17],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 18]     PASSED: GPU[0] T[0] [ 18],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 19]     PASSED: GPU[0] T[0] [ 19],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 20]     PASSED: GPU[0] T[0] [ 20],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 21]     PASSED: GPU[0] T[0] [ 21],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 22]     PASSED: GPU[0] T[0] [ 22],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 23]     PASSED: GPU[0] T[0] [ 23],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 24]     PASSED: GPU[0] T[0] [ 24],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 25]     PASSED: GPU[0] T[0] [ 25],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 26]     PASSED: GPU[0] T[0] [ 26],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 27]     PASSED: GPU[0] T[0] [ 27],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 28]     PASSED: GPU[0] T[0] [ 28],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 29]     PASSED: GPU[0] T[0] [ 29],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 30]     PASSED: GPU[0] T[0] [ 30],      0.000
+
+OpenCL 2.0 not supported
+OCLAtomicOpsMemoryOrder[ 31]     PASSED: GPU[0] T[0] [ 31],      0.000
+<inline asm>:1:2: error: invalid instruction, did you mean: s_nop, v_nop?
+        nop
+        ^
+error: cannot compile inline asm
+1 error generated.
+OCLInlineASM[  0]                PASSED: GPU[0] T[0] [  0],      0.000
+OCLInlineASM[  1]                PASSED: GPU[0] T[0] [  1],      0.000
+<inline asm>:1:2: error: invalid instruction, did you mean: s_nop, v_nop?
+        nop
+        ^
+error: cannot compile inline asm
+1 error generated.
+OCLInlineASM[  2]                PASSED: GPU[0] T[0] [  2],      0.000
+OCLInlineASM[  3]                PASSED: GPU[0] T[0] [  3],      0.000
+OCLArithmeticConversion[  0]     PASSED: GPU[0] T[0] [  0],      0.000
+OCLArithmeticConversion[  1]     PASSED: GPU[0] T[0] [  1],      0.000
+OCLArithmeticConversion[  2]     PASSED: GPU[0] T[0] [  2],      0.000
+OCLArithmeticConversion[  3]     PASSED: GPU[0] T[0] [  3],      0.000
+OCLArithmeticConversion[  4]     PASSED: GPU[0] T[0] [  4],      0.000
+OCLArithmeticConversion[  5]     PASSED: GPU[0] T[0] [  5],      0.000
+OCLArithmeticConversion[  6]     PASSED: GPU[0] T[0] [  6],      0.000
+OCLArithmeticConversion[  7]     PASSED: GPU[0] T[0] [  7],      0.000
+OCLArithmeticConversion[  8]     PASSED: GPU[0] T[0] [  8],      0.000
+OCLArithmeticConversion[  9]     PASSED: GPU[0] T[0] [  9],      0.000
+OCLArithmeticConversion[ 10]     PASSED: GPU[0] T[0] [ 10],      0.000
+OCLArithmeticConversion[ 11]     PASSED: GPU[0] T[0] [ 11],      0.000
+OCLArithmeticConversion[ 12]     PASSED: GPU[0] T[0] [ 12],      0.000
+OCLArithmeticConversion[ 13]     PASSED: GPU[0] T[0] [ 13],      0.000
+OCLArithmeticConversion[ 14]     PASSED: GPU[0] T[0] [ 14],      0.000
+OCLArithmeticConversion[ 15]     PASSED: GPU[0] T[0] [ 15],      0.000
+OCLArithmeticConversion[ 16]     PASSED: GPU[0] T[0] [ 16],      0.000
+OCLArithmeticConversion[ 17]     PASSED: GPU[0] T[0] [ 17],      0.000
+OCLArithmeticConversion[ 18]     PASSED: GPU[0] T[0] [ 18],      0.000
+OCLArithmeticConversion[ 19]     PASSED: GPU[0] T[0] [ 19],      0.000
+OCLArithmeticConversion[ 20]     PASSED: GPU[0] T[0] [ 20],      0.000
+OCLArithmeticConversion[ 21]     PASSED: GPU[0] T[0] [ 21],      0.000
+OCLArithmeticConversion[ 22]     PASSED: GPU[0] T[0] [ 22],      0.000
+OCLArithmeticConversion[ 23]     PASSED: GPU[0] T[0] [ 23],      0.000
+OCLWorkGroupSize[  0]            PASSED: GPU[0] T[0] [  0],      0.000
+OCLWorkGroupSize[  1]            PASSED: GPU[0] T[0] [  1],      0.000
+OCLHelloWorld[  0]               PASSED: GPU[0] T[0] [  0],      0.000
+OCLPrintSpecialChars[  0]        PASSED: GPU[0] T[0] [  0],      0.000
+OCLPrintSpecialChars[  1]        PASSED: GPU[0] T[0] [  1],      0.000
+OCLPrintSpecialChars[  2]        PASSED: GPU[0] T[0] [  2],      0.000
+OCLPrintSpecialChars[  3]        PASSED: GPU[0] T[0] [  3],      0.000
+OCLPrintSpecialChars[  4]        PASSED: GPU[0] T[0] [  4],      0.000
+OCLPrintSpecialChars[  5]        PASSED: GPU[0] T[0] [  5],      0.000
+OCLPrintSpecialChars[  6]        PASSED: GPU[0] T[0] [  6],      0.000
+OCLPrintSpecialChars[  7]        PASSED: GPU[0] T[0] [  7],      0.000
+OCLPrintSpecialChars[  8]        PASSED: GPU[0] T[0] [  8],      0.000
+/tmp/AMD_26441_2414/t_26441_2416.cl:5:17: warning: unknown escape sequence '\ ' [-Wunknown-escape-sequence]
+        printf("\ test %d ", gid);                              
+                ^~
+1 warning generated.
+OCLPrintSpecialChars[  9]        PASSED: GPU[0] T[0] [  9],      0.000
+OCLPrintSpecialChars[ 10]        PASSED: GPU[0] T[0] [ 10],      0.000
+OCLPrintSpecialChars[ 11]        PASSED: GPU[0] T[0] [ 11],      0.000
+OCLPrintSpecialChars[ 12]        PASSED: GPU[0] T[0] [ 12],      0.000
+OCLPrintSpecialChars[ 13]        PASSED: GPU[0] T[0] [ 13],      0.000
+OCLPrintSpecialChars[ 14]        PASSED: GPU[0] T[0] [ 14],      0.000
+OCLPrintSpecialChars[ 15]        PASSED: GPU[0] T[0] [ 15],      0.000
+OCLPrintSpecialChars[ 16]        PASSED: GPU[0] T[0] [ 16],      0.000
+OCLPrintSpecialChars[ 17]        PASSED: GPU[0] T[0] [ 17],      0.000
+OCLPrintSpecialChars[ 18]        PASSED: GPU[0] T[0] [ 18],      0.000
+OCLPrintSpecialChars[ 19]        PASSED: GPU[0] T[0] [ 19],      0.000
+OCLPrintSpecialChars[ 20]        PASSED: GPU[0] T[0] [ 20],      0.000
+OCLPrintSpecialChars[ 21]        PASSED: GPU[0] T[0] [ 21],      0.000
+OCLPrintSpecialChars[ 22]        PASSED: GPU[0] T[0] [ 22],      0.000
+OCLPrintSpecialChars[ 23]        PASSED: GPU[0] T[0] [ 23],      0.000
+OCLPrintSpecialChars[ 24]        PASSED: GPU[0] T[0] [ 24],      0.000
+OCLPrintSpecialChars[ 25]        PASSED: GPU[0] T[0] [ 25],      0.000
+
+
+----------------------------------------
+Total Passed Tests:        26 (100.00%)
+Total Failed Tests:         0 (  0.00%)
+----------------------------------------
+Total Run Tests:           26 (100.00%)
+
+
+Finished: SUCCESS
